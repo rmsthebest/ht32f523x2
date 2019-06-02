@@ -8,16 +8,16 @@ keywords = ["arm", "cortex-m", "ht32", "svd2rust"]
 license = "GPL-3.0"
 name = "ht32f523x2"
 readme = "README.md"
-version = "0.1.0"
+version = "0.2.0"
 
 [dependencies]
 bare-metal = "0.2.0"
-cortex-m = "0.5.0"
+cortex-m = "0.6.0"
 vcell = "0.1.0"
 
 [dependencies.cortex-m-rt]
 optional = true
-version = "0.5.0"
+version = "0.6.0"
 
 [features]
 rt = ["cortex-m-rt/device"]
