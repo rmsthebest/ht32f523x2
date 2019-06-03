@@ -3,6 +3,7 @@ authors = ["rmsthebest"]
 categories = ["embedded", "hardware-support", "no-std"]
 description = "Peripheral access API for HT32F523x2 microcontrollers"
 documentation = "https://docs.rs/ht32f523x2"
+repository = "https://github.com/rmsthebest/ht32f523x2"
 edition = "2018"
 keywords = ["arm", "cortex-m", "ht32", "svd2rust"]
 license = "GPL-3.0"
