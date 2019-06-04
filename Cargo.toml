@@ -8,6 +8,7 @@ keywords = ["arm", "cortex-m", "ht32", "svd2rust"]
 license = "GPL-3.0"
 name = "ht32f523x2"
 readme = "README.md"
+repository = "https://github.com/rmsthebest/ht32f523x2"
 version = "0.2.0"
 
 [dependencies]
