@@ -1,1008 +1,560 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::EDGESR {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register EDGESR"]
+pub type R = crate::R<u32, super::EDGESR>;
+#[doc = "Writer for register EDGESR"]
+pub type W = crate::W<u32, super::EDGESR>;
+#[doc = "Register EDGESR `reset()`'s with value 0"]
+impl crate::ResetValue for super::EDGESR {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct EXTI0EDSR {
-    bits: bool,
-}
-impl EXTI0EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI1EDSR {
-    bits: bool,
-}
-impl EXTI1EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI2EDSR {
-    bits: bool,
-}
-impl EXTI2EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI3EDSR {
-    bits: bool,
-}
-impl EXTI3EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI4EDSR {
-    bits: bool,
-}
-impl EXTI4EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI5EDSR {
-    bits: bool,
-}
-impl EXTI5EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI6EDSR {
-    bits: bool,
-}
-impl EXTI6EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI7EDSR {
-    bits: bool,
-}
-impl EXTI7EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI8EDSR {
-    bits: bool,
-}
-impl EXTI8EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI9EDSR {
-    bits: bool,
-}
-impl EXTI9EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI10EDSR {
-    bits: bool,
-}
-impl EXTI10EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI11EDSR {
-    bits: bool,
-}
-impl EXTI11EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI12EDSR {
-    bits: bool,
-}
-impl EXTI12EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI13EDSR {
-    bits: bool,
-}
-impl EXTI13EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI14EDSR {
-    bits: bool,
-}
-impl EXTI14EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI15EDSR {
-    bits: bool,
-}
-impl EXTI15EDSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Proxy"]
-pub struct _EXTI0EDSW<'a> {
+#[doc = "Reader of field `EXTI0EDS`"]
+pub type EXTI0EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI0EDS`"]
+pub struct EXTI0EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI0EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI0EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI1EDSW<'a> {
+#[doc = "Reader of field `EXTI1EDS`"]
+pub type EXTI1EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI1EDS`"]
+pub struct EXTI1EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI1EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI1EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI2EDSW<'a> {
+#[doc = "Reader of field `EXTI2EDS`"]
+pub type EXTI2EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI2EDS`"]
+pub struct EXTI2EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI2EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI2EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI3EDSW<'a> {
+#[doc = "Reader of field `EXTI3EDS`"]
+pub type EXTI3EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI3EDS`"]
+pub struct EXTI3EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI3EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI3EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 3;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI4EDSW<'a> {
+#[doc = "Reader of field `EXTI4EDS`"]
+pub type EXTI4EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI4EDS`"]
+pub struct EXTI4EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI4EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI4EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI5EDSW<'a> {
+#[doc = "Reader of field `EXTI5EDS`"]
+pub type EXTI5EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI5EDS`"]
+pub struct EXTI5EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI5EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI5EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 5;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI6EDSW<'a> {
+#[doc = "Reader of field `EXTI6EDS`"]
+pub type EXTI6EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI6EDS`"]
+pub struct EXTI6EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI6EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI6EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 6;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI7EDSW<'a> {
+#[doc = "Reader of field `EXTI7EDS`"]
+pub type EXTI7EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI7EDS`"]
+pub struct EXTI7EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI7EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI7EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 7;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI8EDSW<'a> {
+#[doc = "Reader of field `EXTI8EDS`"]
+pub type EXTI8EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI8EDS`"]
+pub struct EXTI8EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI8EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI8EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI9EDSW<'a> {
+#[doc = "Reader of field `EXTI9EDS`"]
+pub type EXTI9EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI9EDS`"]
+pub struct EXTI9EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI9EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI9EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 9;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI10EDSW<'a> {
+#[doc = "Reader of field `EXTI10EDS`"]
+pub type EXTI10EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI10EDS`"]
+pub struct EXTI10EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI10EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI10EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 10;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI11EDSW<'a> {
+#[doc = "Reader of field `EXTI11EDS`"]
+pub type EXTI11EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI11EDS`"]
+pub struct EXTI11EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI11EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI11EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 11;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI12EDSW<'a> {
+#[doc = "Reader of field `EXTI12EDS`"]
+pub type EXTI12EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI12EDS`"]
+pub struct EXTI12EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI12EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI12EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI13EDSW<'a> {
+#[doc = "Reader of field `EXTI13EDS`"]
+pub type EXTI13EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI13EDS`"]
+pub struct EXTI13EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI13EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI13EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 13;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI14EDSW<'a> {
+#[doc = "Reader of field `EXTI14EDS`"]
+pub type EXTI14EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI14EDS`"]
+pub struct EXTI14EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI14EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI14EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 14;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI15EDSW<'a> {
+#[doc = "Reader of field `EXTI15EDS`"]
+pub type EXTI15EDS_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EXTI15EDS`"]
+pub struct EXTI15EDS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI15EDSW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> EXTI15EDS_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 15;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bit 0 - EXTI0EDS"]
-    #[inline]
-    pub fn exti0eds(&self) -> EXTI0EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI0EDSR { bits }
+    #[inline(always)]
+    pub fn exti0eds(&self) -> EXTI0EDS_R {
+        EXTI0EDS_R::new((self.bits & 0x01) != 0)
     }
     #[doc = "Bit 1 - EXTI1EDS"]
-    #[inline]
-    pub fn exti1eds(&self) -> EXTI1EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI1EDSR { bits }
+    #[inline(always)]
+    pub fn exti1eds(&self) -> EXTI1EDS_R {
+        EXTI1EDS_R::new(((self.bits >> 1) & 0x01) != 0)
     }
     #[doc = "Bit 2 - EXTI2EDS"]
-    #[inline]
-    pub fn exti2eds(&self) -> EXTI2EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI2EDSR { bits }
+    #[inline(always)]
+    pub fn exti2eds(&self) -> EXTI2EDS_R {
+        EXTI2EDS_R::new(((self.bits >> 2) & 0x01) != 0)
     }
     #[doc = "Bit 3 - EXTI3EDS"]
-    #[inline]
-    pub fn exti3eds(&self) -> EXTI3EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI3EDSR { bits }
+    #[inline(always)]
+    pub fn exti3eds(&self) -> EXTI3EDS_R {
+        EXTI3EDS_R::new(((self.bits >> 3) & 0x01) != 0)
     }
     #[doc = "Bit 4 - EXTI4EDS"]
-    #[inline]
-    pub fn exti4eds(&self) -> EXTI4EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI4EDSR { bits }
+    #[inline(always)]
+    pub fn exti4eds(&self) -> EXTI4EDS_R {
+        EXTI4EDS_R::new(((self.bits >> 4) & 0x01) != 0)
     }
     #[doc = "Bit 5 - EXTI5EDS"]
-    #[inline]
-    pub fn exti5eds(&self) -> EXTI5EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI5EDSR { bits }
+    #[inline(always)]
+    pub fn exti5eds(&self) -> EXTI5EDS_R {
+        EXTI5EDS_R::new(((self.bits >> 5) & 0x01) != 0)
     }
     #[doc = "Bit 6 - EXTI6EDS"]
-    #[inline]
-    pub fn exti6eds(&self) -> EXTI6EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI6EDSR { bits }
+    #[inline(always)]
+    pub fn exti6eds(&self) -> EXTI6EDS_R {
+        EXTI6EDS_R::new(((self.bits >> 6) & 0x01) != 0)
     }
     #[doc = "Bit 7 - EXTI7EDS"]
-    #[inline]
-    pub fn exti7eds(&self) -> EXTI7EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI7EDSR { bits }
+    #[inline(always)]
+    pub fn exti7eds(&self) -> EXTI7EDS_R {
+        EXTI7EDS_R::new(((self.bits >> 7) & 0x01) != 0)
     }
     #[doc = "Bit 8 - EXTI8EDS"]
-    #[inline]
-    pub fn exti8eds(&self) -> EXTI8EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI8EDSR { bits }
+    #[inline(always)]
+    pub fn exti8eds(&self) -> EXTI8EDS_R {
+        EXTI8EDS_R::new(((self.bits >> 8) & 0x01) != 0)
     }
     #[doc = "Bit 9 - EXTI9EDS"]
-    #[inline]
-    pub fn exti9eds(&self) -> EXTI9EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI9EDSR { bits }
+    #[inline(always)]
+    pub fn exti9eds(&self) -> EXTI9EDS_R {
+        EXTI9EDS_R::new(((self.bits >> 9) & 0x01) != 0)
     }
     #[doc = "Bit 10 - EXTI10EDS"]
-    #[inline]
-    pub fn exti10eds(&self) -> EXTI10EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 10;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI10EDSR { bits }
+    #[inline(always)]
+    pub fn exti10eds(&self) -> EXTI10EDS_R {
+        EXTI10EDS_R::new(((self.bits >> 10) & 0x01) != 0)
     }
     #[doc = "Bit 11 - EXTI11EDS"]
-    #[inline]
-    pub fn exti11eds(&self) -> EXTI11EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 11;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI11EDSR { bits }
+    #[inline(always)]
+    pub fn exti11eds(&self) -> EXTI11EDS_R {
+        EXTI11EDS_R::new(((self.bits >> 11) & 0x01) != 0)
     }
     #[doc = "Bit 12 - EXTI12EDS"]
-    #[inline]
-    pub fn exti12eds(&self) -> EXTI12EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI12EDSR { bits }
+    #[inline(always)]
+    pub fn exti12eds(&self) -> EXTI12EDS_R {
+        EXTI12EDS_R::new(((self.bits >> 12) & 0x01) != 0)
     }
     #[doc = "Bit 13 - EXTI13EDS"]
-    #[inline]
-    pub fn exti13eds(&self) -> EXTI13EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 13;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI13EDSR { bits }
+    #[inline(always)]
+    pub fn exti13eds(&self) -> EXTI13EDS_R {
+        EXTI13EDS_R::new(((self.bits >> 13) & 0x01) != 0)
     }
     #[doc = "Bit 14 - EXTI14EDS"]
-    #[inline]
-    pub fn exti14eds(&self) -> EXTI14EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 14;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI14EDSR { bits }
+    #[inline(always)]
+    pub fn exti14eds(&self) -> EXTI14EDS_R {
+        EXTI14EDS_R::new(((self.bits >> 14) & 0x01) != 0)
     }
     #[doc = "Bit 15 - EXTI15EDS"]
-    #[inline]
-    pub fn exti15eds(&self) -> EXTI15EDSR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 15;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        EXTI15EDSR { bits }
+    #[inline(always)]
+    pub fn exti15eds(&self) -> EXTI15EDS_R {
+        EXTI15EDS_R::new(((self.bits >> 15) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bit 0 - EXTI0EDS"]
-    #[inline]
-    pub fn exti0eds(&mut self) -> _EXTI0EDSW {
-        _EXTI0EDSW { w: self }
+    #[inline(always)]
+    pub fn exti0eds(&mut self) -> EXTI0EDS_W {
+        EXTI0EDS_W { w: self }
     }
     #[doc = "Bit 1 - EXTI1EDS"]
-    #[inline]
-    pub fn exti1eds(&mut self) -> _EXTI1EDSW {
-        _EXTI1EDSW { w: self }
+    #[inline(always)]
+    pub fn exti1eds(&mut self) -> EXTI1EDS_W {
+        EXTI1EDS_W { w: self }
     }
     #[doc = "Bit 2 - EXTI2EDS"]
-    #[inline]
-    pub fn exti2eds(&mut self) -> _EXTI2EDSW {
-        _EXTI2EDSW { w: self }
+    #[inline(always)]
+    pub fn exti2eds(&mut self) -> EXTI2EDS_W {
+        EXTI2EDS_W { w: self }
     }
     #[doc = "Bit 3 - EXTI3EDS"]
-    #[inline]
-    pub fn exti3eds(&mut self) -> _EXTI3EDSW {
-        _EXTI3EDSW { w: self }
+    #[inline(always)]
+    pub fn exti3eds(&mut self) -> EXTI3EDS_W {
+        EXTI3EDS_W { w: self }
     }
     #[doc = "Bit 4 - EXTI4EDS"]
-    #[inline]
-    pub fn exti4eds(&mut self) -> _EXTI4EDSW {
-        _EXTI4EDSW { w: self }
+    #[inline(always)]
+    pub fn exti4eds(&mut self) -> EXTI4EDS_W {
+        EXTI4EDS_W { w: self }
     }
     #[doc = "Bit 5 - EXTI5EDS"]
-    #[inline]
-    pub fn exti5eds(&mut self) -> _EXTI5EDSW {
-        _EXTI5EDSW { w: self }
+    #[inline(always)]
+    pub fn exti5eds(&mut self) -> EXTI5EDS_W {
+        EXTI5EDS_W { w: self }
     }
     #[doc = "Bit 6 - EXTI6EDS"]
-    #[inline]
-    pub fn exti6eds(&mut self) -> _EXTI6EDSW {
-        _EXTI6EDSW { w: self }
+    #[inline(always)]
+    pub fn exti6eds(&mut self) -> EXTI6EDS_W {
+        EXTI6EDS_W { w: self }
     }
     #[doc = "Bit 7 - EXTI7EDS"]
-    #[inline]
-    pub fn exti7eds(&mut self) -> _EXTI7EDSW {
-        _EXTI7EDSW { w: self }
+    #[inline(always)]
+    pub fn exti7eds(&mut self) -> EXTI7EDS_W {
+        EXTI7EDS_W { w: self }
     }
     #[doc = "Bit 8 - EXTI8EDS"]
-    #[inline]
-    pub fn exti8eds(&mut self) -> _EXTI8EDSW {
-        _EXTI8EDSW { w: self }
+    #[inline(always)]
+    pub fn exti8eds(&mut self) -> EXTI8EDS_W {
+        EXTI8EDS_W { w: self }
     }
     #[doc = "Bit 9 - EXTI9EDS"]
-    #[inline]
-    pub fn exti9eds(&mut self) -> _EXTI9EDSW {
-        _EXTI9EDSW { w: self }
+    #[inline(always)]
+    pub fn exti9eds(&mut self) -> EXTI9EDS_W {
+        EXTI9EDS_W { w: self }
     }
     #[doc = "Bit 10 - EXTI10EDS"]
-    #[inline]
-    pub fn exti10eds(&mut self) -> _EXTI10EDSW {
-        _EXTI10EDSW { w: self }
+    #[inline(always)]
+    pub fn exti10eds(&mut self) -> EXTI10EDS_W {
+        EXTI10EDS_W { w: self }
     }
     #[doc = "Bit 11 - EXTI11EDS"]
-    #[inline]
-    pub fn exti11eds(&mut self) -> _EXTI11EDSW {
-        _EXTI11EDSW { w: self }
+    #[inline(always)]
+    pub fn exti11eds(&mut self) -> EXTI11EDS_W {
+        EXTI11EDS_W { w: self }
     }
     #[doc = "Bit 12 - EXTI12EDS"]
-    #[inline]
-    pub fn exti12eds(&mut self) -> _EXTI12EDSW {
-        _EXTI12EDSW { w: self }
+    #[inline(always)]
+    pub fn exti12eds(&mut self) -> EXTI12EDS_W {
+        EXTI12EDS_W { w: self }
     }
     #[doc = "Bit 13 - EXTI13EDS"]
-    #[inline]
-    pub fn exti13eds(&mut self) -> _EXTI13EDSW {
-        _EXTI13EDSW { w: self }
+    #[inline(always)]
+    pub fn exti13eds(&mut self) -> EXTI13EDS_W {
+        EXTI13EDS_W { w: self }
     }
     #[doc = "Bit 14 - EXTI14EDS"]
-    #[inline]
-    pub fn exti14eds(&mut self) -> _EXTI14EDSW {
-        _EXTI14EDSW { w: self }
+    #[inline(always)]
+    pub fn exti14eds(&mut self) -> EXTI14EDS_W {
+        EXTI14EDS_W { w: self }
     }
     #[doc = "Bit 15 - EXTI15EDS"]
-    #[inline]
-    pub fn exti15eds(&mut self) -> _EXTI15EDSW {
-        _EXTI15EDSW { w: self }
+    #[inline(always)]
+    pub fn exti15eds(&mut self) -> EXTI15EDS_W {
+        EXTI15EDS_W { w: self }
     }
 }

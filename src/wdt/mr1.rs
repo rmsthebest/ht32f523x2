@@ -1,146 +1,64 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::MR1 {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register MR1"]
+pub type R = crate::R<u32, super::MR1>;
+#[doc = "Writer for register MR1"]
+pub type W = crate::W<u32, super::MR1>;
+#[doc = "Register MR1 `reset()`'s with value 0"]
+impl crate::ResetValue for super::MR1 {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct WDTDR {
-    bits: u16,
-}
-impl WDTDR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct WPSCR {
-    bits: u8,
-}
-impl WPSCR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _WDTDW<'a> {
+#[doc = "Reader of field `WDTD`"]
+pub type WDTD_R = crate::R<u16, u16>;
+#[doc = "Write proxy for field `WDTD`"]
+pub struct WDTD_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _WDTDW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> WDTD_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        const MASK: u16 = 4095;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x0fff) | ((value as u32) & 0x0fff);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _WPSCW<'a> {
+#[doc = "Reader of field `WPSC`"]
+pub type WPSC_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `WPSC`"]
+pub struct WPSC_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _WPSCW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> WPSC_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 12)) | (((value as u32) & 0x07) << 12);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:11 - WDTD"]
-    #[inline]
-    pub fn wdtd(&self) -> WDTDR {
-        let bits = {
-            const MASK: u16 = 4095;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
-        };
-        WDTDR { bits }
+    #[inline(always)]
+    pub fn wdtd(&self) -> WDTD_R {
+        WDTD_R::new((self.bits & 0x0fff) as u16)
     }
     #[doc = "Bits 12:14 - WPSC"]
-    #[inline]
-    pub fn wpsc(&self) -> WPSCR {
-        let bits = {
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        WPSCR { bits }
+    #[inline(always)]
+    pub fn wpsc(&self) -> WPSC_R {
+        WPSC_R::new(((self.bits >> 12) & 0x07) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:11 - WDTD"]
-    #[inline]
-    pub fn wdtd(&mut self) -> _WDTDW {
-        _WDTDW { w: self }
+    #[inline(always)]
+    pub fn wdtd(&mut self) -> WDTD_W {
+        WDTD_W { w: self }
     }
     #[doc = "Bits 12:14 - WPSC"]
-    #[inline]
-    pub fn wpsc(&mut self) -> _WPSCW {
-        _WPSCW { w: self }
+    #[inline(always)]
+    pub fn wpsc(&mut self) -> WPSC_W {
+        WPSC_W { w: self }
     }
 }

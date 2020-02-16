@@ -1,5 +1,8 @@
 # Change Log
 
+## [v0.3.0] 2020-02-16
+- use svd2rust 0.17.0
+
 ## [v0.2.0] 2019-06-02
 - use svd2rust 0.14.0
 - Changed svd to produce shorter variable names.

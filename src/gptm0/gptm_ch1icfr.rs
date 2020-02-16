@@ -1,187 +1,88 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::GPTM_CH1ICFR {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register GPTM_CH1ICFR"]
+pub type R = crate::R<u32, super::GPTM_CH1ICFR>;
+#[doc = "Writer for register GPTM_CH1ICFR"]
+pub type W = crate::W<u32, super::GPTM_CH1ICFR>;
+#[doc = "Register GPTM_CH1ICFR `reset()`'s with value 0"]
+impl crate::ResetValue for super::GPTM_CH1ICFR {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct TI1FR {
-    bits: u8,
-}
-impl TI1FR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CH1CCSR {
-    bits: u8,
-}
-impl CH1CCSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CH1PSCR {
-    bits: u8,
-}
-impl CH1PSCR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _TI1FW<'a> {
+#[doc = "Reader of field `TI1F`"]
+pub type TI1F_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `TI1F`"]
+pub struct TI1F_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _TI1FW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> TI1F_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CH1CCSW<'a> {
+#[doc = "Reader of field `CH1CCS`"]
+pub type CH1CCS_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CH1CCS`"]
+pub struct CH1CCS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CH1CCSW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CH1CCS_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 16)) | (((value as u32) & 0x03) << 16);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CH1PSCW<'a> {
+#[doc = "Reader of field `CH1PSC`"]
+pub type CH1PSC_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CH1PSC`"]
+pub struct CH1PSC_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CH1PSCW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CH1PSC_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 18;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 18)) | (((value as u32) & 0x03) << 18);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:3 - TI1F"]
-    #[inline]
-    pub fn ti1f(&self) -> TI1FR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        TI1FR { bits }
+    #[inline(always)]
+    pub fn ti1f(&self) -> TI1F_R {
+        TI1F_R::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bits 16:17 - CH1CCS"]
-    #[inline]
-    pub fn ch1ccs(&self) -> CH1CCSR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CH1CCSR { bits }
+    #[inline(always)]
+    pub fn ch1ccs(&self) -> CH1CCS_R {
+        CH1CCS_R::new(((self.bits >> 16) & 0x03) as u8)
     }
     #[doc = "Bits 18:19 - CH1PSC"]
-    #[inline]
-    pub fn ch1psc(&self) -> CH1PSCR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 18;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CH1PSCR { bits }
+    #[inline(always)]
+    pub fn ch1psc(&self) -> CH1PSC_R {
+        CH1PSC_R::new(((self.bits >> 18) & 0x03) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:3 - TI1F"]
-    #[inline]
-    pub fn ti1f(&mut self) -> _TI1FW {
-        _TI1FW { w: self }
+    #[inline(always)]
+    pub fn ti1f(&mut self) -> TI1F_W {
+        TI1F_W { w: self }
     }
     #[doc = "Bits 16:17 - CH1CCS"]
-    #[inline]
-    pub fn ch1ccs(&mut self) -> _CH1CCSW {
-        _CH1CCSW { w: self }
+    #[inline(always)]
+    pub fn ch1ccs(&mut self) -> CH1CCS_W {
+        CH1CCS_W { w: self }
     }
     #[doc = "Bits 18:19 - CH1PSC"]
-    #[inline]
-    pub fn ch1psc(&mut self) -> _CH1PSCW {
-        _CH1PSCW { w: self }
+    #[inline(always)]
+    pub fn ch1psc(&mut self) -> CH1PSC_W {
+        CH1PSC_W { w: self }
     }
 }

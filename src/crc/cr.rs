@@ -1,459 +1,244 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::CR {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register CR"]
+pub type R = crate::R<u32, super::CR>;
+#[doc = "Writer for register CR"]
+pub type W = crate::W<u32, super::CR>;
+#[doc = "Register CR `reset()`'s with value 0"]
+impl crate::ResetValue for super::CR {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct POLYR {
-    bits: u8,
-}
-impl POLYR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct DATBIRVR {
-    bits: bool,
-}
-impl DATBIRVR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct DATBYRVR {
-    bits: bool,
-}
-impl DATBYRVR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct DATCMPLR {
-    bits: bool,
-}
-impl DATCMPLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SUMBIRVR {
-    bits: bool,
-}
-impl SUMBIRVR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SUMBYRVR {
-    bits: bool,
-}
-impl SUMBYRVR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SUMCMPLR {
-    bits: bool,
-}
-impl SUMCMPLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Proxy"]
-pub struct _POLYW<'a> {
+#[doc = "Reader of field `POLY`"]
+pub type POLY_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `POLY`"]
+pub struct POLY_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _POLYW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> POLY_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x03) | ((value as u32) & 0x03);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _DATBIRVW<'a> {
+#[doc = "Reader of field `DATBIRV`"]
+pub type DATBIRV_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `DATBIRV`"]
+pub struct DATBIRV_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _DATBIRVW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> DATBIRV_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _DATBYRVW<'a> {
+#[doc = "Reader of field `DATBYRV`"]
+pub type DATBYRV_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `DATBYRV`"]
+pub struct DATBYRV_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _DATBYRVW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> DATBYRV_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 3;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _DATCMPLW<'a> {
+#[doc = "Reader of field `DATCMPL`"]
+pub type DATCMPL_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `DATCMPL`"]
+pub struct DATCMPL_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _DATCMPLW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> DATCMPL_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SUMBIRVW<'a> {
+#[doc = "Reader of field `SUMBIRV`"]
+pub type SUMBIRV_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SUMBIRV`"]
+pub struct SUMBIRV_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SUMBIRVW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SUMBIRV_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 5;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SUMBYRVW<'a> {
+#[doc = "Reader of field `SUMBYRV`"]
+pub type SUMBYRV_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SUMBYRV`"]
+pub struct SUMBYRV_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SUMBYRVW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SUMBYRV_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 6;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SUMCMPLW<'a> {
+#[doc = "Reader of field `SUMCMPL`"]
+pub type SUMCMPL_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `SUMCMPL`"]
+pub struct SUMCMPL_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SUMCMPLW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> SUMCMPL_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 7;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:1 - POLY"]
-    #[inline]
-    pub fn poly(&self) -> POLYR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        POLYR { bits }
+    #[inline(always)]
+    pub fn poly(&self) -> POLY_R {
+        POLY_R::new((self.bits & 0x03) as u8)
     }
     #[doc = "Bit 2 - DATBIRV"]
-    #[inline]
-    pub fn datbirv(&self) -> DATBIRVR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        DATBIRVR { bits }
+    #[inline(always)]
+    pub fn datbirv(&self) -> DATBIRV_R {
+        DATBIRV_R::new(((self.bits >> 2) & 0x01) != 0)
     }
     #[doc = "Bit 3 - DATBYRV"]
-    #[inline]
-    pub fn datbyrv(&self) -> DATBYRVR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        DATBYRVR { bits }
+    #[inline(always)]
+    pub fn datbyrv(&self) -> DATBYRV_R {
+        DATBYRV_R::new(((self.bits >> 3) & 0x01) != 0)
     }
     #[doc = "Bit 4 - DATCMPL"]
-    #[inline]
-    pub fn datcmpl(&self) -> DATCMPLR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        DATCMPLR { bits }
+    #[inline(always)]
+    pub fn datcmpl(&self) -> DATCMPL_R {
+        DATCMPL_R::new(((self.bits >> 4) & 0x01) != 0)
     }
     #[doc = "Bit 5 - SUMBIRV"]
-    #[inline]
-    pub fn sumbirv(&self) -> SUMBIRVR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SUMBIRVR { bits }
+    #[inline(always)]
+    pub fn sumbirv(&self) -> SUMBIRV_R {
+        SUMBIRV_R::new(((self.bits >> 5) & 0x01) != 0)
     }
     #[doc = "Bit 6 - SUMBYRV"]
-    #[inline]
-    pub fn sumbyrv(&self) -> SUMBYRVR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SUMBYRVR { bits }
+    #[inline(always)]
+    pub fn sumbyrv(&self) -> SUMBYRV_R {
+        SUMBYRV_R::new(((self.bits >> 6) & 0x01) != 0)
     }
     #[doc = "Bit 7 - SUMCMPL"]
-    #[inline]
-    pub fn sumcmpl(&self) -> SUMCMPLR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        SUMCMPLR { bits }
+    #[inline(always)]
+    pub fn sumcmpl(&self) -> SUMCMPL_R {
+        SUMCMPL_R::new(((self.bits >> 7) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:1 - POLY"]
-    #[inline]
-    pub fn poly(&mut self) -> _POLYW {
-        _POLYW { w: self }
+    #[inline(always)]
+    pub fn poly(&mut self) -> POLY_W {
+        POLY_W { w: self }
     }
     #[doc = "Bit 2 - DATBIRV"]
-    #[inline]
-    pub fn datbirv(&mut self) -> _DATBIRVW {
-        _DATBIRVW { w: self }
+    #[inline(always)]
+    pub fn datbirv(&mut self) -> DATBIRV_W {
+        DATBIRV_W { w: self }
     }
     #[doc = "Bit 3 - DATBYRV"]
-    #[inline]
-    pub fn datbyrv(&mut self) -> _DATBYRVW {
-        _DATBYRVW { w: self }
+    #[inline(always)]
+    pub fn datbyrv(&mut self) -> DATBYRV_W {
+        DATBYRV_W { w: self }
     }
     #[doc = "Bit 4 - DATCMPL"]
-    #[inline]
-    pub fn datcmpl(&mut self) -> _DATCMPLW {
-        _DATCMPLW { w: self }
+    #[inline(always)]
+    pub fn datcmpl(&mut self) -> DATCMPL_W {
+        DATCMPL_W { w: self }
     }
     #[doc = "Bit 5 - SUMBIRV"]
-    #[inline]
-    pub fn sumbirv(&mut self) -> _SUMBIRVW {
-        _SUMBIRVW { w: self }
+    #[inline(always)]
+    pub fn sumbirv(&mut self) -> SUMBIRV_W {
+        SUMBIRV_W { w: self }
     }
     #[doc = "Bit 6 - SUMBYRV"]
-    #[inline]
-    pub fn sumbyrv(&mut self) -> _SUMBYRVW {
-        _SUMBYRVW { w: self }
+    #[inline(always)]
+    pub fn sumbyrv(&mut self) -> SUMBYRV_W {
+        SUMBYRV_W { w: self }
     }
     #[doc = "Bit 7 - SUMCMPL"]
-    #[inline]
-    pub fn sumcmpl(&mut self) -> _SUMCMPLW {
-        _SUMCMPLW { w: self }
+    #[inline(always)]
+    pub fn sumcmpl(&mut self) -> SUMCMPL_W {
+        SUMCMPL_W { w: self }
     }
 }

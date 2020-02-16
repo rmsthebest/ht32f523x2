@@ -1,205 +1,98 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::CFGR3 {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register CFGR3"]
+pub type R = crate::R<u32, super::CFGR3>;
+#[doc = "Writer for register CFGR3"]
+pub type W = crate::W<u32, super::CFGR3>;
+#[doc = "Register CFGR3 `reset()`'s with value 0"]
+impl crate::ResetValue for super::CFGR3 {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct DBCNTR {
-    bits: u16,
-}
-impl DBCNTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SRCTYPER {
-    bits: u8,
-}
-impl SRCTYPER {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct DBENR {
-    bits: bool,
-}
-impl DBENR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Proxy"]
-pub struct _DBCNTW<'a> {
+#[doc = "Reader of field `DBCNT`"]
+pub type DBCNT_R = crate::R<u16, u16>;
+#[doc = "Write proxy for field `DBCNT`"]
+pub struct DBCNT_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _DBCNTW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> DBCNT_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        const MASK: u16 = 65535;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0xffff) | ((value as u32) & 0xffff);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SRCTYPEW<'a> {
+#[doc = "Reader of field `SRCTYPE`"]
+pub type SRCTYPE_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SRCTYPE`"]
+pub struct SRCTYPE_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SRCTYPEW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SRCTYPE_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 28;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 28)) | (((value as u32) & 0x07) << 28);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _DBENW<'a> {
+#[doc = "Reader of field `DBEN`"]
+pub type DBEN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `DBEN`"]
+pub struct DBEN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _DBENW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> DBEN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 31;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 31)) | (((value as u32) & 0x01) << 31);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:15 - DBCNT"]
-    #[inline]
-    pub fn dbcnt(&self) -> DBCNTR {
-        let bits = {
-            const MASK: u16 = 65535;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
-        };
-        DBCNTR { bits }
+    #[inline(always)]
+    pub fn dbcnt(&self) -> DBCNT_R {
+        DBCNT_R::new((self.bits & 0xffff) as u16)
     }
     #[doc = "Bits 28:30 - SRCTYPE"]
-    #[inline]
-    pub fn srctype(&self) -> SRCTYPER {
-        let bits = {
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 28;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SRCTYPER { bits }
+    #[inline(always)]
+    pub fn srctype(&self) -> SRCTYPE_R {
+        SRCTYPE_R::new(((self.bits >> 28) & 0x07) as u8)
     }
     #[doc = "Bit 31 - DBEN"]
-    #[inline]
-    pub fn dben(&self) -> DBENR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 31;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        DBENR { bits }
+    #[inline(always)]
+    pub fn dben(&self) -> DBEN_R {
+        DBEN_R::new(((self.bits >> 31) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:15 - DBCNT"]
-    #[inline]
-    pub fn dbcnt(&mut self) -> _DBCNTW {
-        _DBCNTW { w: self }
+    #[inline(always)]
+    pub fn dbcnt(&mut self) -> DBCNT_W {
+        DBCNT_W { w: self }
     }
     #[doc = "Bits 28:30 - SRCTYPE"]
-    #[inline]
-    pub fn srctype(&mut self) -> _SRCTYPEW {
-        _SRCTYPEW { w: self }
+    #[inline(always)]
+    pub fn srctype(&mut self) -> SRCTYPE_W {
+        SRCTYPE_W { w: self }
     }
     #[doc = "Bit 31 - DBEN"]
-    #[inline]
-    pub fn dben(&mut self) -> _DBENW {
-        _DBENW { w: self }
+    #[inline(always)]
+    pub fn dben(&mut self) -> DBEN_W {
+        DBEN_W { w: self }
     }
 }

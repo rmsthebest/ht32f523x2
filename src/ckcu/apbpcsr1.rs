@@ -1,515 +1,280 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::APBPCSR1 {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register APBPCSR1"]
+pub type R = crate::R<u32, super::APBPCSR1>;
+#[doc = "Writer for register APBPCSR1"]
+pub type W = crate::W<u32, super::APBPCSR1>;
+#[doc = "Register APBPCSR1 `reset()`'s with value 0"]
+impl crate::ResetValue for super::APBPCSR1 {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct AFIOPCLKR {
-    bits: u8,
-}
-impl AFIOPCLKR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTIPCLKR {
-    bits: u8,
-}
-impl EXTIPCLKR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct ADCCPCLKR {
-    bits: u8,
-}
-impl ADCCPCLKR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CMPPCLKR {
-    bits: u8,
-}
-impl CMPPCLKR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct WDTRPCLKR {
-    bits: u8,
-}
-impl WDTRPCLKR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct BKPRPCLKR {
-    bits: u8,
-}
-impl BKPRPCLKR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SCI0PCLKR {
-    bits: u8,
-}
-impl SCI0PCLKR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SCI1PCLKR {
-    bits: u8,
-}
-impl SCI1PCLKR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct I2SPCLKR {
-    bits: u8,
-}
-impl I2SPCLKR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SCTM0PCLKR {
-    bits: u8,
-}
-impl SCTM0PCLKR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct SCTM1PCLKR {
-    bits: u8,
-}
-impl SCTM1PCLKR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _AFIOPCLKW<'a> {
+#[doc = "Reader of field `AFIOPCLK`"]
+pub type AFIOPCLK_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `AFIOPCLK`"]
+pub struct AFIOPCLK_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _AFIOPCLKW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> AFIOPCLK_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x03) | ((value as u32) & 0x03);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTIPCLKW<'a> {
+#[doc = "Reader of field `EXTIPCLK`"]
+pub type EXTIPCLK_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `EXTIPCLK`"]
+pub struct EXTIPCLK_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTIPCLKW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> EXTIPCLK_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 2)) | (((value as u32) & 0x03) << 2);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _ADCCPCLKW<'a> {
+#[doc = "Reader of field `ADCCPCLK`"]
+pub type ADCCPCLK_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `ADCCPCLK`"]
+pub struct ADCCPCLK_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _ADCCPCLKW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> ADCCPCLK_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 4)) | (((value as u32) & 0x03) << 4);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CMPPCLKW<'a> {
+#[doc = "Reader of field `CMPPCLK`"]
+pub type CMPPCLK_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CMPPCLK`"]
+pub struct CMPPCLK_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CMPPCLKW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CMPPCLK_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u32) & 0x03) << 8);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _WDTRPCLKW<'a> {
+#[doc = "Reader of field `WDTRPCLK`"]
+pub type WDTRPCLK_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `WDTRPCLK`"]
+pub struct WDTRPCLK_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _WDTRPCLKW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> WDTRPCLK_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 12)) | (((value as u32) & 0x03) << 12);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _BKPRPCLKW<'a> {
+#[doc = "Reader of field `BKPRPCLK`"]
+pub type BKPRPCLK_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `BKPRPCLK`"]
+pub struct BKPRPCLK_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _BKPRPCLKW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> BKPRPCLK_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 14;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 14)) | (((value as u32) & 0x03) << 14);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SCI0PCLKW<'a> {
+#[doc = "Reader of field `SCI0PCLK`"]
+pub type SCI0PCLK_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SCI0PCLK`"]
+pub struct SCI0PCLK_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SCI0PCLKW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SCI0PCLK_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 16)) | (((value as u32) & 0x03) << 16);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SCI1PCLKW<'a> {
+#[doc = "Reader of field `SCI1PCLK`"]
+pub type SCI1PCLK_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SCI1PCLK`"]
+pub struct SCI1PCLK_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SCI1PCLKW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SCI1PCLK_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 18;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 18)) | (((value as u32) & 0x03) << 18);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _I2SPCLKW<'a> {
+#[doc = "Reader of field `I2SPCLK`"]
+pub type I2SPCLK_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `I2SPCLK`"]
+pub struct I2SPCLK_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _I2SPCLKW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> I2SPCLK_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 20;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 20)) | (((value as u32) & 0x03) << 20);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SCTM0PCLKW<'a> {
+#[doc = "Reader of field `SCTM0PCLK`"]
+pub type SCTM0PCLK_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SCTM0PCLK`"]
+pub struct SCTM0PCLK_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SCTM0PCLKW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SCTM0PCLK_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 24;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 24)) | (((value as u32) & 0x03) << 24);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _SCTM1PCLKW<'a> {
+#[doc = "Reader of field `SCTM1PCLK`"]
+pub type SCTM1PCLK_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `SCTM1PCLK`"]
+pub struct SCTM1PCLK_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _SCTM1PCLKW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> SCTM1PCLK_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 26;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 26)) | (((value as u32) & 0x03) << 26);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:1 - AFIOPCLK"]
-    #[inline]
-    pub fn afiopclk(&self) -> AFIOPCLKR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        AFIOPCLKR { bits }
+    #[inline(always)]
+    pub fn afiopclk(&self) -> AFIOPCLK_R {
+        AFIOPCLK_R::new((self.bits & 0x03) as u8)
     }
     #[doc = "Bits 2:3 - EXTIPCLK"]
-    #[inline]
-    pub fn extipclk(&self) -> EXTIPCLKR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        EXTIPCLKR { bits }
+    #[inline(always)]
+    pub fn extipclk(&self) -> EXTIPCLK_R {
+        EXTIPCLK_R::new(((self.bits >> 2) & 0x03) as u8)
     }
     #[doc = "Bits 4:5 - ADCCPCLK"]
-    #[inline]
-    pub fn adccpclk(&self) -> ADCCPCLKR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        ADCCPCLKR { bits }
+    #[inline(always)]
+    pub fn adccpclk(&self) -> ADCCPCLK_R {
+        ADCCPCLK_R::new(((self.bits >> 4) & 0x03) as u8)
     }
     #[doc = "Bits 8:9 - CMPPCLK"]
-    #[inline]
-    pub fn cmppclk(&self) -> CMPPCLKR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CMPPCLKR { bits }
+    #[inline(always)]
+    pub fn cmppclk(&self) -> CMPPCLK_R {
+        CMPPCLK_R::new(((self.bits >> 8) & 0x03) as u8)
     }
     #[doc = "Bits 12:13 - WDTRPCLK"]
-    #[inline]
-    pub fn wdtrpclk(&self) -> WDTRPCLKR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        WDTRPCLKR { bits }
+    #[inline(always)]
+    pub fn wdtrpclk(&self) -> WDTRPCLK_R {
+        WDTRPCLK_R::new(((self.bits >> 12) & 0x03) as u8)
     }
     #[doc = "Bits 14:15 - BKPRPCLK"]
-    #[inline]
-    pub fn bkprpclk(&self) -> BKPRPCLKR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 14;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        BKPRPCLKR { bits }
+    #[inline(always)]
+    pub fn bkprpclk(&self) -> BKPRPCLK_R {
+        BKPRPCLK_R::new(((self.bits >> 14) & 0x03) as u8)
     }
     #[doc = "Bits 16:17 - SCI0PCLK"]
-    #[inline]
-    pub fn sci0pclk(&self) -> SCI0PCLKR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SCI0PCLKR { bits }
+    #[inline(always)]
+    pub fn sci0pclk(&self) -> SCI0PCLK_R {
+        SCI0PCLK_R::new(((self.bits >> 16) & 0x03) as u8)
     }
     #[doc = "Bits 18:19 - SCI1PCLK"]
-    #[inline]
-    pub fn sci1pclk(&self) -> SCI1PCLKR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 18;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SCI1PCLKR { bits }
+    #[inline(always)]
+    pub fn sci1pclk(&self) -> SCI1PCLK_R {
+        SCI1PCLK_R::new(((self.bits >> 18) & 0x03) as u8)
     }
     #[doc = "Bits 20:21 - I2SPCLK"]
-    #[inline]
-    pub fn i2spclk(&self) -> I2SPCLKR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 20;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        I2SPCLKR { bits }
+    #[inline(always)]
+    pub fn i2spclk(&self) -> I2SPCLK_R {
+        I2SPCLK_R::new(((self.bits >> 20) & 0x03) as u8)
     }
     #[doc = "Bits 24:25 - SCTM0PCLK"]
-    #[inline]
-    pub fn sctm0pclk(&self) -> SCTM0PCLKR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 24;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SCTM0PCLKR { bits }
+    #[inline(always)]
+    pub fn sctm0pclk(&self) -> SCTM0PCLK_R {
+        SCTM0PCLK_R::new(((self.bits >> 24) & 0x03) as u8)
     }
     #[doc = "Bits 26:27 - SCTM1PCLK"]
-    #[inline]
-    pub fn sctm1pclk(&self) -> SCTM1PCLKR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 26;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        SCTM1PCLKR { bits }
+    #[inline(always)]
+    pub fn sctm1pclk(&self) -> SCTM1PCLK_R {
+        SCTM1PCLK_R::new(((self.bits >> 26) & 0x03) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:1 - AFIOPCLK"]
-    #[inline]
-    pub fn afiopclk(&mut self) -> _AFIOPCLKW {
-        _AFIOPCLKW { w: self }
+    #[inline(always)]
+    pub fn afiopclk(&mut self) -> AFIOPCLK_W {
+        AFIOPCLK_W { w: self }
     }
     #[doc = "Bits 2:3 - EXTIPCLK"]
-    #[inline]
-    pub fn extipclk(&mut self) -> _EXTIPCLKW {
-        _EXTIPCLKW { w: self }
+    #[inline(always)]
+    pub fn extipclk(&mut self) -> EXTIPCLK_W {
+        EXTIPCLK_W { w: self }
     }
     #[doc = "Bits 4:5 - ADCCPCLK"]
-    #[inline]
-    pub fn adccpclk(&mut self) -> _ADCCPCLKW {
-        _ADCCPCLKW { w: self }
+    #[inline(always)]
+    pub fn adccpclk(&mut self) -> ADCCPCLK_W {
+        ADCCPCLK_W { w: self }
     }
     #[doc = "Bits 8:9 - CMPPCLK"]
-    #[inline]
-    pub fn cmppclk(&mut self) -> _CMPPCLKW {
-        _CMPPCLKW { w: self }
+    #[inline(always)]
+    pub fn cmppclk(&mut self) -> CMPPCLK_W {
+        CMPPCLK_W { w: self }
     }
     #[doc = "Bits 12:13 - WDTRPCLK"]
-    #[inline]
-    pub fn wdtrpclk(&mut self) -> _WDTRPCLKW {
-        _WDTRPCLKW { w: self }
+    #[inline(always)]
+    pub fn wdtrpclk(&mut self) -> WDTRPCLK_W {
+        WDTRPCLK_W { w: self }
     }
     #[doc = "Bits 14:15 - BKPRPCLK"]
-    #[inline]
-    pub fn bkprpclk(&mut self) -> _BKPRPCLKW {
-        _BKPRPCLKW { w: self }
+    #[inline(always)]
+    pub fn bkprpclk(&mut self) -> BKPRPCLK_W {
+        BKPRPCLK_W { w: self }
     }
     #[doc = "Bits 16:17 - SCI0PCLK"]
-    #[inline]
-    pub fn sci0pclk(&mut self) -> _SCI0PCLKW {
-        _SCI0PCLKW { w: self }
+    #[inline(always)]
+    pub fn sci0pclk(&mut self) -> SCI0PCLK_W {
+        SCI0PCLK_W { w: self }
     }
     #[doc = "Bits 18:19 - SCI1PCLK"]
-    #[inline]
-    pub fn sci1pclk(&mut self) -> _SCI1PCLKW {
-        _SCI1PCLKW { w: self }
+    #[inline(always)]
+    pub fn sci1pclk(&mut self) -> SCI1PCLK_W {
+        SCI1PCLK_W { w: self }
     }
     #[doc = "Bits 20:21 - I2SPCLK"]
-    #[inline]
-    pub fn i2spclk(&mut self) -> _I2SPCLKW {
-        _I2SPCLKW { w: self }
+    #[inline(always)]
+    pub fn i2spclk(&mut self) -> I2SPCLK_W {
+        I2SPCLK_W { w: self }
     }
     #[doc = "Bits 24:25 - SCTM0PCLK"]
-    #[inline]
-    pub fn sctm0pclk(&mut self) -> _SCTM0PCLKW {
-        _SCTM0PCLKW { w: self }
+    #[inline(always)]
+    pub fn sctm0pclk(&mut self) -> SCTM0PCLK_W {
+        SCTM0PCLK_W { w: self }
     }
     #[doc = "Bits 26:27 - SCTM1PCLK"]
-    #[inline]
-    pub fn sctm1pclk(&mut self) -> _SCTM1PCLKW {
-        _SCTM1PCLKW { w: self }
+    #[inline(always)]
+    pub fn sctm1pclk(&mut self) -> SCTM1PCLK_W {
+        SCTM1PCLK_W { w: self }
     }
 }

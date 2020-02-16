@@ -1,392 +1,208 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::GPDCFGLR {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register GPDCFGLR"]
+pub type R = crate::R<u32, super::GPDCFGLR>;
+#[doc = "Writer for register GPDCFGLR"]
+pub type W = crate::W<u32, super::GPDCFGLR>;
+#[doc = "Register GPDCFGLR `reset()`'s with value 0"]
+impl crate::ResetValue for super::GPDCFGLR {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct CFG0R {
-    bits: u8,
-}
-impl CFG0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CFG1R {
-    bits: u8,
-}
-impl CFG1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CFG2R {
-    bits: u8,
-}
-impl CFG2R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CFG3R {
-    bits: u8,
-}
-impl CFG3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CFG4R {
-    bits: u8,
-}
-impl CFG4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CFG5R {
-    bits: u8,
-}
-impl CFG5R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CFG6R {
-    bits: u8,
-}
-impl CFG6R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct CFG7R {
-    bits: u8,
-}
-impl CFG7R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _CFG0W<'a> {
+#[doc = "Reader of field `CFG0`"]
+pub type CFG0_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CFG0`"]
+pub struct CFG0_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CFG0W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CFG0_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CFG1W<'a> {
+#[doc = "Reader of field `CFG1`"]
+pub type CFG1_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CFG1`"]
+pub struct CFG1_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CFG1W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CFG1_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 4)) | (((value as u32) & 0x0f) << 4);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CFG2W<'a> {
+#[doc = "Reader of field `CFG2`"]
+pub type CFG2_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CFG2`"]
+pub struct CFG2_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CFG2W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CFG2_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u32) & 0x0f) << 8);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CFG3W<'a> {
+#[doc = "Reader of field `CFG3`"]
+pub type CFG3_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CFG3`"]
+pub struct CFG3_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CFG3W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CFG3_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 12)) | (((value as u32) & 0x0f) << 12);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CFG4W<'a> {
+#[doc = "Reader of field `CFG4`"]
+pub type CFG4_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CFG4`"]
+pub struct CFG4_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CFG4W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CFG4_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 16)) | (((value as u32) & 0x0f) << 16);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CFG5W<'a> {
+#[doc = "Reader of field `CFG5`"]
+pub type CFG5_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CFG5`"]
+pub struct CFG5_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CFG5W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CFG5_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 20;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 20)) | (((value as u32) & 0x0f) << 20);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CFG6W<'a> {
+#[doc = "Reader of field `CFG6`"]
+pub type CFG6_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CFG6`"]
+pub struct CFG6_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CFG6W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CFG6_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 24;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 24)) | (((value as u32) & 0x0f) << 24);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _CFG7W<'a> {
+#[doc = "Reader of field `CFG7`"]
+pub type CFG7_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CFG7`"]
+pub struct CFG7_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CFG7W<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CFG7_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 28;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 28)) | (((value as u32) & 0x0f) << 28);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:3 - CFG0"]
-    #[inline]
-    pub fn cfg0(&self) -> CFG0R {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CFG0R { bits }
+    #[inline(always)]
+    pub fn cfg0(&self) -> CFG0_R {
+        CFG0_R::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bits 4:7 - CFG1"]
-    #[inline]
-    pub fn cfg1(&self) -> CFG1R {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CFG1R { bits }
+    #[inline(always)]
+    pub fn cfg1(&self) -> CFG1_R {
+        CFG1_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
     #[doc = "Bits 8:11 - CFG2"]
-    #[inline]
-    pub fn cfg2(&self) -> CFG2R {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CFG2R { bits }
+    #[inline(always)]
+    pub fn cfg2(&self) -> CFG2_R {
+        CFG2_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
     #[doc = "Bits 12:15 - CFG3"]
-    #[inline]
-    pub fn cfg3(&self) -> CFG3R {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CFG3R { bits }
+    #[inline(always)]
+    pub fn cfg3(&self) -> CFG3_R {
+        CFG3_R::new(((self.bits >> 12) & 0x0f) as u8)
     }
     #[doc = "Bits 16:19 - CFG4"]
-    #[inline]
-    pub fn cfg4(&self) -> CFG4R {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CFG4R { bits }
+    #[inline(always)]
+    pub fn cfg4(&self) -> CFG4_R {
+        CFG4_R::new(((self.bits >> 16) & 0x0f) as u8)
     }
     #[doc = "Bits 20:23 - CFG5"]
-    #[inline]
-    pub fn cfg5(&self) -> CFG5R {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 20;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CFG5R { bits }
+    #[inline(always)]
+    pub fn cfg5(&self) -> CFG5_R {
+        CFG5_R::new(((self.bits >> 20) & 0x0f) as u8)
     }
     #[doc = "Bits 24:27 - CFG6"]
-    #[inline]
-    pub fn cfg6(&self) -> CFG6R {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 24;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CFG6R { bits }
+    #[inline(always)]
+    pub fn cfg6(&self) -> CFG6_R {
+        CFG6_R::new(((self.bits >> 24) & 0x0f) as u8)
     }
     #[doc = "Bits 28:31 - CFG7"]
-    #[inline]
-    pub fn cfg7(&self) -> CFG7R {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 28;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CFG7R { bits }
+    #[inline(always)]
+    pub fn cfg7(&self) -> CFG7_R {
+        CFG7_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:3 - CFG0"]
-    #[inline]
-    pub fn cfg0(&mut self) -> _CFG0W {
-        _CFG0W { w: self }
+    #[inline(always)]
+    pub fn cfg0(&mut self) -> CFG0_W {
+        CFG0_W { w: self }
     }
     #[doc = "Bits 4:7 - CFG1"]
-    #[inline]
-    pub fn cfg1(&mut self) -> _CFG1W {
-        _CFG1W { w: self }
+    #[inline(always)]
+    pub fn cfg1(&mut self) -> CFG1_W {
+        CFG1_W { w: self }
     }
     #[doc = "Bits 8:11 - CFG2"]
-    #[inline]
-    pub fn cfg2(&mut self) -> _CFG2W {
-        _CFG2W { w: self }
+    #[inline(always)]
+    pub fn cfg2(&mut self) -> CFG2_W {
+        CFG2_W { w: self }
     }
     #[doc = "Bits 12:15 - CFG3"]
-    #[inline]
-    pub fn cfg3(&mut self) -> _CFG3W {
-        _CFG3W { w: self }
+    #[inline(always)]
+    pub fn cfg3(&mut self) -> CFG3_W {
+        CFG3_W { w: self }
     }
     #[doc = "Bits 16:19 - CFG4"]
-    #[inline]
-    pub fn cfg4(&mut self) -> _CFG4W {
-        _CFG4W { w: self }
+    #[inline(always)]
+    pub fn cfg4(&mut self) -> CFG4_W {
+        CFG4_W { w: self }
     }
     #[doc = "Bits 20:23 - CFG5"]
-    #[inline]
-    pub fn cfg5(&mut self) -> _CFG5W {
-        _CFG5W { w: self }
+    #[inline(always)]
+    pub fn cfg5(&mut self) -> CFG5_W {
+        CFG5_W { w: self }
     }
     #[doc = "Bits 24:27 - CFG6"]
-    #[inline]
-    pub fn cfg6(&mut self) -> _CFG6W {
-        _CFG6W { w: self }
+    #[inline(always)]
+    pub fn cfg6(&mut self) -> CFG6_W {
+        CFG6_W { w: self }
     }
     #[doc = "Bits 28:31 - CFG7"]
-    #[inline]
-    pub fn cfg7(&mut self) -> _CFG7W {
-        _CFG7W { w: self }
+    #[inline(always)]
+    pub fn cfg7(&mut self) -> CFG7_W {
+        CFG7_W { w: self }
     }
 }

@@ -1,146 +1,64 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::MDID {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register MDID"]
+pub type R = crate::R<u32, super::MDID>;
+#[doc = "Writer for register MDID"]
+pub type W = crate::W<u32, super::MDID>;
+#[doc = "Register MDID `reset()`'s with value 0"]
+impl crate::ResetValue for super::MDID {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct CHIPIDR {
-    bits: u16,
-}
-impl CHIPIDR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct MFIDR {
-    bits: u16,
-}
-impl MFIDR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u16 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _CHIPIDW<'a> {
+#[doc = "Reader of field `CHIPID`"]
+pub type CHIPID_R = crate::R<u16, u16>;
+#[doc = "Write proxy for field `CHIPID`"]
+pub struct CHIPID_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CHIPIDW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CHIPID_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        const MASK: u16 = 65535;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0xffff) | ((value as u32) & 0xffff);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _MFIDW<'a> {
+#[doc = "Reader of field `MFID`"]
+pub type MFID_R = crate::R<u16, u16>;
+#[doc = "Write proxy for field `MFID`"]
+pub struct MFID_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _MFIDW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> MFID_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        const MASK: u16 = 65535;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0xffff << 16)) | (((value as u32) & 0xffff) << 16);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:15 - CHIPID"]
-    #[inline]
-    pub fn chipid(&self) -> CHIPIDR {
-        let bits = {
-            const MASK: u16 = 65535;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
-        };
-        CHIPIDR { bits }
+    #[inline(always)]
+    pub fn chipid(&self) -> CHIPID_R {
+        CHIPID_R::new((self.bits & 0xffff) as u16)
     }
     #[doc = "Bits 16:31 - MFID"]
-    #[inline]
-    pub fn mfid(&self) -> MFIDR {
-        let bits = {
-            const MASK: u16 = 65535;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u16
-        };
-        MFIDR { bits }
+    #[inline(always)]
+    pub fn mfid(&self) -> MFID_R {
+        MFID_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:15 - CHIPID"]
-    #[inline]
-    pub fn chipid(&mut self) -> _CHIPIDW {
-        _CHIPIDW { w: self }
+    #[inline(always)]
+    pub fn chipid(&mut self) -> CHIPID_W {
+        CHIPID_W { w: self }
     }
     #[doc = "Bits 16:31 - MFID"]
-    #[inline]
-    pub fn mfid(&mut self) -> _MFIDW {
-        _MFIDW { w: self }
+    #[inline(always)]
+    pub fn mfid(&mut self) -> MFID_W {
+        MFID_W { w: self }
     }
 }

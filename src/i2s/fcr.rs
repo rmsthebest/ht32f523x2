@@ -1,264 +1,132 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::FCR {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register FCR"]
+pub type R = crate::R<u32, super::FCR>;
+#[doc = "Writer for register FCR"]
+pub type W = crate::W<u32, super::FCR>;
+#[doc = "Register FCR `reset()`'s with value 0"]
+impl crate::ResetValue for super::FCR {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct TXFTLSR {
-    bits: u8,
-}
-impl TXFTLSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RXFTLSR {
-    bits: u8,
-}
-impl RXFTLSR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct TXFRSTR {
-    bits: bool,
-}
-impl TXFRSTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct RXFRSTR {
-    bits: bool,
-}
-impl RXFRSTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Proxy"]
-pub struct _TXFTLSW<'a> {
+#[doc = "Reader of field `TXFTLS`"]
+pub type TXFTLS_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `TXFTLS`"]
+pub struct TXFTLS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _TXFTLSW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> TXFTLS_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _RXFTLSW<'a> {
+#[doc = "Reader of field `RXFTLS`"]
+pub type RXFTLS_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `RXFTLS`"]
+pub struct RXFTLS_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _RXFTLSW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> RXFTLS_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 4)) | (((value as u32) & 0x0f) << 4);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _TXFRSTW<'a> {
+#[doc = "Reader of field `TXFRST`"]
+pub type TXFRST_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `TXFRST`"]
+pub struct TXFRST_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _TXFRSTW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> TXFRST_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _RXFRSTW<'a> {
+#[doc = "Reader of field `RXFRST`"]
+pub type RXFRST_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `RXFRST`"]
+pub struct RXFRST_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _RXFRSTW<'a> {
-    #[doc = r" Sets the field bit"]
+impl<'a> RXFRST_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 9;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:3 - TXFTLS"]
-    #[inline]
-    pub fn txftls(&self) -> TXFTLSR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        TXFTLSR { bits }
+    #[inline(always)]
+    pub fn txftls(&self) -> TXFTLS_R {
+        TXFTLS_R::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bits 4:7 - RXFTLS"]
-    #[inline]
-    pub fn rxftls(&self) -> RXFTLSR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        RXFTLSR { bits }
+    #[inline(always)]
+    pub fn rxftls(&self) -> RXFTLS_R {
+        RXFTLS_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
     #[doc = "Bit 8 - TXFRST"]
-    #[inline]
-    pub fn txfrst(&self) -> TXFRSTR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        TXFRSTR { bits }
+    #[inline(always)]
+    pub fn txfrst(&self) -> TXFRST_R {
+        TXFRST_R::new(((self.bits >> 8) & 0x01) != 0)
     }
     #[doc = "Bit 9 - RXFRST"]
-    #[inline]
-    pub fn rxfrst(&self) -> RXFRSTR {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 9;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        RXFRSTR { bits }
+    #[inline(always)]
+    pub fn rxfrst(&self) -> RXFRST_R {
+        RXFRST_R::new(((self.bits >> 9) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:3 - TXFTLS"]
-    #[inline]
-    pub fn txftls(&mut self) -> _TXFTLSW {
-        _TXFTLSW { w: self }
+    #[inline(always)]
+    pub fn txftls(&mut self) -> TXFTLS_W {
+        TXFTLS_W { w: self }
     }
     #[doc = "Bits 4:7 - RXFTLS"]
-    #[inline]
-    pub fn rxftls(&mut self) -> _RXFTLSW {
-        _RXFTLSW { w: self }
+    #[inline(always)]
+    pub fn rxftls(&mut self) -> RXFTLS_W {
+        RXFTLS_W { w: self }
     }
     #[doc = "Bit 8 - TXFRST"]
-    #[inline]
-    pub fn txfrst(&mut self) -> _TXFRSTW {
-        _TXFRSTW { w: self }
+    #[inline(always)]
+    pub fn txfrst(&mut self) -> TXFRST_W {
+        TXFRST_W { w: self }
     }
     #[doc = "Bit 9 - RXFRST"]
-    #[inline]
-    pub fn rxfrst(&mut self) -> _RXFRSTW {
-        _RXFRSTW { w: self }
+    #[inline(always)]
+    pub fn rxfrst(&mut self) -> RXFRST_W {
+        RXFRST_W { w: self }
     }
 }

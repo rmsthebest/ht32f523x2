@@ -1,228 +1,112 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::CKST {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register CKST"]
+pub type R = crate::R<u32, super::CKST>;
+#[doc = "Writer for register CKST"]
+pub type W = crate::W<u32, super::CKST>;
+#[doc = "Register CKST `reset()`'s with value 0"]
+impl crate::ResetValue for super::CKST {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct CKSWSTR {
-    bits: u8,
-}
-impl CKSWSTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PLLSTR {
-    bits: u8,
-}
-impl PLLSTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct HSESTR {
-    bits: u8,
-}
-impl HSESTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct HSISTR {
-    bits: u8,
-}
-impl HSISTR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _CKSWSTW<'a> {
+#[doc = "Reader of field `CKSWST`"]
+pub type CKSWST_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `CKSWST`"]
+pub struct CKSWST_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _CKSWSTW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> CKSWST_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x07) | ((value as u32) & 0x07);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _PLLSTW<'a> {
+#[doc = "Reader of field `PLLST`"]
+pub type PLLST_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `PLLST`"]
+pub struct PLLST_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PLLSTW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> PLLST_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u32) & 0x0f) << 8);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _HSESTW<'a> {
+#[doc = "Reader of field `HSEST`"]
+pub type HSEST_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `HSEST`"]
+pub struct HSEST_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _HSESTW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> HSEST_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 3;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x03 << 16)) | (((value as u32) & 0x03) << 16);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _HSISTW<'a> {
+#[doc = "Reader of field `HSIST`"]
+pub type HSIST_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `HSIST`"]
+pub struct HSIST_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _HSISTW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> HSIST_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 7;
-        const OFFSET: u8 = 24;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x07 << 24)) | (((value as u32) & 0x07) << 24);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:2 - CKSWST"]
-    #[inline]
-    pub fn ckswst(&self) -> CKSWSTR {
-        let bits = {
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        CKSWSTR { bits }
+    #[inline(always)]
+    pub fn ckswst(&self) -> CKSWST_R {
+        CKSWST_R::new((self.bits & 0x07) as u8)
     }
     #[doc = "Bits 8:11 - PLLST"]
-    #[inline]
-    pub fn pllst(&self) -> PLLSTR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        PLLSTR { bits }
+    #[inline(always)]
+    pub fn pllst(&self) -> PLLST_R {
+        PLLST_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
     #[doc = "Bits 16:17 - HSEST"]
-    #[inline]
-    pub fn hsest(&self) -> HSESTR {
-        let bits = {
-            const MASK: u8 = 3;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        HSESTR { bits }
+    #[inline(always)]
+    pub fn hsest(&self) -> HSEST_R {
+        HSEST_R::new(((self.bits >> 16) & 0x03) as u8)
     }
     #[doc = "Bits 24:26 - HSIST"]
-    #[inline]
-    pub fn hsist(&self) -> HSISTR {
-        let bits = {
-            const MASK: u8 = 7;
-            const OFFSET: u8 = 24;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        HSISTR { bits }
+    #[inline(always)]
+    pub fn hsist(&self) -> HSIST_R {
+        HSIST_R::new(((self.bits >> 24) & 0x07) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:2 - CKSWST"]
-    #[inline]
-    pub fn ckswst(&mut self) -> _CKSWSTW {
-        _CKSWSTW { w: self }
+    #[inline(always)]
+    pub fn ckswst(&mut self) -> CKSWST_W {
+        CKSWST_W { w: self }
     }
     #[doc = "Bits 8:11 - PLLST"]
-    #[inline]
-    pub fn pllst(&mut self) -> _PLLSTW {
-        _PLLSTW { w: self }
+    #[inline(always)]
+    pub fn pllst(&mut self) -> PLLST_W {
+        PLLST_W { w: self }
     }
     #[doc = "Bits 16:17 - HSEST"]
-    #[inline]
-    pub fn hsest(&mut self) -> _HSESTW {
-        _HSESTW { w: self }
+    #[inline(always)]
+    pub fn hsest(&mut self) -> HSEST_W {
+        HSEST_W { w: self }
     }
     #[doc = "Bits 24:26 - HSIST"]
-    #[inline]
-    pub fn hsist(&mut self) -> _HSISTW {
-        _HSISTW { w: self }
+    #[inline(always)]
+    pub fn hsist(&mut self) -> HSIST_W {
+        HSIST_W { w: self }
     }
 }

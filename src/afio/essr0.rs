@@ -1,392 +1,208 @@
-#[doc = r" Value read from the register"]
-pub struct R {
-    bits: u32,
-}
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::ESSR0 {
-    #[doc = r" Modifies the contents of the register"]
-    #[inline]
-    pub fn modify<F>(&self, f: F)
-    where
-        for<'w> F: FnOnce(&R, &'w mut W) -> &'w mut W,
-    {
-        let bits = self.register.get();
-        let r = R { bits: bits };
-        let mut w = W { bits: bits };
-        f(&r, &mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Reads the contents of the register"]
-    #[inline]
-    pub fn read(&self) -> R {
-        R {
-            bits: self.register.get(),
-        }
-    }
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
-    }
-    #[doc = r" Writes the reset value to the register"]
-    #[inline]
-    pub fn reset(&self) {
-        self.write(|w| w)
+#[doc = "Reader of register ESSR0"]
+pub type R = crate::R<u32, super::ESSR0>;
+#[doc = "Writer for register ESSR0"]
+pub type W = crate::W<u32, super::ESSR0>;
+#[doc = "Register ESSR0 `reset()`'s with value 0"]
+impl crate::ResetValue for super::ESSR0 {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = r" Value of the field"]
-pub struct EXTI0PINR {
-    bits: u8,
-}
-impl EXTI0PINR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI1PINR {
-    bits: u8,
-}
-impl EXTI1PINR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI2PINR {
-    bits: u8,
-}
-impl EXTI2PINR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI3PINR {
-    bits: u8,
-}
-impl EXTI3PINR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI4PINR {
-    bits: u8,
-}
-impl EXTI4PINR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI5PINR {
-    bits: u8,
-}
-impl EXTI5PINR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI6PINR {
-    bits: u8,
-}
-impl EXTI6PINR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct EXTI7PINR {
-    bits: u8,
-}
-impl EXTI7PINR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Proxy"]
-pub struct _EXTI0PINW<'a> {
+#[doc = "Reader of field `EXTI0PIN`"]
+pub type EXTI0PIN_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `EXTI0PIN`"]
+pub struct EXTI0PIN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI0PINW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> EXTI0PIN_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI1PINW<'a> {
+#[doc = "Reader of field `EXTI1PIN`"]
+pub type EXTI1PIN_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `EXTI1PIN`"]
+pub struct EXTI1PIN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI1PINW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> EXTI1PIN_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 4;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 4)) | (((value as u32) & 0x0f) << 4);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI2PINW<'a> {
+#[doc = "Reader of field `EXTI2PIN`"]
+pub type EXTI2PIN_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `EXTI2PIN`"]
+pub struct EXTI2PIN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI2PINW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> EXTI2PIN_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 8;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u32) & 0x0f) << 8);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI3PINW<'a> {
+#[doc = "Reader of field `EXTI3PIN`"]
+pub type EXTI3PIN_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `EXTI3PIN`"]
+pub struct EXTI3PIN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI3PINW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> EXTI3PIN_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 12;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 12)) | (((value as u32) & 0x0f) << 12);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI4PINW<'a> {
+#[doc = "Reader of field `EXTI4PIN`"]
+pub type EXTI4PIN_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `EXTI4PIN`"]
+pub struct EXTI4PIN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI4PINW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> EXTI4PIN_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 16;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 16)) | (((value as u32) & 0x0f) << 16);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI5PINW<'a> {
+#[doc = "Reader of field `EXTI5PIN`"]
+pub type EXTI5PIN_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `EXTI5PIN`"]
+pub struct EXTI5PIN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI5PINW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> EXTI5PIN_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 20;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 20)) | (((value as u32) & 0x0f) << 20);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI6PINW<'a> {
+#[doc = "Reader of field `EXTI6PIN`"]
+pub type EXTI6PIN_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `EXTI6PIN`"]
+pub struct EXTI6PIN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI6PINW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> EXTI6PIN_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 24;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 24)) | (((value as u32) & 0x0f) << 24);
         self.w
     }
 }
-#[doc = r" Proxy"]
-pub struct _EXTI7PINW<'a> {
+#[doc = "Reader of field `EXTI7PIN`"]
+pub type EXTI7PIN_R = crate::R<u8, u8>;
+#[doc = "Write proxy for field `EXTI7PIN`"]
+pub struct EXTI7PIN_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _EXTI7PINW<'a> {
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+impl<'a> EXTI7PIN_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        const MASK: u8 = 15;
-        const OFFSET: u8 = 28;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !(0x0f << 28)) | (((value as u32) & 0x0f) << 28);
         self.w
     }
 }
 impl R {
-    #[doc = r" Value of the register as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u32 {
-        self.bits
-    }
     #[doc = "Bits 0:3 - EXTI0PIN"]
-    #[inline]
-    pub fn exti0pin(&self) -> EXTI0PINR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        EXTI0PINR { bits }
+    #[inline(always)]
+    pub fn exti0pin(&self) -> EXTI0PIN_R {
+        EXTI0PIN_R::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bits 4:7 - EXTI1PIN"]
-    #[inline]
-    pub fn exti1pin(&self) -> EXTI1PINR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        EXTI1PINR { bits }
+    #[inline(always)]
+    pub fn exti1pin(&self) -> EXTI1PIN_R {
+        EXTI1PIN_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
     #[doc = "Bits 8:11 - EXTI2PIN"]
-    #[inline]
-    pub fn exti2pin(&self) -> EXTI2PINR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        EXTI2PINR { bits }
+    #[inline(always)]
+    pub fn exti2pin(&self) -> EXTI2PIN_R {
+        EXTI2PIN_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
     #[doc = "Bits 12:15 - EXTI3PIN"]
-    #[inline]
-    pub fn exti3pin(&self) -> EXTI3PINR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 12;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        EXTI3PINR { bits }
+    #[inline(always)]
+    pub fn exti3pin(&self) -> EXTI3PIN_R {
+        EXTI3PIN_R::new(((self.bits >> 12) & 0x0f) as u8)
     }
     #[doc = "Bits 16:19 - EXTI4PIN"]
-    #[inline]
-    pub fn exti4pin(&self) -> EXTI4PINR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 16;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        EXTI4PINR { bits }
+    #[inline(always)]
+    pub fn exti4pin(&self) -> EXTI4PIN_R {
+        EXTI4PIN_R::new(((self.bits >> 16) & 0x0f) as u8)
     }
     #[doc = "Bits 20:23 - EXTI5PIN"]
-    #[inline]
-    pub fn exti5pin(&self) -> EXTI5PINR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 20;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        EXTI5PINR { bits }
+    #[inline(always)]
+    pub fn exti5pin(&self) -> EXTI5PIN_R {
+        EXTI5PIN_R::new(((self.bits >> 20) & 0x0f) as u8)
     }
     #[doc = "Bits 24:27 - EXTI6PIN"]
-    #[inline]
-    pub fn exti6pin(&self) -> EXTI6PINR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 24;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        EXTI6PINR { bits }
+    #[inline(always)]
+    pub fn exti6pin(&self) -> EXTI6PIN_R {
+        EXTI6PIN_R::new(((self.bits >> 24) & 0x0f) as u8)
     }
     #[doc = "Bits 28:31 - EXTI7PIN"]
-    #[inline]
-    pub fn exti7pin(&self) -> EXTI7PINR {
-        let bits = {
-            const MASK: u8 = 15;
-            const OFFSET: u8 = 28;
-            ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        EXTI7PINR { bits }
+    #[inline(always)]
+    pub fn exti7pin(&self) -> EXTI7PIN_R {
+        EXTI7PIN_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bits 0:3 - EXTI0PIN"]
-    #[inline]
-    pub fn exti0pin(&mut self) -> _EXTI0PINW {
-        _EXTI0PINW { w: self }
+    #[inline(always)]
+    pub fn exti0pin(&mut self) -> EXTI0PIN_W {
+        EXTI0PIN_W { w: self }
     }
     #[doc = "Bits 4:7 - EXTI1PIN"]
-    #[inline]
-    pub fn exti1pin(&mut self) -> _EXTI1PINW {
-        _EXTI1PINW { w: self }
+    #[inline(always)]
+    pub fn exti1pin(&mut self) -> EXTI1PIN_W {
+        EXTI1PIN_W { w: self }
     }
     #[doc = "Bits 8:11 - EXTI2PIN"]
-    #[inline]
-    pub fn exti2pin(&mut self) -> _EXTI2PINW {
-        _EXTI2PINW { w: self }
+    #[inline(always)]
+    pub fn exti2pin(&mut self) -> EXTI2PIN_W {
+        EXTI2PIN_W { w: self }
     }
     #[doc = "Bits 12:15 - EXTI3PIN"]
-    #[inline]
-    pub fn exti3pin(&mut self) -> _EXTI3PINW {
-        _EXTI3PINW { w: self }
+    #[inline(always)]
+    pub fn exti3pin(&mut self) -> EXTI3PIN_W {
+        EXTI3PIN_W { w: self }
     }
     #[doc = "Bits 16:19 - EXTI4PIN"]
-    #[inline]
-    pub fn exti4pin(&mut self) -> _EXTI4PINW {
-        _EXTI4PINW { w: self }
+    #[inline(always)]
+    pub fn exti4pin(&mut self) -> EXTI4PIN_W {
+        EXTI4PIN_W { w: self }
     }
     #[doc = "Bits 20:23 - EXTI5PIN"]
-    #[inline]
-    pub fn exti5pin(&mut self) -> _EXTI5PINW {
-        _EXTI5PINW { w: self }
+    #[inline(always)]
+    pub fn exti5pin(&mut self) -> EXTI5PIN_W {
+        EXTI5PIN_W { w: self }
     }
     #[doc = "Bits 24:27 - EXTI6PIN"]
-    #[inline]
-    pub fn exti6pin(&mut self) -> _EXTI6PINW {
-        _EXTI6PINW { w: self }
+    #[inline(always)]
+    pub fn exti6pin(&mut self) -> EXTI6PIN_W {
+        EXTI6PIN_W { w: self }
     }
     #[doc = "Bits 28:31 - EXTI7PIN"]
-    #[inline]
-    pub fn exti7pin(&mut self) -> _EXTI7PINW {
-        _EXTI7PINW { w: self }
+    #[inline(always)]
+    pub fn exti7pin(&mut self) -> EXTI7PIN_W {
+        EXTI7PIN_W { w: self }
     }
 }
