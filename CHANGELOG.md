@@ -1,5 +1,8 @@
 # Change Log
 
+## [v0.4.0] 2023-03-12
+- use svd2rust 0.28.0
+
 ## [v0.3.0] 2020-02-16
 - use svd2rust 0.17.0
 
