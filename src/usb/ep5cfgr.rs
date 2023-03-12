@@ -1,153 +1,67 @@
-#[doc = "Reader of register EP5CFGR"]
-pub type R = crate::R<u32, super::EP5CFGR>;
-#[doc = "Writer for register EP5CFGR"]
-pub type W = crate::W<u32, super::EP5CFGR>;
-#[doc = "Register EP5CFGR `reset()`'s with value 0"]
-impl crate::ResetValue for super::EP5CFGR {
-    type Type = u32;
+#[doc = "Register `EP5CFGR` reader"]
+pub struct R(crate::R<EP5CFGR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<EP5CFGR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `EPBUFA`"]
-pub type EPBUFA_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `EPBUFA`"]
-pub struct EPBUFA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EPBUFA_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<EP5CFGR_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | ((value as u32) & 0x03ff);
-        self.w
+    fn from(reader: crate::R<EP5CFGR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `EPLEN`"]
-pub type EPLEN_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `EPLEN`"]
-pub struct EPLEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EPLEN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+#[doc = "Register `EP5CFGR` writer"]
+pub struct W(crate::W<EP5CFGR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<EP5CFGR_SPEC>;
     #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 10)) | (((value as u32) & 0x03ff) << 10);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `SDBS`"]
-pub type SDBS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SDBS`"]
-pub struct SDBS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SDBS_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | (((value as u32) & 0x01) << 23);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `EPADR`"]
-pub type EPADR_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `EPADR`"]
-pub struct EPADR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EPADR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::W<EP5CFGR_SPEC>> for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | (((value as u32) & 0x0f) << 24);
-        self.w
+    fn from(writer: crate::W<EP5CFGR_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `EPDIR`"]
-pub type EPDIR_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `EPDIR`"]
-pub struct EPDIR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EPDIR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | (((value as u32) & 0x01) << 28);
-        self.w
-    }
-}
-#[doc = "Reader of field `EPTYPE`"]
-pub type EPTYPE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `EPTYPE`"]
-pub struct EPTYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EPTYPE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | (((value as u32) & 0x01) << 29);
-        self.w
-    }
-}
-#[doc = "Reader of field `EPEN`"]
-pub type EPEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `EPEN`"]
-pub struct EPEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EPEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | (((value as u32) & 0x01) << 31);
-        self.w
-    }
-}
+#[doc = "Field `EPBUFA` reader - EPBUFA"]
+pub type EPBUFA_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `EPBUFA` writer - EPBUFA"]
+pub type EPBUFA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EP5CFGR_SPEC, u16, u16, 10, O>;
+#[doc = "Field `EPLEN` reader - EPLEN"]
+pub type EPLEN_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `EPLEN` writer - EPLEN"]
+pub type EPLEN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EP5CFGR_SPEC, u16, u16, 10, O>;
+#[doc = "Field `SDBS` reader - SDBS"]
+pub type SDBS_R = crate::BitReader<bool>;
+#[doc = "Field `SDBS` writer - SDBS"]
+pub type SDBS_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP5CFGR_SPEC, bool, O>;
+#[doc = "Field `EPADR` reader - EPADR"]
+pub type EPADR_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `EPADR` writer - EPADR"]
+pub type EPADR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EP5CFGR_SPEC, u8, u8, 4, O>;
+#[doc = "Field `EPDIR` reader - EPDIR"]
+pub type EPDIR_R = crate::BitReader<bool>;
+#[doc = "Field `EPDIR` writer - EPDIR"]
+pub type EPDIR_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP5CFGR_SPEC, bool, O>;
+#[doc = "Field `EPTYPE` reader - EPTYPE"]
+pub type EPTYPE_R = crate::BitReader<bool>;
+#[doc = "Field `EPTYPE` writer - EPTYPE"]
+pub type EPTYPE_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP5CFGR_SPEC, bool, O>;
+#[doc = "Field `EPEN` reader - EPEN"]
+pub type EPEN_R = crate::BitReader<bool>;
+#[doc = "Field `EPEN` writer - EPEN"]
+pub type EPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP5CFGR_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:9 - EPBUFA"]
     #[inline(always)]
@@ -162,7 +76,7 @@ impl R {
     #[doc = "Bit 23 - SDBS"]
     #[inline(always)]
     pub fn sdbs(&self) -> SDBS_R {
-        SDBS_R::new(((self.bits >> 23) & 0x01) != 0)
+        SDBS_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bits 24:27 - EPADR"]
     #[inline(always)]
@@ -172,53 +86,85 @@ impl R {
     #[doc = "Bit 28 - EPDIR"]
     #[inline(always)]
     pub fn epdir(&self) -> EPDIR_R {
-        EPDIR_R::new(((self.bits >> 28) & 0x01) != 0)
+        EPDIR_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - EPTYPE"]
     #[inline(always)]
     pub fn eptype(&self) -> EPTYPE_R {
-        EPTYPE_R::new(((self.bits >> 29) & 0x01) != 0)
+        EPTYPE_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 31 - EPEN"]
     #[inline(always)]
     pub fn epen(&self) -> EPEN_R {
-        EPEN_R::new(((self.bits >> 31) & 0x01) != 0)
+        EPEN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:9 - EPBUFA"]
     #[inline(always)]
-    pub fn epbufa(&mut self) -> EPBUFA_W {
-        EPBUFA_W { w: self }
+    #[must_use]
+    pub fn epbufa(&mut self) -> EPBUFA_W<0> {
+        EPBUFA_W::new(self)
     }
     #[doc = "Bits 10:19 - EPLEN"]
     #[inline(always)]
-    pub fn eplen(&mut self) -> EPLEN_W {
-        EPLEN_W { w: self }
+    #[must_use]
+    pub fn eplen(&mut self) -> EPLEN_W<10> {
+        EPLEN_W::new(self)
     }
     #[doc = "Bit 23 - SDBS"]
     #[inline(always)]
-    pub fn sdbs(&mut self) -> SDBS_W {
-        SDBS_W { w: self }
+    #[must_use]
+    pub fn sdbs(&mut self) -> SDBS_W<23> {
+        SDBS_W::new(self)
     }
     #[doc = "Bits 24:27 - EPADR"]
     #[inline(always)]
-    pub fn epadr(&mut self) -> EPADR_W {
-        EPADR_W { w: self }
+    #[must_use]
+    pub fn epadr(&mut self) -> EPADR_W<24> {
+        EPADR_W::new(self)
     }
     #[doc = "Bit 28 - EPDIR"]
     #[inline(always)]
-    pub fn epdir(&mut self) -> EPDIR_W {
-        EPDIR_W { w: self }
+    #[must_use]
+    pub fn epdir(&mut self) -> EPDIR_W<28> {
+        EPDIR_W::new(self)
     }
     #[doc = "Bit 29 - EPTYPE"]
     #[inline(always)]
-    pub fn eptype(&mut self) -> EPTYPE_W {
-        EPTYPE_W { w: self }
+    #[must_use]
+    pub fn eptype(&mut self) -> EPTYPE_W<29> {
+        EPTYPE_W::new(self)
     }
     #[doc = "Bit 31 - EPEN"]
     #[inline(always)]
-    pub fn epen(&mut self) -> EPEN_W {
-        EPEN_W { w: self }
+    #[must_use]
+    pub fn epen(&mut self) -> EPEN_W<31> {
+        EPEN_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "EP5CFGR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ep5cfgr](index.html) module"]
+pub struct EP5CFGR_SPEC;
+impl crate::RegisterSpec for EP5CFGR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [ep5cfgr::R](R) reader structure"]
+impl crate::Readable for EP5CFGR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ep5cfgr::W](W) writer structure"]
+impl crate::Writable for EP5CFGR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets EP5CFGR to value 0"]
+impl crate::Resettable for EP5CFGR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

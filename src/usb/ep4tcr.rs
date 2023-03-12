@@ -1,43 +1,47 @@
-#[doc = "Reader of register EP4TCR"]
-pub type R = crate::R<u32, super::EP4TCR>;
-#[doc = "Writer for register EP4TCR"]
-pub type W = crate::W<u32, super::EP4TCR>;
-#[doc = "Register EP4TCR `reset()`'s with value 0"]
-impl crate::ResetValue for super::EP4TCR {
-    type Type = u32;
+#[doc = "Register `EP4TCR` reader"]
+pub struct R(crate::R<EP4TCR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<EP4TCR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TCNT0`"]
-pub type TCNT0_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `TCNT0`"]
-pub struct TCNT0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TCNT0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<EP4TCR_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | ((value as u32) & 0x03ff);
-        self.w
+    fn from(reader: crate::R<EP4TCR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `TCNT1`"]
-pub type TCNT1_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `TCNT1`"]
-pub struct TCNT1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TCNT1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+#[doc = "Register `EP4TCR` writer"]
+pub struct W(crate::W<EP4TCR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<EP4TCR_SPEC>;
     #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 16)) | (((value as u32) & 0x03ff) << 16);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<EP4TCR_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<EP4TCR_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `TCNT0` reader - TCNT0"]
+pub type TCNT0_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `TCNT0` writer - TCNT0"]
+pub type TCNT0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EP4TCR_SPEC, u16, u16, 10, O>;
+#[doc = "Field `TCNT1` reader - TCNT1"]
+pub type TCNT1_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `TCNT1` writer - TCNT1"]
+pub type TCNT1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, EP4TCR_SPEC, u16, u16, 10, O>;
 impl R {
     #[doc = "Bits 0:9 - TCNT0"]
     #[inline(always)]
@@ -53,12 +57,39 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - TCNT0"]
     #[inline(always)]
-    pub fn tcnt0(&mut self) -> TCNT0_W {
-        TCNT0_W { w: self }
+    #[must_use]
+    pub fn tcnt0(&mut self) -> TCNT0_W<0> {
+        TCNT0_W::new(self)
     }
     #[doc = "Bits 16:25 - TCNT1"]
     #[inline(always)]
-    pub fn tcnt1(&mut self) -> TCNT1_W {
-        TCNT1_W { w: self }
+    #[must_use]
+    pub fn tcnt1(&mut self) -> TCNT1_W<16> {
+        TCNT1_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "EP4TCR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ep4tcr](index.html) module"]
+pub struct EP4TCR_SPEC;
+impl crate::RegisterSpec for EP4TCR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [ep4tcr::R](R) reader structure"]
+impl crate::Readable for EP4TCR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ep4tcr::W](W) writer structure"]
+impl crate::Writable for EP4TCR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets EP4TCR to value 0"]
+impl crate::Resettable for EP4TCR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -1,220 +1,155 @@
-#[doc = "Reader of register IER"]
-pub type R = crate::R<u32, super::IER>;
-#[doc = "Writer for register IER"]
-pub type W = crate::W<u32, super::IER>;
-#[doc = "Register IER `reset()`'s with value 0"]
-impl crate::ResetValue for super::IER {
-    type Type = u32;
+#[doc = "Register `IER` reader"]
+pub struct R(crate::R<IER_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<IER_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `PARE`"]
-pub type PARE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PARE`"]
-pub struct PARE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PARE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<IER_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<IER_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `RXCE`"]
-pub type RXCE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RXCE`"]
-pub struct RXCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXCE_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `IER` writer"]
+pub struct W(crate::W<IER_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<IER_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TXCE`"]
-pub type TXCE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TXCE`"]
-pub struct TXCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXCE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `WTE`"]
-pub type WTE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WTE`"]
-pub struct WTE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WTE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<IER_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn from(writer: crate::W<IER_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `CARDIRE`"]
-pub type CARDIRE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CARDIRE`"]
-pub struct CARDIRE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARDIRE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Reader of field `TXBEE`"]
-pub type TXBEE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TXBEE`"]
-pub struct TXBEE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXBEE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
-        self.w
-    }
-}
+#[doc = "Field `PARE` reader - PARE"]
+pub type PARE_R = crate::BitReader<bool>;
+#[doc = "Field `PARE` writer - PARE"]
+pub type PARE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+#[doc = "Field `RXCE` reader - RXCE"]
+pub type RXCE_R = crate::BitReader<bool>;
+#[doc = "Field `RXCE` writer - RXCE"]
+pub type RXCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+#[doc = "Field `TXCE` reader - TXCE"]
+pub type TXCE_R = crate::BitReader<bool>;
+#[doc = "Field `TXCE` writer - TXCE"]
+pub type TXCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+#[doc = "Field `WTE` reader - WTE"]
+pub type WTE_R = crate::BitReader<bool>;
+#[doc = "Field `WTE` writer - WTE"]
+pub type WTE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+#[doc = "Field `CARDIRE` reader - CARDIRE"]
+pub type CARDIRE_R = crate::BitReader<bool>;
+#[doc = "Field `CARDIRE` writer - CARDIRE"]
+pub type CARDIRE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+#[doc = "Field `TXBEE` reader - TXBEE"]
+pub type TXBEE_R = crate::BitReader<bool>;
+#[doc = "Field `TXBEE` writer - TXBEE"]
+pub type TXBEE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - PARE"]
     #[inline(always)]
     pub fn pare(&self) -> PARE_R {
-        PARE_R::new((self.bits & 0x01) != 0)
+        PARE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RXCE"]
     #[inline(always)]
     pub fn rxce(&self) -> RXCE_R {
-        RXCE_R::new(((self.bits >> 1) & 0x01) != 0)
+        RXCE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - TXCE"]
     #[inline(always)]
     pub fn txce(&self) -> TXCE_R {
-        TXCE_R::new(((self.bits >> 2) & 0x01) != 0)
+        TXCE_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - WTE"]
     #[inline(always)]
     pub fn wte(&self) -> WTE_R {
-        WTE_R::new(((self.bits >> 3) & 0x01) != 0)
+        WTE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 6 - CARDIRE"]
     #[inline(always)]
     pub fn cardire(&self) -> CARDIRE_R {
-        CARDIRE_R::new(((self.bits >> 6) & 0x01) != 0)
+        CARDIRE_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - TXBEE"]
     #[inline(always)]
     pub fn txbee(&self) -> TXBEE_R {
-        TXBEE_R::new(((self.bits >> 7) & 0x01) != 0)
+        TXBEE_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - PARE"]
     #[inline(always)]
-    pub fn pare(&mut self) -> PARE_W {
-        PARE_W { w: self }
+    #[must_use]
+    pub fn pare(&mut self) -> PARE_W<0> {
+        PARE_W::new(self)
     }
     #[doc = "Bit 1 - RXCE"]
     #[inline(always)]
-    pub fn rxce(&mut self) -> RXCE_W {
-        RXCE_W { w: self }
+    #[must_use]
+    pub fn rxce(&mut self) -> RXCE_W<1> {
+        RXCE_W::new(self)
     }
     #[doc = "Bit 2 - TXCE"]
     #[inline(always)]
-    pub fn txce(&mut self) -> TXCE_W {
-        TXCE_W { w: self }
+    #[must_use]
+    pub fn txce(&mut self) -> TXCE_W<2> {
+        TXCE_W::new(self)
     }
     #[doc = "Bit 3 - WTE"]
     #[inline(always)]
-    pub fn wte(&mut self) -> WTE_W {
-        WTE_W { w: self }
+    #[must_use]
+    pub fn wte(&mut self) -> WTE_W<3> {
+        WTE_W::new(self)
     }
     #[doc = "Bit 6 - CARDIRE"]
     #[inline(always)]
-    pub fn cardire(&mut self) -> CARDIRE_W {
-        CARDIRE_W { w: self }
+    #[must_use]
+    pub fn cardire(&mut self) -> CARDIRE_W<6> {
+        CARDIRE_W::new(self)
     }
     #[doc = "Bit 7 - TXBEE"]
     #[inline(always)]
-    pub fn txbee(&mut self) -> TXBEE_W {
-        TXBEE_W { w: self }
+    #[must_use]
+    pub fn txbee(&mut self) -> TXBEE_W<7> {
+        TXBEE_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "IER\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ier](index.html) module"]
+pub struct IER_SPEC;
+impl crate::RegisterSpec for IER_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [ier::R](R) reader structure"]
+impl crate::Readable for IER_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ier::W](W) writer structure"]
+impl crate::Writable for IER_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets IER to value 0"]
+impl crate::Resettable for IER_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

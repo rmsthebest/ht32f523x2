@@ -1,254 +1,170 @@
-#[doc = "Reader of register CHCTR"]
-pub type R = crate::R<u32, super::CHCTR>;
-#[doc = "Writer for register CHCTR"]
-pub type W = crate::W<u32, super::CHCTR>;
-#[doc = "Register CHCTR `reset()`'s with value 0"]
-impl crate::ResetValue for super::CHCTR {
-    type Type = u32;
+#[doc = "Register `CHCTR` reader"]
+pub struct R(crate::R<CHCTR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CHCTR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CH0E`"]
-pub type CH0E_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH0E`"]
-pub struct CH0E_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH0E_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<CHCTR_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<CHCTR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `CH0NE`"]
-pub type CH0NE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH0NE`"]
-pub struct CH0NE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH0NE_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `CHCTR` writer"]
+pub struct W(crate::W<CHCTR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CHCTR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CH1E`"]
-pub type CH1E_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH1E`"]
-pub struct CH1E_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH1E_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `CH1NE`"]
-pub type CH1NE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH1NE`"]
-pub struct CH1NE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH1NE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<CHCTR_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn from(writer: crate::W<CHCTR_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `CH2E`"]
-pub type CH2E_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH2E`"]
-pub struct CH2E_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH2E_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Reader of field `CH2NE`"]
-pub type CH2NE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH2NE`"]
-pub struct CH2NE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH2NE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Reader of field `CH3E`"]
-pub type CH3E_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH3E`"]
-pub struct CH3E_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH3E_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
-    }
-}
+#[doc = "Field `CH0E` reader - CH0E"]
+pub type CH0E_R = crate::BitReader<bool>;
+#[doc = "Field `CH0E` writer - CH0E"]
+pub type CH0E_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCTR_SPEC, bool, O>;
+#[doc = "Field `CH0NE` reader - CH0NE"]
+pub type CH0NE_R = crate::BitReader<bool>;
+#[doc = "Field `CH0NE` writer - CH0NE"]
+pub type CH0NE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCTR_SPEC, bool, O>;
+#[doc = "Field `CH1E` reader - CH1E"]
+pub type CH1E_R = crate::BitReader<bool>;
+#[doc = "Field `CH1E` writer - CH1E"]
+pub type CH1E_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCTR_SPEC, bool, O>;
+#[doc = "Field `CH1NE` reader - CH1NE"]
+pub type CH1NE_R = crate::BitReader<bool>;
+#[doc = "Field `CH1NE` writer - CH1NE"]
+pub type CH1NE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCTR_SPEC, bool, O>;
+#[doc = "Field `CH2E` reader - CH2E"]
+pub type CH2E_R = crate::BitReader<bool>;
+#[doc = "Field `CH2E` writer - CH2E"]
+pub type CH2E_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCTR_SPEC, bool, O>;
+#[doc = "Field `CH2NE` reader - CH2NE"]
+pub type CH2NE_R = crate::BitReader<bool>;
+#[doc = "Field `CH2NE` writer - CH2NE"]
+pub type CH2NE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCTR_SPEC, bool, O>;
+#[doc = "Field `CH3E` reader - CH3E"]
+pub type CH3E_R = crate::BitReader<bool>;
+#[doc = "Field `CH3E` writer - CH3E"]
+pub type CH3E_W<'a, const O: u8> = crate::BitWriter<'a, u32, CHCTR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - CH0E"]
     #[inline(always)]
     pub fn ch0e(&self) -> CH0E_R {
-        CH0E_R::new((self.bits & 0x01) != 0)
+        CH0E_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - CH0NE"]
     #[inline(always)]
     pub fn ch0ne(&self) -> CH0NE_R {
-        CH0NE_R::new(((self.bits >> 1) & 0x01) != 0)
+        CH0NE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - CH1E"]
     #[inline(always)]
     pub fn ch1e(&self) -> CH1E_R {
-        CH1E_R::new(((self.bits >> 2) & 0x01) != 0)
+        CH1E_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - CH1NE"]
     #[inline(always)]
     pub fn ch1ne(&self) -> CH1NE_R {
-        CH1NE_R::new(((self.bits >> 3) & 0x01) != 0)
+        CH1NE_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - CH2E"]
     #[inline(always)]
     pub fn ch2e(&self) -> CH2E_R {
-        CH2E_R::new(((self.bits >> 4) & 0x01) != 0)
+        CH2E_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - CH2NE"]
     #[inline(always)]
     pub fn ch2ne(&self) -> CH2NE_R {
-        CH2NE_R::new(((self.bits >> 5) & 0x01) != 0)
+        CH2NE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - CH3E"]
     #[inline(always)]
     pub fn ch3e(&self) -> CH3E_R {
-        CH3E_R::new(((self.bits >> 6) & 0x01) != 0)
+        CH3E_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - CH0E"]
     #[inline(always)]
-    pub fn ch0e(&mut self) -> CH0E_W {
-        CH0E_W { w: self }
+    #[must_use]
+    pub fn ch0e(&mut self) -> CH0E_W<0> {
+        CH0E_W::new(self)
     }
     #[doc = "Bit 1 - CH0NE"]
     #[inline(always)]
-    pub fn ch0ne(&mut self) -> CH0NE_W {
-        CH0NE_W { w: self }
+    #[must_use]
+    pub fn ch0ne(&mut self) -> CH0NE_W<1> {
+        CH0NE_W::new(self)
     }
     #[doc = "Bit 2 - CH1E"]
     #[inline(always)]
-    pub fn ch1e(&mut self) -> CH1E_W {
-        CH1E_W { w: self }
+    #[must_use]
+    pub fn ch1e(&mut self) -> CH1E_W<2> {
+        CH1E_W::new(self)
     }
     #[doc = "Bit 3 - CH1NE"]
     #[inline(always)]
-    pub fn ch1ne(&mut self) -> CH1NE_W {
-        CH1NE_W { w: self }
+    #[must_use]
+    pub fn ch1ne(&mut self) -> CH1NE_W<3> {
+        CH1NE_W::new(self)
     }
     #[doc = "Bit 4 - CH2E"]
     #[inline(always)]
-    pub fn ch2e(&mut self) -> CH2E_W {
-        CH2E_W { w: self }
+    #[must_use]
+    pub fn ch2e(&mut self) -> CH2E_W<4> {
+        CH2E_W::new(self)
     }
     #[doc = "Bit 5 - CH2NE"]
     #[inline(always)]
-    pub fn ch2ne(&mut self) -> CH2NE_W {
-        CH2NE_W { w: self }
+    #[must_use]
+    pub fn ch2ne(&mut self) -> CH2NE_W<5> {
+        CH2NE_W::new(self)
     }
     #[doc = "Bit 6 - CH3E"]
     #[inline(always)]
-    pub fn ch3e(&mut self) -> CH3E_W {
-        CH3E_W { w: self }
+    #[must_use]
+    pub fn ch3e(&mut self) -> CH3E_W<6> {
+        CH3E_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "CHCTR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [chctr](index.html) module"]
+pub struct CHCTR_SPEC;
+impl crate::RegisterSpec for CHCTR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [chctr::R](R) reader structure"]
+impl crate::Readable for CHCTR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [chctr::W](W) writer structure"]
+impl crate::Writable for CHCTR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CHCTR to value 0"]
+impl crate::Resettable for CHCTR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

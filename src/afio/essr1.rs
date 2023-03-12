@@ -1,127 +1,71 @@
-#[doc = "Reader of register ESSR1"]
-pub type R = crate::R<u32, super::ESSR1>;
-#[doc = "Writer for register ESSR1"]
-pub type W = crate::W<u32, super::ESSR1>;
-#[doc = "Register ESSR1 `reset()`'s with value 0"]
-impl crate::ResetValue for super::ESSR1 {
-    type Type = u32;
+#[doc = "Register `ESSR1` reader"]
+pub struct R(crate::R<ESSR1_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<ESSR1_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `EXTI8PIN`"]
-pub type EXTI8PIN_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `EXTI8PIN`"]
-pub struct EXTI8PIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTI8PIN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<ESSR1_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
-        self.w
+    fn from(reader: crate::R<ESSR1_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `EXTI9PIN`"]
-pub type EXTI9PIN_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `EXTI9PIN`"]
-pub struct EXTI9PIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTI9PIN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+#[doc = "Register `ESSR1` writer"]
+pub struct W(crate::W<ESSR1_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<ESSR1_SPEC>;
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | (((value as u32) & 0x0f) << 4);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `EXTI10PIN`"]
-pub type EXTI10PIN_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `EXTI10PIN`"]
-pub struct EXTI10PIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTI10PIN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u32) & 0x0f) << 8);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `EXTI11PIN`"]
-pub type EXTI11PIN_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `EXTI11PIN`"]
-pub struct EXTI11PIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTI11PIN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::W<ESSR1_SPEC>> for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 12)) | (((value as u32) & 0x0f) << 12);
-        self.w
+    fn from(writer: crate::W<ESSR1_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `EXTI12PIN`"]
-pub type EXTI12PIN_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `EXTI12PIN`"]
-pub struct EXTI12PIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTI12PIN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | (((value as u32) & 0x0f) << 16);
-        self.w
-    }
-}
-#[doc = "Reader of field `EXTI13PIN`"]
-pub type EXTI13PIN_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `EXTI13PIN`"]
-pub struct EXTI13PIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTI13PIN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 20)) | (((value as u32) & 0x0f) << 20);
-        self.w
-    }
-}
-#[doc = "Reader of field `EXTI14PIN`"]
-pub type EXTI14PIN_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `EXTI14PIN`"]
-pub struct EXTI14PIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTI14PIN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | (((value as u32) & 0x0f) << 24);
-        self.w
-    }
-}
-#[doc = "Reader of field `EXTI15PIN`"]
-pub type EXTI15PIN_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `EXTI15PIN`"]
-pub struct EXTI15PIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTI15PIN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | (((value as u32) & 0x0f) << 28);
-        self.w
-    }
-}
+#[doc = "Field `EXTI8PIN` reader - EXTI8PIN"]
+pub type EXTI8PIN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `EXTI8PIN` writer - EXTI8PIN"]
+pub type EXTI8PIN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ESSR1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `EXTI9PIN` reader - EXTI9PIN"]
+pub type EXTI9PIN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `EXTI9PIN` writer - EXTI9PIN"]
+pub type EXTI9PIN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ESSR1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `EXTI10PIN` reader - EXTI10PIN"]
+pub type EXTI10PIN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `EXTI10PIN` writer - EXTI10PIN"]
+pub type EXTI10PIN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ESSR1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `EXTI11PIN` reader - EXTI11PIN"]
+pub type EXTI11PIN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `EXTI11PIN` writer - EXTI11PIN"]
+pub type EXTI11PIN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ESSR1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `EXTI12PIN` reader - EXTI12PIN"]
+pub type EXTI12PIN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `EXTI12PIN` writer - EXTI12PIN"]
+pub type EXTI12PIN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ESSR1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `EXTI13PIN` reader - EXTI13PIN"]
+pub type EXTI13PIN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `EXTI13PIN` writer - EXTI13PIN"]
+pub type EXTI13PIN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ESSR1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `EXTI14PIN` reader - EXTI14PIN"]
+pub type EXTI14PIN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `EXTI14PIN` writer - EXTI14PIN"]
+pub type EXTI14PIN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ESSR1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `EXTI15PIN` reader - EXTI15PIN"]
+pub type EXTI15PIN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `EXTI15PIN` writer - EXTI15PIN"]
+pub type EXTI15PIN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ESSR1_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - EXTI8PIN"]
     #[inline(always)]
@@ -167,42 +111,75 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - EXTI8PIN"]
     #[inline(always)]
-    pub fn exti8pin(&mut self) -> EXTI8PIN_W {
-        EXTI8PIN_W { w: self }
+    #[must_use]
+    pub fn exti8pin(&mut self) -> EXTI8PIN_W<0> {
+        EXTI8PIN_W::new(self)
     }
     #[doc = "Bits 4:7 - EXTI9PIN"]
     #[inline(always)]
-    pub fn exti9pin(&mut self) -> EXTI9PIN_W {
-        EXTI9PIN_W { w: self }
+    #[must_use]
+    pub fn exti9pin(&mut self) -> EXTI9PIN_W<4> {
+        EXTI9PIN_W::new(self)
     }
     #[doc = "Bits 8:11 - EXTI10PIN"]
     #[inline(always)]
-    pub fn exti10pin(&mut self) -> EXTI10PIN_W {
-        EXTI10PIN_W { w: self }
+    #[must_use]
+    pub fn exti10pin(&mut self) -> EXTI10PIN_W<8> {
+        EXTI10PIN_W::new(self)
     }
     #[doc = "Bits 12:15 - EXTI11PIN"]
     #[inline(always)]
-    pub fn exti11pin(&mut self) -> EXTI11PIN_W {
-        EXTI11PIN_W { w: self }
+    #[must_use]
+    pub fn exti11pin(&mut self) -> EXTI11PIN_W<12> {
+        EXTI11PIN_W::new(self)
     }
     #[doc = "Bits 16:19 - EXTI12PIN"]
     #[inline(always)]
-    pub fn exti12pin(&mut self) -> EXTI12PIN_W {
-        EXTI12PIN_W { w: self }
+    #[must_use]
+    pub fn exti12pin(&mut self) -> EXTI12PIN_W<16> {
+        EXTI12PIN_W::new(self)
     }
     #[doc = "Bits 20:23 - EXTI13PIN"]
     #[inline(always)]
-    pub fn exti13pin(&mut self) -> EXTI13PIN_W {
-        EXTI13PIN_W { w: self }
+    #[must_use]
+    pub fn exti13pin(&mut self) -> EXTI13PIN_W<20> {
+        EXTI13PIN_W::new(self)
     }
     #[doc = "Bits 24:27 - EXTI14PIN"]
     #[inline(always)]
-    pub fn exti14pin(&mut self) -> EXTI14PIN_W {
-        EXTI14PIN_W { w: self }
+    #[must_use]
+    pub fn exti14pin(&mut self) -> EXTI14PIN_W<24> {
+        EXTI14PIN_W::new(self)
     }
     #[doc = "Bits 28:31 - EXTI15PIN"]
     #[inline(always)]
-    pub fn exti15pin(&mut self) -> EXTI15PIN_W {
-        EXTI15PIN_W { w: self }
+    #[must_use]
+    pub fn exti15pin(&mut self) -> EXTI15PIN_W<28> {
+        EXTI15PIN_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "ESSR1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [essr1](index.html) module"]
+pub struct ESSR1_SPEC;
+impl crate::RegisterSpec for ESSR1_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [essr1::R](R) reader structure"]
+impl crate::Readable for ESSR1_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [essr1::W](W) writer structure"]
+impl crate::Writable for ESSR1_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets ESSR1 to value 0"]
+impl crate::Resettable for ESSR1_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

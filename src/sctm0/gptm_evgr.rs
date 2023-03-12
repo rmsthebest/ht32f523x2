@@ -1,220 +1,155 @@
-#[doc = "Reader of register GPTM_EVGR"]
-pub type R = crate::R<u32, super::GPTM_EVGR>;
-#[doc = "Writer for register GPTM_EVGR"]
-pub type W = crate::W<u32, super::GPTM_EVGR>;
-#[doc = "Register GPTM_EVGR `reset()`'s with value 0"]
-impl crate::ResetValue for super::GPTM_EVGR {
-    type Type = u32;
+#[doc = "Register `GPTM_EVGR` reader"]
+pub struct R(crate::R<GPTM_EVGR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<GPTM_EVGR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CH0CCG`"]
-pub type CH0CCG_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH0CCG`"]
-pub struct CH0CCG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH0CCG_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<GPTM_EVGR_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<GPTM_EVGR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `CH1CCG`"]
-pub type CH1CCG_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH1CCG`"]
-pub struct CH1CCG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH1CCG_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `GPTM_EVGR` writer"]
+pub struct W(crate::W<GPTM_EVGR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<GPTM_EVGR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CH2CCG`"]
-pub type CH2CCG_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH2CCG`"]
-pub struct CH2CCG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH2CCG_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `CH3CCG`"]
-pub type CH3CCG_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH3CCG`"]
-pub struct CH3CCG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH3CCG_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<GPTM_EVGR_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn from(writer: crate::W<GPTM_EVGR_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `UEVG`"]
-pub type UEVG_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UEVG`"]
-pub struct UEVG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UEVG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Reader of field `TEVG`"]
-pub type TEVG_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TEVG`"]
-pub struct TEVG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TEVG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
-        self.w
-    }
-}
+#[doc = "Field `CH0CCG` reader - CH0CCG"]
+pub type CH0CCG_R = crate::BitReader<bool>;
+#[doc = "Field `CH0CCG` writer - CH0CCG"]
+pub type CH0CCG_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPTM_EVGR_SPEC, bool, O>;
+#[doc = "Field `CH1CCG` reader - CH1CCG"]
+pub type CH1CCG_R = crate::BitReader<bool>;
+#[doc = "Field `CH1CCG` writer - CH1CCG"]
+pub type CH1CCG_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPTM_EVGR_SPEC, bool, O>;
+#[doc = "Field `CH2CCG` reader - CH2CCG"]
+pub type CH2CCG_R = crate::BitReader<bool>;
+#[doc = "Field `CH2CCG` writer - CH2CCG"]
+pub type CH2CCG_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPTM_EVGR_SPEC, bool, O>;
+#[doc = "Field `CH3CCG` reader - CH3CCG"]
+pub type CH3CCG_R = crate::BitReader<bool>;
+#[doc = "Field `CH3CCG` writer - CH3CCG"]
+pub type CH3CCG_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPTM_EVGR_SPEC, bool, O>;
+#[doc = "Field `UEVG` reader - UEVG"]
+pub type UEVG_R = crate::BitReader<bool>;
+#[doc = "Field `UEVG` writer - UEVG"]
+pub type UEVG_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPTM_EVGR_SPEC, bool, O>;
+#[doc = "Field `TEVG` reader - TEVG"]
+pub type TEVG_R = crate::BitReader<bool>;
+#[doc = "Field `TEVG` writer - TEVG"]
+pub type TEVG_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPTM_EVGR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - CH0CCG"]
     #[inline(always)]
     pub fn ch0ccg(&self) -> CH0CCG_R {
-        CH0CCG_R::new((self.bits & 0x01) != 0)
+        CH0CCG_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - CH1CCG"]
     #[inline(always)]
     pub fn ch1ccg(&self) -> CH1CCG_R {
-        CH1CCG_R::new(((self.bits >> 1) & 0x01) != 0)
+        CH1CCG_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - CH2CCG"]
     #[inline(always)]
     pub fn ch2ccg(&self) -> CH2CCG_R {
-        CH2CCG_R::new(((self.bits >> 2) & 0x01) != 0)
+        CH2CCG_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - CH3CCG"]
     #[inline(always)]
     pub fn ch3ccg(&self) -> CH3CCG_R {
-        CH3CCG_R::new(((self.bits >> 3) & 0x01) != 0)
+        CH3CCG_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 8 - UEVG"]
     #[inline(always)]
     pub fn uevg(&self) -> UEVG_R {
-        UEVG_R::new(((self.bits >> 8) & 0x01) != 0)
+        UEVG_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 10 - TEVG"]
     #[inline(always)]
     pub fn tevg(&self) -> TEVG_R {
-        TEVG_R::new(((self.bits >> 10) & 0x01) != 0)
+        TEVG_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - CH0CCG"]
     #[inline(always)]
-    pub fn ch0ccg(&mut self) -> CH0CCG_W {
-        CH0CCG_W { w: self }
+    #[must_use]
+    pub fn ch0ccg(&mut self) -> CH0CCG_W<0> {
+        CH0CCG_W::new(self)
     }
     #[doc = "Bit 1 - CH1CCG"]
     #[inline(always)]
-    pub fn ch1ccg(&mut self) -> CH1CCG_W {
-        CH1CCG_W { w: self }
+    #[must_use]
+    pub fn ch1ccg(&mut self) -> CH1CCG_W<1> {
+        CH1CCG_W::new(self)
     }
     #[doc = "Bit 2 - CH2CCG"]
     #[inline(always)]
-    pub fn ch2ccg(&mut self) -> CH2CCG_W {
-        CH2CCG_W { w: self }
+    #[must_use]
+    pub fn ch2ccg(&mut self) -> CH2CCG_W<2> {
+        CH2CCG_W::new(self)
     }
     #[doc = "Bit 3 - CH3CCG"]
     #[inline(always)]
-    pub fn ch3ccg(&mut self) -> CH3CCG_W {
-        CH3CCG_W { w: self }
+    #[must_use]
+    pub fn ch3ccg(&mut self) -> CH3CCG_W<3> {
+        CH3CCG_W::new(self)
     }
     #[doc = "Bit 8 - UEVG"]
     #[inline(always)]
-    pub fn uevg(&mut self) -> UEVG_W {
-        UEVG_W { w: self }
+    #[must_use]
+    pub fn uevg(&mut self) -> UEVG_W<8> {
+        UEVG_W::new(self)
     }
     #[doc = "Bit 10 - TEVG"]
     #[inline(always)]
-    pub fn tevg(&mut self) -> TEVG_W {
-        TEVG_W { w: self }
+    #[must_use]
+    pub fn tevg(&mut self) -> TEVG_W<10> {
+        TEVG_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "GPTM_EVGR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gptm_evgr](index.html) module"]
+pub struct GPTM_EVGR_SPEC;
+impl crate::RegisterSpec for GPTM_EVGR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [gptm_evgr::R](R) reader structure"]
+impl crate::Readable for GPTM_EVGR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [gptm_evgr::W](W) writer structure"]
+impl crate::Writable for GPTM_EVGR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets GPTM_EVGR to value 0"]
+impl crate::Resettable for GPTM_EVGR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

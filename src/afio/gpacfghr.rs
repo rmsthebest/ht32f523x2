@@ -1,127 +1,71 @@
-#[doc = "Reader of register GPACFGHR"]
-pub type R = crate::R<u32, super::GPACFGHR>;
-#[doc = "Writer for register GPACFGHR"]
-pub type W = crate::W<u32, super::GPACFGHR>;
-#[doc = "Register GPACFGHR `reset()`'s with value 0"]
-impl crate::ResetValue for super::GPACFGHR {
-    type Type = u32;
+#[doc = "Register `GPACFGHR` reader"]
+pub struct R(crate::R<GPACFGHR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<GPACFGHR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CFG8`"]
-pub type CFG8_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CFG8`"]
-pub struct CFG8_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CFG8_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<GPACFGHR_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
-        self.w
+    fn from(reader: crate::R<GPACFGHR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `CFG9`"]
-pub type CFG9_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CFG9`"]
-pub struct CFG9_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CFG9_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+#[doc = "Register `GPACFGHR` writer"]
+pub struct W(crate::W<GPACFGHR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<GPACFGHR_SPEC>;
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | (((value as u32) & 0x0f) << 4);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CFG10`"]
-pub type CFG10_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CFG10`"]
-pub struct CFG10_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CFG10_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u32) & 0x0f) << 8);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `CFG11`"]
-pub type CFG11_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CFG11`"]
-pub struct CFG11_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CFG11_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::W<GPACFGHR_SPEC>> for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 12)) | (((value as u32) & 0x0f) << 12);
-        self.w
+    fn from(writer: crate::W<GPACFGHR_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `CFG12`"]
-pub type CFG12_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CFG12`"]
-pub struct CFG12_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CFG12_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | (((value as u32) & 0x0f) << 16);
-        self.w
-    }
-}
-#[doc = "Reader of field `CFG13`"]
-pub type CFG13_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CFG13`"]
-pub struct CFG13_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CFG13_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 20)) | (((value as u32) & 0x0f) << 20);
-        self.w
-    }
-}
-#[doc = "Reader of field `CFG14`"]
-pub type CFG14_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CFG14`"]
-pub struct CFG14_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CFG14_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | (((value as u32) & 0x0f) << 24);
-        self.w
-    }
-}
-#[doc = "Reader of field `CFG15`"]
-pub type CFG15_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CFG15`"]
-pub struct CFG15_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CFG15_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | (((value as u32) & 0x0f) << 28);
-        self.w
-    }
-}
+#[doc = "Field `CFG8` reader - CFG8"]
+pub type CFG8_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CFG8` writer - CFG8"]
+pub type CFG8_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPACFGHR_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CFG9` reader - CFG9"]
+pub type CFG9_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CFG9` writer - CFG9"]
+pub type CFG9_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPACFGHR_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CFG10` reader - CFG10"]
+pub type CFG10_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CFG10` writer - CFG10"]
+pub type CFG10_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPACFGHR_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CFG11` reader - CFG11"]
+pub type CFG11_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CFG11` writer - CFG11"]
+pub type CFG11_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPACFGHR_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CFG12` reader - CFG12"]
+pub type CFG12_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CFG12` writer - CFG12"]
+pub type CFG12_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPACFGHR_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CFG13` reader - CFG13"]
+pub type CFG13_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CFG13` writer - CFG13"]
+pub type CFG13_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPACFGHR_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CFG14` reader - CFG14"]
+pub type CFG14_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CFG14` writer - CFG14"]
+pub type CFG14_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPACFGHR_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CFG15` reader - CFG15"]
+pub type CFG15_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CFG15` writer - CFG15"]
+pub type CFG15_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPACFGHR_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - CFG8"]
     #[inline(always)]
@@ -167,42 +111,75 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - CFG8"]
     #[inline(always)]
-    pub fn cfg8(&mut self) -> CFG8_W {
-        CFG8_W { w: self }
+    #[must_use]
+    pub fn cfg8(&mut self) -> CFG8_W<0> {
+        CFG8_W::new(self)
     }
     #[doc = "Bits 4:7 - CFG9"]
     #[inline(always)]
-    pub fn cfg9(&mut self) -> CFG9_W {
-        CFG9_W { w: self }
+    #[must_use]
+    pub fn cfg9(&mut self) -> CFG9_W<4> {
+        CFG9_W::new(self)
     }
     #[doc = "Bits 8:11 - CFG10"]
     #[inline(always)]
-    pub fn cfg10(&mut self) -> CFG10_W {
-        CFG10_W { w: self }
+    #[must_use]
+    pub fn cfg10(&mut self) -> CFG10_W<8> {
+        CFG10_W::new(self)
     }
     #[doc = "Bits 12:15 - CFG11"]
     #[inline(always)]
-    pub fn cfg11(&mut self) -> CFG11_W {
-        CFG11_W { w: self }
+    #[must_use]
+    pub fn cfg11(&mut self) -> CFG11_W<12> {
+        CFG11_W::new(self)
     }
     #[doc = "Bits 16:19 - CFG12"]
     #[inline(always)]
-    pub fn cfg12(&mut self) -> CFG12_W {
-        CFG12_W { w: self }
+    #[must_use]
+    pub fn cfg12(&mut self) -> CFG12_W<16> {
+        CFG12_W::new(self)
     }
     #[doc = "Bits 20:23 - CFG13"]
     #[inline(always)]
-    pub fn cfg13(&mut self) -> CFG13_W {
-        CFG13_W { w: self }
+    #[must_use]
+    pub fn cfg13(&mut self) -> CFG13_W<20> {
+        CFG13_W::new(self)
     }
     #[doc = "Bits 24:27 - CFG14"]
     #[inline(always)]
-    pub fn cfg14(&mut self) -> CFG14_W {
-        CFG14_W { w: self }
+    #[must_use]
+    pub fn cfg14(&mut self) -> CFG14_W<24> {
+        CFG14_W::new(self)
     }
     #[doc = "Bits 28:31 - CFG15"]
     #[inline(always)]
-    pub fn cfg15(&mut self) -> CFG15_W {
-        CFG15_W { w: self }
+    #[must_use]
+    pub fn cfg15(&mut self) -> CFG15_W<28> {
+        CFG15_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "GPACFGHR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpacfghr](index.html) module"]
+pub struct GPACFGHR_SPEC;
+impl crate::RegisterSpec for GPACFGHR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [gpacfghr::R](R) reader structure"]
+impl crate::Readable for GPACFGHR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [gpacfghr::W](W) writer structure"]
+impl crate::Writable for GPACFGHR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets GPACFGHR to value 0"]
+impl crate::Resettable for GPACFGHR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

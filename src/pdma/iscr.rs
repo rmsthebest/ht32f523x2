@@ -1,1036 +1,515 @@
-#[doc = "Reader of register ISCR"]
-pub type R = crate::R<u32, super::ISCR>;
-#[doc = "Writer for register ISCR"]
-pub type W = crate::W<u32, super::ISCR>;
-#[doc = "Register ISCR `reset()`'s with value 0"]
-impl crate::ResetValue for super::ISCR {
-    type Type = u32;
+#[doc = "Register `ISCR` reader"]
+pub struct R(crate::R<ISCR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<ISCR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `GEICLR0`"]
-pub type GEICLR0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `GEICLR0`"]
-pub struct GEICLR0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEICLR0_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<ISCR_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<ISCR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `BEICLR0`"]
-pub type BEICLR0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BEICLR0`"]
-pub struct BEICLR0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BEICLR0_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `ISCR` writer"]
+pub struct W(crate::W<ISCR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<ISCR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `HTICLR0`"]
-pub type HTICLR0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `HTICLR0`"]
-pub struct HTICLR0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HTICLR0_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `TCICLR0`"]
-pub type TCICLR0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TCICLR0`"]
-pub struct TCICLR0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TCICLR0_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<ISCR_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn from(writer: crate::W<ISCR_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `TEICLR0`"]
-pub type TEICLR0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TEICLR0`"]
-pub struct TEICLR0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TEICLR0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Reader of field `GEICLR1`"]
-pub type GEICLR1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `GEICLR1`"]
-pub struct GEICLR1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEICLR1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Reader of field `BEICLR1`"]
-pub type BEICLR1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BEICLR1`"]
-pub struct BEICLR1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BEICLR1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Reader of field `HTICLR1`"]
-pub type HTICLR1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `HTICLR1`"]
-pub struct HTICLR1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HTICLR1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Reader of field `TCICLR1`"]
-pub type TCICLR1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TCICLR1`"]
-pub struct TCICLR1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TCICLR1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Reader of field `TEICLR1`"]
-pub type TEICLR1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TEICLR1`"]
-pub struct TEICLR1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TEICLR1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
-        self.w
-    }
-}
-#[doc = "Reader of field `GEICLR2`"]
-pub type GEICLR2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `GEICLR2`"]
-pub struct GEICLR2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEICLR2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
-        self.w
-    }
-}
-#[doc = "Reader of field `BEICLR2`"]
-pub type BEICLR2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BEICLR2`"]
-pub struct BEICLR2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BEICLR2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
-        self.w
-    }
-}
-#[doc = "Reader of field `HTICLR2`"]
-pub type HTICLR2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `HTICLR2`"]
-pub struct HTICLR2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HTICLR2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
-        self.w
-    }
-}
-#[doc = "Reader of field `TCICLR2`"]
-pub type TCICLR2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TCICLR2`"]
-pub struct TCICLR2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TCICLR2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
-        self.w
-    }
-}
-#[doc = "Reader of field `TEICLR2`"]
-pub type TEICLR2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TEICLR2`"]
-pub struct TEICLR2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TEICLR2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
-        self.w
-    }
-}
-#[doc = "Reader of field `GEICLR3`"]
-pub type GEICLR3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `GEICLR3`"]
-pub struct GEICLR3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEICLR3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
-        self.w
-    }
-}
-#[doc = "Reader of field `BEICLR3`"]
-pub type BEICLR3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BEICLR3`"]
-pub struct BEICLR3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BEICLR3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
-        self.w
-    }
-}
-#[doc = "Reader of field `HTICLR3`"]
-pub type HTICLR3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `HTICLR3`"]
-pub struct HTICLR3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HTICLR3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
-        self.w
-    }
-}
-#[doc = "Reader of field `TCICLR3`"]
-pub type TCICLR3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TCICLR3`"]
-pub struct TCICLR3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TCICLR3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
-        self.w
-    }
-}
-#[doc = "Reader of field `TEICLR3`"]
-pub type TEICLR3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TEICLR3`"]
-pub struct TEICLR3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TEICLR3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
-        self.w
-    }
-}
-#[doc = "Reader of field `GEICLR4`"]
-pub type GEICLR4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `GEICLR4`"]
-pub struct GEICLR4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEICLR4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | (((value as u32) & 0x01) << 20);
-        self.w
-    }
-}
-#[doc = "Reader of field `BEICLR4`"]
-pub type BEICLR4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BEICLR4`"]
-pub struct BEICLR4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BEICLR4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | (((value as u32) & 0x01) << 21);
-        self.w
-    }
-}
-#[doc = "Reader of field `HTICLR4`"]
-pub type HTICLR4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `HTICLR4`"]
-pub struct HTICLR4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HTICLR4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | (((value as u32) & 0x01) << 22);
-        self.w
-    }
-}
-#[doc = "Reader of field `TCICLR4`"]
-pub type TCICLR4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TCICLR4`"]
-pub struct TCICLR4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TCICLR4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 23)) | (((value as u32) & 0x01) << 23);
-        self.w
-    }
-}
-#[doc = "Reader of field `TEICLR4`"]
-pub type TEICLR4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TEICLR4`"]
-pub struct TEICLR4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TEICLR4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | (((value as u32) & 0x01) << 24);
-        self.w
-    }
-}
-#[doc = "Reader of field `GEICLR5`"]
-pub type GEICLR5_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `GEICLR5`"]
-pub struct GEICLR5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GEICLR5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | (((value as u32) & 0x01) << 25);
-        self.w
-    }
-}
-#[doc = "Reader of field `BEICLR5`"]
-pub type BEICLR5_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BEICLR5`"]
-pub struct BEICLR5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BEICLR5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | (((value as u32) & 0x01) << 26);
-        self.w
-    }
-}
-#[doc = "Reader of field `HTICLR5`"]
-pub type HTICLR5_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `HTICLR5`"]
-pub struct HTICLR5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HTICLR5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 27)) | (((value as u32) & 0x01) << 27);
-        self.w
-    }
-}
-#[doc = "Reader of field `TCICLR5`"]
-pub type TCICLR5_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TCICLR5`"]
-pub struct TCICLR5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TCICLR5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | (((value as u32) & 0x01) << 28);
-        self.w
-    }
-}
-#[doc = "Reader of field `TEICLR5`"]
-pub type TEICLR5_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TEICLR5`"]
-pub struct TEICLR5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TEICLR5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | (((value as u32) & 0x01) << 29);
-        self.w
-    }
-}
+#[doc = "Field `GEICLR0` reader - GEICLR0"]
+pub type GEICLR0_R = crate::BitReader<bool>;
+#[doc = "Field `GEICLR0` writer - GEICLR0"]
+pub type GEICLR0_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `BEICLR0` reader - BEICLR0"]
+pub type BEICLR0_R = crate::BitReader<bool>;
+#[doc = "Field `BEICLR0` writer - BEICLR0"]
+pub type BEICLR0_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `HTICLR0` reader - HTICLR0"]
+pub type HTICLR0_R = crate::BitReader<bool>;
+#[doc = "Field `HTICLR0` writer - HTICLR0"]
+pub type HTICLR0_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `TCICLR0` reader - TCICLR0"]
+pub type TCICLR0_R = crate::BitReader<bool>;
+#[doc = "Field `TCICLR0` writer - TCICLR0"]
+pub type TCICLR0_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `TEICLR0` reader - TEICLR0"]
+pub type TEICLR0_R = crate::BitReader<bool>;
+#[doc = "Field `TEICLR0` writer - TEICLR0"]
+pub type TEICLR0_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `GEICLR1` reader - GEICLR1"]
+pub type GEICLR1_R = crate::BitReader<bool>;
+#[doc = "Field `GEICLR1` writer - GEICLR1"]
+pub type GEICLR1_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `BEICLR1` reader - BEICLR1"]
+pub type BEICLR1_R = crate::BitReader<bool>;
+#[doc = "Field `BEICLR1` writer - BEICLR1"]
+pub type BEICLR1_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `HTICLR1` reader - HTICLR1"]
+pub type HTICLR1_R = crate::BitReader<bool>;
+#[doc = "Field `HTICLR1` writer - HTICLR1"]
+pub type HTICLR1_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `TCICLR1` reader - TCICLR1"]
+pub type TCICLR1_R = crate::BitReader<bool>;
+#[doc = "Field `TCICLR1` writer - TCICLR1"]
+pub type TCICLR1_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `TEICLR1` reader - TEICLR1"]
+pub type TEICLR1_R = crate::BitReader<bool>;
+#[doc = "Field `TEICLR1` writer - TEICLR1"]
+pub type TEICLR1_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `GEICLR2` reader - GEICLR2"]
+pub type GEICLR2_R = crate::BitReader<bool>;
+#[doc = "Field `GEICLR2` writer - GEICLR2"]
+pub type GEICLR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `BEICLR2` reader - BEICLR2"]
+pub type BEICLR2_R = crate::BitReader<bool>;
+#[doc = "Field `BEICLR2` writer - BEICLR2"]
+pub type BEICLR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `HTICLR2` reader - HTICLR2"]
+pub type HTICLR2_R = crate::BitReader<bool>;
+#[doc = "Field `HTICLR2` writer - HTICLR2"]
+pub type HTICLR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `TCICLR2` reader - TCICLR2"]
+pub type TCICLR2_R = crate::BitReader<bool>;
+#[doc = "Field `TCICLR2` writer - TCICLR2"]
+pub type TCICLR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `TEICLR2` reader - TEICLR2"]
+pub type TEICLR2_R = crate::BitReader<bool>;
+#[doc = "Field `TEICLR2` writer - TEICLR2"]
+pub type TEICLR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `GEICLR3` reader - GEICLR3"]
+pub type GEICLR3_R = crate::BitReader<bool>;
+#[doc = "Field `GEICLR3` writer - GEICLR3"]
+pub type GEICLR3_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `BEICLR3` reader - BEICLR3"]
+pub type BEICLR3_R = crate::BitReader<bool>;
+#[doc = "Field `BEICLR3` writer - BEICLR3"]
+pub type BEICLR3_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `HTICLR3` reader - HTICLR3"]
+pub type HTICLR3_R = crate::BitReader<bool>;
+#[doc = "Field `HTICLR3` writer - HTICLR3"]
+pub type HTICLR3_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `TCICLR3` reader - TCICLR3"]
+pub type TCICLR3_R = crate::BitReader<bool>;
+#[doc = "Field `TCICLR3` writer - TCICLR3"]
+pub type TCICLR3_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `TEICLR3` reader - TEICLR3"]
+pub type TEICLR3_R = crate::BitReader<bool>;
+#[doc = "Field `TEICLR3` writer - TEICLR3"]
+pub type TEICLR3_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `GEICLR4` reader - GEICLR4"]
+pub type GEICLR4_R = crate::BitReader<bool>;
+#[doc = "Field `GEICLR4` writer - GEICLR4"]
+pub type GEICLR4_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `BEICLR4` reader - BEICLR4"]
+pub type BEICLR4_R = crate::BitReader<bool>;
+#[doc = "Field `BEICLR4` writer - BEICLR4"]
+pub type BEICLR4_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `HTICLR4` reader - HTICLR4"]
+pub type HTICLR4_R = crate::BitReader<bool>;
+#[doc = "Field `HTICLR4` writer - HTICLR4"]
+pub type HTICLR4_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `TCICLR4` reader - TCICLR4"]
+pub type TCICLR4_R = crate::BitReader<bool>;
+#[doc = "Field `TCICLR4` writer - TCICLR4"]
+pub type TCICLR4_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `TEICLR4` reader - TEICLR4"]
+pub type TEICLR4_R = crate::BitReader<bool>;
+#[doc = "Field `TEICLR4` writer - TEICLR4"]
+pub type TEICLR4_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `GEICLR5` reader - GEICLR5"]
+pub type GEICLR5_R = crate::BitReader<bool>;
+#[doc = "Field `GEICLR5` writer - GEICLR5"]
+pub type GEICLR5_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `BEICLR5` reader - BEICLR5"]
+pub type BEICLR5_R = crate::BitReader<bool>;
+#[doc = "Field `BEICLR5` writer - BEICLR5"]
+pub type BEICLR5_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `HTICLR5` reader - HTICLR5"]
+pub type HTICLR5_R = crate::BitReader<bool>;
+#[doc = "Field `HTICLR5` writer - HTICLR5"]
+pub type HTICLR5_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `TCICLR5` reader - TCICLR5"]
+pub type TCICLR5_R = crate::BitReader<bool>;
+#[doc = "Field `TCICLR5` writer - TCICLR5"]
+pub type TCICLR5_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
+#[doc = "Field `TEICLR5` reader - TEICLR5"]
+pub type TEICLR5_R = crate::BitReader<bool>;
+#[doc = "Field `TEICLR5` writer - TEICLR5"]
+pub type TEICLR5_W<'a, const O: u8> = crate::BitWriter<'a, u32, ISCR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - GEICLR0"]
     #[inline(always)]
     pub fn geiclr0(&self) -> GEICLR0_R {
-        GEICLR0_R::new((self.bits & 0x01) != 0)
+        GEICLR0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - BEICLR0"]
     #[inline(always)]
     pub fn beiclr0(&self) -> BEICLR0_R {
-        BEICLR0_R::new(((self.bits >> 1) & 0x01) != 0)
+        BEICLR0_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - HTICLR0"]
     #[inline(always)]
     pub fn hticlr0(&self) -> HTICLR0_R {
-        HTICLR0_R::new(((self.bits >> 2) & 0x01) != 0)
+        HTICLR0_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - TCICLR0"]
     #[inline(always)]
     pub fn tciclr0(&self) -> TCICLR0_R {
-        TCICLR0_R::new(((self.bits >> 3) & 0x01) != 0)
+        TCICLR0_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - TEICLR0"]
     #[inline(always)]
     pub fn teiclr0(&self) -> TEICLR0_R {
-        TEICLR0_R::new(((self.bits >> 4) & 0x01) != 0)
+        TEICLR0_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - GEICLR1"]
     #[inline(always)]
     pub fn geiclr1(&self) -> GEICLR1_R {
-        GEICLR1_R::new(((self.bits >> 5) & 0x01) != 0)
+        GEICLR1_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - BEICLR1"]
     #[inline(always)]
     pub fn beiclr1(&self) -> BEICLR1_R {
-        BEICLR1_R::new(((self.bits >> 6) & 0x01) != 0)
+        BEICLR1_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - HTICLR1"]
     #[inline(always)]
     pub fn hticlr1(&self) -> HTICLR1_R {
-        HTICLR1_R::new(((self.bits >> 7) & 0x01) != 0)
+        HTICLR1_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - TCICLR1"]
     #[inline(always)]
     pub fn tciclr1(&self) -> TCICLR1_R {
-        TCICLR1_R::new(((self.bits >> 8) & 0x01) != 0)
+        TCICLR1_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - TEICLR1"]
     #[inline(always)]
     pub fn teiclr1(&self) -> TEICLR1_R {
-        TEICLR1_R::new(((self.bits >> 9) & 0x01) != 0)
+        TEICLR1_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - GEICLR2"]
     #[inline(always)]
     pub fn geiclr2(&self) -> GEICLR2_R {
-        GEICLR2_R::new(((self.bits >> 10) & 0x01) != 0)
+        GEICLR2_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - BEICLR2"]
     #[inline(always)]
     pub fn beiclr2(&self) -> BEICLR2_R {
-        BEICLR2_R::new(((self.bits >> 11) & 0x01) != 0)
+        BEICLR2_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - HTICLR2"]
     #[inline(always)]
     pub fn hticlr2(&self) -> HTICLR2_R {
-        HTICLR2_R::new(((self.bits >> 12) & 0x01) != 0)
+        HTICLR2_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - TCICLR2"]
     #[inline(always)]
     pub fn tciclr2(&self) -> TCICLR2_R {
-        TCICLR2_R::new(((self.bits >> 13) & 0x01) != 0)
+        TCICLR2_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - TEICLR2"]
     #[inline(always)]
     pub fn teiclr2(&self) -> TEICLR2_R {
-        TEICLR2_R::new(((self.bits >> 14) & 0x01) != 0)
+        TEICLR2_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - GEICLR3"]
     #[inline(always)]
     pub fn geiclr3(&self) -> GEICLR3_R {
-        GEICLR3_R::new(((self.bits >> 15) & 0x01) != 0)
+        GEICLR3_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - BEICLR3"]
     #[inline(always)]
     pub fn beiclr3(&self) -> BEICLR3_R {
-        BEICLR3_R::new(((self.bits >> 16) & 0x01) != 0)
+        BEICLR3_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - HTICLR3"]
     #[inline(always)]
     pub fn hticlr3(&self) -> HTICLR3_R {
-        HTICLR3_R::new(((self.bits >> 17) & 0x01) != 0)
+        HTICLR3_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - TCICLR3"]
     #[inline(always)]
     pub fn tciclr3(&self) -> TCICLR3_R {
-        TCICLR3_R::new(((self.bits >> 18) & 0x01) != 0)
+        TCICLR3_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - TEICLR3"]
     #[inline(always)]
     pub fn teiclr3(&self) -> TEICLR3_R {
-        TEICLR3_R::new(((self.bits >> 19) & 0x01) != 0)
+        TEICLR3_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - GEICLR4"]
     #[inline(always)]
     pub fn geiclr4(&self) -> GEICLR4_R {
-        GEICLR4_R::new(((self.bits >> 20) & 0x01) != 0)
+        GEICLR4_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - BEICLR4"]
     #[inline(always)]
     pub fn beiclr4(&self) -> BEICLR4_R {
-        BEICLR4_R::new(((self.bits >> 21) & 0x01) != 0)
+        BEICLR4_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - HTICLR4"]
     #[inline(always)]
     pub fn hticlr4(&self) -> HTICLR4_R {
-        HTICLR4_R::new(((self.bits >> 22) & 0x01) != 0)
+        HTICLR4_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 23 - TCICLR4"]
     #[inline(always)]
     pub fn tciclr4(&self) -> TCICLR4_R {
-        TCICLR4_R::new(((self.bits >> 23) & 0x01) != 0)
+        TCICLR4_R::new(((self.bits >> 23) & 1) != 0)
     }
     #[doc = "Bit 24 - TEICLR4"]
     #[inline(always)]
     pub fn teiclr4(&self) -> TEICLR4_R {
-        TEICLR4_R::new(((self.bits >> 24) & 0x01) != 0)
+        TEICLR4_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - GEICLR5"]
     #[inline(always)]
     pub fn geiclr5(&self) -> GEICLR5_R {
-        GEICLR5_R::new(((self.bits >> 25) & 0x01) != 0)
+        GEICLR5_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - BEICLR5"]
     #[inline(always)]
     pub fn beiclr5(&self) -> BEICLR5_R {
-        BEICLR5_R::new(((self.bits >> 26) & 0x01) != 0)
+        BEICLR5_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - HTICLR5"]
     #[inline(always)]
     pub fn hticlr5(&self) -> HTICLR5_R {
-        HTICLR5_R::new(((self.bits >> 27) & 0x01) != 0)
+        HTICLR5_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - TCICLR5"]
     #[inline(always)]
     pub fn tciclr5(&self) -> TCICLR5_R {
-        TCICLR5_R::new(((self.bits >> 28) & 0x01) != 0)
+        TCICLR5_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Bit 29 - TEICLR5"]
     #[inline(always)]
     pub fn teiclr5(&self) -> TEICLR5_R {
-        TEICLR5_R::new(((self.bits >> 29) & 0x01) != 0)
+        TEICLR5_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - GEICLR0"]
     #[inline(always)]
-    pub fn geiclr0(&mut self) -> GEICLR0_W {
-        GEICLR0_W { w: self }
+    #[must_use]
+    pub fn geiclr0(&mut self) -> GEICLR0_W<0> {
+        GEICLR0_W::new(self)
     }
     #[doc = "Bit 1 - BEICLR0"]
     #[inline(always)]
-    pub fn beiclr0(&mut self) -> BEICLR0_W {
-        BEICLR0_W { w: self }
+    #[must_use]
+    pub fn beiclr0(&mut self) -> BEICLR0_W<1> {
+        BEICLR0_W::new(self)
     }
     #[doc = "Bit 2 - HTICLR0"]
     #[inline(always)]
-    pub fn hticlr0(&mut self) -> HTICLR0_W {
-        HTICLR0_W { w: self }
+    #[must_use]
+    pub fn hticlr0(&mut self) -> HTICLR0_W<2> {
+        HTICLR0_W::new(self)
     }
     #[doc = "Bit 3 - TCICLR0"]
     #[inline(always)]
-    pub fn tciclr0(&mut self) -> TCICLR0_W {
-        TCICLR0_W { w: self }
+    #[must_use]
+    pub fn tciclr0(&mut self) -> TCICLR0_W<3> {
+        TCICLR0_W::new(self)
     }
     #[doc = "Bit 4 - TEICLR0"]
     #[inline(always)]
-    pub fn teiclr0(&mut self) -> TEICLR0_W {
-        TEICLR0_W { w: self }
+    #[must_use]
+    pub fn teiclr0(&mut self) -> TEICLR0_W<4> {
+        TEICLR0_W::new(self)
     }
     #[doc = "Bit 5 - GEICLR1"]
     #[inline(always)]
-    pub fn geiclr1(&mut self) -> GEICLR1_W {
-        GEICLR1_W { w: self }
+    #[must_use]
+    pub fn geiclr1(&mut self) -> GEICLR1_W<5> {
+        GEICLR1_W::new(self)
     }
     #[doc = "Bit 6 - BEICLR1"]
     #[inline(always)]
-    pub fn beiclr1(&mut self) -> BEICLR1_W {
-        BEICLR1_W { w: self }
+    #[must_use]
+    pub fn beiclr1(&mut self) -> BEICLR1_W<6> {
+        BEICLR1_W::new(self)
     }
     #[doc = "Bit 7 - HTICLR1"]
     #[inline(always)]
-    pub fn hticlr1(&mut self) -> HTICLR1_W {
-        HTICLR1_W { w: self }
+    #[must_use]
+    pub fn hticlr1(&mut self) -> HTICLR1_W<7> {
+        HTICLR1_W::new(self)
     }
     #[doc = "Bit 8 - TCICLR1"]
     #[inline(always)]
-    pub fn tciclr1(&mut self) -> TCICLR1_W {
-        TCICLR1_W { w: self }
+    #[must_use]
+    pub fn tciclr1(&mut self) -> TCICLR1_W<8> {
+        TCICLR1_W::new(self)
     }
     #[doc = "Bit 9 - TEICLR1"]
     #[inline(always)]
-    pub fn teiclr1(&mut self) -> TEICLR1_W {
-        TEICLR1_W { w: self }
+    #[must_use]
+    pub fn teiclr1(&mut self) -> TEICLR1_W<9> {
+        TEICLR1_W::new(self)
     }
     #[doc = "Bit 10 - GEICLR2"]
     #[inline(always)]
-    pub fn geiclr2(&mut self) -> GEICLR2_W {
-        GEICLR2_W { w: self }
+    #[must_use]
+    pub fn geiclr2(&mut self) -> GEICLR2_W<10> {
+        GEICLR2_W::new(self)
     }
     #[doc = "Bit 11 - BEICLR2"]
     #[inline(always)]
-    pub fn beiclr2(&mut self) -> BEICLR2_W {
-        BEICLR2_W { w: self }
+    #[must_use]
+    pub fn beiclr2(&mut self) -> BEICLR2_W<11> {
+        BEICLR2_W::new(self)
     }
     #[doc = "Bit 12 - HTICLR2"]
     #[inline(always)]
-    pub fn hticlr2(&mut self) -> HTICLR2_W {
-        HTICLR2_W { w: self }
+    #[must_use]
+    pub fn hticlr2(&mut self) -> HTICLR2_W<12> {
+        HTICLR2_W::new(self)
     }
     #[doc = "Bit 13 - TCICLR2"]
     #[inline(always)]
-    pub fn tciclr2(&mut self) -> TCICLR2_W {
-        TCICLR2_W { w: self }
+    #[must_use]
+    pub fn tciclr2(&mut self) -> TCICLR2_W<13> {
+        TCICLR2_W::new(self)
     }
     #[doc = "Bit 14 - TEICLR2"]
     #[inline(always)]
-    pub fn teiclr2(&mut self) -> TEICLR2_W {
-        TEICLR2_W { w: self }
+    #[must_use]
+    pub fn teiclr2(&mut self) -> TEICLR2_W<14> {
+        TEICLR2_W::new(self)
     }
     #[doc = "Bit 15 - GEICLR3"]
     #[inline(always)]
-    pub fn geiclr3(&mut self) -> GEICLR3_W {
-        GEICLR3_W { w: self }
+    #[must_use]
+    pub fn geiclr3(&mut self) -> GEICLR3_W<15> {
+        GEICLR3_W::new(self)
     }
     #[doc = "Bit 16 - BEICLR3"]
     #[inline(always)]
-    pub fn beiclr3(&mut self) -> BEICLR3_W {
-        BEICLR3_W { w: self }
+    #[must_use]
+    pub fn beiclr3(&mut self) -> BEICLR3_W<16> {
+        BEICLR3_W::new(self)
     }
     #[doc = "Bit 17 - HTICLR3"]
     #[inline(always)]
-    pub fn hticlr3(&mut self) -> HTICLR3_W {
-        HTICLR3_W { w: self }
+    #[must_use]
+    pub fn hticlr3(&mut self) -> HTICLR3_W<17> {
+        HTICLR3_W::new(self)
     }
     #[doc = "Bit 18 - TCICLR3"]
     #[inline(always)]
-    pub fn tciclr3(&mut self) -> TCICLR3_W {
-        TCICLR3_W { w: self }
+    #[must_use]
+    pub fn tciclr3(&mut self) -> TCICLR3_W<18> {
+        TCICLR3_W::new(self)
     }
     #[doc = "Bit 19 - TEICLR3"]
     #[inline(always)]
-    pub fn teiclr3(&mut self) -> TEICLR3_W {
-        TEICLR3_W { w: self }
+    #[must_use]
+    pub fn teiclr3(&mut self) -> TEICLR3_W<19> {
+        TEICLR3_W::new(self)
     }
     #[doc = "Bit 20 - GEICLR4"]
     #[inline(always)]
-    pub fn geiclr4(&mut self) -> GEICLR4_W {
-        GEICLR4_W { w: self }
+    #[must_use]
+    pub fn geiclr4(&mut self) -> GEICLR4_W<20> {
+        GEICLR4_W::new(self)
     }
     #[doc = "Bit 21 - BEICLR4"]
     #[inline(always)]
-    pub fn beiclr4(&mut self) -> BEICLR4_W {
-        BEICLR4_W { w: self }
+    #[must_use]
+    pub fn beiclr4(&mut self) -> BEICLR4_W<21> {
+        BEICLR4_W::new(self)
     }
     #[doc = "Bit 22 - HTICLR4"]
     #[inline(always)]
-    pub fn hticlr4(&mut self) -> HTICLR4_W {
-        HTICLR4_W { w: self }
+    #[must_use]
+    pub fn hticlr4(&mut self) -> HTICLR4_W<22> {
+        HTICLR4_W::new(self)
     }
     #[doc = "Bit 23 - TCICLR4"]
     #[inline(always)]
-    pub fn tciclr4(&mut self) -> TCICLR4_W {
-        TCICLR4_W { w: self }
+    #[must_use]
+    pub fn tciclr4(&mut self) -> TCICLR4_W<23> {
+        TCICLR4_W::new(self)
     }
     #[doc = "Bit 24 - TEICLR4"]
     #[inline(always)]
-    pub fn teiclr4(&mut self) -> TEICLR4_W {
-        TEICLR4_W { w: self }
+    #[must_use]
+    pub fn teiclr4(&mut self) -> TEICLR4_W<24> {
+        TEICLR4_W::new(self)
     }
     #[doc = "Bit 25 - GEICLR5"]
     #[inline(always)]
-    pub fn geiclr5(&mut self) -> GEICLR5_W {
-        GEICLR5_W { w: self }
+    #[must_use]
+    pub fn geiclr5(&mut self) -> GEICLR5_W<25> {
+        GEICLR5_W::new(self)
     }
     #[doc = "Bit 26 - BEICLR5"]
     #[inline(always)]
-    pub fn beiclr5(&mut self) -> BEICLR5_W {
-        BEICLR5_W { w: self }
+    #[must_use]
+    pub fn beiclr5(&mut self) -> BEICLR5_W<26> {
+        BEICLR5_W::new(self)
     }
     #[doc = "Bit 27 - HTICLR5"]
     #[inline(always)]
-    pub fn hticlr5(&mut self) -> HTICLR5_W {
-        HTICLR5_W { w: self }
+    #[must_use]
+    pub fn hticlr5(&mut self) -> HTICLR5_W<27> {
+        HTICLR5_W::new(self)
     }
     #[doc = "Bit 28 - TCICLR5"]
     #[inline(always)]
-    pub fn tciclr5(&mut self) -> TCICLR5_W {
-        TCICLR5_W { w: self }
+    #[must_use]
+    pub fn tciclr5(&mut self) -> TCICLR5_W<28> {
+        TCICLR5_W::new(self)
     }
     #[doc = "Bit 29 - TEICLR5"]
     #[inline(always)]
-    pub fn teiclr5(&mut self) -> TEICLR5_W {
-        TEICLR5_W { w: self }
+    #[must_use]
+    pub fn teiclr5(&mut self) -> TEICLR5_W<29> {
+        TEICLR5_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "ISCR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [iscr](index.html) module"]
+pub struct ISCR_SPEC;
+impl crate::RegisterSpec for ISCR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [iscr::R](R) reader structure"]
+impl crate::Readable for ISCR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [iscr::W](W) writer structure"]
+impl crate::Writable for ISCR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets ISCR to value 0"]
+impl crate::Resettable for ISCR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

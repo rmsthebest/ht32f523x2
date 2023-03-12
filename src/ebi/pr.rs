@@ -1,152 +1,125 @@
-#[doc = "Reader of register PR"]
-pub type R = crate::R<u32, super::PR>;
-#[doc = "Writer for register PR"]
-pub type W = crate::W<u32, super::PR>;
-#[doc = "Register PR `reset()`'s with value 0"]
-impl crate::ResetValue for super::PR {
-    type Type = u32;
+#[doc = "Register `PR` reader"]
+pub struct R(crate::R<PR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<PR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CSPOL`"]
-pub type CSPOL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CSPOL`"]
-pub struct CSPOL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CSPOL_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<PR_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<PR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `OEPOL`"]
-pub type OEPOL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `OEPOL`"]
-pub struct OEPOL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OEPOL_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `PR` writer"]
+pub struct W(crate::W<PR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<PR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `WEPOL`"]
-pub type WEPOL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WEPOL`"]
-pub struct WEPOL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WEPOL_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `ALEPOL`"]
-pub type ALEPOL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ALEPOL`"]
-pub struct ALEPOL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ALEPOL_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<PR_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn from(writer: crate::W<PR_SPEC>) -> Self {
+        W(writer)
     }
 }
+#[doc = "Field `CSPOL` reader - CSPOL"]
+pub type CSPOL_R = crate::BitReader<bool>;
+#[doc = "Field `CSPOL` writer - CSPOL"]
+pub type CSPOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, PR_SPEC, bool, O>;
+#[doc = "Field `OEPOL` reader - OEPOL"]
+pub type OEPOL_R = crate::BitReader<bool>;
+#[doc = "Field `OEPOL` writer - OEPOL"]
+pub type OEPOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, PR_SPEC, bool, O>;
+#[doc = "Field `WEPOL` reader - WEPOL"]
+pub type WEPOL_R = crate::BitReader<bool>;
+#[doc = "Field `WEPOL` writer - WEPOL"]
+pub type WEPOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, PR_SPEC, bool, O>;
+#[doc = "Field `ALEPOL` reader - ALEPOL"]
+pub type ALEPOL_R = crate::BitReader<bool>;
+#[doc = "Field `ALEPOL` writer - ALEPOL"]
+pub type ALEPOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, PR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - CSPOL"]
     #[inline(always)]
     pub fn cspol(&self) -> CSPOL_R {
-        CSPOL_R::new((self.bits & 0x01) != 0)
+        CSPOL_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - OEPOL"]
     #[inline(always)]
     pub fn oepol(&self) -> OEPOL_R {
-        OEPOL_R::new(((self.bits >> 1) & 0x01) != 0)
+        OEPOL_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - WEPOL"]
     #[inline(always)]
     pub fn wepol(&self) -> WEPOL_R {
-        WEPOL_R::new(((self.bits >> 2) & 0x01) != 0)
+        WEPOL_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - ALEPOL"]
     #[inline(always)]
     pub fn alepol(&self) -> ALEPOL_R {
-        ALEPOL_R::new(((self.bits >> 3) & 0x01) != 0)
+        ALEPOL_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - CSPOL"]
     #[inline(always)]
-    pub fn cspol(&mut self) -> CSPOL_W {
-        CSPOL_W { w: self }
+    #[must_use]
+    pub fn cspol(&mut self) -> CSPOL_W<0> {
+        CSPOL_W::new(self)
     }
     #[doc = "Bit 1 - OEPOL"]
     #[inline(always)]
-    pub fn oepol(&mut self) -> OEPOL_W {
-        OEPOL_W { w: self }
+    #[must_use]
+    pub fn oepol(&mut self) -> OEPOL_W<1> {
+        OEPOL_W::new(self)
     }
     #[doc = "Bit 2 - WEPOL"]
     #[inline(always)]
-    pub fn wepol(&mut self) -> WEPOL_W {
-        WEPOL_W { w: self }
+    #[must_use]
+    pub fn wepol(&mut self) -> WEPOL_W<2> {
+        WEPOL_W::new(self)
     }
     #[doc = "Bit 3 - ALEPOL"]
     #[inline(always)]
-    pub fn alepol(&mut self) -> ALEPOL_W {
-        ALEPOL_W { w: self }
+    #[must_use]
+    pub fn alepol(&mut self) -> ALEPOL_W<3> {
+        ALEPOL_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "PR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pr](index.html) module"]
+pub struct PR_SPEC;
+impl crate::RegisterSpec for PR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [pr::R](R) reader structure"]
+impl crate::Readable for PR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [pr::W](W) writer structure"]
+impl crate::Writable for PR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets PR to value 0"]
+impl crate::Resettable for PR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

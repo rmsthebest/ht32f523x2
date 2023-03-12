@@ -1,244 +1,170 @@
-#[doc = "Reader of register CR"]
-pub type R = crate::R<u32, super::CR>;
-#[doc = "Writer for register CR"]
-pub type W = crate::W<u32, super::CR>;
-#[doc = "Register CR `reset()`'s with value 0"]
-impl crate::ResetValue for super::CR {
-    type Type = u32;
+#[doc = "Register `CR` reader"]
+pub struct R(crate::R<CR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `POLY`"]
-pub type POLY_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `POLY`"]
-pub struct POLY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POLY_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<CR_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | ((value as u32) & 0x03);
-        self.w
+    fn from(reader: crate::R<CR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `DATBIRV`"]
-pub type DATBIRV_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DATBIRV`"]
-pub struct DATBIRV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DATBIRV_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `CR` writer"]
+pub struct W(crate::W<CR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `DATBYRV`"]
-pub type DATBYRV_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DATBYRV`"]
-pub struct DATBYRV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DATBYRV_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `DATCMPL`"]
-pub type DATCMPL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DATCMPL`"]
-pub struct DATCMPL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DATCMPL_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<CR_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
+    fn from(writer: crate::W<CR_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `SUMBIRV`"]
-pub type SUMBIRV_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SUMBIRV`"]
-pub struct SUMBIRV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SUMBIRV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Reader of field `SUMBYRV`"]
-pub type SUMBYRV_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SUMBYRV`"]
-pub struct SUMBYRV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SUMBYRV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Reader of field `SUMCMPL`"]
-pub type SUMCMPL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SUMCMPL`"]
-pub struct SUMCMPL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SUMCMPL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
-        self.w
-    }
-}
+#[doc = "Field `POLY` reader - POLY"]
+pub type POLY_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `POLY` writer - POLY"]
+pub type POLY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR_SPEC, u8, u8, 2, O>;
+#[doc = "Field `DATBIRV` reader - DATBIRV"]
+pub type DATBIRV_R = crate::BitReader<bool>;
+#[doc = "Field `DATBIRV` writer - DATBIRV"]
+pub type DATBIRV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `DATBYRV` reader - DATBYRV"]
+pub type DATBYRV_R = crate::BitReader<bool>;
+#[doc = "Field `DATBYRV` writer - DATBYRV"]
+pub type DATBYRV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `DATCMPL` reader - DATCMPL"]
+pub type DATCMPL_R = crate::BitReader<bool>;
+#[doc = "Field `DATCMPL` writer - DATCMPL"]
+pub type DATCMPL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `SUMBIRV` reader - SUMBIRV"]
+pub type SUMBIRV_R = crate::BitReader<bool>;
+#[doc = "Field `SUMBIRV` writer - SUMBIRV"]
+pub type SUMBIRV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `SUMBYRV` reader - SUMBYRV"]
+pub type SUMBYRV_R = crate::BitReader<bool>;
+#[doc = "Field `SUMBYRV` writer - SUMBYRV"]
+pub type SUMBYRV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `SUMCMPL` reader - SUMCMPL"]
+pub type SUMCMPL_R = crate::BitReader<bool>;
+#[doc = "Field `SUMCMPL` writer - SUMCMPL"]
+pub type SUMCMPL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:1 - POLY"]
     #[inline(always)]
     pub fn poly(&self) -> POLY_R {
-        POLY_R::new((self.bits & 0x03) as u8)
+        POLY_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 2 - DATBIRV"]
     #[inline(always)]
     pub fn datbirv(&self) -> DATBIRV_R {
-        DATBIRV_R::new(((self.bits >> 2) & 0x01) != 0)
+        DATBIRV_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - DATBYRV"]
     #[inline(always)]
     pub fn datbyrv(&self) -> DATBYRV_R {
-        DATBYRV_R::new(((self.bits >> 3) & 0x01) != 0)
+        DATBYRV_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - DATCMPL"]
     #[inline(always)]
     pub fn datcmpl(&self) -> DATCMPL_R {
-        DATCMPL_R::new(((self.bits >> 4) & 0x01) != 0)
+        DATCMPL_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - SUMBIRV"]
     #[inline(always)]
     pub fn sumbirv(&self) -> SUMBIRV_R {
-        SUMBIRV_R::new(((self.bits >> 5) & 0x01) != 0)
+        SUMBIRV_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - SUMBYRV"]
     #[inline(always)]
     pub fn sumbyrv(&self) -> SUMBYRV_R {
-        SUMBYRV_R::new(((self.bits >> 6) & 0x01) != 0)
+        SUMBYRV_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - SUMCMPL"]
     #[inline(always)]
     pub fn sumcmpl(&self) -> SUMCMPL_R {
-        SUMCMPL_R::new(((self.bits >> 7) & 0x01) != 0)
+        SUMCMPL_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - POLY"]
     #[inline(always)]
-    pub fn poly(&mut self) -> POLY_W {
-        POLY_W { w: self }
+    #[must_use]
+    pub fn poly(&mut self) -> POLY_W<0> {
+        POLY_W::new(self)
     }
     #[doc = "Bit 2 - DATBIRV"]
     #[inline(always)]
-    pub fn datbirv(&mut self) -> DATBIRV_W {
-        DATBIRV_W { w: self }
+    #[must_use]
+    pub fn datbirv(&mut self) -> DATBIRV_W<2> {
+        DATBIRV_W::new(self)
     }
     #[doc = "Bit 3 - DATBYRV"]
     #[inline(always)]
-    pub fn datbyrv(&mut self) -> DATBYRV_W {
-        DATBYRV_W { w: self }
+    #[must_use]
+    pub fn datbyrv(&mut self) -> DATBYRV_W<3> {
+        DATBYRV_W::new(self)
     }
     #[doc = "Bit 4 - DATCMPL"]
     #[inline(always)]
-    pub fn datcmpl(&mut self) -> DATCMPL_W {
-        DATCMPL_W { w: self }
+    #[must_use]
+    pub fn datcmpl(&mut self) -> DATCMPL_W<4> {
+        DATCMPL_W::new(self)
     }
     #[doc = "Bit 5 - SUMBIRV"]
     #[inline(always)]
-    pub fn sumbirv(&mut self) -> SUMBIRV_W {
-        SUMBIRV_W { w: self }
+    #[must_use]
+    pub fn sumbirv(&mut self) -> SUMBIRV_W<5> {
+        SUMBIRV_W::new(self)
     }
     #[doc = "Bit 6 - SUMBYRV"]
     #[inline(always)]
-    pub fn sumbyrv(&mut self) -> SUMBYRV_W {
-        SUMBYRV_W { w: self }
+    #[must_use]
+    pub fn sumbyrv(&mut self) -> SUMBYRV_W<6> {
+        SUMBYRV_W::new(self)
     }
     #[doc = "Bit 7 - SUMCMPL"]
     #[inline(always)]
-    pub fn sumcmpl(&mut self) -> SUMCMPL_W {
-        SUMCMPL_W { w: self }
+    #[must_use]
+    pub fn sumcmpl(&mut self) -> SUMCMPL_W<7> {
+        SUMCMPL_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "CR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cr](index.html) module"]
+pub struct CR_SPEC;
+impl crate::RegisterSpec for CR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [cr::R](R) reader structure"]
+impl crate::Readable for CR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [cr::W](W) writer structure"]
+impl crate::Writable for CR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CR to value 0"]
+impl crate::Resettable for CR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

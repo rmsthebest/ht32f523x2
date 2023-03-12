@@ -1,84 +1,95 @@
-#[doc = "Reader of register CPSR"]
-pub type R = crate::R<u32, super::CPSR>;
-#[doc = "Writer for register CPSR"]
-pub type W = crate::W<u32, super::CPSR>;
-#[doc = "Register CPSR `reset()`'s with value 0"]
-impl crate::ResetValue for super::CPSR {
-    type Type = u32;
+#[doc = "Register `CPSR` reader"]
+pub struct R(crate::R<CPSR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CPSR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CPSB`"]
-pub type CPSB_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CPSB`"]
-pub struct CPSB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CPSB_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<CPSR_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<CPSR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `OBPSB`"]
-pub type OBPSB_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `OBPSB`"]
-pub struct OBPSB_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OBPSB_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `CPSR` writer"]
+pub struct W(crate::W<CPSR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CPSR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<CPSR_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<CPSR_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `CPSB` reader - CPSB"]
+pub type CPSB_R = crate::BitReader<bool>;
+#[doc = "Field `CPSB` writer - CPSB"]
+pub type CPSB_W<'a, const O: u8> = crate::BitWriter<'a, u32, CPSR_SPEC, bool, O>;
+#[doc = "Field `OBPSB` reader - OBPSB"]
+pub type OBPSB_R = crate::BitReader<bool>;
+#[doc = "Field `OBPSB` writer - OBPSB"]
+pub type OBPSB_W<'a, const O: u8> = crate::BitWriter<'a, u32, CPSR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - CPSB"]
     #[inline(always)]
     pub fn cpsb(&self) -> CPSB_R {
-        CPSB_R::new((self.bits & 0x01) != 0)
+        CPSB_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - OBPSB"]
     #[inline(always)]
     pub fn obpsb(&self) -> OBPSB_R {
-        OBPSB_R::new(((self.bits >> 1) & 0x01) != 0)
+        OBPSB_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - CPSB"]
     #[inline(always)]
-    pub fn cpsb(&mut self) -> CPSB_W {
-        CPSB_W { w: self }
+    #[must_use]
+    pub fn cpsb(&mut self) -> CPSB_W<0> {
+        CPSB_W::new(self)
     }
     #[doc = "Bit 1 - OBPSB"]
     #[inline(always)]
-    pub fn obpsb(&mut self) -> OBPSB_W {
-        OBPSB_W { w: self }
+    #[must_use]
+    pub fn obpsb(&mut self) -> OBPSB_W<1> {
+        OBPSB_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "CPSR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cpsr](index.html) module"]
+pub struct CPSR_SPEC;
+impl crate::RegisterSpec for CPSR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [cpsr::R](R) reader structure"]
+impl crate::Readable for CPSR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [cpsr::W](W) writer structure"]
+impl crate::Writable for CPSR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CPSR to value 0"]
+impl crate::Resettable for CPSR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

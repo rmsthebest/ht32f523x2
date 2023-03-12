@@ -1,254 +1,170 @@
-#[doc = "Reader of register OISR"]
-pub type R = crate::R<u32, super::OISR>;
-#[doc = "Writer for register OISR"]
-pub type W = crate::W<u32, super::OISR>;
-#[doc = "Register OISR `reset()`'s with value 0"]
-impl crate::ResetValue for super::OISR {
-    type Type = u32;
+#[doc = "Register `OISR` reader"]
+pub struct R(crate::R<OISR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<OISR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `ORFF`"]
-pub type ORFF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ORFF`"]
-pub struct ORFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ORFF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<OISR_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<OISR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `ITADF`"]
-pub type ITADF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ITADF`"]
-pub struct ITADF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ITADF_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `OISR` writer"]
+pub struct W(crate::W<OISR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<OISR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `OBEF`"]
-pub type OBEF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `OBEF`"]
-pub struct OBEF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OBEF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `IOCMF`"]
-pub type IOCMF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `IOCMF`"]
-pub struct IOCMF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IOCMF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<OISR_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn from(writer: crate::W<OISR_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `OREF`"]
-pub type OREF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `OREF`"]
-pub struct OREF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OREF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Reader of field `RORFF`"]
-pub type RORFF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RORFF`"]
-pub struct RORFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RORFF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
-        self.w
-    }
-}
-#[doc = "Reader of field `PPEF`"]
-pub type PPEF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PPEF`"]
-pub struct PPEF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PPEF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
-        self.w
-    }
-}
+#[doc = "Field `ORFF` reader - ORFF"]
+pub type ORFF_R = crate::BitReader<bool>;
+#[doc = "Field `ORFF` writer - ORFF"]
+pub type ORFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, OISR_SPEC, bool, O>;
+#[doc = "Field `ITADF` reader - ITADF"]
+pub type ITADF_R = crate::BitReader<bool>;
+#[doc = "Field `ITADF` writer - ITADF"]
+pub type ITADF_W<'a, const O: u8> = crate::BitWriter<'a, u32, OISR_SPEC, bool, O>;
+#[doc = "Field `OBEF` reader - OBEF"]
+pub type OBEF_R = crate::BitReader<bool>;
+#[doc = "Field `OBEF` writer - OBEF"]
+pub type OBEF_W<'a, const O: u8> = crate::BitWriter<'a, u32, OISR_SPEC, bool, O>;
+#[doc = "Field `IOCMF` reader - IOCMF"]
+pub type IOCMF_R = crate::BitReader<bool>;
+#[doc = "Field `IOCMF` writer - IOCMF"]
+pub type IOCMF_W<'a, const O: u8> = crate::BitWriter<'a, u32, OISR_SPEC, bool, O>;
+#[doc = "Field `OREF` reader - OREF"]
+pub type OREF_R = crate::BitReader<bool>;
+#[doc = "Field `OREF` writer - OREF"]
+pub type OREF_W<'a, const O: u8> = crate::BitWriter<'a, u32, OISR_SPEC, bool, O>;
+#[doc = "Field `RORFF` reader - RORFF"]
+pub type RORFF_R = crate::BitReader<bool>;
+#[doc = "Field `RORFF` writer - RORFF"]
+pub type RORFF_W<'a, const O: u8> = crate::BitWriter<'a, u32, OISR_SPEC, bool, O>;
+#[doc = "Field `PPEF` reader - PPEF"]
+pub type PPEF_R = crate::BitReader<bool>;
+#[doc = "Field `PPEF` writer - PPEF"]
+pub type PPEF_W<'a, const O: u8> = crate::BitWriter<'a, u32, OISR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - ORFF"]
     #[inline(always)]
     pub fn orff(&self) -> ORFF_R {
-        ORFF_R::new((self.bits & 0x01) != 0)
+        ORFF_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - ITADF"]
     #[inline(always)]
     pub fn itadf(&self) -> ITADF_R {
-        ITADF_R::new(((self.bits >> 1) & 0x01) != 0)
+        ITADF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - OBEF"]
     #[inline(always)]
     pub fn obef(&self) -> OBEF_R {
-        OBEF_R::new(((self.bits >> 2) & 0x01) != 0)
+        OBEF_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - IOCMF"]
     #[inline(always)]
     pub fn iocmf(&self) -> IOCMF_R {
-        IOCMF_R::new(((self.bits >> 3) & 0x01) != 0)
+        IOCMF_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - OREF"]
     #[inline(always)]
     pub fn oref(&self) -> OREF_R {
-        OREF_R::new(((self.bits >> 4) & 0x01) != 0)
+        OREF_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 16 - RORFF"]
     #[inline(always)]
     pub fn rorff(&self) -> RORFF_R {
-        RORFF_R::new(((self.bits >> 16) & 0x01) != 0)
+        RORFF_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - PPEF"]
     #[inline(always)]
     pub fn ppef(&self) -> PPEF_R {
-        PPEF_R::new(((self.bits >> 17) & 0x01) != 0)
+        PPEF_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - ORFF"]
     #[inline(always)]
-    pub fn orff(&mut self) -> ORFF_W {
-        ORFF_W { w: self }
+    #[must_use]
+    pub fn orff(&mut self) -> ORFF_W<0> {
+        ORFF_W::new(self)
     }
     #[doc = "Bit 1 - ITADF"]
     #[inline(always)]
-    pub fn itadf(&mut self) -> ITADF_W {
-        ITADF_W { w: self }
+    #[must_use]
+    pub fn itadf(&mut self) -> ITADF_W<1> {
+        ITADF_W::new(self)
     }
     #[doc = "Bit 2 - OBEF"]
     #[inline(always)]
-    pub fn obef(&mut self) -> OBEF_W {
-        OBEF_W { w: self }
+    #[must_use]
+    pub fn obef(&mut self) -> OBEF_W<2> {
+        OBEF_W::new(self)
     }
     #[doc = "Bit 3 - IOCMF"]
     #[inline(always)]
-    pub fn iocmf(&mut self) -> IOCMF_W {
-        IOCMF_W { w: self }
+    #[must_use]
+    pub fn iocmf(&mut self) -> IOCMF_W<3> {
+        IOCMF_W::new(self)
     }
     #[doc = "Bit 4 - OREF"]
     #[inline(always)]
-    pub fn oref(&mut self) -> OREF_W {
-        OREF_W { w: self }
+    #[must_use]
+    pub fn oref(&mut self) -> OREF_W<4> {
+        OREF_W::new(self)
     }
     #[doc = "Bit 16 - RORFF"]
     #[inline(always)]
-    pub fn rorff(&mut self) -> RORFF_W {
-        RORFF_W { w: self }
+    #[must_use]
+    pub fn rorff(&mut self) -> RORFF_W<16> {
+        RORFF_W::new(self)
     }
     #[doc = "Bit 17 - PPEF"]
     #[inline(always)]
-    pub fn ppef(&mut self) -> PPEF_W {
-        PPEF_W { w: self }
+    #[must_use]
+    pub fn ppef(&mut self) -> PPEF_W<17> {
+        PPEF_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "OISR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [oisr](index.html) module"]
+pub struct OISR_SPEC;
+impl crate::RegisterSpec for OISR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [oisr::R](R) reader structure"]
+impl crate::Readable for OISR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [oisr::W](W) writer structure"]
+impl crate::Writable for OISR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets OISR to value 0"]
+impl crate::Resettable for OISR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

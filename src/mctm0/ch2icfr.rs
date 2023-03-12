@@ -1,57 +1,51 @@
-#[doc = "Reader of register CH2ICFR"]
-pub type R = crate::R<u32, super::CH2ICFR>;
-#[doc = "Writer for register CH2ICFR"]
-pub type W = crate::W<u32, super::CH2ICFR>;
-#[doc = "Register CH2ICFR `reset()`'s with value 0"]
-impl crate::ResetValue for super::CH2ICFR {
-    type Type = u32;
+#[doc = "Register `CH2ICFR` reader"]
+pub struct R(crate::R<CH2ICFR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CH2ICFR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TI2F`"]
-pub type TI2F_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `TI2F`"]
-pub struct TI2F_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TI2F_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<CH2ICFR_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
-        self.w
+    fn from(reader: crate::R<CH2ICFR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `CH2CCS`"]
-pub type CH2CCS_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CH2CCS`"]
-pub struct CH2CCS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH2CCS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+#[doc = "Register `CH2ICFR` writer"]
+pub struct W(crate::W<CH2ICFR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CH2ICFR_SPEC>;
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | (((value as u32) & 0x03) << 16);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CH2PSC`"]
-pub type CH2PSC_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CH2PSC`"]
-pub struct CH2PSC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH2PSC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 18)) | (((value as u32) & 0x03) << 18);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
+impl From<crate::W<CH2ICFR_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<CH2ICFR_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `TI2F` reader - TI2F"]
+pub type TI2F_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TI2F` writer - TI2F"]
+pub type TI2F_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH2ICFR_SPEC, u8, u8, 4, O>;
+#[doc = "Field `CH2CCS` reader - CH2CCS"]
+pub type CH2CCS_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CH2CCS` writer - CH2CCS"]
+pub type CH2CCS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH2ICFR_SPEC, u8, u8, 2, O>;
+#[doc = "Field `CH2PSC` reader - CH2PSC"]
+pub type CH2PSC_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CH2PSC` writer - CH2PSC"]
+pub type CH2PSC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH2ICFR_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 0:3 - TI2F"]
     #[inline(always)]
@@ -61,28 +55,56 @@ impl R {
     #[doc = "Bits 16:17 - CH2CCS"]
     #[inline(always)]
     pub fn ch2ccs(&self) -> CH2CCS_R {
-        CH2CCS_R::new(((self.bits >> 16) & 0x03) as u8)
+        CH2CCS_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 18:19 - CH2PSC"]
     #[inline(always)]
     pub fn ch2psc(&self) -> CH2PSC_R {
-        CH2PSC_R::new(((self.bits >> 18) & 0x03) as u8)
+        CH2PSC_R::new(((self.bits >> 18) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - TI2F"]
     #[inline(always)]
-    pub fn ti2f(&mut self) -> TI2F_W {
-        TI2F_W { w: self }
+    #[must_use]
+    pub fn ti2f(&mut self) -> TI2F_W<0> {
+        TI2F_W::new(self)
     }
     #[doc = "Bits 16:17 - CH2CCS"]
     #[inline(always)]
-    pub fn ch2ccs(&mut self) -> CH2CCS_W {
-        CH2CCS_W { w: self }
+    #[must_use]
+    pub fn ch2ccs(&mut self) -> CH2CCS_W<16> {
+        CH2CCS_W::new(self)
     }
     #[doc = "Bits 18:19 - CH2PSC"]
     #[inline(always)]
-    pub fn ch2psc(&mut self) -> CH2PSC_W {
-        CH2PSC_W { w: self }
+    #[must_use]
+    pub fn ch2psc(&mut self) -> CH2PSC_W<18> {
+        CH2PSC_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "CH2ICFR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch2icfr](index.html) module"]
+pub struct CH2ICFR_SPEC;
+impl crate::RegisterSpec for CH2ICFR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [ch2icfr::R](R) reader structure"]
+impl crate::Readable for CH2ICFR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ch2icfr::W](W) writer structure"]
+impl crate::Writable for CH2ICFR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CH2ICFR to value 0"]
+impl crate::Resettable for CH2ICFR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -1,116 +1,71 @@
-#[doc = "Reader of register USART_RS485CR"]
-pub type R = crate::R<u32, super::USART_RS485CR>;
-#[doc = "Writer for register USART_RS485CR"]
-pub type W = crate::W<u32, super::USART_RS485CR>;
-#[doc = "Register USART_RS485CR `reset()`'s with value 0"]
-impl crate::ResetValue for super::USART_RS485CR {
-    type Type = u32;
+#[doc = "Register `USART_RS485CR` reader"]
+pub struct R(crate::R<USART_RS485CR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<USART_RS485CR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TXENP`"]
-pub type TXENP_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TXENP`"]
-pub struct TXENP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXENP_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<USART_RS485CR_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<USART_RS485CR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `RSNMM`"]
-pub type RSNMM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RSNMM`"]
-pub struct RSNMM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RSNMM_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `USART_RS485CR` writer"]
+pub struct W(crate::W<USART_RS485CR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<USART_RS485CR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `RSAAD`"]
-pub type RSAAD_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RSAAD`"]
-pub struct RSAAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RSAAD_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `ADDMATCH`"]
-pub type ADDMATCH_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `ADDMATCH`"]
-pub struct ADDMATCH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADDMATCH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::W<USART_RS485CR_SPEC>> for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | (((value as u32) & 0xff) << 8);
-        self.w
+    fn from(writer: crate::W<USART_RS485CR_SPEC>) -> Self {
+        W(writer)
     }
 }
+#[doc = "Field `TXENP` reader - TXENP"]
+pub type TXENP_R = crate::BitReader<bool>;
+#[doc = "Field `TXENP` writer - TXENP"]
+pub type TXENP_W<'a, const O: u8> = crate::BitWriter<'a, u32, USART_RS485CR_SPEC, bool, O>;
+#[doc = "Field `RSNMM` reader - RSNMM"]
+pub type RSNMM_R = crate::BitReader<bool>;
+#[doc = "Field `RSNMM` writer - RSNMM"]
+pub type RSNMM_W<'a, const O: u8> = crate::BitWriter<'a, u32, USART_RS485CR_SPEC, bool, O>;
+#[doc = "Field `RSAAD` reader - RSAAD"]
+pub type RSAAD_R = crate::BitReader<bool>;
+#[doc = "Field `RSAAD` writer - RSAAD"]
+pub type RSAAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USART_RS485CR_SPEC, bool, O>;
+#[doc = "Field `ADDMATCH` reader - ADDMATCH"]
+pub type ADDMATCH_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ADDMATCH` writer - ADDMATCH"]
+pub type ADDMATCH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, USART_RS485CR_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bit 0 - TXENP"]
     #[inline(always)]
     pub fn txenp(&self) -> TXENP_R {
-        TXENP_R::new((self.bits & 0x01) != 0)
+        TXENP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RSNMM"]
     #[inline(always)]
     pub fn rsnmm(&self) -> RSNMM_R {
-        RSNMM_R::new(((self.bits >> 1) & 0x01) != 0)
+        RSNMM_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - RSAAD"]
     #[inline(always)]
     pub fn rsaad(&self) -> RSAAD_R {
-        RSAAD_R::new(((self.bits >> 2) & 0x01) != 0)
+        RSAAD_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 8:15 - ADDMATCH"]
     #[inline(always)]
@@ -121,22 +76,51 @@ impl R {
 impl W {
     #[doc = "Bit 0 - TXENP"]
     #[inline(always)]
-    pub fn txenp(&mut self) -> TXENP_W {
-        TXENP_W { w: self }
+    #[must_use]
+    pub fn txenp(&mut self) -> TXENP_W<0> {
+        TXENP_W::new(self)
     }
     #[doc = "Bit 1 - RSNMM"]
     #[inline(always)]
-    pub fn rsnmm(&mut self) -> RSNMM_W {
-        RSNMM_W { w: self }
+    #[must_use]
+    pub fn rsnmm(&mut self) -> RSNMM_W<1> {
+        RSNMM_W::new(self)
     }
     #[doc = "Bit 2 - RSAAD"]
     #[inline(always)]
-    pub fn rsaad(&mut self) -> RSAAD_W {
-        RSAAD_W { w: self }
+    #[must_use]
+    pub fn rsaad(&mut self) -> RSAAD_W<2> {
+        RSAAD_W::new(self)
     }
     #[doc = "Bits 8:15 - ADDMATCH"]
     #[inline(always)]
-    pub fn addmatch(&mut self) -> ADDMATCH_W {
-        ADDMATCH_W { w: self }
+    #[must_use]
+    pub fn addmatch(&mut self) -> ADDMATCH_W<8> {
+        ADDMATCH_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "USART_RS485CR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [usart_rs485cr](index.html) module"]
+pub struct USART_RS485CR_SPEC;
+impl crate::RegisterSpec for USART_RS485CR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [usart_rs485cr::R](R) reader structure"]
+impl crate::Readable for USART_RS485CR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [usart_rs485cr::W](W) writer structure"]
+impl crate::Writable for USART_RS485CR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets USART_RS485CR to value 0"]
+impl crate::Resettable for USART_RS485CR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

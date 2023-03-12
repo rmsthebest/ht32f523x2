@@ -1,166 +1,140 @@
-#[doc = "Reader of register CNTCFR"]
-pub type R = crate::R<u32, super::CNTCFR>;
-#[doc = "Writer for register CNTCFR"]
-pub type W = crate::W<u32, super::CNTCFR>;
-#[doc = "Register CNTCFR `reset()`'s with value 0"]
-impl crate::ResetValue for super::CNTCFR {
-    type Type = u32;
+#[doc = "Register `CNTCFR` reader"]
+pub struct R(crate::R<CNTCFR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CNTCFR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `UEV1DIS`"]
-pub type UEV1DIS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UEV1DIS`"]
-pub struct UEV1DIS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UEV1DIS_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<CNTCFR_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<CNTCFR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `UGDIS`"]
-pub type UGDIS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UGDIS`"]
-pub struct UGDIS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UGDIS_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `CNTCFR` writer"]
+pub struct W(crate::W<CNTCFR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CNTCFR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CKDIV`"]
-pub type CKDIV_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CKDIV`"]
-pub struct CKDIV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CKDIV_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u32) & 0x03) << 8);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `CMSEL`"]
-pub type CMSEL_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CMSEL`"]
-pub struct CMSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CMSEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::W<CNTCFR_SPEC>> for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | (((value as u32) & 0x03) << 16);
-        self.w
+    fn from(writer: crate::W<CNTCFR_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `DIR`"]
-pub type DIR_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DIR`"]
-pub struct DIR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 24)) | (((value as u32) & 0x01) << 24);
-        self.w
-    }
-}
+#[doc = "Field `UEV1DIS` reader - UEV1DIS"]
+pub type UEV1DIS_R = crate::BitReader<bool>;
+#[doc = "Field `UEV1DIS` writer - UEV1DIS"]
+pub type UEV1DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CNTCFR_SPEC, bool, O>;
+#[doc = "Field `UGDIS` reader - UGDIS"]
+pub type UGDIS_R = crate::BitReader<bool>;
+#[doc = "Field `UGDIS` writer - UGDIS"]
+pub type UGDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CNTCFR_SPEC, bool, O>;
+#[doc = "Field `CKDIV` reader - CKDIV"]
+pub type CKDIV_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CKDIV` writer - CKDIV"]
+pub type CKDIV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CNTCFR_SPEC, u8, u8, 2, O>;
+#[doc = "Field `CMSEL` reader - CMSEL"]
+pub type CMSEL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CMSEL` writer - CMSEL"]
+pub type CMSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CNTCFR_SPEC, u8, u8, 2, O>;
+#[doc = "Field `DIR` reader - DIR"]
+pub type DIR_R = crate::BitReader<bool>;
+#[doc = "Field `DIR` writer - DIR"]
+pub type DIR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CNTCFR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - UEV1DIS"]
     #[inline(always)]
     pub fn uev1dis(&self) -> UEV1DIS_R {
-        UEV1DIS_R::new((self.bits & 0x01) != 0)
+        UEV1DIS_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - UGDIS"]
     #[inline(always)]
     pub fn ugdis(&self) -> UGDIS_R {
-        UGDIS_R::new(((self.bits >> 1) & 0x01) != 0)
+        UGDIS_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 8:9 - CKDIV"]
     #[inline(always)]
     pub fn ckdiv(&self) -> CKDIV_R {
-        CKDIV_R::new(((self.bits >> 8) & 0x03) as u8)
+        CKDIV_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 16:17 - CMSEL"]
     #[inline(always)]
     pub fn cmsel(&self) -> CMSEL_R {
-        CMSEL_R::new(((self.bits >> 16) & 0x03) as u8)
+        CMSEL_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bit 24 - DIR"]
     #[inline(always)]
     pub fn dir(&self) -> DIR_R {
-        DIR_R::new(((self.bits >> 24) & 0x01) != 0)
+        DIR_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - UEV1DIS"]
     #[inline(always)]
-    pub fn uev1dis(&mut self) -> UEV1DIS_W {
-        UEV1DIS_W { w: self }
+    #[must_use]
+    pub fn uev1dis(&mut self) -> UEV1DIS_W<0> {
+        UEV1DIS_W::new(self)
     }
     #[doc = "Bit 1 - UGDIS"]
     #[inline(always)]
-    pub fn ugdis(&mut self) -> UGDIS_W {
-        UGDIS_W { w: self }
+    #[must_use]
+    pub fn ugdis(&mut self) -> UGDIS_W<1> {
+        UGDIS_W::new(self)
     }
     #[doc = "Bits 8:9 - CKDIV"]
     #[inline(always)]
-    pub fn ckdiv(&mut self) -> CKDIV_W {
-        CKDIV_W { w: self }
+    #[must_use]
+    pub fn ckdiv(&mut self) -> CKDIV_W<8> {
+        CKDIV_W::new(self)
     }
     #[doc = "Bits 16:17 - CMSEL"]
     #[inline(always)]
-    pub fn cmsel(&mut self) -> CMSEL_W {
-        CMSEL_W { w: self }
+    #[must_use]
+    pub fn cmsel(&mut self) -> CMSEL_W<16> {
+        CMSEL_W::new(self)
     }
     #[doc = "Bit 24 - DIR"]
     #[inline(always)]
-    pub fn dir(&mut self) -> DIR_W {
-        DIR_W { w: self }
+    #[must_use]
+    pub fn dir(&mut self) -> DIR_W<24> {
+        DIR_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "CNTCFR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cntcfr](index.html) module"]
+pub struct CNTCFR_SPEC;
+impl crate::RegisterSpec for CNTCFR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [cntcfr::R](R) reader structure"]
+impl crate::Readable for CNTCFR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [cntcfr::W](W) writer structure"]
+impl crate::Writable for CNTCFR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CNTCFR to value 0"]
+impl crate::Resettable for CNTCFR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

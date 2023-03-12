@@ -1,67 +1,51 @@
-#[doc = "Reader of register USART_USRTPR"]
-pub type R = crate::R<u32, super::USART_USRTPR>;
-#[doc = "Writer for register USART_USRTPR"]
-pub type W = crate::W<u32, super::USART_USRTPR>;
-#[doc = "Register USART_USRTPR `reset()`'s with value 0"]
-impl crate::ResetValue for super::USART_USRTPR {
-    type Type = u32;
+#[doc = "Register `USART_USRTPR` reader"]
+pub struct R(crate::R<USART_USRTPR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<USART_USRTPR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `RXTOC`"]
-pub type RXTOC_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `RXTOC`"]
-pub struct RXTOC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXTOC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<USART_USRTPR_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | ((value as u32) & 0x7f);
-        self.w
+    fn from(reader: crate::R<USART_USRTPR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `RXTOEN`"]
-pub type RXTOEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RXTOEN`"]
-pub struct RXTOEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXTOEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `USART_USRTPR` writer"]
+pub struct W(crate::W<USART_USRTPR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<USART_USRTPR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TG`"]
-pub type TG_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `TG`"]
-pub struct TG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TG_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | (((value as u32) & 0xff) << 8);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
+impl From<crate::W<USART_USRTPR_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<USART_USRTPR_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `RXTOC` reader - RXTOC"]
+pub type RXTOC_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `RXTOC` writer - RXTOC"]
+pub type RXTOC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, USART_USRTPR_SPEC, u8, u8, 7, O>;
+#[doc = "Field `RXTOEN` reader - RXTOEN"]
+pub type RXTOEN_R = crate::BitReader<bool>;
+#[doc = "Field `RXTOEN` writer - RXTOEN"]
+pub type RXTOEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USART_USRTPR_SPEC, bool, O>;
+#[doc = "Field `TG` reader - TG"]
+pub type TG_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `TG` writer - TG"]
+pub type TG_W<'a, const O: u8> = crate::FieldWriter<'a, u32, USART_USRTPR_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:6 - RXTOC"]
     #[inline(always)]
@@ -71,7 +55,7 @@ impl R {
     #[doc = "Bit 7 - RXTOEN"]
     #[inline(always)]
     pub fn rxtoen(&self) -> RXTOEN_R {
-        RXTOEN_R::new(((self.bits >> 7) & 0x01) != 0)
+        RXTOEN_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:15 - TG"]
     #[inline(always)]
@@ -82,17 +66,45 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - RXTOC"]
     #[inline(always)]
-    pub fn rxtoc(&mut self) -> RXTOC_W {
-        RXTOC_W { w: self }
+    #[must_use]
+    pub fn rxtoc(&mut self) -> RXTOC_W<0> {
+        RXTOC_W::new(self)
     }
     #[doc = "Bit 7 - RXTOEN"]
     #[inline(always)]
-    pub fn rxtoen(&mut self) -> RXTOEN_W {
-        RXTOEN_W { w: self }
+    #[must_use]
+    pub fn rxtoen(&mut self) -> RXTOEN_W<7> {
+        RXTOEN_W::new(self)
     }
     #[doc = "Bits 8:15 - TG"]
     #[inline(always)]
-    pub fn tg(&mut self) -> TG_W {
-        TG_W { w: self }
+    #[must_use]
+    pub fn tg(&mut self) -> TG_W<8> {
+        TG_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "USART_USRTPR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [usart_usrtpr](index.html) module"]
+pub struct USART_USRTPR_SPEC;
+impl crate::RegisterSpec for USART_USRTPR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [usart_usrtpr::R](R) reader structure"]
+impl crate::Readable for USART_USRTPR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [usart_usrtpr::W](W) writer structure"]
+impl crate::Writable for USART_USRTPR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets USART_USRTPR to value 0"]
+impl crate::Resettable for USART_USRTPR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

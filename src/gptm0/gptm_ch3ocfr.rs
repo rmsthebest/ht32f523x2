@@ -1,142 +1,125 @@
-#[doc = "Reader of register GPTM_CH3OCFR"]
-pub type R = crate::R<u32, super::GPTM_CH3OCFR>;
-#[doc = "Writer for register GPTM_CH3OCFR"]
-pub type W = crate::W<u32, super::GPTM_CH3OCFR>;
-#[doc = "Register GPTM_CH3OCFR `reset()`'s with value 0"]
-impl crate::ResetValue for super::GPTM_CH3OCFR {
-    type Type = u32;
+#[doc = "Register `GPTM_CH3OCFR` reader"]
+pub struct R(crate::R<GPTM_CH3OCFR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<GPTM_CH3OCFR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CH3OM`"]
-pub type CH3OM_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `CH3OM`"]
-pub struct CH3OM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH3OM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<GPTM_CH3OCFR_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | ((value as u32) & 0x07);
-        self.w
+    fn from(reader: crate::R<GPTM_CH3OCFR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `CH3PRE`"]
-pub type CH3PRE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH3PRE`"]
-pub struct CH3PRE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH3PRE_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `GPTM_CH3OCFR` writer"]
+pub struct W(crate::W<GPTM_CH3OCFR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<GPTM_CH3OCFR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CH3IMAE`"]
-pub type CH3IMAE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH3IMAE`"]
-pub struct CH3IMAE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH3IMAE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `CH3OM3`"]
-pub type CH3OM3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CH3OM3`"]
-pub struct CH3OM3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH3OM3_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<GPTM_CH3OCFR_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
+    fn from(writer: crate::W<GPTM_CH3OCFR_SPEC>) -> Self {
+        W(writer)
     }
 }
+#[doc = "Field `CH3OM` reader - CH3OM"]
+pub type CH3OM_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `CH3OM` writer - CH3OM"]
+pub type CH3OM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPTM_CH3OCFR_SPEC, u8, u8, 3, O>;
+#[doc = "Field `CH3PRE` reader - CH3PRE"]
+pub type CH3PRE_R = crate::BitReader<bool>;
+#[doc = "Field `CH3PRE` writer - CH3PRE"]
+pub type CH3PRE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPTM_CH3OCFR_SPEC, bool, O>;
+#[doc = "Field `CH3IMAE` reader - CH3IMAE"]
+pub type CH3IMAE_R = crate::BitReader<bool>;
+#[doc = "Field `CH3IMAE` writer - CH3IMAE"]
+pub type CH3IMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPTM_CH3OCFR_SPEC, bool, O>;
+#[doc = "Field `CH3OM3` reader - CH3OM3"]
+pub type CH3OM3_R = crate::BitReader<bool>;
+#[doc = "Field `CH3OM3` writer - CH3OM3"]
+pub type CH3OM3_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPTM_CH3OCFR_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:2 - CH3OM"]
     #[inline(always)]
     pub fn ch3om(&self) -> CH3OM_R {
-        CH3OM_R::new((self.bits & 0x07) as u8)
+        CH3OM_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bit 4 - CH3PRE"]
     #[inline(always)]
     pub fn ch3pre(&self) -> CH3PRE_R {
-        CH3PRE_R::new(((self.bits >> 4) & 0x01) != 0)
+        CH3PRE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - CH3IMAE"]
     #[inline(always)]
     pub fn ch3imae(&self) -> CH3IMAE_R {
-        CH3IMAE_R::new(((self.bits >> 5) & 0x01) != 0)
+        CH3IMAE_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 8 - CH3OM3"]
     #[inline(always)]
     pub fn ch3om3(&self) -> CH3OM3_R {
-        CH3OM3_R::new(((self.bits >> 8) & 0x01) != 0)
+        CH3OM3_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - CH3OM"]
     #[inline(always)]
-    pub fn ch3om(&mut self) -> CH3OM_W {
-        CH3OM_W { w: self }
+    #[must_use]
+    pub fn ch3om(&mut self) -> CH3OM_W<0> {
+        CH3OM_W::new(self)
     }
     #[doc = "Bit 4 - CH3PRE"]
     #[inline(always)]
-    pub fn ch3pre(&mut self) -> CH3PRE_W {
-        CH3PRE_W { w: self }
+    #[must_use]
+    pub fn ch3pre(&mut self) -> CH3PRE_W<4> {
+        CH3PRE_W::new(self)
     }
     #[doc = "Bit 5 - CH3IMAE"]
     #[inline(always)]
-    pub fn ch3imae(&mut self) -> CH3IMAE_W {
-        CH3IMAE_W { w: self }
+    #[must_use]
+    pub fn ch3imae(&mut self) -> CH3IMAE_W<5> {
+        CH3IMAE_W::new(self)
     }
     #[doc = "Bit 8 - CH3OM3"]
     #[inline(always)]
-    pub fn ch3om3(&mut self) -> CH3OM3_W {
-        CH3OM3_W { w: self }
+    #[must_use]
+    pub fn ch3om3(&mut self) -> CH3OM3_W<8> {
+        CH3OM3_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "GPTM_CH3OCFR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gptm_ch3ocfr](index.html) module"]
+pub struct GPTM_CH3OCFR_SPEC;
+impl crate::RegisterSpec for GPTM_CH3OCFR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [gptm_ch3ocfr::R](R) reader structure"]
+impl crate::Readable for GPTM_CH3OCFR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [gptm_ch3ocfr::W](W) writer structure"]
+impl crate::Writable for GPTM_CH3OCFR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets GPTM_CH3OCFR to value 0"]
+impl crate::Resettable for GPTM_CH3OCFR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

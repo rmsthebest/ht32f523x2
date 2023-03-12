@@ -1,322 +1,200 @@
-#[doc = "Reader of register CR"]
-pub type R = crate::R<u32, super::CR>;
-#[doc = "Writer for register CR"]
-pub type W = crate::W<u32, super::CR>;
-#[doc = "Register CR `reset()`'s with value 0"]
-impl crate::ResetValue for super::CR {
-    type Type = u32;
+#[doc = "Register `CR` reader"]
+pub struct R(crate::R<CR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CONV`"]
-pub type CONV_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CONV`"]
-pub struct CONV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONV_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<CR_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<CR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `CREP`"]
-pub type CREP_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CREP`"]
-pub struct CREP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CREP_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `CR` writer"]
+pub struct W(crate::W<CR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `WTEN`"]
-pub type WTEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WTEN`"]
-pub struct WTEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WTEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `SCIM`"]
-pub type SCIM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SCIM`"]
-pub struct SCIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCIM_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<CR_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn from(writer: crate::W<CR_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `RETRY`"]
-pub type RETRY_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RETRY`"]
-pub struct RETRY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RETRY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Reader of field `ENSCI`"]
-pub type ENSCI_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ENSCI`"]
-pub struct ENSCI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENSCI_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Reader of field `DETCNF`"]
-pub type DETCNF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DETCNF`"]
-pub struct DETCNF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DETCNF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Reader of field `TXDMA`"]
-pub type TXDMA_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TXDMA`"]
-pub struct TXDMA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXDMA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Reader of field `RXDMA`"]
-pub type RXDMA_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RXDMA`"]
-pub struct RXDMA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXDMA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
-        self.w
-    }
-}
+#[doc = "Field `CONV` reader - CONV"]
+pub type CONV_R = crate::BitReader<bool>;
+#[doc = "Field `CONV` writer - CONV"]
+pub type CONV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `CREP` reader - CREP"]
+pub type CREP_R = crate::BitReader<bool>;
+#[doc = "Field `CREP` writer - CREP"]
+pub type CREP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `WTEN` reader - WTEN"]
+pub type WTEN_R = crate::BitReader<bool>;
+#[doc = "Field `WTEN` writer - WTEN"]
+pub type WTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `SCIM` reader - SCIM"]
+pub type SCIM_R = crate::BitReader<bool>;
+#[doc = "Field `SCIM` writer - SCIM"]
+pub type SCIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `RETRY` reader - RETRY"]
+pub type RETRY_R = crate::BitReader<bool>;
+#[doc = "Field `RETRY` writer - RETRY"]
+pub type RETRY_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `ENSCI` reader - ENSCI"]
+pub type ENSCI_R = crate::BitReader<bool>;
+#[doc = "Field `ENSCI` writer - ENSCI"]
+pub type ENSCI_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `DETCNF` reader - DETCNF"]
+pub type DETCNF_R = crate::BitReader<bool>;
+#[doc = "Field `DETCNF` writer - DETCNF"]
+pub type DETCNF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `TXDMA` reader - TXDMA"]
+pub type TXDMA_R = crate::BitReader<bool>;
+#[doc = "Field `TXDMA` writer - TXDMA"]
+pub type TXDMA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `RXDMA` reader - RXDMA"]
+pub type RXDMA_R = crate::BitReader<bool>;
+#[doc = "Field `RXDMA` writer - RXDMA"]
+pub type RXDMA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - CONV"]
     #[inline(always)]
     pub fn conv(&self) -> CONV_R {
-        CONV_R::new((self.bits & 0x01) != 0)
+        CONV_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - CREP"]
     #[inline(always)]
     pub fn crep(&self) -> CREP_R {
-        CREP_R::new(((self.bits >> 1) & 0x01) != 0)
+        CREP_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - WTEN"]
     #[inline(always)]
     pub fn wten(&self) -> WTEN_R {
-        WTEN_R::new(((self.bits >> 2) & 0x01) != 0)
+        WTEN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - SCIM"]
     #[inline(always)]
     pub fn scim(&self) -> SCIM_R {
-        SCIM_R::new(((self.bits >> 3) & 0x01) != 0)
+        SCIM_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - RETRY"]
     #[inline(always)]
     pub fn retry(&self) -> RETRY_R {
-        RETRY_R::new(((self.bits >> 4) & 0x01) != 0)
+        RETRY_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - ENSCI"]
     #[inline(always)]
     pub fn ensci(&self) -> ENSCI_R {
-        ENSCI_R::new(((self.bits >> 5) & 0x01) != 0)
+        ENSCI_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - DETCNF"]
     #[inline(always)]
     pub fn detcnf(&self) -> DETCNF_R {
-        DETCNF_R::new(((self.bits >> 6) & 0x01) != 0)
+        DETCNF_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 8 - TXDMA"]
     #[inline(always)]
     pub fn txdma(&self) -> TXDMA_R {
-        TXDMA_R::new(((self.bits >> 8) & 0x01) != 0)
+        TXDMA_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - RXDMA"]
     #[inline(always)]
     pub fn rxdma(&self) -> RXDMA_R {
-        RXDMA_R::new(((self.bits >> 9) & 0x01) != 0)
+        RXDMA_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - CONV"]
     #[inline(always)]
-    pub fn conv(&mut self) -> CONV_W {
-        CONV_W { w: self }
+    #[must_use]
+    pub fn conv(&mut self) -> CONV_W<0> {
+        CONV_W::new(self)
     }
     #[doc = "Bit 1 - CREP"]
     #[inline(always)]
-    pub fn crep(&mut self) -> CREP_W {
-        CREP_W { w: self }
+    #[must_use]
+    pub fn crep(&mut self) -> CREP_W<1> {
+        CREP_W::new(self)
     }
     #[doc = "Bit 2 - WTEN"]
     #[inline(always)]
-    pub fn wten(&mut self) -> WTEN_W {
-        WTEN_W { w: self }
+    #[must_use]
+    pub fn wten(&mut self) -> WTEN_W<2> {
+        WTEN_W::new(self)
     }
     #[doc = "Bit 3 - SCIM"]
     #[inline(always)]
-    pub fn scim(&mut self) -> SCIM_W {
-        SCIM_W { w: self }
+    #[must_use]
+    pub fn scim(&mut self) -> SCIM_W<3> {
+        SCIM_W::new(self)
     }
     #[doc = "Bit 4 - RETRY"]
     #[inline(always)]
-    pub fn retry(&mut self) -> RETRY_W {
-        RETRY_W { w: self }
+    #[must_use]
+    pub fn retry(&mut self) -> RETRY_W<4> {
+        RETRY_W::new(self)
     }
     #[doc = "Bit 5 - ENSCI"]
     #[inline(always)]
-    pub fn ensci(&mut self) -> ENSCI_W {
-        ENSCI_W { w: self }
+    #[must_use]
+    pub fn ensci(&mut self) -> ENSCI_W<5> {
+        ENSCI_W::new(self)
     }
     #[doc = "Bit 6 - DETCNF"]
     #[inline(always)]
-    pub fn detcnf(&mut self) -> DETCNF_W {
-        DETCNF_W { w: self }
+    #[must_use]
+    pub fn detcnf(&mut self) -> DETCNF_W<6> {
+        DETCNF_W::new(self)
     }
     #[doc = "Bit 8 - TXDMA"]
     #[inline(always)]
-    pub fn txdma(&mut self) -> TXDMA_W {
-        TXDMA_W { w: self }
+    #[must_use]
+    pub fn txdma(&mut self) -> TXDMA_W<8> {
+        TXDMA_W::new(self)
     }
     #[doc = "Bit 9 - RXDMA"]
     #[inline(always)]
-    pub fn rxdma(&mut self) -> RXDMA_W {
-        RXDMA_W { w: self }
+    #[must_use]
+    pub fn rxdma(&mut self) -> RXDMA_W<9> {
+        RXDMA_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "CR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cr](index.html) module"]
+pub struct CR_SPEC;
+impl crate::RegisterSpec for CR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [cr::R](R) reader structure"]
+impl crate::Readable for CR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [cr::W](W) writer structure"]
+impl crate::Writable for CR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CR to value 0"]
+impl crate::Resettable for CR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

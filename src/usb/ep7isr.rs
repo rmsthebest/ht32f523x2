@@ -1,288 +1,185 @@
-#[doc = "Reader of register EP7ISR"]
-pub type R = crate::R<u32, super::EP7ISR>;
-#[doc = "Writer for register EP7ISR"]
-pub type W = crate::W<u32, super::EP7ISR>;
-#[doc = "Register EP7ISR `reset()`'s with value 0"]
-impl crate::ResetValue for super::EP7ISR {
-    type Type = u32;
+#[doc = "Register `EP7ISR` reader"]
+pub struct R(crate::R<EP7ISR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<EP7ISR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `OTRXIF`"]
-pub type OTRXIF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `OTRXIF`"]
-pub struct OTRXIF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OTRXIF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<EP7ISR_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<EP7ISR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `ODRXIF`"]
-pub type ODRXIF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ODRXIF`"]
-pub struct ODRXIF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ODRXIF_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `EP7ISR` writer"]
+pub struct W(crate::W<EP7ISR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<EP7ISR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `ODOVIF`"]
-pub type ODOVIF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ODOVIF`"]
-pub struct ODOVIF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ODOVIF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `ITRXIF`"]
-pub type ITRXIF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ITRXIF`"]
-pub struct ITRXIF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ITRXIF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<EP7ISR_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn from(writer: crate::W<EP7ISR_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `IDTXIF`"]
-pub type IDTXIF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `IDTXIF`"]
-pub struct IDTXIF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IDTXIF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Reader of field `NAKIF`"]
-pub type NAKIF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `NAKIF`"]
-pub struct NAKIF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NAKIF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Reader of field `STLIF`"]
-pub type STLIF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `STLIF`"]
-pub struct STLIF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STLIF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Reader of field `UERIF`"]
-pub type UERIF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UERIF`"]
-pub struct UERIF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UERIF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
-        self.w
-    }
-}
+#[doc = "Field `OTRXIF` reader - OTRXIF"]
+pub type OTRXIF_R = crate::BitReader<bool>;
+#[doc = "Field `OTRXIF` writer - OTRXIF"]
+pub type OTRXIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP7ISR_SPEC, bool, O>;
+#[doc = "Field `ODRXIF` reader - ODRXIF"]
+pub type ODRXIF_R = crate::BitReader<bool>;
+#[doc = "Field `ODRXIF` writer - ODRXIF"]
+pub type ODRXIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP7ISR_SPEC, bool, O>;
+#[doc = "Field `ODOVIF` reader - ODOVIF"]
+pub type ODOVIF_R = crate::BitReader<bool>;
+#[doc = "Field `ODOVIF` writer - ODOVIF"]
+pub type ODOVIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP7ISR_SPEC, bool, O>;
+#[doc = "Field `ITRXIF` reader - ITRXIF"]
+pub type ITRXIF_R = crate::BitReader<bool>;
+#[doc = "Field `ITRXIF` writer - ITRXIF"]
+pub type ITRXIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP7ISR_SPEC, bool, O>;
+#[doc = "Field `IDTXIF` reader - IDTXIF"]
+pub type IDTXIF_R = crate::BitReader<bool>;
+#[doc = "Field `IDTXIF` writer - IDTXIF"]
+pub type IDTXIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP7ISR_SPEC, bool, O>;
+#[doc = "Field `NAKIF` reader - NAKIF"]
+pub type NAKIF_R = crate::BitReader<bool>;
+#[doc = "Field `NAKIF` writer - NAKIF"]
+pub type NAKIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP7ISR_SPEC, bool, O>;
+#[doc = "Field `STLIF` reader - STLIF"]
+pub type STLIF_R = crate::BitReader<bool>;
+#[doc = "Field `STLIF` writer - STLIF"]
+pub type STLIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP7ISR_SPEC, bool, O>;
+#[doc = "Field `UERIF` reader - UERIF"]
+pub type UERIF_R = crate::BitReader<bool>;
+#[doc = "Field `UERIF` writer - UERIF"]
+pub type UERIF_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP7ISR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - OTRXIF"]
     #[inline(always)]
     pub fn otrxif(&self) -> OTRXIF_R {
-        OTRXIF_R::new((self.bits & 0x01) != 0)
+        OTRXIF_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - ODRXIF"]
     #[inline(always)]
     pub fn odrxif(&self) -> ODRXIF_R {
-        ODRXIF_R::new(((self.bits >> 1) & 0x01) != 0)
+        ODRXIF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - ODOVIF"]
     #[inline(always)]
     pub fn odovif(&self) -> ODOVIF_R {
-        ODOVIF_R::new(((self.bits >> 2) & 0x01) != 0)
+        ODOVIF_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - ITRXIF"]
     #[inline(always)]
     pub fn itrxif(&self) -> ITRXIF_R {
-        ITRXIF_R::new(((self.bits >> 3) & 0x01) != 0)
+        ITRXIF_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - IDTXIF"]
     #[inline(always)]
     pub fn idtxif(&self) -> IDTXIF_R {
-        IDTXIF_R::new(((self.bits >> 4) & 0x01) != 0)
+        IDTXIF_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - NAKIF"]
     #[inline(always)]
     pub fn nakif(&self) -> NAKIF_R {
-        NAKIF_R::new(((self.bits >> 5) & 0x01) != 0)
+        NAKIF_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - STLIF"]
     #[inline(always)]
     pub fn stlif(&self) -> STLIF_R {
-        STLIF_R::new(((self.bits >> 6) & 0x01) != 0)
+        STLIF_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - UERIF"]
     #[inline(always)]
     pub fn uerif(&self) -> UERIF_R {
-        UERIF_R::new(((self.bits >> 7) & 0x01) != 0)
+        UERIF_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - OTRXIF"]
     #[inline(always)]
-    pub fn otrxif(&mut self) -> OTRXIF_W {
-        OTRXIF_W { w: self }
+    #[must_use]
+    pub fn otrxif(&mut self) -> OTRXIF_W<0> {
+        OTRXIF_W::new(self)
     }
     #[doc = "Bit 1 - ODRXIF"]
     #[inline(always)]
-    pub fn odrxif(&mut self) -> ODRXIF_W {
-        ODRXIF_W { w: self }
+    #[must_use]
+    pub fn odrxif(&mut self) -> ODRXIF_W<1> {
+        ODRXIF_W::new(self)
     }
     #[doc = "Bit 2 - ODOVIF"]
     #[inline(always)]
-    pub fn odovif(&mut self) -> ODOVIF_W {
-        ODOVIF_W { w: self }
+    #[must_use]
+    pub fn odovif(&mut self) -> ODOVIF_W<2> {
+        ODOVIF_W::new(self)
     }
     #[doc = "Bit 3 - ITRXIF"]
     #[inline(always)]
-    pub fn itrxif(&mut self) -> ITRXIF_W {
-        ITRXIF_W { w: self }
+    #[must_use]
+    pub fn itrxif(&mut self) -> ITRXIF_W<3> {
+        ITRXIF_W::new(self)
     }
     #[doc = "Bit 4 - IDTXIF"]
     #[inline(always)]
-    pub fn idtxif(&mut self) -> IDTXIF_W {
-        IDTXIF_W { w: self }
+    #[must_use]
+    pub fn idtxif(&mut self) -> IDTXIF_W<4> {
+        IDTXIF_W::new(self)
     }
     #[doc = "Bit 5 - NAKIF"]
     #[inline(always)]
-    pub fn nakif(&mut self) -> NAKIF_W {
-        NAKIF_W { w: self }
+    #[must_use]
+    pub fn nakif(&mut self) -> NAKIF_W<5> {
+        NAKIF_W::new(self)
     }
     #[doc = "Bit 6 - STLIF"]
     #[inline(always)]
-    pub fn stlif(&mut self) -> STLIF_W {
-        STLIF_W { w: self }
+    #[must_use]
+    pub fn stlif(&mut self) -> STLIF_W<6> {
+        STLIF_W::new(self)
     }
     #[doc = "Bit 7 - UERIF"]
     #[inline(always)]
-    pub fn uerif(&mut self) -> UERIF_W {
-        UERIF_W { w: self }
+    #[must_use]
+    pub fn uerif(&mut self) -> UERIF_W<7> {
+        UERIF_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "EP7ISR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ep7isr](index.html) module"]
+pub struct EP7ISR_SPEC;
+impl crate::RegisterSpec for EP7ISR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [ep7isr::R](R) reader structure"]
+impl crate::Readable for EP7ISR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ep7isr::W](W) writer structure"]
+impl crate::Writable for EP7ISR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets EP7ISR to value 0"]
+impl crate::Resettable for EP7ISR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

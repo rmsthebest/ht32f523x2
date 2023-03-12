@@ -1,156 +1,140 @@
-#[doc = "Reader of register CR"]
-pub type R = crate::R<u32, super::CR>;
-#[doc = "Writer for register CR"]
-pub type W = crate::W<u32, super::CR>;
-#[doc = "Register CR `reset()`'s with value 0"]
-impl crate::ResetValue for super::CR {
-    type Type = u32;
+#[doc = "Register `CR` reader"]
+pub struct R(crate::R<CR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `ADMODE`"]
-pub type ADMODE_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `ADMODE`"]
-pub struct ADMODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADMODE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<CR_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | ((value as u32) & 0x03);
-        self.w
+    fn from(reader: crate::R<CR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `ADCRST`"]
-pub type ADCRST_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ADCRST`"]
-pub struct ADCRST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADCRST_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `CR` writer"]
+pub struct W(crate::W<CR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `ADCEN`"]
-pub type ADCEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ADCEN`"]
-pub struct ADCEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADCEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `ADSEQL`"]
-pub type ADSEQL_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `ADSEQL`"]
-pub struct ADSEQL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADSEQL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::W<CR_SPEC>> for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 8)) | (((value as u32) & 0x07) << 8);
-        self.w
+    fn from(writer: crate::W<CR_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `ADSUBL`"]
-pub type ADSUBL_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `ADSUBL`"]
-pub struct ADSUBL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADSUBL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 16)) | (((value as u32) & 0x07) << 16);
-        self.w
-    }
-}
+#[doc = "Field `ADMODE` reader - ADMODE"]
+pub type ADMODE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ADMODE` writer - ADMODE"]
+pub type ADMODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR_SPEC, u8, u8, 2, O>;
+#[doc = "Field `ADCRST` reader - ADCRST"]
+pub type ADCRST_R = crate::BitReader<bool>;
+#[doc = "Field `ADCRST` writer - ADCRST"]
+pub type ADCRST_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `ADCEN` reader - ADCEN"]
+pub type ADCEN_R = crate::BitReader<bool>;
+#[doc = "Field `ADCEN` writer - ADCEN"]
+pub type ADCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+#[doc = "Field `ADSEQL` reader - ADSEQL"]
+pub type ADSEQL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ADSEQL` writer - ADSEQL"]
+pub type ADSEQL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR_SPEC, u8, u8, 3, O>;
+#[doc = "Field `ADSUBL` reader - ADSUBL"]
+pub type ADSUBL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ADSUBL` writer - ADSUBL"]
+pub type ADSUBL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR_SPEC, u8, u8, 3, O>;
 impl R {
     #[doc = "Bits 0:1 - ADMODE"]
     #[inline(always)]
     pub fn admode(&self) -> ADMODE_R {
-        ADMODE_R::new((self.bits & 0x03) as u8)
+        ADMODE_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bit 6 - ADCRST"]
     #[inline(always)]
     pub fn adcrst(&self) -> ADCRST_R {
-        ADCRST_R::new(((self.bits >> 6) & 0x01) != 0)
+        ADCRST_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - ADCEN"]
     #[inline(always)]
     pub fn adcen(&self) -> ADCEN_R {
-        ADCEN_R::new(((self.bits >> 7) & 0x01) != 0)
+        ADCEN_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:10 - ADSEQL"]
     #[inline(always)]
     pub fn adseql(&self) -> ADSEQL_R {
-        ADSEQL_R::new(((self.bits >> 8) & 0x07) as u8)
+        ADSEQL_R::new(((self.bits >> 8) & 7) as u8)
     }
     #[doc = "Bits 16:18 - ADSUBL"]
     #[inline(always)]
     pub fn adsubl(&self) -> ADSUBL_R {
-        ADSUBL_R::new(((self.bits >> 16) & 0x07) as u8)
+        ADSUBL_R::new(((self.bits >> 16) & 7) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - ADMODE"]
     #[inline(always)]
-    pub fn admode(&mut self) -> ADMODE_W {
-        ADMODE_W { w: self }
+    #[must_use]
+    pub fn admode(&mut self) -> ADMODE_W<0> {
+        ADMODE_W::new(self)
     }
     #[doc = "Bit 6 - ADCRST"]
     #[inline(always)]
-    pub fn adcrst(&mut self) -> ADCRST_W {
-        ADCRST_W { w: self }
+    #[must_use]
+    pub fn adcrst(&mut self) -> ADCRST_W<6> {
+        ADCRST_W::new(self)
     }
     #[doc = "Bit 7 - ADCEN"]
     #[inline(always)]
-    pub fn adcen(&mut self) -> ADCEN_W {
-        ADCEN_W { w: self }
+    #[must_use]
+    pub fn adcen(&mut self) -> ADCEN_W<7> {
+        ADCEN_W::new(self)
     }
     #[doc = "Bits 8:10 - ADSEQL"]
     #[inline(always)]
-    pub fn adseql(&mut self) -> ADSEQL_W {
-        ADSEQL_W { w: self }
+    #[must_use]
+    pub fn adseql(&mut self) -> ADSEQL_W<8> {
+        ADSEQL_W::new(self)
     }
     #[doc = "Bits 16:18 - ADSUBL"]
     #[inline(always)]
-    pub fn adsubl(&mut self) -> ADSUBL_W {
-        ADSUBL_W { w: self }
+    #[must_use]
+    pub fn adsubl(&mut self) -> ADSUBL_W<16> {
+        ADSUBL_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "CR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cr](index.html) module"]
+pub struct CR_SPEC;
+impl crate::RegisterSpec for CR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [cr::R](R) reader structure"]
+impl crate::Readable for CR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [cr::W](W) writer structure"]
+impl crate::Writable for CR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CR to value 0"]
+impl crate::Resettable for CR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

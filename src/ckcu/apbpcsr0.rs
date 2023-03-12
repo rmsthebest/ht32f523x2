@@ -1,328 +1,260 @@
-#[doc = "Reader of register APBPCSR0"]
-pub type R = crate::R<u32, super::APBPCSR0>;
-#[doc = "Writer for register APBPCSR0"]
-pub type W = crate::W<u32, super::APBPCSR0>;
-#[doc = "Register APBPCSR0 `reset()`'s with value 0"]
-impl crate::ResetValue for super::APBPCSR0 {
-    type Type = u32;
+#[doc = "Register `APBPCSR0` reader"]
+pub struct R(crate::R<APBPCSR0_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<APBPCSR0_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `I2C0PCLK`"]
-pub type I2C0PCLK_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `I2C0PCLK`"]
-pub struct I2C0PCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C0PCLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<APBPCSR0_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03) | ((value as u32) & 0x03);
-        self.w
+    fn from(reader: crate::R<APBPCSR0_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `I2C1PCLK`"]
-pub type I2C1PCLK_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `I2C1PCLK`"]
-pub struct I2C1PCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> I2C1PCLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+#[doc = "Register `APBPCSR0` writer"]
+pub struct W(crate::W<APBPCSR0_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<APBPCSR0_SPEC>;
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 2)) | (((value as u32) & 0x03) << 2);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `SPI0PCLK`"]
-pub type SPI0PCLK_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `SPI0PCLK`"]
-pub struct SPI0PCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI0PCLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | (((value as u32) & 0x03) << 4);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `SPI1PCLK`"]
-pub type SPI1PCLK_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `SPI1PCLK`"]
-pub struct SPI1PCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPI1PCLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::W<APBPCSR0_SPEC>> for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | (((value as u32) & 0x03) << 6);
-        self.w
+    fn from(writer: crate::W<APBPCSR0_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `BFTM0PCLK`"]
-pub type BFTM0PCLK_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `BFTM0PCLK`"]
-pub struct BFTM0PCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BFTM0PCLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | (((value as u32) & 0x03) << 12);
-        self.w
-    }
-}
-#[doc = "Reader of field `BFTM1PCLK`"]
-pub type BFTM1PCLK_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `BFTM1PCLK`"]
-pub struct BFTM1PCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BFTM1PCLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | (((value as u32) & 0x03) << 14);
-        self.w
-    }
-}
-#[doc = "Reader of field `MCTM0PCLK`"]
-pub type MCTM0PCLK_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `MCTM0PCLK`"]
-pub struct MCTM0PCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MCTM0PCLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | (((value as u32) & 0x03) << 16);
-        self.w
-    }
-}
-#[doc = "Reader of field `GPTM0PCLK`"]
-pub type GPTM0PCLK_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `GPTM0PCLK`"]
-pub struct GPTM0PCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPTM0PCLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 20)) | (((value as u32) & 0x03) << 20);
-        self.w
-    }
-}
-#[doc = "Reader of field `GPTM1PCLK`"]
-pub type GPTM1PCLK_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `GPTM1PCLK`"]
-pub struct GPTM1PCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPTM1PCLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | (((value as u32) & 0x03) << 22);
-        self.w
-    }
-}
-#[doc = "Reader of field `USR0PCLK`"]
-pub type USR0PCLK_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `USR0PCLK`"]
-pub struct USR0PCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR0PCLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 24)) | (((value as u32) & 0x03) << 24);
-        self.w
-    }
-}
-#[doc = "Reader of field `USR1PCLK`"]
-pub type USR1PCLK_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `USR1PCLK`"]
-pub struct USR1PCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> USR1PCLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 26)) | (((value as u32) & 0x03) << 26);
-        self.w
-    }
-}
-#[doc = "Reader of field `UR0PCLK`"]
-pub type UR0PCLK_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `UR0PCLK`"]
-pub struct UR0PCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UR0PCLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 28)) | (((value as u32) & 0x03) << 28);
-        self.w
-    }
-}
-#[doc = "Reader of field `UR1PCLK`"]
-pub type UR1PCLK_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `UR1PCLK`"]
-pub struct UR1PCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UR1PCLK_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | (((value as u32) & 0x03) << 30);
-        self.w
-    }
-}
+#[doc = "Field `I2C0PCLK` reader - I2C0PCLK"]
+pub type I2C0PCLK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `I2C0PCLK` writer - I2C0PCLK"]
+pub type I2C0PCLK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, APBPCSR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `I2C1PCLK` reader - I2C1PCLK"]
+pub type I2C1PCLK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `I2C1PCLK` writer - I2C1PCLK"]
+pub type I2C1PCLK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, APBPCSR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `SPI0PCLK` reader - SPI0PCLK"]
+pub type SPI0PCLK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `SPI0PCLK` writer - SPI0PCLK"]
+pub type SPI0PCLK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, APBPCSR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `SPI1PCLK` reader - SPI1PCLK"]
+pub type SPI1PCLK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `SPI1PCLK` writer - SPI1PCLK"]
+pub type SPI1PCLK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, APBPCSR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `BFTM0PCLK` reader - BFTM0PCLK"]
+pub type BFTM0PCLK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `BFTM0PCLK` writer - BFTM0PCLK"]
+pub type BFTM0PCLK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, APBPCSR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `BFTM1PCLK` reader - BFTM1PCLK"]
+pub type BFTM1PCLK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `BFTM1PCLK` writer - BFTM1PCLK"]
+pub type BFTM1PCLK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, APBPCSR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `MCTM0PCLK` reader - MCTM0PCLK"]
+pub type MCTM0PCLK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `MCTM0PCLK` writer - MCTM0PCLK"]
+pub type MCTM0PCLK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, APBPCSR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `GPTM0PCLK` reader - GPTM0PCLK"]
+pub type GPTM0PCLK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `GPTM0PCLK` writer - GPTM0PCLK"]
+pub type GPTM0PCLK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, APBPCSR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `GPTM1PCLK` reader - GPTM1PCLK"]
+pub type GPTM1PCLK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `GPTM1PCLK` writer - GPTM1PCLK"]
+pub type GPTM1PCLK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, APBPCSR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `USR0PCLK` reader - USR0PCLK"]
+pub type USR0PCLK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `USR0PCLK` writer - USR0PCLK"]
+pub type USR0PCLK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, APBPCSR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `USR1PCLK` reader - USR1PCLK"]
+pub type USR1PCLK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `USR1PCLK` writer - USR1PCLK"]
+pub type USR1PCLK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, APBPCSR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `UR0PCLK` reader - UR0PCLK"]
+pub type UR0PCLK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `UR0PCLK` writer - UR0PCLK"]
+pub type UR0PCLK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, APBPCSR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `UR1PCLK` reader - UR1PCLK"]
+pub type UR1PCLK_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `UR1PCLK` writer - UR1PCLK"]
+pub type UR1PCLK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, APBPCSR0_SPEC, u8, u8, 2, O>;
 impl R {
     #[doc = "Bits 0:1 - I2C0PCLK"]
     #[inline(always)]
     pub fn i2c0pclk(&self) -> I2C0PCLK_R {
-        I2C0PCLK_R::new((self.bits & 0x03) as u8)
+        I2C0PCLK_R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - I2C1PCLK"]
     #[inline(always)]
     pub fn i2c1pclk(&self) -> I2C1PCLK_R {
-        I2C1PCLK_R::new(((self.bits >> 2) & 0x03) as u8)
+        I2C1PCLK_R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - SPI0PCLK"]
     #[inline(always)]
     pub fn spi0pclk(&self) -> SPI0PCLK_R {
-        SPI0PCLK_R::new(((self.bits >> 4) & 0x03) as u8)
+        SPI0PCLK_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - SPI1PCLK"]
     #[inline(always)]
     pub fn spi1pclk(&self) -> SPI1PCLK_R {
-        SPI1PCLK_R::new(((self.bits >> 6) & 0x03) as u8)
+        SPI1PCLK_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 12:13 - BFTM0PCLK"]
     #[inline(always)]
     pub fn bftm0pclk(&self) -> BFTM0PCLK_R {
-        BFTM0PCLK_R::new(((self.bits >> 12) & 0x03) as u8)
+        BFTM0PCLK_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - BFTM1PCLK"]
     #[inline(always)]
     pub fn bftm1pclk(&self) -> BFTM1PCLK_R {
-        BFTM1PCLK_R::new(((self.bits >> 14) & 0x03) as u8)
+        BFTM1PCLK_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 16:17 - MCTM0PCLK"]
     #[inline(always)]
     pub fn mctm0pclk(&self) -> MCTM0PCLK_R {
-        MCTM0PCLK_R::new(((self.bits >> 16) & 0x03) as u8)
+        MCTM0PCLK_R::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bits 20:21 - GPTM0PCLK"]
     #[inline(always)]
     pub fn gptm0pclk(&self) -> GPTM0PCLK_R {
-        GPTM0PCLK_R::new(((self.bits >> 20) & 0x03) as u8)
+        GPTM0PCLK_R::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bits 22:23 - GPTM1PCLK"]
     #[inline(always)]
     pub fn gptm1pclk(&self) -> GPTM1PCLK_R {
-        GPTM1PCLK_R::new(((self.bits >> 22) & 0x03) as u8)
+        GPTM1PCLK_R::new(((self.bits >> 22) & 3) as u8)
     }
     #[doc = "Bits 24:25 - USR0PCLK"]
     #[inline(always)]
     pub fn usr0pclk(&self) -> USR0PCLK_R {
-        USR0PCLK_R::new(((self.bits >> 24) & 0x03) as u8)
+        USR0PCLK_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Bits 26:27 - USR1PCLK"]
     #[inline(always)]
     pub fn usr1pclk(&self) -> USR1PCLK_R {
-        USR1PCLK_R::new(((self.bits >> 26) & 0x03) as u8)
+        USR1PCLK_R::new(((self.bits >> 26) & 3) as u8)
     }
     #[doc = "Bits 28:29 - UR0PCLK"]
     #[inline(always)]
     pub fn ur0pclk(&self) -> UR0PCLK_R {
-        UR0PCLK_R::new(((self.bits >> 28) & 0x03) as u8)
+        UR0PCLK_R::new(((self.bits >> 28) & 3) as u8)
     }
     #[doc = "Bits 30:31 - UR1PCLK"]
     #[inline(always)]
     pub fn ur1pclk(&self) -> UR1PCLK_R {
-        UR1PCLK_R::new(((self.bits >> 30) & 0x03) as u8)
+        UR1PCLK_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - I2C0PCLK"]
     #[inline(always)]
-    pub fn i2c0pclk(&mut self) -> I2C0PCLK_W {
-        I2C0PCLK_W { w: self }
+    #[must_use]
+    pub fn i2c0pclk(&mut self) -> I2C0PCLK_W<0> {
+        I2C0PCLK_W::new(self)
     }
     #[doc = "Bits 2:3 - I2C1PCLK"]
     #[inline(always)]
-    pub fn i2c1pclk(&mut self) -> I2C1PCLK_W {
-        I2C1PCLK_W { w: self }
+    #[must_use]
+    pub fn i2c1pclk(&mut self) -> I2C1PCLK_W<2> {
+        I2C1PCLK_W::new(self)
     }
     #[doc = "Bits 4:5 - SPI0PCLK"]
     #[inline(always)]
-    pub fn spi0pclk(&mut self) -> SPI0PCLK_W {
-        SPI0PCLK_W { w: self }
+    #[must_use]
+    pub fn spi0pclk(&mut self) -> SPI0PCLK_W<4> {
+        SPI0PCLK_W::new(self)
     }
     #[doc = "Bits 6:7 - SPI1PCLK"]
     #[inline(always)]
-    pub fn spi1pclk(&mut self) -> SPI1PCLK_W {
-        SPI1PCLK_W { w: self }
+    #[must_use]
+    pub fn spi1pclk(&mut self) -> SPI1PCLK_W<6> {
+        SPI1PCLK_W::new(self)
     }
     #[doc = "Bits 12:13 - BFTM0PCLK"]
     #[inline(always)]
-    pub fn bftm0pclk(&mut self) -> BFTM0PCLK_W {
-        BFTM0PCLK_W { w: self }
+    #[must_use]
+    pub fn bftm0pclk(&mut self) -> BFTM0PCLK_W<12> {
+        BFTM0PCLK_W::new(self)
     }
     #[doc = "Bits 14:15 - BFTM1PCLK"]
     #[inline(always)]
-    pub fn bftm1pclk(&mut self) -> BFTM1PCLK_W {
-        BFTM1PCLK_W { w: self }
+    #[must_use]
+    pub fn bftm1pclk(&mut self) -> BFTM1PCLK_W<14> {
+        BFTM1PCLK_W::new(self)
     }
     #[doc = "Bits 16:17 - MCTM0PCLK"]
     #[inline(always)]
-    pub fn mctm0pclk(&mut self) -> MCTM0PCLK_W {
-        MCTM0PCLK_W { w: self }
+    #[must_use]
+    pub fn mctm0pclk(&mut self) -> MCTM0PCLK_W<16> {
+        MCTM0PCLK_W::new(self)
     }
     #[doc = "Bits 20:21 - GPTM0PCLK"]
     #[inline(always)]
-    pub fn gptm0pclk(&mut self) -> GPTM0PCLK_W {
-        GPTM0PCLK_W { w: self }
+    #[must_use]
+    pub fn gptm0pclk(&mut self) -> GPTM0PCLK_W<20> {
+        GPTM0PCLK_W::new(self)
     }
     #[doc = "Bits 22:23 - GPTM1PCLK"]
     #[inline(always)]
-    pub fn gptm1pclk(&mut self) -> GPTM1PCLK_W {
-        GPTM1PCLK_W { w: self }
+    #[must_use]
+    pub fn gptm1pclk(&mut self) -> GPTM1PCLK_W<22> {
+        GPTM1PCLK_W::new(self)
     }
     #[doc = "Bits 24:25 - USR0PCLK"]
     #[inline(always)]
-    pub fn usr0pclk(&mut self) -> USR0PCLK_W {
-        USR0PCLK_W { w: self }
+    #[must_use]
+    pub fn usr0pclk(&mut self) -> USR0PCLK_W<24> {
+        USR0PCLK_W::new(self)
     }
     #[doc = "Bits 26:27 - USR1PCLK"]
     #[inline(always)]
-    pub fn usr1pclk(&mut self) -> USR1PCLK_W {
-        USR1PCLK_W { w: self }
+    #[must_use]
+    pub fn usr1pclk(&mut self) -> USR1PCLK_W<26> {
+        USR1PCLK_W::new(self)
     }
     #[doc = "Bits 28:29 - UR0PCLK"]
     #[inline(always)]
-    pub fn ur0pclk(&mut self) -> UR0PCLK_W {
-        UR0PCLK_W { w: self }
+    #[must_use]
+    pub fn ur0pclk(&mut self) -> UR0PCLK_W<28> {
+        UR0PCLK_W::new(self)
     }
     #[doc = "Bits 30:31 - UR1PCLK"]
     #[inline(always)]
-    pub fn ur1pclk(&mut self) -> UR1PCLK_W {
-        UR1PCLK_W { w: self }
+    #[must_use]
+    pub fn ur1pclk(&mut self) -> UR1PCLK_W<30> {
+        UR1PCLK_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "APBPCSR0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [apbpcsr0](index.html) module"]
+pub struct APBPCSR0_SPEC;
+impl crate::RegisterSpec for APBPCSR0_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [apbpcsr0::R](R) reader structure"]
+impl crate::Readable for APBPCSR0_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [apbpcsr0::W](W) writer structure"]
+impl crate::Writable for APBPCSR0_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets APBPCSR0 to value 0"]
+impl crate::Resettable for APBPCSR0_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

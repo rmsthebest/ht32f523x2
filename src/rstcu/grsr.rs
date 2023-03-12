@@ -1,152 +1,125 @@
-#[doc = "Reader of register GRSR"]
-pub type R = crate::R<u32, super::GRSR>;
-#[doc = "Writer for register GRSR"]
-pub type W = crate::W<u32, super::GRSR>;
-#[doc = "Register GRSR `reset()`'s with value 0"]
-impl crate::ResetValue for super::GRSR {
-    type Type = u32;
+#[doc = "Register `GRSR` reader"]
+pub struct R(crate::R<GRSR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<GRSR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `NVICRSTF`"]
-pub type NVICRSTF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `NVICRSTF`"]
-pub struct NVICRSTF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NVICRSTF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<GRSR_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<GRSR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `EXTRSTF`"]
-pub type EXTRSTF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `EXTRSTF`"]
-pub struct EXTRSTF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EXTRSTF_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `GRSR` writer"]
+pub struct W(crate::W<GRSR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<GRSR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `WDTRSTF`"]
-pub type WDTRSTF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WDTRSTF`"]
-pub struct WDTRSTF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDTRSTF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `PORSTF`"]
-pub type PORSTF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PORSTF`"]
-pub struct PORSTF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PORSTF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<GRSR_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn from(writer: crate::W<GRSR_SPEC>) -> Self {
+        W(writer)
     }
 }
+#[doc = "Field `NVICRSTF` reader - NVICRSTF"]
+pub type NVICRSTF_R = crate::BitReader<bool>;
+#[doc = "Field `NVICRSTF` writer - NVICRSTF"]
+pub type NVICRSTF_W<'a, const O: u8> = crate::BitWriter<'a, u32, GRSR_SPEC, bool, O>;
+#[doc = "Field `EXTRSTF` reader - EXTRSTF"]
+pub type EXTRSTF_R = crate::BitReader<bool>;
+#[doc = "Field `EXTRSTF` writer - EXTRSTF"]
+pub type EXTRSTF_W<'a, const O: u8> = crate::BitWriter<'a, u32, GRSR_SPEC, bool, O>;
+#[doc = "Field `WDTRSTF` reader - WDTRSTF"]
+pub type WDTRSTF_R = crate::BitReader<bool>;
+#[doc = "Field `WDTRSTF` writer - WDTRSTF"]
+pub type WDTRSTF_W<'a, const O: u8> = crate::BitWriter<'a, u32, GRSR_SPEC, bool, O>;
+#[doc = "Field `PORSTF` reader - PORSTF"]
+pub type PORSTF_R = crate::BitReader<bool>;
+#[doc = "Field `PORSTF` writer - PORSTF"]
+pub type PORSTF_W<'a, const O: u8> = crate::BitWriter<'a, u32, GRSR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - NVICRSTF"]
     #[inline(always)]
     pub fn nvicrstf(&self) -> NVICRSTF_R {
-        NVICRSTF_R::new((self.bits & 0x01) != 0)
+        NVICRSTF_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - EXTRSTF"]
     #[inline(always)]
     pub fn extrstf(&self) -> EXTRSTF_R {
-        EXTRSTF_R::new(((self.bits >> 1) & 0x01) != 0)
+        EXTRSTF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - WDTRSTF"]
     #[inline(always)]
     pub fn wdtrstf(&self) -> WDTRSTF_R {
-        WDTRSTF_R::new(((self.bits >> 2) & 0x01) != 0)
+        WDTRSTF_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - PORSTF"]
     #[inline(always)]
     pub fn porstf(&self) -> PORSTF_R {
-        PORSTF_R::new(((self.bits >> 3) & 0x01) != 0)
+        PORSTF_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - NVICRSTF"]
     #[inline(always)]
-    pub fn nvicrstf(&mut self) -> NVICRSTF_W {
-        NVICRSTF_W { w: self }
+    #[must_use]
+    pub fn nvicrstf(&mut self) -> NVICRSTF_W<0> {
+        NVICRSTF_W::new(self)
     }
     #[doc = "Bit 1 - EXTRSTF"]
     #[inline(always)]
-    pub fn extrstf(&mut self) -> EXTRSTF_W {
-        EXTRSTF_W { w: self }
+    #[must_use]
+    pub fn extrstf(&mut self) -> EXTRSTF_W<1> {
+        EXTRSTF_W::new(self)
     }
     #[doc = "Bit 2 - WDTRSTF"]
     #[inline(always)]
-    pub fn wdtrstf(&mut self) -> WDTRSTF_W {
-        WDTRSTF_W { w: self }
+    #[must_use]
+    pub fn wdtrstf(&mut self) -> WDTRSTF_W<2> {
+        WDTRSTF_W::new(self)
     }
     #[doc = "Bit 3 - PORSTF"]
     #[inline(always)]
-    pub fn porstf(&mut self) -> PORSTF_W {
-        PORSTF_W { w: self }
+    #[must_use]
+    pub fn porstf(&mut self) -> PORSTF_W<3> {
+        PORSTF_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "GRSR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [grsr](index.html) module"]
+pub struct GRSR_SPEC;
+impl crate::RegisterSpec for GRSR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [grsr::R](R) reader structure"]
+impl crate::Readable for GRSR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [grsr::W](W) writer structure"]
+impl crate::Writable for GRSR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets GRSR to value 0"]
+impl crate::Resettable for GRSR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

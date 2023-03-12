@@ -1,312 +1,200 @@
-#[doc = "Reader of register PWRCU_LVDCSR"]
-pub type R = crate::R<u32, super::PWRCU_LVDCSR>;
-#[doc = "Writer for register PWRCU_LVDCSR"]
-pub type W = crate::W<u32, super::PWRCU_LVDCSR>;
-#[doc = "Register PWRCU_LVDCSR `reset()`'s with value 0"]
-impl crate::ResetValue for super::PWRCU_LVDCSR {
-    type Type = u32;
+#[doc = "Register `PWRCU_LVDCSR` reader"]
+pub struct R(crate::R<PWRCU_LVDCSR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<PWRCU_LVDCSR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `BODEN`"]
-pub type BODEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BODEN`"]
-pub struct BODEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BODEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<PWRCU_LVDCSR_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<PWRCU_LVDCSR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `BODRIS`"]
-pub type BODRIS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BODRIS`"]
-pub struct BODRIS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BODRIS_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `PWRCU_LVDCSR` writer"]
+pub struct W(crate::W<PWRCU_LVDCSR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<PWRCU_LVDCSR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `BODF`"]
-pub type BODF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BODF`"]
-pub struct BODF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BODF_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `LVDEN`"]
-pub type LVDEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `LVDEN`"]
-pub struct LVDEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LVDEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<PWRCU_LVDCSR_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
-        self.w
+    fn from(writer: crate::W<PWRCU_LVDCSR_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `LVDS01`"]
-pub type LVDS01_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `LVDS01`"]
-pub struct LVDS01_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LVDS01_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 17)) | (((value as u32) & 0x03) << 17);
-        self.w
-    }
-}
-#[doc = "Reader of field `LVDS2`"]
-pub type LVDS2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `LVDS2`"]
-pub struct LVDS2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LVDS2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 22)) | (((value as u32) & 0x01) << 22);
-        self.w
-    }
-}
-#[doc = "Reader of field `LVDF`"]
-pub type LVDF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `LVDF`"]
-pub struct LVDF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LVDF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
-        self.w
-    }
-}
-#[doc = "Reader of field `LVDIWEN`"]
-pub type LVDIWEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `LVDIWEN`"]
-pub struct LVDIWEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LVDIWEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | (((value as u32) & 0x01) << 20);
-        self.w
-    }
-}
-#[doc = "Reader of field `LVDEWEN`"]
-pub type LVDEWEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `LVDEWEN`"]
-pub struct LVDEWEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LVDEWEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 21)) | (((value as u32) & 0x01) << 21);
-        self.w
-    }
-}
+#[doc = "Field `BODEN` reader - BODEN"]
+pub type BODEN_R = crate::BitReader<bool>;
+#[doc = "Field `BODEN` writer - BODEN"]
+pub type BODEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWRCU_LVDCSR_SPEC, bool, O>;
+#[doc = "Field `BODRIS` reader - BODRIS"]
+pub type BODRIS_R = crate::BitReader<bool>;
+#[doc = "Field `BODRIS` writer - BODRIS"]
+pub type BODRIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWRCU_LVDCSR_SPEC, bool, O>;
+#[doc = "Field `BODF` reader - BODF"]
+pub type BODF_R = crate::BitReader<bool>;
+#[doc = "Field `BODF` writer - BODF"]
+pub type BODF_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWRCU_LVDCSR_SPEC, bool, O>;
+#[doc = "Field `LVDEN` reader - LVDEN"]
+pub type LVDEN_R = crate::BitReader<bool>;
+#[doc = "Field `LVDEN` writer - LVDEN"]
+pub type LVDEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWRCU_LVDCSR_SPEC, bool, O>;
+#[doc = "Field `LVDS01` reader - LVDS01"]
+pub type LVDS01_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `LVDS01` writer - LVDS01"]
+pub type LVDS01_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PWRCU_LVDCSR_SPEC, u8, u8, 2, O>;
+#[doc = "Field `LVDF` reader - LVDF"]
+pub type LVDF_R = crate::BitReader<bool>;
+#[doc = "Field `LVDF` writer - LVDF"]
+pub type LVDF_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWRCU_LVDCSR_SPEC, bool, O>;
+#[doc = "Field `LVDIWEN` reader - LVDIWEN"]
+pub type LVDIWEN_R = crate::BitReader<bool>;
+#[doc = "Field `LVDIWEN` writer - LVDIWEN"]
+pub type LVDIWEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWRCU_LVDCSR_SPEC, bool, O>;
+#[doc = "Field `LVDEWEN` reader - LVDEWEN"]
+pub type LVDEWEN_R = crate::BitReader<bool>;
+#[doc = "Field `LVDEWEN` writer - LVDEWEN"]
+pub type LVDEWEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWRCU_LVDCSR_SPEC, bool, O>;
+#[doc = "Field `LVDS2` reader - LVDS2"]
+pub type LVDS2_R = crate::BitReader<bool>;
+#[doc = "Field `LVDS2` writer - LVDS2"]
+pub type LVDS2_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWRCU_LVDCSR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - BODEN"]
     #[inline(always)]
     pub fn boden(&self) -> BODEN_R {
-        BODEN_R::new((self.bits & 0x01) != 0)
+        BODEN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - BODRIS"]
     #[inline(always)]
     pub fn bodris(&self) -> BODRIS_R {
-        BODRIS_R::new(((self.bits >> 1) & 0x01) != 0)
+        BODRIS_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 3 - BODF"]
     #[inline(always)]
     pub fn bodf(&self) -> BODF_R {
-        BODF_R::new(((self.bits >> 3) & 0x01) != 0)
+        BODF_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 16 - LVDEN"]
     #[inline(always)]
     pub fn lvden(&self) -> LVDEN_R {
-        LVDEN_R::new(((self.bits >> 16) & 0x01) != 0)
+        LVDEN_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:18 - LVDS01"]
     #[inline(always)]
     pub fn lvds01(&self) -> LVDS01_R {
-        LVDS01_R::new(((self.bits >> 17) & 0x03) as u8)
-    }
-    #[doc = "Bit 22 - LVDS2"]
-    #[inline(always)]
-    pub fn lvds2(&self) -> LVDS2_R {
-        LVDS2_R::new(((self.bits >> 22) & 0x01) != 0)
+        LVDS01_R::new(((self.bits >> 17) & 3) as u8)
     }
     #[doc = "Bit 19 - LVDF"]
     #[inline(always)]
     pub fn lvdf(&self) -> LVDF_R {
-        LVDF_R::new(((self.bits >> 19) & 0x01) != 0)
+        LVDF_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - LVDIWEN"]
     #[inline(always)]
     pub fn lvdiwen(&self) -> LVDIWEN_R {
-        LVDIWEN_R::new(((self.bits >> 20) & 0x01) != 0)
+        LVDIWEN_R::new(((self.bits >> 20) & 1) != 0)
     }
     #[doc = "Bit 21 - LVDEWEN"]
     #[inline(always)]
     pub fn lvdewen(&self) -> LVDEWEN_R {
-        LVDEWEN_R::new(((self.bits >> 21) & 0x01) != 0)
+        LVDEWEN_R::new(((self.bits >> 21) & 1) != 0)
+    }
+    #[doc = "Bit 22 - LVDS2"]
+    #[inline(always)]
+    pub fn lvds2(&self) -> LVDS2_R {
+        LVDS2_R::new(((self.bits >> 22) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - BODEN"]
     #[inline(always)]
-    pub fn boden(&mut self) -> BODEN_W {
-        BODEN_W { w: self }
+    #[must_use]
+    pub fn boden(&mut self) -> BODEN_W<0> {
+        BODEN_W::new(self)
     }
     #[doc = "Bit 1 - BODRIS"]
     #[inline(always)]
-    pub fn bodris(&mut self) -> BODRIS_W {
-        BODRIS_W { w: self }
+    #[must_use]
+    pub fn bodris(&mut self) -> BODRIS_W<1> {
+        BODRIS_W::new(self)
     }
     #[doc = "Bit 3 - BODF"]
     #[inline(always)]
-    pub fn bodf(&mut self) -> BODF_W {
-        BODF_W { w: self }
+    #[must_use]
+    pub fn bodf(&mut self) -> BODF_W<3> {
+        BODF_W::new(self)
     }
     #[doc = "Bit 16 - LVDEN"]
     #[inline(always)]
-    pub fn lvden(&mut self) -> LVDEN_W {
-        LVDEN_W { w: self }
+    #[must_use]
+    pub fn lvden(&mut self) -> LVDEN_W<16> {
+        LVDEN_W::new(self)
     }
     #[doc = "Bits 17:18 - LVDS01"]
     #[inline(always)]
-    pub fn lvds01(&mut self) -> LVDS01_W {
-        LVDS01_W { w: self }
-    }
-    #[doc = "Bit 22 - LVDS2"]
-    #[inline(always)]
-    pub fn lvds2(&mut self) -> LVDS2_W {
-        LVDS2_W { w: self }
+    #[must_use]
+    pub fn lvds01(&mut self) -> LVDS01_W<17> {
+        LVDS01_W::new(self)
     }
     #[doc = "Bit 19 - LVDF"]
     #[inline(always)]
-    pub fn lvdf(&mut self) -> LVDF_W {
-        LVDF_W { w: self }
+    #[must_use]
+    pub fn lvdf(&mut self) -> LVDF_W<19> {
+        LVDF_W::new(self)
     }
     #[doc = "Bit 20 - LVDIWEN"]
     #[inline(always)]
-    pub fn lvdiwen(&mut self) -> LVDIWEN_W {
-        LVDIWEN_W { w: self }
+    #[must_use]
+    pub fn lvdiwen(&mut self) -> LVDIWEN_W<20> {
+        LVDIWEN_W::new(self)
     }
     #[doc = "Bit 21 - LVDEWEN"]
     #[inline(always)]
-    pub fn lvdewen(&mut self) -> LVDEWEN_W {
-        LVDEWEN_W { w: self }
+    #[must_use]
+    pub fn lvdewen(&mut self) -> LVDEWEN_W<21> {
+        LVDEWEN_W::new(self)
     }
+    #[doc = "Bit 22 - LVDS2"]
+    #[inline(always)]
+    #[must_use]
+    pub fn lvds2(&mut self) -> LVDS2_W<22> {
+        LVDS2_W::new(self)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "PWRCU_LVDCSR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [pwrcu_lvdcsr](index.html) module"]
+pub struct PWRCU_LVDCSR_SPEC;
+impl crate::RegisterSpec for PWRCU_LVDCSR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [pwrcu_lvdcsr::R](R) reader structure"]
+impl crate::Readable for PWRCU_LVDCSR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [pwrcu_lvdcsr::W](W) writer structure"]
+impl crate::Writable for PWRCU_LVDCSR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets PWRCU_LVDCSR to value 0"]
+impl crate::Resettable for PWRCU_LVDCSR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

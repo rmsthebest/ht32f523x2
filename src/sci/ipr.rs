@@ -1,220 +1,155 @@
-#[doc = "Reader of register IPR"]
-pub type R = crate::R<u32, super::IPR>;
-#[doc = "Writer for register IPR"]
-pub type W = crate::W<u32, super::IPR>;
-#[doc = "Register IPR `reset()`'s with value 0"]
-impl crate::ResetValue for super::IPR {
-    type Type = u32;
+#[doc = "Register `IPR` reader"]
+pub struct R(crate::R<IPR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<IPR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `PARP`"]
-pub type PARP_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PARP`"]
-pub struct PARP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PARP_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<IPR_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<IPR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `RXCP`"]
-pub type RXCP_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RXCP`"]
-pub struct RXCP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXCP_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `IPR` writer"]
+pub struct W(crate::W<IPR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<IPR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `TXCP`"]
-pub type TXCP_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TXCP`"]
-pub struct TXCP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXCP_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `WTP`"]
-pub type WTP_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WTP`"]
-pub struct WTP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WTP_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<IPR_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
-        self.w
+    fn from(writer: crate::W<IPR_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `CARDIRP`"]
-pub type CARDIRP_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CARDIRP`"]
-pub struct CARDIRP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CARDIRP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Reader of field `TXBEP`"]
-pub type TXBEP_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TXBEP`"]
-pub struct TXBEP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXBEP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
-        self.w
-    }
-}
+#[doc = "Field `PARP` reader - PARP"]
+pub type PARP_R = crate::BitReader<bool>;
+#[doc = "Field `PARP` writer - PARP"]
+pub type PARP_W<'a, const O: u8> = crate::BitWriter<'a, u32, IPR_SPEC, bool, O>;
+#[doc = "Field `RXCP` reader - RXCP"]
+pub type RXCP_R = crate::BitReader<bool>;
+#[doc = "Field `RXCP` writer - RXCP"]
+pub type RXCP_W<'a, const O: u8> = crate::BitWriter<'a, u32, IPR_SPEC, bool, O>;
+#[doc = "Field `TXCP` reader - TXCP"]
+pub type TXCP_R = crate::BitReader<bool>;
+#[doc = "Field `TXCP` writer - TXCP"]
+pub type TXCP_W<'a, const O: u8> = crate::BitWriter<'a, u32, IPR_SPEC, bool, O>;
+#[doc = "Field `WTP` reader - WTP"]
+pub type WTP_R = crate::BitReader<bool>;
+#[doc = "Field `WTP` writer - WTP"]
+pub type WTP_W<'a, const O: u8> = crate::BitWriter<'a, u32, IPR_SPEC, bool, O>;
+#[doc = "Field `CARDIRP` reader - CARDIRP"]
+pub type CARDIRP_R = crate::BitReader<bool>;
+#[doc = "Field `CARDIRP` writer - CARDIRP"]
+pub type CARDIRP_W<'a, const O: u8> = crate::BitWriter<'a, u32, IPR_SPEC, bool, O>;
+#[doc = "Field `TXBEP` reader - TXBEP"]
+pub type TXBEP_R = crate::BitReader<bool>;
+#[doc = "Field `TXBEP` writer - TXBEP"]
+pub type TXBEP_W<'a, const O: u8> = crate::BitWriter<'a, u32, IPR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - PARP"]
     #[inline(always)]
     pub fn parp(&self) -> PARP_R {
-        PARP_R::new((self.bits & 0x01) != 0)
+        PARP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RXCP"]
     #[inline(always)]
     pub fn rxcp(&self) -> RXCP_R {
-        RXCP_R::new(((self.bits >> 1) & 0x01) != 0)
+        RXCP_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - TXCP"]
     #[inline(always)]
     pub fn txcp(&self) -> TXCP_R {
-        TXCP_R::new(((self.bits >> 2) & 0x01) != 0)
+        TXCP_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - WTP"]
     #[inline(always)]
     pub fn wtp(&self) -> WTP_R {
-        WTP_R::new(((self.bits >> 3) & 0x01) != 0)
+        WTP_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 6 - CARDIRP"]
     #[inline(always)]
     pub fn cardirp(&self) -> CARDIRP_R {
-        CARDIRP_R::new(((self.bits >> 6) & 0x01) != 0)
+        CARDIRP_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - TXBEP"]
     #[inline(always)]
     pub fn txbep(&self) -> TXBEP_R {
-        TXBEP_R::new(((self.bits >> 7) & 0x01) != 0)
+        TXBEP_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - PARP"]
     #[inline(always)]
-    pub fn parp(&mut self) -> PARP_W {
-        PARP_W { w: self }
+    #[must_use]
+    pub fn parp(&mut self) -> PARP_W<0> {
+        PARP_W::new(self)
     }
     #[doc = "Bit 1 - RXCP"]
     #[inline(always)]
-    pub fn rxcp(&mut self) -> RXCP_W {
-        RXCP_W { w: self }
+    #[must_use]
+    pub fn rxcp(&mut self) -> RXCP_W<1> {
+        RXCP_W::new(self)
     }
     #[doc = "Bit 2 - TXCP"]
     #[inline(always)]
-    pub fn txcp(&mut self) -> TXCP_W {
-        TXCP_W { w: self }
+    #[must_use]
+    pub fn txcp(&mut self) -> TXCP_W<2> {
+        TXCP_W::new(self)
     }
     #[doc = "Bit 3 - WTP"]
     #[inline(always)]
-    pub fn wtp(&mut self) -> WTP_W {
-        WTP_W { w: self }
+    #[must_use]
+    pub fn wtp(&mut self) -> WTP_W<3> {
+        WTP_W::new(self)
     }
     #[doc = "Bit 6 - CARDIRP"]
     #[inline(always)]
-    pub fn cardirp(&mut self) -> CARDIRP_W {
-        CARDIRP_W { w: self }
+    #[must_use]
+    pub fn cardirp(&mut self) -> CARDIRP_W<6> {
+        CARDIRP_W::new(self)
     }
     #[doc = "Bit 7 - TXBEP"]
     #[inline(always)]
-    pub fn txbep(&mut self) -> TXBEP_W {
-        TXBEP_W { w: self }
+    #[must_use]
+    pub fn txbep(&mut self) -> TXBEP_W<7> {
+        TXBEP_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "IPR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ipr](index.html) module"]
+pub struct IPR_SPEC;
+impl crate::RegisterSpec for IPR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [ipr::R](R) reader structure"]
+impl crate::Readable for IPR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ipr::W](W) writer structure"]
+impl crate::Writable for IPR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets IPR to value 0"]
+impl crate::Resettable for IPR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

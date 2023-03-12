@@ -1,115 +1,59 @@
-#[doc = "Reader of register MR0"]
-pub type R = crate::R<u32, super::MR0>;
-#[doc = "Writer for register MR0"]
-pub type W = crate::W<u32, super::MR0>;
-#[doc = "Register MR0 `reset()`'s with value 0"]
-impl crate::ResetValue for super::MR0 {
-    type Type = u32;
+#[doc = "Register `MR0` reader"]
+pub struct R(crate::R<MR0_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<MR0_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `WDTV`"]
-pub type WDTV_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `WDTV`"]
-pub struct WDTV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDTV_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<MR0_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | ((value as u32) & 0x0fff);
-        self.w
+    fn from(reader: crate::R<MR0_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `WDTFIEN`"]
-pub type WDTFIEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WDTFIEN`"]
-pub struct WDTFIEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDTFIEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `MR0` writer"]
+pub struct W(crate::W<MR0_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<MR0_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `WDTRSTEN`"]
-pub type WDTRSTEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WDTRSTEN`"]
-pub struct WDTRSTEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDTRSTEN_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `WDTSHLT`"]
-pub type WDTSHLT_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `WDTSHLT`"]
-pub struct WDTSHLT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDTSHLT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::W<MR0_SPEC>> for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | (((value as u32) & 0x03) << 14);
-        self.w
+    fn from(writer: crate::W<MR0_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `WDTEN`"]
-pub type WDTEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `WDTEN`"]
-pub struct WDTEN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WDTEN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
-        self.w
-    }
-}
+#[doc = "Field `WDTV` reader - WDTV"]
+pub type WDTV_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `WDTV` writer - WDTV"]
+pub type WDTV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MR0_SPEC, u16, u16, 12, O>;
+#[doc = "Field `WDTFIEN` reader - WDTFIEN"]
+pub type WDTFIEN_R = crate::BitReader<bool>;
+#[doc = "Field `WDTFIEN` writer - WDTFIEN"]
+pub type WDTFIEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MR0_SPEC, bool, O>;
+#[doc = "Field `WDTRSTEN` reader - WDTRSTEN"]
+pub type WDTRSTEN_R = crate::BitReader<bool>;
+#[doc = "Field `WDTRSTEN` writer - WDTRSTEN"]
+pub type WDTRSTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MR0_SPEC, bool, O>;
+#[doc = "Field `WDTSHLT` reader - WDTSHLT"]
+pub type WDTSHLT_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `WDTSHLT` writer - WDTSHLT"]
+pub type WDTSHLT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `WDTEN` reader - WDTEN"]
+pub type WDTEN_R = crate::BitReader<bool>;
+#[doc = "Field `WDTEN` writer - WDTEN"]
+pub type WDTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MR0_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:11 - WDTV"]
     #[inline(always)]
@@ -119,48 +63,78 @@ impl R {
     #[doc = "Bit 12 - WDTFIEN"]
     #[inline(always)]
     pub fn wdtfien(&self) -> WDTFIEN_R {
-        WDTFIEN_R::new(((self.bits >> 12) & 0x01) != 0)
+        WDTFIEN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - WDTRSTEN"]
     #[inline(always)]
     pub fn wdtrsten(&self) -> WDTRSTEN_R {
-        WDTRSTEN_R::new(((self.bits >> 13) & 0x01) != 0)
+        WDTRSTEN_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bits 14:15 - WDTSHLT"]
     #[inline(always)]
     pub fn wdtshlt(&self) -> WDTSHLT_R {
-        WDTSHLT_R::new(((self.bits >> 14) & 0x03) as u8)
+        WDTSHLT_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bit 16 - WDTEN"]
     #[inline(always)]
     pub fn wdten(&self) -> WDTEN_R {
-        WDTEN_R::new(((self.bits >> 16) & 0x01) != 0)
+        WDTEN_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:11 - WDTV"]
     #[inline(always)]
-    pub fn wdtv(&mut self) -> WDTV_W {
-        WDTV_W { w: self }
+    #[must_use]
+    pub fn wdtv(&mut self) -> WDTV_W<0> {
+        WDTV_W::new(self)
     }
     #[doc = "Bit 12 - WDTFIEN"]
     #[inline(always)]
-    pub fn wdtfien(&mut self) -> WDTFIEN_W {
-        WDTFIEN_W { w: self }
+    #[must_use]
+    pub fn wdtfien(&mut self) -> WDTFIEN_W<12> {
+        WDTFIEN_W::new(self)
     }
     #[doc = "Bit 13 - WDTRSTEN"]
     #[inline(always)]
-    pub fn wdtrsten(&mut self) -> WDTRSTEN_W {
-        WDTRSTEN_W { w: self }
+    #[must_use]
+    pub fn wdtrsten(&mut self) -> WDTRSTEN_W<13> {
+        WDTRSTEN_W::new(self)
     }
     #[doc = "Bits 14:15 - WDTSHLT"]
     #[inline(always)]
-    pub fn wdtshlt(&mut self) -> WDTSHLT_W {
-        WDTSHLT_W { w: self }
+    #[must_use]
+    pub fn wdtshlt(&mut self) -> WDTSHLT_W<14> {
+        WDTSHLT_W::new(self)
     }
     #[doc = "Bit 16 - WDTEN"]
     #[inline(always)]
-    pub fn wdten(&mut self) -> WDTEN_W {
-        WDTEN_W { w: self }
+    #[must_use]
+    pub fn wdten(&mut self) -> WDTEN_W<16> {
+        WDTEN_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "MR0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mr0](index.html) module"]
+pub struct MR0_SPEC;
+impl crate::RegisterSpec for MR0_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [mr0::R](R) reader structure"]
+impl crate::Readable for MR0_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [mr0::W](W) writer structure"]
+impl crate::Writable for MR0_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets MR0 to value 0"]
+impl crate::Resettable for MR0_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

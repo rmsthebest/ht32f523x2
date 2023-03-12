@@ -1,144 +1,78 @@
-#[doc = "Reader of register WCR"]
-pub type R = crate::R<u32, super::WCR>;
-#[doc = "Writer for register WCR"]
-pub type W = crate::W<u32, super::WCR>;
-#[doc = "Register WCR `reset()`'s with value 0"]
-impl crate::ResetValue for super::WCR {
-    type Type = u32;
+#[doc = "Register `WCR` reader"]
+pub struct R(crate::R<WCR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<WCR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `ADWLE`"]
-pub type ADWLE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ADWLE`"]
-pub struct ADWLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADWLE_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::R<WCR_SPEC>> for R {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
-        self.w
+    fn from(reader: crate::R<WCR_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `ADWUE`"]
-pub type ADWUE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ADWUE`"]
-pub struct ADWUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADWUE_W<'a> {
-    #[doc = r"Sets the field bit"]
+#[doc = "Register `WCR` writer"]
+pub struct W(crate::W<WCR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<WCR_SPEC>;
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `ADWALL`"]
-pub type ADWALL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ADWALL`"]
-pub struct ADWALL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADWALL_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `ADWCH`"]
-pub type ADWCH_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `ADWCH`"]
-pub struct ADWCH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADWCH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::W<WCR_SPEC>> for W {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u32) & 0x0f) << 8);
-        self.w
+    fn from(writer: crate::W<WCR_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `ADLCH`"]
-pub type ADLCH_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `ADLCH`"]
-pub struct ADLCH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADLCH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | (((value as u32) & 0x0f) << 16);
-        self.w
-    }
-}
-#[doc = "Reader of field `ADUCH`"]
-pub type ADUCH_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `ADUCH`"]
-pub struct ADUCH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADUCH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | (((value as u32) & 0x0f) << 24);
-        self.w
-    }
-}
+#[doc = "Field `ADWLE` reader - ADWLE"]
+pub type ADWLE_R = crate::BitReader<bool>;
+#[doc = "Field `ADWLE` writer - ADWLE"]
+pub type ADWLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, WCR_SPEC, bool, O>;
+#[doc = "Field `ADWUE` reader - ADWUE"]
+pub type ADWUE_R = crate::BitReader<bool>;
+#[doc = "Field `ADWUE` writer - ADWUE"]
+pub type ADWUE_W<'a, const O: u8> = crate::BitWriter<'a, u32, WCR_SPEC, bool, O>;
+#[doc = "Field `ADWALL` reader - ADWALL"]
+pub type ADWALL_R = crate::BitReader<bool>;
+#[doc = "Field `ADWALL` writer - ADWALL"]
+pub type ADWALL_W<'a, const O: u8> = crate::BitWriter<'a, u32, WCR_SPEC, bool, O>;
+#[doc = "Field `ADWCH` reader - ADWCH"]
+pub type ADWCH_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ADWCH` writer - ADWCH"]
+pub type ADWCH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WCR_SPEC, u8, u8, 4, O>;
+#[doc = "Field `ADLCH` reader - ADLCH"]
+pub type ADLCH_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ADLCH` writer - ADLCH"]
+pub type ADLCH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WCR_SPEC, u8, u8, 4, O>;
+#[doc = "Field `ADUCH` reader - ADUCH"]
+pub type ADUCH_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ADUCH` writer - ADUCH"]
+pub type ADUCH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, WCR_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bit 0 - ADWLE"]
     #[inline(always)]
     pub fn adwle(&self) -> ADWLE_R {
-        ADWLE_R::new((self.bits & 0x01) != 0)
+        ADWLE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - ADWUE"]
     #[inline(always)]
     pub fn adwue(&self) -> ADWUE_R {
-        ADWUE_R::new(((self.bits >> 1) & 0x01) != 0)
+        ADWUE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - ADWALL"]
     #[inline(always)]
     pub fn adwall(&self) -> ADWALL_R {
-        ADWALL_R::new(((self.bits >> 2) & 0x01) != 0)
+        ADWALL_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bits 8:11 - ADWCH"]
     #[inline(always)]
@@ -159,32 +93,63 @@ impl R {
 impl W {
     #[doc = "Bit 0 - ADWLE"]
     #[inline(always)]
-    pub fn adwle(&mut self) -> ADWLE_W {
-        ADWLE_W { w: self }
+    #[must_use]
+    pub fn adwle(&mut self) -> ADWLE_W<0> {
+        ADWLE_W::new(self)
     }
     #[doc = "Bit 1 - ADWUE"]
     #[inline(always)]
-    pub fn adwue(&mut self) -> ADWUE_W {
-        ADWUE_W { w: self }
+    #[must_use]
+    pub fn adwue(&mut self) -> ADWUE_W<1> {
+        ADWUE_W::new(self)
     }
     #[doc = "Bit 2 - ADWALL"]
     #[inline(always)]
-    pub fn adwall(&mut self) -> ADWALL_W {
-        ADWALL_W { w: self }
+    #[must_use]
+    pub fn adwall(&mut self) -> ADWALL_W<2> {
+        ADWALL_W::new(self)
     }
     #[doc = "Bits 8:11 - ADWCH"]
     #[inline(always)]
-    pub fn adwch(&mut self) -> ADWCH_W {
-        ADWCH_W { w: self }
+    #[must_use]
+    pub fn adwch(&mut self) -> ADWCH_W<8> {
+        ADWCH_W::new(self)
     }
     #[doc = "Bits 16:19 - ADLCH"]
     #[inline(always)]
-    pub fn adlch(&mut self) -> ADLCH_W {
-        ADLCH_W { w: self }
+    #[must_use]
+    pub fn adlch(&mut self) -> ADLCH_W<16> {
+        ADLCH_W::new(self)
     }
     #[doc = "Bits 24:27 - ADUCH"]
     #[inline(always)]
-    pub fn aduch(&mut self) -> ADUCH_W {
-        ADUCH_W { w: self }
+    #[must_use]
+    pub fn aduch(&mut self) -> ADUCH_W<24> {
+        ADUCH_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "WCR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [wcr](index.html) module"]
+pub struct WCR_SPEC;
+impl crate::RegisterSpec for WCR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [wcr::R](R) reader structure"]
+impl crate::Readable for WCR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [wcr::W](W) writer structure"]
+impl crate::Writable for WCR_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets WCR to value 0"]
+impl crate::Resettable for WCR_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }

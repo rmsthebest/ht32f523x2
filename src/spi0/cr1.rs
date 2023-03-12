@@ -1,139 +1,63 @@
-#[doc = "Reader of register CR1"]
-pub type R = crate::R<u32, super::CR1>;
-#[doc = "Writer for register CR1"]
-pub type W = crate::W<u32, super::CR1>;
-#[doc = "Register CR1 `reset()`'s with value 0"]
-impl crate::ResetValue for super::CR1 {
-    type Type = u32;
+#[doc = "Register `CR1` reader"]
+pub struct R(crate::R<CR1_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CR1_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `DFL`"]
-pub type DFL_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `DFL`"]
-pub struct DFL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DFL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+impl From<crate::R<CR1_SPEC>> for R {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | ((value as u32) & 0x0f);
-        self.w
+    fn from(reader: crate::R<CR1_SPEC>) -> Self {
+        R(reader)
     }
 }
-#[doc = "Reader of field `FORMAT`"]
-pub type FORMAT_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `FORMAT`"]
-pub struct FORMAT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORMAT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
+#[doc = "Register `CR1` writer"]
+pub struct W(crate::W<CR1_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CR1_SPEC>;
     #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 8)) | (((value as u32) & 0x07) << 8);
-        self.w
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `SELAP`"]
-pub type SELAP_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SELAP`"]
-pub struct SELAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SELAP_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl core::ops::DerefMut for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
-        self.w
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
-#[doc = "Reader of field `FIRSTBIT`"]
-pub type FIRSTBIT_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FIRSTBIT`"]
-pub struct FIRSTBIT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FIRSTBIT_W<'a> {
-    #[doc = r"Sets the field bit"]
+impl From<crate::W<CR1_SPEC>> for W {
     #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
-        self.w
+    fn from(writer: crate::W<CR1_SPEC>) -> Self {
+        W(writer)
     }
 }
-#[doc = "Reader of field `SELM`"]
-pub type SELM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SELM`"]
-pub struct SELM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SELM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
-        self.w
-    }
-}
-#[doc = "Reader of field `MODE`"]
-pub type MODE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `MODE`"]
-pub struct MODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MODE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
-        self.w
-    }
-}
+#[doc = "Field `DFL` reader - DFL"]
+pub type DFL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DFL` writer - DFL"]
+pub type DFL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR1_SPEC, u8, u8, 4, O>;
+#[doc = "Field `FORMAT` reader - FORMAT"]
+pub type FORMAT_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `FORMAT` writer - FORMAT"]
+pub type FORMAT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR1_SPEC, u8, u8, 3, O>;
+#[doc = "Field `SELAP` reader - SELAP"]
+pub type SELAP_R = crate::BitReader<bool>;
+#[doc = "Field `SELAP` writer - SELAP"]
+pub type SELAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
+#[doc = "Field `FIRSTBIT` reader - FIRSTBIT"]
+pub type FIRSTBIT_R = crate::BitReader<bool>;
+#[doc = "Field `FIRSTBIT` writer - FIRSTBIT"]
+pub type FIRSTBIT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
+#[doc = "Field `SELM` reader - SELM"]
+pub type SELM_R = crate::BitReader<bool>;
+#[doc = "Field `SELM` writer - SELM"]
+pub type SELM_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
+#[doc = "Field `MODE` reader - MODE"]
+pub type MODE_R = crate::BitReader<bool>;
+#[doc = "Field `MODE` writer - MODE"]
+pub type MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
 impl R {
     #[doc = "Bits 0:3 - DFL"]
     #[inline(always)]
@@ -143,58 +67,89 @@ impl R {
     #[doc = "Bits 8:10 - FORMAT"]
     #[inline(always)]
     pub fn format(&self) -> FORMAT_R {
-        FORMAT_R::new(((self.bits >> 8) & 0x07) as u8)
+        FORMAT_R::new(((self.bits >> 8) & 7) as u8)
     }
     #[doc = "Bit 11 - SELAP"]
     #[inline(always)]
     pub fn selap(&self) -> SELAP_R {
-        SELAP_R::new(((self.bits >> 11) & 0x01) != 0)
+        SELAP_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - FIRSTBIT"]
     #[inline(always)]
     pub fn firstbit(&self) -> FIRSTBIT_R {
-        FIRSTBIT_R::new(((self.bits >> 12) & 0x01) != 0)
+        FIRSTBIT_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - SELM"]
     #[inline(always)]
     pub fn selm(&self) -> SELM_R {
-        SELM_R::new(((self.bits >> 13) & 0x01) != 0)
+        SELM_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - MODE"]
     #[inline(always)]
     pub fn mode(&self) -> MODE_R {
-        MODE_R::new(((self.bits >> 14) & 0x01) != 0)
+        MODE_R::new(((self.bits >> 14) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - DFL"]
     #[inline(always)]
-    pub fn dfl(&mut self) -> DFL_W {
-        DFL_W { w: self }
+    #[must_use]
+    pub fn dfl(&mut self) -> DFL_W<0> {
+        DFL_W::new(self)
     }
     #[doc = "Bits 8:10 - FORMAT"]
     #[inline(always)]
-    pub fn format(&mut self) -> FORMAT_W {
-        FORMAT_W { w: self }
+    #[must_use]
+    pub fn format(&mut self) -> FORMAT_W<8> {
+        FORMAT_W::new(self)
     }
     #[doc = "Bit 11 - SELAP"]
     #[inline(always)]
-    pub fn selap(&mut self) -> SELAP_W {
-        SELAP_W { w: self }
+    #[must_use]
+    pub fn selap(&mut self) -> SELAP_W<11> {
+        SELAP_W::new(self)
     }
     #[doc = "Bit 12 - FIRSTBIT"]
     #[inline(always)]
-    pub fn firstbit(&mut self) -> FIRSTBIT_W {
-        FIRSTBIT_W { w: self }
+    #[must_use]
+    pub fn firstbit(&mut self) -> FIRSTBIT_W<12> {
+        FIRSTBIT_W::new(self)
     }
     #[doc = "Bit 13 - SELM"]
     #[inline(always)]
-    pub fn selm(&mut self) -> SELM_W {
-        SELM_W { w: self }
+    #[must_use]
+    pub fn selm(&mut self) -> SELM_W<13> {
+        SELM_W::new(self)
     }
     #[doc = "Bit 14 - MODE"]
     #[inline(always)]
-    pub fn mode(&mut self) -> MODE_W {
-        MODE_W { w: self }
+    #[must_use]
+    pub fn mode(&mut self) -> MODE_W<14> {
+        MODE_W::new(self)
     }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "CR1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cr1](index.html) module"]
+pub struct CR1_SPEC;
+impl crate::RegisterSpec for CR1_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [cr1::R](R) reader structure"]
+impl crate::Readable for CR1_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [cr1::W](W) writer structure"]
+impl crate::Writable for CR1_SPEC {
+    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+}
+#[doc = "`reset()` method sets CR1 to value 0"]
+impl crate::Resettable for CR1_SPEC {
+    const RESET_VALUE: Self::Ux = 0;
 }
