@@ -1,155 +1,115 @@
 #[doc = "Register `IRAW` reader"]
-pub struct R(crate::R<IRAW_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IRAW_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IRAW_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IRAW_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IrawSpec>;
 #[doc = "Register `IRAW` writer"]
-pub struct W(crate::W<IRAW_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IRAW_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IRAW_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IRAW_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IrawSpec>;
 #[doc = "Field `ADIRAWS` reader - ADIRAWS"]
-pub type ADIRAWS_R = crate::BitReader<bool>;
+pub type AdirawsR = crate::BitReader;
 #[doc = "Field `ADIRAWS` writer - ADIRAWS"]
-pub type ADIRAWS_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRAW_SPEC, bool, O>;
+pub type AdirawsW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADIRAWG` reader - ADIRAWG"]
-pub type ADIRAWG_R = crate::BitReader<bool>;
+pub type AdirawgR = crate::BitReader;
 #[doc = "Field `ADIRAWG` writer - ADIRAWG"]
-pub type ADIRAWG_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRAW_SPEC, bool, O>;
+pub type AdirawgW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADIRAWC` reader - ADIRAWC"]
-pub type ADIRAWC_R = crate::BitReader<bool>;
+pub type AdirawcR = crate::BitReader;
 #[doc = "Field `ADIRAWC` writer - ADIRAWC"]
-pub type ADIRAWC_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRAW_SPEC, bool, O>;
+pub type AdirawcW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADIRAWL` reader - ADIRAWL"]
-pub type ADIRAWL_R = crate::BitReader<bool>;
+pub type AdirawlR = crate::BitReader;
 #[doc = "Field `ADIRAWL` writer - ADIRAWL"]
-pub type ADIRAWL_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRAW_SPEC, bool, O>;
+pub type AdirawlW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADIRAWU` reader - ADIRAWU"]
-pub type ADIRAWU_R = crate::BitReader<bool>;
+pub type AdirawuR = crate::BitReader;
 #[doc = "Field `ADIRAWU` writer - ADIRAWU"]
-pub type ADIRAWU_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRAW_SPEC, bool, O>;
+pub type AdirawuW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADIRAWO` reader - ADIRAWO"]
-pub type ADIRAWO_R = crate::BitReader<bool>;
+pub type AdirawoR = crate::BitReader;
 #[doc = "Field `ADIRAWO` writer - ADIRAWO"]
-pub type ADIRAWO_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRAW_SPEC, bool, O>;
+pub type AdirawoW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - ADIRAWS"]
     #[inline(always)]
-    pub fn adiraws(&self) -> ADIRAWS_R {
-        ADIRAWS_R::new((self.bits & 1) != 0)
+    pub fn adiraws(&self) -> AdirawsR {
+        AdirawsR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - ADIRAWG"]
     #[inline(always)]
-    pub fn adirawg(&self) -> ADIRAWG_R {
-        ADIRAWG_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn adirawg(&self) -> AdirawgR {
+        AdirawgR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - ADIRAWC"]
     #[inline(always)]
-    pub fn adirawc(&self) -> ADIRAWC_R {
-        ADIRAWC_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn adirawc(&self) -> AdirawcR {
+        AdirawcR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 16 - ADIRAWL"]
     #[inline(always)]
-    pub fn adirawl(&self) -> ADIRAWL_R {
-        ADIRAWL_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn adirawl(&self) -> AdirawlR {
+        AdirawlR::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - ADIRAWU"]
     #[inline(always)]
-    pub fn adirawu(&self) -> ADIRAWU_R {
-        ADIRAWU_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn adirawu(&self) -> AdirawuR {
+        AdirawuR::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 24 - ADIRAWO"]
     #[inline(always)]
-    pub fn adirawo(&self) -> ADIRAWO_R {
-        ADIRAWO_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn adirawo(&self) -> AdirawoR {
+        AdirawoR::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - ADIRAWS"]
     #[inline(always)]
     #[must_use]
-    pub fn adiraws(&mut self) -> ADIRAWS_W<0> {
-        ADIRAWS_W::new(self)
+    pub fn adiraws(&mut self) -> AdirawsW<IrawSpec> {
+        AdirawsW::new(self, 0)
     }
     #[doc = "Bit 1 - ADIRAWG"]
     #[inline(always)]
     #[must_use]
-    pub fn adirawg(&mut self) -> ADIRAWG_W<1> {
-        ADIRAWG_W::new(self)
+    pub fn adirawg(&mut self) -> AdirawgW<IrawSpec> {
+        AdirawgW::new(self, 1)
     }
     #[doc = "Bit 2 - ADIRAWC"]
     #[inline(always)]
     #[must_use]
-    pub fn adirawc(&mut self) -> ADIRAWC_W<2> {
-        ADIRAWC_W::new(self)
+    pub fn adirawc(&mut self) -> AdirawcW<IrawSpec> {
+        AdirawcW::new(self, 2)
     }
     #[doc = "Bit 16 - ADIRAWL"]
     #[inline(always)]
     #[must_use]
-    pub fn adirawl(&mut self) -> ADIRAWL_W<16> {
-        ADIRAWL_W::new(self)
+    pub fn adirawl(&mut self) -> AdirawlW<IrawSpec> {
+        AdirawlW::new(self, 16)
     }
     #[doc = "Bit 17 - ADIRAWU"]
     #[inline(always)]
     #[must_use]
-    pub fn adirawu(&mut self) -> ADIRAWU_W<17> {
-        ADIRAWU_W::new(self)
+    pub fn adirawu(&mut self) -> AdirawuW<IrawSpec> {
+        AdirawuW::new(self, 17)
     }
     #[doc = "Bit 24 - ADIRAWO"]
     #[inline(always)]
     #[must_use]
-    pub fn adirawo(&mut self) -> ADIRAWO_W<24> {
-        ADIRAWO_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn adirawo(&mut self) -> AdirawoW<IrawSpec> {
+        AdirawoW::new(self, 24)
     }
 }
-#[doc = "IRAW\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [iraw](index.html) module"]
-pub struct IRAW_SPEC;
-impl crate::RegisterSpec for IRAW_SPEC {
+#[doc = "IRAW\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iraw::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iraw::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IrawSpec;
+impl crate::RegisterSpec for IrawSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [iraw::R](R) reader structure"]
-impl crate::Readable for IRAW_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [iraw::W](W) writer structure"]
-impl crate::Writable for IRAW_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`iraw::R`](R) reader structure"]
+impl crate::Readable for IrawSpec {}
+#[doc = "`write(|w| ..)` method takes [`iraw::W`](W) writer structure"]
+impl crate::Writable for IrawSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IRAW to value 0"]
-impl crate::Resettable for IRAW_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for IrawSpec {
+    const RESET_VALUE: u32 = 0;
 }

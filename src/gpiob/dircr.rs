@@ -1,305 +1,265 @@
 #[doc = "Register `DIRCR` reader"]
-pub struct R(crate::R<DIRCR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIRCR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIRCR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIRCR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DircrSpec>;
 #[doc = "Register `DIRCR` writer"]
-pub struct W(crate::W<DIRCR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DIRCR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DIRCR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DIRCR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DircrSpec>;
 #[doc = "Field `DIR0` reader - DIR0"]
-pub type DIR0_R = crate::BitReader<bool>;
+pub type Dir0R = crate::BitReader;
 #[doc = "Field `DIR0` writer - DIR0"]
-pub type DIR0_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir0W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR1` reader - DIR1"]
-pub type DIR1_R = crate::BitReader<bool>;
+pub type Dir1R = crate::BitReader;
 #[doc = "Field `DIR1` writer - DIR1"]
-pub type DIR1_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir1W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR2` reader - DIR2"]
-pub type DIR2_R = crate::BitReader<bool>;
+pub type Dir2R = crate::BitReader;
 #[doc = "Field `DIR2` writer - DIR2"]
-pub type DIR2_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir2W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR3` reader - DIR3"]
-pub type DIR3_R = crate::BitReader<bool>;
+pub type Dir3R = crate::BitReader;
 #[doc = "Field `DIR3` writer - DIR3"]
-pub type DIR3_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir3W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR4` reader - DIR4"]
-pub type DIR4_R = crate::BitReader<bool>;
+pub type Dir4R = crate::BitReader;
 #[doc = "Field `DIR4` writer - DIR4"]
-pub type DIR4_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir4W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR5` reader - DIR5"]
-pub type DIR5_R = crate::BitReader<bool>;
+pub type Dir5R = crate::BitReader;
 #[doc = "Field `DIR5` writer - DIR5"]
-pub type DIR5_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir5W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR6` reader - DIR6"]
-pub type DIR6_R = crate::BitReader<bool>;
+pub type Dir6R = crate::BitReader;
 #[doc = "Field `DIR6` writer - DIR6"]
-pub type DIR6_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir6W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR7` reader - DIR7"]
-pub type DIR7_R = crate::BitReader<bool>;
+pub type Dir7R = crate::BitReader;
 #[doc = "Field `DIR7` writer - DIR7"]
-pub type DIR7_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir7W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR8` reader - DIR8"]
-pub type DIR8_R = crate::BitReader<bool>;
+pub type Dir8R = crate::BitReader;
 #[doc = "Field `DIR8` writer - DIR8"]
-pub type DIR8_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir8W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR9` reader - DIR9"]
-pub type DIR9_R = crate::BitReader<bool>;
+pub type Dir9R = crate::BitReader;
 #[doc = "Field `DIR9` writer - DIR9"]
-pub type DIR9_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir9W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR10` reader - DIR10"]
-pub type DIR10_R = crate::BitReader<bool>;
+pub type Dir10R = crate::BitReader;
 #[doc = "Field `DIR10` writer - DIR10"]
-pub type DIR10_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir10W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR11` reader - DIR11"]
-pub type DIR11_R = crate::BitReader<bool>;
+pub type Dir11R = crate::BitReader;
 #[doc = "Field `DIR11` writer - DIR11"]
-pub type DIR11_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir11W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR12` reader - DIR12"]
-pub type DIR12_R = crate::BitReader<bool>;
+pub type Dir12R = crate::BitReader;
 #[doc = "Field `DIR12` writer - DIR12"]
-pub type DIR12_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir12W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR13` reader - DIR13"]
-pub type DIR13_R = crate::BitReader<bool>;
+pub type Dir13R = crate::BitReader;
 #[doc = "Field `DIR13` writer - DIR13"]
-pub type DIR13_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir13W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR14` reader - DIR14"]
-pub type DIR14_R = crate::BitReader<bool>;
+pub type Dir14R = crate::BitReader;
 #[doc = "Field `DIR14` writer - DIR14"]
-pub type DIR14_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir14W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DIR15` reader - DIR15"]
-pub type DIR15_R = crate::BitReader<bool>;
+pub type Dir15R = crate::BitReader;
 #[doc = "Field `DIR15` writer - DIR15"]
-pub type DIR15_W<'a, const O: u8> = crate::BitWriter<'a, u32, DIRCR_SPEC, bool, O>;
+pub type Dir15W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - DIR0"]
     #[inline(always)]
-    pub fn dir0(&self) -> DIR0_R {
-        DIR0_R::new((self.bits & 1) != 0)
+    pub fn dir0(&self) -> Dir0R {
+        Dir0R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - DIR1"]
     #[inline(always)]
-    pub fn dir1(&self) -> DIR1_R {
-        DIR1_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn dir1(&self) -> Dir1R {
+        Dir1R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - DIR2"]
     #[inline(always)]
-    pub fn dir2(&self) -> DIR2_R {
-        DIR2_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn dir2(&self) -> Dir2R {
+        Dir2R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - DIR3"]
     #[inline(always)]
-    pub fn dir3(&self) -> DIR3_R {
-        DIR3_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn dir3(&self) -> Dir3R {
+        Dir3R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - DIR4"]
     #[inline(always)]
-    pub fn dir4(&self) -> DIR4_R {
-        DIR4_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn dir4(&self) -> Dir4R {
+        Dir4R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - DIR5"]
     #[inline(always)]
-    pub fn dir5(&self) -> DIR5_R {
-        DIR5_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn dir5(&self) -> Dir5R {
+        Dir5R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - DIR6"]
     #[inline(always)]
-    pub fn dir6(&self) -> DIR6_R {
-        DIR6_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn dir6(&self) -> Dir6R {
+        Dir6R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - DIR7"]
     #[inline(always)]
-    pub fn dir7(&self) -> DIR7_R {
-        DIR7_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn dir7(&self) -> Dir7R {
+        Dir7R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - DIR8"]
     #[inline(always)]
-    pub fn dir8(&self) -> DIR8_R {
-        DIR8_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn dir8(&self) -> Dir8R {
+        Dir8R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - DIR9"]
     #[inline(always)]
-    pub fn dir9(&self) -> DIR9_R {
-        DIR9_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn dir9(&self) -> Dir9R {
+        Dir9R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - DIR10"]
     #[inline(always)]
-    pub fn dir10(&self) -> DIR10_R {
-        DIR10_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn dir10(&self) -> Dir10R {
+        Dir10R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - DIR11"]
     #[inline(always)]
-    pub fn dir11(&self) -> DIR11_R {
-        DIR11_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn dir11(&self) -> Dir11R {
+        Dir11R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - DIR12"]
     #[inline(always)]
-    pub fn dir12(&self) -> DIR12_R {
-        DIR12_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn dir12(&self) -> Dir12R {
+        Dir12R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - DIR13"]
     #[inline(always)]
-    pub fn dir13(&self) -> DIR13_R {
-        DIR13_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn dir13(&self) -> Dir13R {
+        Dir13R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - DIR14"]
     #[inline(always)]
-    pub fn dir14(&self) -> DIR14_R {
-        DIR14_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn dir14(&self) -> Dir14R {
+        Dir14R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - DIR15"]
     #[inline(always)]
-    pub fn dir15(&self) -> DIR15_R {
-        DIR15_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn dir15(&self) -> Dir15R {
+        Dir15R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - DIR0"]
     #[inline(always)]
     #[must_use]
-    pub fn dir0(&mut self) -> DIR0_W<0> {
-        DIR0_W::new(self)
+    pub fn dir0(&mut self) -> Dir0W<DircrSpec> {
+        Dir0W::new(self, 0)
     }
     #[doc = "Bit 1 - DIR1"]
     #[inline(always)]
     #[must_use]
-    pub fn dir1(&mut self) -> DIR1_W<1> {
-        DIR1_W::new(self)
+    pub fn dir1(&mut self) -> Dir1W<DircrSpec> {
+        Dir1W::new(self, 1)
     }
     #[doc = "Bit 2 - DIR2"]
     #[inline(always)]
     #[must_use]
-    pub fn dir2(&mut self) -> DIR2_W<2> {
-        DIR2_W::new(self)
+    pub fn dir2(&mut self) -> Dir2W<DircrSpec> {
+        Dir2W::new(self, 2)
     }
     #[doc = "Bit 3 - DIR3"]
     #[inline(always)]
     #[must_use]
-    pub fn dir3(&mut self) -> DIR3_W<3> {
-        DIR3_W::new(self)
+    pub fn dir3(&mut self) -> Dir3W<DircrSpec> {
+        Dir3W::new(self, 3)
     }
     #[doc = "Bit 4 - DIR4"]
     #[inline(always)]
     #[must_use]
-    pub fn dir4(&mut self) -> DIR4_W<4> {
-        DIR4_W::new(self)
+    pub fn dir4(&mut self) -> Dir4W<DircrSpec> {
+        Dir4W::new(self, 4)
     }
     #[doc = "Bit 5 - DIR5"]
     #[inline(always)]
     #[must_use]
-    pub fn dir5(&mut self) -> DIR5_W<5> {
-        DIR5_W::new(self)
+    pub fn dir5(&mut self) -> Dir5W<DircrSpec> {
+        Dir5W::new(self, 5)
     }
     #[doc = "Bit 6 - DIR6"]
     #[inline(always)]
     #[must_use]
-    pub fn dir6(&mut self) -> DIR6_W<6> {
-        DIR6_W::new(self)
+    pub fn dir6(&mut self) -> Dir6W<DircrSpec> {
+        Dir6W::new(self, 6)
     }
     #[doc = "Bit 7 - DIR7"]
     #[inline(always)]
     #[must_use]
-    pub fn dir7(&mut self) -> DIR7_W<7> {
-        DIR7_W::new(self)
+    pub fn dir7(&mut self) -> Dir7W<DircrSpec> {
+        Dir7W::new(self, 7)
     }
     #[doc = "Bit 8 - DIR8"]
     #[inline(always)]
     #[must_use]
-    pub fn dir8(&mut self) -> DIR8_W<8> {
-        DIR8_W::new(self)
+    pub fn dir8(&mut self) -> Dir8W<DircrSpec> {
+        Dir8W::new(self, 8)
     }
     #[doc = "Bit 9 - DIR9"]
     #[inline(always)]
     #[must_use]
-    pub fn dir9(&mut self) -> DIR9_W<9> {
-        DIR9_W::new(self)
+    pub fn dir9(&mut self) -> Dir9W<DircrSpec> {
+        Dir9W::new(self, 9)
     }
     #[doc = "Bit 10 - DIR10"]
     #[inline(always)]
     #[must_use]
-    pub fn dir10(&mut self) -> DIR10_W<10> {
-        DIR10_W::new(self)
+    pub fn dir10(&mut self) -> Dir10W<DircrSpec> {
+        Dir10W::new(self, 10)
     }
     #[doc = "Bit 11 - DIR11"]
     #[inline(always)]
     #[must_use]
-    pub fn dir11(&mut self) -> DIR11_W<11> {
-        DIR11_W::new(self)
+    pub fn dir11(&mut self) -> Dir11W<DircrSpec> {
+        Dir11W::new(self, 11)
     }
     #[doc = "Bit 12 - DIR12"]
     #[inline(always)]
     #[must_use]
-    pub fn dir12(&mut self) -> DIR12_W<12> {
-        DIR12_W::new(self)
+    pub fn dir12(&mut self) -> Dir12W<DircrSpec> {
+        Dir12W::new(self, 12)
     }
     #[doc = "Bit 13 - DIR13"]
     #[inline(always)]
     #[must_use]
-    pub fn dir13(&mut self) -> DIR13_W<13> {
-        DIR13_W::new(self)
+    pub fn dir13(&mut self) -> Dir13W<DircrSpec> {
+        Dir13W::new(self, 13)
     }
     #[doc = "Bit 14 - DIR14"]
     #[inline(always)]
     #[must_use]
-    pub fn dir14(&mut self) -> DIR14_W<14> {
-        DIR14_W::new(self)
+    pub fn dir14(&mut self) -> Dir14W<DircrSpec> {
+        Dir14W::new(self, 14)
     }
     #[doc = "Bit 15 - DIR15"]
     #[inline(always)]
     #[must_use]
-    pub fn dir15(&mut self) -> DIR15_W<15> {
-        DIR15_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn dir15(&mut self) -> Dir15W<DircrSpec> {
+        Dir15W::new(self, 15)
     }
 }
-#[doc = "DIRCR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dircr](index.html) module"]
-pub struct DIRCR_SPEC;
-impl crate::RegisterSpec for DIRCR_SPEC {
+#[doc = "DIRCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dircr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dircr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct DircrSpec;
+impl crate::RegisterSpec for DircrSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dircr::R](R) reader structure"]
-impl crate::Readable for DIRCR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dircr::W](W) writer structure"]
-impl crate::Writable for DIRCR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`dircr::R`](R) reader structure"]
+impl crate::Readable for DircrSpec {}
+#[doc = "`write(|w| ..)` method takes [`dircr::W`](W) writer structure"]
+impl crate::Writable for DircrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIRCR to value 0"]
-impl crate::Resettable for DIRCR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for DircrSpec {
+    const RESET_VALUE: u32 = 0;
 }

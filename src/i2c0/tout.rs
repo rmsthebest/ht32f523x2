@@ -1,95 +1,55 @@
 #[doc = "Register `TOUT` reader"]
-pub struct R(crate::R<TOUT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TOUT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TOUT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TOUT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ToutSpec>;
 #[doc = "Register `TOUT` writer"]
-pub struct W(crate::W<TOUT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TOUT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TOUT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TOUT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<ToutSpec>;
 #[doc = "Field `TOUT` reader - TOUT"]
-pub type TOUT_R = crate::FieldReader<u16, u16>;
+pub type ToutR = crate::FieldReader<u16>;
 #[doc = "Field `TOUT` writer - TOUT"]
-pub type TOUT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TOUT_SPEC, u16, u16, 16, O>;
+pub type ToutW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `PSC` reader - PSC"]
-pub type PSC_R = crate::FieldReader<u8, u8>;
+pub type PscR = crate::FieldReader;
 #[doc = "Field `PSC` writer - PSC"]
-pub type PSC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TOUT_SPEC, u8, u8, 3, O>;
+pub type PscW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:15 - TOUT"]
     #[inline(always)]
-    pub fn tout(&self) -> TOUT_R {
-        TOUT_R::new((self.bits & 0xffff) as u16)
+    pub fn tout(&self) -> ToutR {
+        ToutR::new((self.bits & 0xffff) as u16)
     }
     #[doc = "Bits 16:18 - PSC"]
     #[inline(always)]
-    pub fn psc(&self) -> PSC_R {
-        PSC_R::new(((self.bits >> 16) & 7) as u8)
+    pub fn psc(&self) -> PscR {
+        PscR::new(((self.bits >> 16) & 7) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - TOUT"]
     #[inline(always)]
     #[must_use]
-    pub fn tout(&mut self) -> TOUT_W<0> {
-        TOUT_W::new(self)
+    pub fn tout(&mut self) -> ToutW<ToutSpec> {
+        ToutW::new(self, 0)
     }
     #[doc = "Bits 16:18 - PSC"]
     #[inline(always)]
     #[must_use]
-    pub fn psc(&mut self) -> PSC_W<16> {
-        PSC_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn psc(&mut self) -> PscW<ToutSpec> {
+        PscW::new(self, 16)
     }
 }
-#[doc = "TOUT\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tout](index.html) module"]
-pub struct TOUT_SPEC;
-impl crate::RegisterSpec for TOUT_SPEC {
+#[doc = "TOUT\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tout::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tout::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct ToutSpec;
+impl crate::RegisterSpec for ToutSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [tout::R](R) reader structure"]
-impl crate::Readable for TOUT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tout::W](W) writer structure"]
-impl crate::Writable for TOUT_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`tout::R`](R) reader structure"]
+impl crate::Readable for ToutSpec {}
+#[doc = "`write(|w| ..)` method takes [`tout::W`](W) writer structure"]
+impl crate::Writable for ToutSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TOUT to value 0"]
-impl crate::Resettable for TOUT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for ToutSpec {
+    const RESET_VALUE: u32 = 0;
 }

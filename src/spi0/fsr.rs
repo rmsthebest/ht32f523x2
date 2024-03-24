@@ -1,95 +1,55 @@
 #[doc = "Register `FSR` reader"]
-pub struct R(crate::R<FSR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FSR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FSR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FSR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FsrSpec>;
 #[doc = "Register `FSR` writer"]
-pub struct W(crate::W<FSR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<FSR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<FSR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<FSR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<FsrSpec>;
 #[doc = "Field `TXFS` reader - TXFS"]
-pub type TXFS_R = crate::FieldReader<u8, u8>;
+pub type TxfsR = crate::FieldReader;
 #[doc = "Field `TXFS` writer - TXFS"]
-pub type TXFS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSR_SPEC, u8, u8, 4, O>;
+pub type TxfsW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `RXFS` reader - RXFS"]
-pub type RXFS_R = crate::FieldReader<u8, u8>;
+pub type RxfsR = crate::FieldReader;
 #[doc = "Field `RXFS` writer - RXFS"]
-pub type RXFS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FSR_SPEC, u8, u8, 4, O>;
+pub type RxfsW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - TXFS"]
     #[inline(always)]
-    pub fn txfs(&self) -> TXFS_R {
-        TXFS_R::new((self.bits & 0x0f) as u8)
+    pub fn txfs(&self) -> TxfsR {
+        TxfsR::new((self.bits & 0x0f) as u8)
     }
     #[doc = "Bits 4:7 - RXFS"]
     #[inline(always)]
-    pub fn rxfs(&self) -> RXFS_R {
-        RXFS_R::new(((self.bits >> 4) & 0x0f) as u8)
+    pub fn rxfs(&self) -> RxfsR {
+        RxfsR::new(((self.bits >> 4) & 0x0f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - TXFS"]
     #[inline(always)]
     #[must_use]
-    pub fn txfs(&mut self) -> TXFS_W<0> {
-        TXFS_W::new(self)
+    pub fn txfs(&mut self) -> TxfsW<FsrSpec> {
+        TxfsW::new(self, 0)
     }
     #[doc = "Bits 4:7 - RXFS"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfs(&mut self) -> RXFS_W<4> {
-        RXFS_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn rxfs(&mut self) -> RxfsW<FsrSpec> {
+        RxfsW::new(self, 4)
     }
 }
-#[doc = "FSR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fsr](index.html) module"]
-pub struct FSR_SPEC;
-impl crate::RegisterSpec for FSR_SPEC {
+#[doc = "FSR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fsr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fsr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct FsrSpec;
+impl crate::RegisterSpec for FsrSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fsr::R](R) reader structure"]
-impl crate::Readable for FSR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [fsr::W](W) writer structure"]
-impl crate::Writable for FSR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`fsr::R`](R) reader structure"]
+impl crate::Readable for FsrSpec {}
+#[doc = "`write(|w| ..)` method takes [`fsr::W`](W) writer structure"]
+impl crate::Writable for FsrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FSR to value 0"]
-impl crate::Resettable for FSR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for FsrSpec {
+    const RESET_VALUE: u32 = 0;
 }

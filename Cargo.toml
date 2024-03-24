@@ -9,16 +9,13 @@ license = "GPL-3.0"
 name = "ht32f523x2"
 readme = "README.md"
 repository = "https://github.com/rmsthebest/ht32f523x2"
-version = "0.4.0"
+version = "0.5.0"
 
 [dependencies]
-bare-metal = "0.2.0"
-cortex-m = "0.6.0"
-vcell = "0.1.0"
-
-[dependencies.cortex-m-rt]
-optional = true
-version = "0.6.0"
+critical-section = { version = "1.0", optional = true }
+cortex-m = "0.7"
+cortex-m-rt = { version = "0.7", optional = true }
+vcell = "0.1"
 
 [features]
 rt = ["cortex-m-rt/device"]

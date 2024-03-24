@@ -1,80 +1,40 @@
 #[doc = "Register `CH0CCR` reader"]
-pub struct R(crate::R<CH0CCR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CH0CCR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CH0CCR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CH0CCR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<Ch0ccrSpec>;
 #[doc = "Register `CH0CCR` writer"]
-pub struct W(crate::W<CH0CCR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CH0CCR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CH0CCR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CH0CCR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<Ch0ccrSpec>;
 #[doc = "Field `CH0CCV` reader - CH0CCV"]
-pub type CH0CCV_R = crate::FieldReader<u16, u16>;
+pub type Ch0ccvR = crate::FieldReader<u16>;
 #[doc = "Field `CH0CCV` writer - CH0CCV"]
-pub type CH0CCV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH0CCR_SPEC, u16, u16, 16, O>;
+pub type Ch0ccvW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - CH0CCV"]
     #[inline(always)]
-    pub fn ch0ccv(&self) -> CH0CCV_R {
-        CH0CCV_R::new((self.bits & 0xffff) as u16)
+    pub fn ch0ccv(&self) -> Ch0ccvR {
+        Ch0ccvR::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - CH0CCV"]
     #[inline(always)]
     #[must_use]
-    pub fn ch0ccv(&mut self) -> CH0CCV_W<0> {
-        CH0CCV_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn ch0ccv(&mut self) -> Ch0ccvW<Ch0ccrSpec> {
+        Ch0ccvW::new(self, 0)
     }
 }
-#[doc = "CH0CCR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch0ccr](index.html) module"]
-pub struct CH0CCR_SPEC;
-impl crate::RegisterSpec for CH0CCR_SPEC {
+#[doc = "CH0CCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch0ccr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch0ccr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Ch0ccrSpec;
+impl crate::RegisterSpec for Ch0ccrSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ch0ccr::R](R) reader structure"]
-impl crate::Readable for CH0CCR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ch0ccr::W](W) writer structure"]
-impl crate::Writable for CH0CCR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`ch0ccr::R`](R) reader structure"]
+impl crate::Readable for Ch0ccrSpec {}
+#[doc = "`write(|w| ..)` method takes [`ch0ccr::W`](W) writer structure"]
+impl crate::Writable for Ch0ccrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CH0CCR to value 0"]
-impl crate::Resettable for CH0CCR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for Ch0ccrSpec {
+    const RESET_VALUE: u32 = 0;
 }

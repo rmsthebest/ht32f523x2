@@ -1,140 +1,100 @@
 #[doc = "Register `CNTCFR` reader"]
-pub struct R(crate::R<CNTCFR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CNTCFR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CNTCFR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CNTCFR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CntcfrSpec>;
 #[doc = "Register `CNTCFR` writer"]
-pub struct W(crate::W<CNTCFR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CNTCFR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CNTCFR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CNTCFR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CntcfrSpec>;
 #[doc = "Field `UEV1DIS` reader - UEV1DIS"]
-pub type UEV1DIS_R = crate::BitReader<bool>;
+pub type Uev1disR = crate::BitReader;
 #[doc = "Field `UEV1DIS` writer - UEV1DIS"]
-pub type UEV1DIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CNTCFR_SPEC, bool, O>;
+pub type Uev1disW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UGDIS` reader - UGDIS"]
-pub type UGDIS_R = crate::BitReader<bool>;
+pub type UgdisR = crate::BitReader;
 #[doc = "Field `UGDIS` writer - UGDIS"]
-pub type UGDIS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CNTCFR_SPEC, bool, O>;
+pub type UgdisW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CKDIV` reader - CKDIV"]
-pub type CKDIV_R = crate::FieldReader<u8, u8>;
+pub type CkdivR = crate::FieldReader;
 #[doc = "Field `CKDIV` writer - CKDIV"]
-pub type CKDIV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CNTCFR_SPEC, u8, u8, 2, O>;
+pub type CkdivW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CMSEL` reader - CMSEL"]
-pub type CMSEL_R = crate::FieldReader<u8, u8>;
+pub type CmselR = crate::FieldReader;
 #[doc = "Field `CMSEL` writer - CMSEL"]
-pub type CMSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CNTCFR_SPEC, u8, u8, 2, O>;
+pub type CmselW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DIR` reader - DIR"]
-pub type DIR_R = crate::BitReader<bool>;
+pub type DirR = crate::BitReader;
 #[doc = "Field `DIR` writer - DIR"]
-pub type DIR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CNTCFR_SPEC, bool, O>;
+pub type DirW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - UEV1DIS"]
     #[inline(always)]
-    pub fn uev1dis(&self) -> UEV1DIS_R {
-        UEV1DIS_R::new((self.bits & 1) != 0)
+    pub fn uev1dis(&self) -> Uev1disR {
+        Uev1disR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - UGDIS"]
     #[inline(always)]
-    pub fn ugdis(&self) -> UGDIS_R {
-        UGDIS_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn ugdis(&self) -> UgdisR {
+        UgdisR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 8:9 - CKDIV"]
     #[inline(always)]
-    pub fn ckdiv(&self) -> CKDIV_R {
-        CKDIV_R::new(((self.bits >> 8) & 3) as u8)
+    pub fn ckdiv(&self) -> CkdivR {
+        CkdivR::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bits 16:17 - CMSEL"]
     #[inline(always)]
-    pub fn cmsel(&self) -> CMSEL_R {
-        CMSEL_R::new(((self.bits >> 16) & 3) as u8)
+    pub fn cmsel(&self) -> CmselR {
+        CmselR::new(((self.bits >> 16) & 3) as u8)
     }
     #[doc = "Bit 24 - DIR"]
     #[inline(always)]
-    pub fn dir(&self) -> DIR_R {
-        DIR_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn dir(&self) -> DirR {
+        DirR::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - UEV1DIS"]
     #[inline(always)]
     #[must_use]
-    pub fn uev1dis(&mut self) -> UEV1DIS_W<0> {
-        UEV1DIS_W::new(self)
+    pub fn uev1dis(&mut self) -> Uev1disW<CntcfrSpec> {
+        Uev1disW::new(self, 0)
     }
     #[doc = "Bit 1 - UGDIS"]
     #[inline(always)]
     #[must_use]
-    pub fn ugdis(&mut self) -> UGDIS_W<1> {
-        UGDIS_W::new(self)
+    pub fn ugdis(&mut self) -> UgdisW<CntcfrSpec> {
+        UgdisW::new(self, 1)
     }
     #[doc = "Bits 8:9 - CKDIV"]
     #[inline(always)]
     #[must_use]
-    pub fn ckdiv(&mut self) -> CKDIV_W<8> {
-        CKDIV_W::new(self)
+    pub fn ckdiv(&mut self) -> CkdivW<CntcfrSpec> {
+        CkdivW::new(self, 8)
     }
     #[doc = "Bits 16:17 - CMSEL"]
     #[inline(always)]
     #[must_use]
-    pub fn cmsel(&mut self) -> CMSEL_W<16> {
-        CMSEL_W::new(self)
+    pub fn cmsel(&mut self) -> CmselW<CntcfrSpec> {
+        CmselW::new(self, 16)
     }
     #[doc = "Bit 24 - DIR"]
     #[inline(always)]
     #[must_use]
-    pub fn dir(&mut self) -> DIR_W<24> {
-        DIR_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn dir(&mut self) -> DirW<CntcfrSpec> {
+        DirW::new(self, 24)
     }
 }
-#[doc = "CNTCFR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cntcfr](index.html) module"]
-pub struct CNTCFR_SPEC;
-impl crate::RegisterSpec for CNTCFR_SPEC {
+#[doc = "CNTCFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cntcfr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cntcfr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CntcfrSpec;
+impl crate::RegisterSpec for CntcfrSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cntcfr::R](R) reader structure"]
-impl crate::Readable for CNTCFR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cntcfr::W](W) writer structure"]
-impl crate::Writable for CNTCFR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`cntcfr::R`](R) reader structure"]
+impl crate::Readable for CntcfrSpec {}
+#[doc = "`write(|w| ..)` method takes [`cntcfr::W`](W) writer structure"]
+impl crate::Writable for CntcfrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CNTCFR to value 0"]
-impl crate::Resettable for CNTCFR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for CntcfrSpec {
+    const RESET_VALUE: u32 = 0;
 }

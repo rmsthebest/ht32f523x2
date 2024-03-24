@@ -1,170 +1,130 @@
 #[doc = "Register `HSICR` reader"]
-pub struct R(crate::R<HSICR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<HSICR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<HSICR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<HSICR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<HsicrSpec>;
 #[doc = "Register `HSICR` writer"]
-pub struct W(crate::W<HSICR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<HSICR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<HSICR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<HSICR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<HsicrSpec>;
 #[doc = "Field `TRIMEN` reader - TRIMEN"]
-pub type TRIMEN_R = crate::BitReader<bool>;
+pub type TrimenR = crate::BitReader;
 #[doc = "Field `TRIMEN` writer - TRIMEN"]
-pub type TRIMEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, HSICR_SPEC, bool, O>;
+pub type TrimenW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ATCEN` reader - ATCEN"]
-pub type ATCEN_R = crate::BitReader<bool>;
+pub type AtcenR = crate::BitReader;
 #[doc = "Field `ATCEN` writer - ATCEN"]
-pub type ATCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, HSICR_SPEC, bool, O>;
+pub type AtcenW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMSEL` reader - TMSEL"]
-pub type TMSEL_R = crate::BitReader<bool>;
+pub type TmselR = crate::BitReader;
 #[doc = "Field `TMSEL` writer - TMSEL"]
-pub type TMSEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, HSICR_SPEC, bool, O>;
+pub type TmselW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REFCLKSEL` reader - REFCLKSEL"]
-pub type REFCLKSEL_R = crate::BitReader<bool>;
+pub type RefclkselR = crate::BitReader;
 #[doc = "Field `REFCLKSEL` writer - REFCLKSEL"]
-pub type REFCLKSEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, HSICR_SPEC, bool, O>;
+pub type RefclkselW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FLOCK` reader - FLOCK"]
-pub type FLOCK_R = crate::BitReader<bool>;
+pub type FlockR = crate::BitReader;
 #[doc = "Field `FLOCK` writer - FLOCK"]
-pub type FLOCK_W<'a, const O: u8> = crate::BitWriter<'a, u32, HSICR_SPEC, bool, O>;
+pub type FlockW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HSIFINE` reader - HSIFINE"]
-pub type HSIFINE_R = crate::FieldReader<u8, u8>;
+pub type HsifineR = crate::FieldReader;
 #[doc = "Field `HSIFINE` writer - HSIFINE"]
-pub type HSIFINE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HSICR_SPEC, u8, u8, 8, O>;
+pub type HsifineW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `HSICOARSE` reader - HSICOARSE"]
-pub type HSICOARSE_R = crate::FieldReader<u8, u8>;
+pub type HsicoarseR = crate::FieldReader;
 #[doc = "Field `HSICOARSE` writer - HSICOARSE"]
-pub type HSICOARSE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, HSICR_SPEC, u8, u8, 5, O>;
+pub type HsicoarseW<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bit 0 - TRIMEN"]
     #[inline(always)]
-    pub fn trimen(&self) -> TRIMEN_R {
-        TRIMEN_R::new((self.bits & 1) != 0)
+    pub fn trimen(&self) -> TrimenR {
+        TrimenR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - ATCEN"]
     #[inline(always)]
-    pub fn atcen(&self) -> ATCEN_R {
-        ATCEN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn atcen(&self) -> AtcenR {
+        AtcenR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 4 - TMSEL"]
     #[inline(always)]
-    pub fn tmsel(&self) -> TMSEL_R {
-        TMSEL_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn tmsel(&self) -> TmselR {
+        TmselR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - REFCLKSEL"]
     #[inline(always)]
-    pub fn refclksel(&self) -> REFCLKSEL_R {
-        REFCLKSEL_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn refclksel(&self) -> RefclkselR {
+        RefclkselR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 7 - FLOCK"]
     #[inline(always)]
-    pub fn flock(&self) -> FLOCK_R {
-        FLOCK_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn flock(&self) -> FlockR {
+        FlockR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 16:23 - HSIFINE"]
     #[inline(always)]
-    pub fn hsifine(&self) -> HSIFINE_R {
-        HSIFINE_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn hsifine(&self) -> HsifineR {
+        HsifineR::new(((self.bits >> 16) & 0xff) as u8)
     }
     #[doc = "Bits 24:28 - HSICOARSE"]
     #[inline(always)]
-    pub fn hsicoarse(&self) -> HSICOARSE_R {
-        HSICOARSE_R::new(((self.bits >> 24) & 0x1f) as u8)
+    pub fn hsicoarse(&self) -> HsicoarseR {
+        HsicoarseR::new(((self.bits >> 24) & 0x1f) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0 - TRIMEN"]
     #[inline(always)]
     #[must_use]
-    pub fn trimen(&mut self) -> TRIMEN_W<0> {
-        TRIMEN_W::new(self)
+    pub fn trimen(&mut self) -> TrimenW<HsicrSpec> {
+        TrimenW::new(self, 0)
     }
     #[doc = "Bit 1 - ATCEN"]
     #[inline(always)]
     #[must_use]
-    pub fn atcen(&mut self) -> ATCEN_W<1> {
-        ATCEN_W::new(self)
+    pub fn atcen(&mut self) -> AtcenW<HsicrSpec> {
+        AtcenW::new(self, 1)
     }
     #[doc = "Bit 4 - TMSEL"]
     #[inline(always)]
     #[must_use]
-    pub fn tmsel(&mut self) -> TMSEL_W<4> {
-        TMSEL_W::new(self)
+    pub fn tmsel(&mut self) -> TmselW<HsicrSpec> {
+        TmselW::new(self, 4)
     }
     #[doc = "Bit 5 - REFCLKSEL"]
     #[inline(always)]
     #[must_use]
-    pub fn refclksel(&mut self) -> REFCLKSEL_W<5> {
-        REFCLKSEL_W::new(self)
+    pub fn refclksel(&mut self) -> RefclkselW<HsicrSpec> {
+        RefclkselW::new(self, 5)
     }
     #[doc = "Bit 7 - FLOCK"]
     #[inline(always)]
     #[must_use]
-    pub fn flock(&mut self) -> FLOCK_W<7> {
-        FLOCK_W::new(self)
+    pub fn flock(&mut self) -> FlockW<HsicrSpec> {
+        FlockW::new(self, 7)
     }
     #[doc = "Bits 16:23 - HSIFINE"]
     #[inline(always)]
     #[must_use]
-    pub fn hsifine(&mut self) -> HSIFINE_W<16> {
-        HSIFINE_W::new(self)
+    pub fn hsifine(&mut self) -> HsifineW<HsicrSpec> {
+        HsifineW::new(self, 16)
     }
     #[doc = "Bits 24:28 - HSICOARSE"]
     #[inline(always)]
     #[must_use]
-    pub fn hsicoarse(&mut self) -> HSICOARSE_W<24> {
-        HSICOARSE_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn hsicoarse(&mut self) -> HsicoarseW<HsicrSpec> {
+        HsicoarseW::new(self, 24)
     }
 }
-#[doc = "HSICR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [hsicr](index.html) module"]
-pub struct HSICR_SPEC;
-impl crate::RegisterSpec for HSICR_SPEC {
+#[doc = "HSICR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hsicr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hsicr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct HsicrSpec;
+impl crate::RegisterSpec for HsicrSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [hsicr::R](R) reader structure"]
-impl crate::Readable for HSICR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [hsicr::W](W) writer structure"]
-impl crate::Writable for HSICR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`hsicr::R`](R) reader structure"]
+impl crate::Readable for HsicrSpec {}
+#[doc = "`write(|w| ..)` method takes [`hsicr::W`](W) writer structure"]
+impl crate::Writable for HsicrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HSICR to value 0"]
-impl crate::Resettable for HSICR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for HsicrSpec {
+    const RESET_VALUE: u32 = 0;
 }

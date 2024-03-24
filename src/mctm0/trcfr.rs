@@ -1,80 +1,40 @@
 #[doc = "Register `TRCFR` reader"]
-pub struct R(crate::R<TRCFR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TRCFR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TRCFR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TRCFR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TrcfrSpec>;
 #[doc = "Register `TRCFR` writer"]
-pub struct W(crate::W<TRCFR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TRCFR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TRCFR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TRCFR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TrcfrSpec>;
 #[doc = "Field `TRSEL` reader - TRSEL"]
-pub type TRSEL_R = crate::FieldReader<u8, u8>;
+pub type TrselR = crate::FieldReader;
 #[doc = "Field `TRSEL` writer - TRSEL"]
-pub type TRSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TRCFR_SPEC, u8, u8, 4, O>;
+pub type TrselW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - TRSEL"]
     #[inline(always)]
-    pub fn trsel(&self) -> TRSEL_R {
-        TRSEL_R::new((self.bits & 0x0f) as u8)
+    pub fn trsel(&self) -> TrselR {
+        TrselR::new((self.bits & 0x0f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:3 - TRSEL"]
     #[inline(always)]
     #[must_use]
-    pub fn trsel(&mut self) -> TRSEL_W<0> {
-        TRSEL_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn trsel(&mut self) -> TrselW<TrcfrSpec> {
+        TrselW::new(self, 0)
     }
 }
-#[doc = "TRCFR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [trcfr](index.html) module"]
-pub struct TRCFR_SPEC;
-impl crate::RegisterSpec for TRCFR_SPEC {
+#[doc = "TRCFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`trcfr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`trcfr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TrcfrSpec;
+impl crate::RegisterSpec for TrcfrSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [trcfr::R](R) reader structure"]
-impl crate::Readable for TRCFR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [trcfr::W](W) writer structure"]
-impl crate::Writable for TRCFR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`trcfr::R`](R) reader structure"]
+impl crate::Readable for TrcfrSpec {}
+#[doc = "`write(|w| ..)` method takes [`trcfr::W`](W) writer structure"]
+impl crate::Writable for TrcfrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TRCFR to value 0"]
-impl crate::Resettable for TRCFR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for TrcfrSpec {
+    const RESET_VALUE: u32 = 0;
 }

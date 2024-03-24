@@ -1,215 +1,175 @@
 #[doc = "Register `CH3CR` reader"]
-pub struct R(crate::R<CH3CR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CH3CR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CH3CR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CH3CR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<Ch3crSpec>;
 #[doc = "Register `CH3CR` writer"]
-pub struct W(crate::W<CH3CR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CH3CR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CH3CR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CH3CR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<Ch3crSpec>;
 #[doc = "Field `CHEN` reader - CHEN"]
-pub type CHEN_R = crate::BitReader<bool>;
+pub type ChenR = crate::BitReader;
 #[doc = "Field `CHEN` writer - CHEN"]
-pub type CHEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CR_SPEC, bool, O>;
+pub type ChenW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWTRIG` reader - SWTRIG"]
-pub type SWTRIG_R = crate::BitReader<bool>;
+pub type SwtrigR = crate::BitReader;
 #[doc = "Field `SWTRIG` writer - SWTRIG"]
-pub type SWTRIG_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CR_SPEC, bool, O>;
+pub type SwtrigW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DWIDTH` reader - DWIDTH"]
-pub type DWIDTH_R = crate::FieldReader<u8, u8>;
+pub type DwidthR = crate::FieldReader;
 #[doc = "Field `DWIDTH` writer - DWIDTH"]
-pub type DWIDTH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH3CR_SPEC, u8, u8, 2, O>;
+pub type DwidthW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DSTAINC` reader - DSTAINC"]
-pub type DSTAINC_R = crate::BitReader<bool>;
+pub type DstaincR = crate::BitReader;
 #[doc = "Field `DSTAINC` writer - DSTAINC"]
-pub type DSTAINC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CR_SPEC, bool, O>;
+pub type DstaincW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DSTAMOD` reader - DSTAMOD"]
-pub type DSTAMOD_R = crate::BitReader<bool>;
+pub type DstamodR = crate::BitReader;
 #[doc = "Field `DSTAMOD` writer - DSTAMOD"]
-pub type DSTAMOD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CR_SPEC, bool, O>;
+pub type DstamodW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SRCAINC` reader - SRCAINC"]
-pub type SRCAINC_R = crate::BitReader<bool>;
+pub type SrcaincR = crate::BitReader;
 #[doc = "Field `SRCAINC` writer - SRCAINC"]
-pub type SRCAINC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CR_SPEC, bool, O>;
+pub type SrcaincW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SRCAMOD` reader - SRCAMOD"]
-pub type SRCAMOD_R = crate::BitReader<bool>;
+pub type SrcamodR = crate::BitReader;
 #[doc = "Field `SRCAMOD` writer - SRCAMOD"]
-pub type SRCAMOD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CR_SPEC, bool, O>;
+pub type SrcamodW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHPRI` reader - CHPRI"]
-pub type CHPRI_R = crate::FieldReader<u8, u8>;
+pub type ChpriR = crate::FieldReader;
 #[doc = "Field `CHPRI` writer - CHPRI"]
-pub type CHPRI_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH3CR_SPEC, u8, u8, 2, O>;
+pub type ChpriW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FIXAEN` reader - FIXAEN"]
-pub type FIXAEN_R = crate::BitReader<bool>;
+pub type FixaenR = crate::BitReader;
 #[doc = "Field `FIXAEN` writer - FIXAEN"]
-pub type FIXAEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CR_SPEC, bool, O>;
+pub type FixaenW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AUTORL` reader - AUTORL"]
-pub type AUTORL_R = crate::BitReader<bool>;
+pub type AutorlR = crate::BitReader;
 #[doc = "Field `AUTORL` writer - AUTORL"]
-pub type AUTORL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CH3CR_SPEC, bool, O>;
+pub type AutorlW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - CHEN"]
     #[inline(always)]
-    pub fn chen(&self) -> CHEN_R {
-        CHEN_R::new((self.bits & 1) != 0)
+    pub fn chen(&self) -> ChenR {
+        ChenR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - SWTRIG"]
     #[inline(always)]
-    pub fn swtrig(&self) -> SWTRIG_R {
-        SWTRIG_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn swtrig(&self) -> SwtrigR {
+        SwtrigR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:3 - DWIDTH"]
     #[inline(always)]
-    pub fn dwidth(&self) -> DWIDTH_R {
-        DWIDTH_R::new(((self.bits >> 2) & 3) as u8)
+    pub fn dwidth(&self) -> DwidthR {
+        DwidthR::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bit 4 - DSTAINC"]
     #[inline(always)]
-    pub fn dstainc(&self) -> DSTAINC_R {
-        DSTAINC_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn dstainc(&self) -> DstaincR {
+        DstaincR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - DSTAMOD"]
     #[inline(always)]
-    pub fn dstamod(&self) -> DSTAMOD_R {
-        DSTAMOD_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn dstamod(&self) -> DstamodR {
+        DstamodR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - SRCAINC"]
     #[inline(always)]
-    pub fn srcainc(&self) -> SRCAINC_R {
-        SRCAINC_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn srcainc(&self) -> SrcaincR {
+        SrcaincR::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - SRCAMOD"]
     #[inline(always)]
-    pub fn srcamod(&self) -> SRCAMOD_R {
-        SRCAMOD_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn srcamod(&self) -> SrcamodR {
+        SrcamodR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:9 - CHPRI"]
     #[inline(always)]
-    pub fn chpri(&self) -> CHPRI_R {
-        CHPRI_R::new(((self.bits >> 8) & 3) as u8)
+    pub fn chpri(&self) -> ChpriR {
+        ChpriR::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bit 10 - FIXAEN"]
     #[inline(always)]
-    pub fn fixaen(&self) -> FIXAEN_R {
-        FIXAEN_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn fixaen(&self) -> FixaenR {
+        FixaenR::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - AUTORL"]
     #[inline(always)]
-    pub fn autorl(&self) -> AUTORL_R {
-        AUTORL_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn autorl(&self) -> AutorlR {
+        AutorlR::new(((self.bits >> 11) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - CHEN"]
     #[inline(always)]
     #[must_use]
-    pub fn chen(&mut self) -> CHEN_W<0> {
-        CHEN_W::new(self)
+    pub fn chen(&mut self) -> ChenW<Ch3crSpec> {
+        ChenW::new(self, 0)
     }
     #[doc = "Bit 1 - SWTRIG"]
     #[inline(always)]
     #[must_use]
-    pub fn swtrig(&mut self) -> SWTRIG_W<1> {
-        SWTRIG_W::new(self)
+    pub fn swtrig(&mut self) -> SwtrigW<Ch3crSpec> {
+        SwtrigW::new(self, 1)
     }
     #[doc = "Bits 2:3 - DWIDTH"]
     #[inline(always)]
     #[must_use]
-    pub fn dwidth(&mut self) -> DWIDTH_W<2> {
-        DWIDTH_W::new(self)
+    pub fn dwidth(&mut self) -> DwidthW<Ch3crSpec> {
+        DwidthW::new(self, 2)
     }
     #[doc = "Bit 4 - DSTAINC"]
     #[inline(always)]
     #[must_use]
-    pub fn dstainc(&mut self) -> DSTAINC_W<4> {
-        DSTAINC_W::new(self)
+    pub fn dstainc(&mut self) -> DstaincW<Ch3crSpec> {
+        DstaincW::new(self, 4)
     }
     #[doc = "Bit 5 - DSTAMOD"]
     #[inline(always)]
     #[must_use]
-    pub fn dstamod(&mut self) -> DSTAMOD_W<5> {
-        DSTAMOD_W::new(self)
+    pub fn dstamod(&mut self) -> DstamodW<Ch3crSpec> {
+        DstamodW::new(self, 5)
     }
     #[doc = "Bit 6 - SRCAINC"]
     #[inline(always)]
     #[must_use]
-    pub fn srcainc(&mut self) -> SRCAINC_W<6> {
-        SRCAINC_W::new(self)
+    pub fn srcainc(&mut self) -> SrcaincW<Ch3crSpec> {
+        SrcaincW::new(self, 6)
     }
     #[doc = "Bit 7 - SRCAMOD"]
     #[inline(always)]
     #[must_use]
-    pub fn srcamod(&mut self) -> SRCAMOD_W<7> {
-        SRCAMOD_W::new(self)
+    pub fn srcamod(&mut self) -> SrcamodW<Ch3crSpec> {
+        SrcamodW::new(self, 7)
     }
     #[doc = "Bits 8:9 - CHPRI"]
     #[inline(always)]
     #[must_use]
-    pub fn chpri(&mut self) -> CHPRI_W<8> {
-        CHPRI_W::new(self)
+    pub fn chpri(&mut self) -> ChpriW<Ch3crSpec> {
+        ChpriW::new(self, 8)
     }
     #[doc = "Bit 10 - FIXAEN"]
     #[inline(always)]
     #[must_use]
-    pub fn fixaen(&mut self) -> FIXAEN_W<10> {
-        FIXAEN_W::new(self)
+    pub fn fixaen(&mut self) -> FixaenW<Ch3crSpec> {
+        FixaenW::new(self, 10)
     }
     #[doc = "Bit 11 - AUTORL"]
     #[inline(always)]
     #[must_use]
-    pub fn autorl(&mut self) -> AUTORL_W<11> {
-        AUTORL_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn autorl(&mut self) -> AutorlW<Ch3crSpec> {
+        AutorlW::new(self, 11)
     }
 }
-#[doc = "CH3CR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch3cr](index.html) module"]
-pub struct CH3CR_SPEC;
-impl crate::RegisterSpec for CH3CR_SPEC {
+#[doc = "CH3CR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch3cr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch3cr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Ch3crSpec;
+impl crate::RegisterSpec for Ch3crSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ch3cr::R](R) reader structure"]
-impl crate::Readable for CH3CR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ch3cr::W](W) writer structure"]
-impl crate::Writable for CH3CR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`ch3cr::R`](R) reader structure"]
+impl crate::Readable for Ch3crSpec {}
+#[doc = "`write(|w| ..)` method takes [`ch3cr::W`](W) writer structure"]
+impl crate::Writable for Ch3crSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CH3CR to value 0"]
-impl crate::Resettable for CH3CR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for Ch3crSpec {
+    const RESET_VALUE: u32 = 0;
 }

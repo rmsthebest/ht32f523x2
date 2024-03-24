@@ -1,80 +1,40 @@
 #[doc = "Register `USART_USRTSTR` reader"]
-pub struct R(crate::R<USART_USRTSTR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<USART_USRTSTR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<USART_USRTSTR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<USART_USRTSTR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UsartUsrtstrSpec>;
 #[doc = "Register `USART_USRTSTR` writer"]
-pub struct W(crate::W<USART_USRTSTR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<USART_USRTSTR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<USART_USRTSTR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<USART_USRTSTR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<UsartUsrtstrSpec>;
 #[doc = "Field `LBM` reader - LBM"]
-pub type LBM_R = crate::FieldReader<u8, u8>;
+pub type LbmR = crate::FieldReader;
 #[doc = "Field `LBM` writer - LBM"]
-pub type LBM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, USART_USRTSTR_SPEC, u8, u8, 2, O>;
+pub type LbmW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - LBM"]
     #[inline(always)]
-    pub fn lbm(&self) -> LBM_R {
-        LBM_R::new((self.bits & 3) as u8)
+    pub fn lbm(&self) -> LbmR {
+        LbmR::new((self.bits & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - LBM"]
     #[inline(always)]
     #[must_use]
-    pub fn lbm(&mut self) -> LBM_W<0> {
-        LBM_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn lbm(&mut self) -> LbmW<UsartUsrtstrSpec> {
+        LbmW::new(self, 0)
     }
 }
-#[doc = "USART_USRTSTR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [usart_usrtstr](index.html) module"]
-pub struct USART_USRTSTR_SPEC;
-impl crate::RegisterSpec for USART_USRTSTR_SPEC {
+#[doc = "USART_USRTSTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`usart_usrtstr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usart_usrtstr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct UsartUsrtstrSpec;
+impl crate::RegisterSpec for UsartUsrtstrSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [usart_usrtstr::R](R) reader structure"]
-impl crate::Readable for USART_USRTSTR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [usart_usrtstr::W](W) writer structure"]
-impl crate::Writable for USART_USRTSTR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`usart_usrtstr::R`](R) reader structure"]
+impl crate::Readable for UsartUsrtstrSpec {}
+#[doc = "`write(|w| ..)` method takes [`usart_usrtstr::W`](W) writer structure"]
+impl crate::Writable for UsartUsrtstrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets USART_USRTSTR to value 0"]
-impl crate::Resettable for USART_USRTSTR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for UsartUsrtstrSpec {
+    const RESET_VALUE: u32 = 0;
 }

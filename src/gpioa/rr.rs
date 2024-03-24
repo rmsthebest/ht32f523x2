@@ -1,305 +1,265 @@
 #[doc = "Register `RR` reader"]
-pub struct R(crate::R<RR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RrSpec>;
 #[doc = "Register `RR` writer"]
-pub struct W(crate::W<RR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RrSpec>;
 #[doc = "Field `RST0` reader - RST0"]
-pub type RST0_R = crate::BitReader<bool>;
+pub type Rst0R = crate::BitReader;
 #[doc = "Field `RST0` writer - RST0"]
-pub type RST0_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst0W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST1` reader - RST1"]
-pub type RST1_R = crate::BitReader<bool>;
+pub type Rst1R = crate::BitReader;
 #[doc = "Field `RST1` writer - RST1"]
-pub type RST1_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst1W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST2` reader - RST2"]
-pub type RST2_R = crate::BitReader<bool>;
+pub type Rst2R = crate::BitReader;
 #[doc = "Field `RST2` writer - RST2"]
-pub type RST2_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst2W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST3` reader - RST3"]
-pub type RST3_R = crate::BitReader<bool>;
+pub type Rst3R = crate::BitReader;
 #[doc = "Field `RST3` writer - RST3"]
-pub type RST3_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst3W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST4` reader - RST4"]
-pub type RST4_R = crate::BitReader<bool>;
+pub type Rst4R = crate::BitReader;
 #[doc = "Field `RST4` writer - RST4"]
-pub type RST4_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst4W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST5` reader - RST5"]
-pub type RST5_R = crate::BitReader<bool>;
+pub type Rst5R = crate::BitReader;
 #[doc = "Field `RST5` writer - RST5"]
-pub type RST5_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst5W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST6` reader - RST6"]
-pub type RST6_R = crate::BitReader<bool>;
+pub type Rst6R = crate::BitReader;
 #[doc = "Field `RST6` writer - RST6"]
-pub type RST6_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst6W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST7` reader - RST7"]
-pub type RST7_R = crate::BitReader<bool>;
+pub type Rst7R = crate::BitReader;
 #[doc = "Field `RST7` writer - RST7"]
-pub type RST7_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst7W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST8` reader - RST8"]
-pub type RST8_R = crate::BitReader<bool>;
+pub type Rst8R = crate::BitReader;
 #[doc = "Field `RST8` writer - RST8"]
-pub type RST8_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst8W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST9` reader - RST9"]
-pub type RST9_R = crate::BitReader<bool>;
+pub type Rst9R = crate::BitReader;
 #[doc = "Field `RST9` writer - RST9"]
-pub type RST9_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst9W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST10` reader - RST10"]
-pub type RST10_R = crate::BitReader<bool>;
+pub type Rst10R = crate::BitReader;
 #[doc = "Field `RST10` writer - RST10"]
-pub type RST10_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst10W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST11` reader - RST11"]
-pub type RST11_R = crate::BitReader<bool>;
+pub type Rst11R = crate::BitReader;
 #[doc = "Field `RST11` writer - RST11"]
-pub type RST11_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst11W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST12` reader - RST12"]
-pub type RST12_R = crate::BitReader<bool>;
+pub type Rst12R = crate::BitReader;
 #[doc = "Field `RST12` writer - RST12"]
-pub type RST12_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst12W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST13` reader - RST13"]
-pub type RST13_R = crate::BitReader<bool>;
+pub type Rst13R = crate::BitReader;
 #[doc = "Field `RST13` writer - RST13"]
-pub type RST13_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst13W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST14` reader - RST14"]
-pub type RST14_R = crate::BitReader<bool>;
+pub type Rst14R = crate::BitReader;
 #[doc = "Field `RST14` writer - RST14"]
-pub type RST14_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst14W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RST15` reader - RST15"]
-pub type RST15_R = crate::BitReader<bool>;
+pub type Rst15R = crate::BitReader;
 #[doc = "Field `RST15` writer - RST15"]
-pub type RST15_W<'a, const O: u8> = crate::BitWriter<'a, u32, RR_SPEC, bool, O>;
+pub type Rst15W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - RST0"]
     #[inline(always)]
-    pub fn rst0(&self) -> RST0_R {
-        RST0_R::new((self.bits & 1) != 0)
+    pub fn rst0(&self) -> Rst0R {
+        Rst0R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RST1"]
     #[inline(always)]
-    pub fn rst1(&self) -> RST1_R {
-        RST1_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn rst1(&self) -> Rst1R {
+        Rst1R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - RST2"]
     #[inline(always)]
-    pub fn rst2(&self) -> RST2_R {
-        RST2_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn rst2(&self) -> Rst2R {
+        Rst2R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - RST3"]
     #[inline(always)]
-    pub fn rst3(&self) -> RST3_R {
-        RST3_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn rst3(&self) -> Rst3R {
+        Rst3R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - RST4"]
     #[inline(always)]
-    pub fn rst4(&self) -> RST4_R {
-        RST4_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn rst4(&self) -> Rst4R {
+        Rst4R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - RST5"]
     #[inline(always)]
-    pub fn rst5(&self) -> RST5_R {
-        RST5_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn rst5(&self) -> Rst5R {
+        Rst5R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - RST6"]
     #[inline(always)]
-    pub fn rst6(&self) -> RST6_R {
-        RST6_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn rst6(&self) -> Rst6R {
+        Rst6R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - RST7"]
     #[inline(always)]
-    pub fn rst7(&self) -> RST7_R {
-        RST7_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn rst7(&self) -> Rst7R {
+        Rst7R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - RST8"]
     #[inline(always)]
-    pub fn rst8(&self) -> RST8_R {
-        RST8_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn rst8(&self) -> Rst8R {
+        Rst8R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - RST9"]
     #[inline(always)]
-    pub fn rst9(&self) -> RST9_R {
-        RST9_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn rst9(&self) -> Rst9R {
+        Rst9R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - RST10"]
     #[inline(always)]
-    pub fn rst10(&self) -> RST10_R {
-        RST10_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn rst10(&self) -> Rst10R {
+        Rst10R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - RST11"]
     #[inline(always)]
-    pub fn rst11(&self) -> RST11_R {
-        RST11_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn rst11(&self) -> Rst11R {
+        Rst11R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - RST12"]
     #[inline(always)]
-    pub fn rst12(&self) -> RST12_R {
-        RST12_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn rst12(&self) -> Rst12R {
+        Rst12R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - RST13"]
     #[inline(always)]
-    pub fn rst13(&self) -> RST13_R {
-        RST13_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn rst13(&self) -> Rst13R {
+        Rst13R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - RST14"]
     #[inline(always)]
-    pub fn rst14(&self) -> RST14_R {
-        RST14_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn rst14(&self) -> Rst14R {
+        Rst14R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - RST15"]
     #[inline(always)]
-    pub fn rst15(&self) -> RST15_R {
-        RST15_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn rst15(&self) -> Rst15R {
+        Rst15R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - RST0"]
     #[inline(always)]
     #[must_use]
-    pub fn rst0(&mut self) -> RST0_W<0> {
-        RST0_W::new(self)
+    pub fn rst0(&mut self) -> Rst0W<RrSpec> {
+        Rst0W::new(self, 0)
     }
     #[doc = "Bit 1 - RST1"]
     #[inline(always)]
     #[must_use]
-    pub fn rst1(&mut self) -> RST1_W<1> {
-        RST1_W::new(self)
+    pub fn rst1(&mut self) -> Rst1W<RrSpec> {
+        Rst1W::new(self, 1)
     }
     #[doc = "Bit 2 - RST2"]
     #[inline(always)]
     #[must_use]
-    pub fn rst2(&mut self) -> RST2_W<2> {
-        RST2_W::new(self)
+    pub fn rst2(&mut self) -> Rst2W<RrSpec> {
+        Rst2W::new(self, 2)
     }
     #[doc = "Bit 3 - RST3"]
     #[inline(always)]
     #[must_use]
-    pub fn rst3(&mut self) -> RST3_W<3> {
-        RST3_W::new(self)
+    pub fn rst3(&mut self) -> Rst3W<RrSpec> {
+        Rst3W::new(self, 3)
     }
     #[doc = "Bit 4 - RST4"]
     #[inline(always)]
     #[must_use]
-    pub fn rst4(&mut self) -> RST4_W<4> {
-        RST4_W::new(self)
+    pub fn rst4(&mut self) -> Rst4W<RrSpec> {
+        Rst4W::new(self, 4)
     }
     #[doc = "Bit 5 - RST5"]
     #[inline(always)]
     #[must_use]
-    pub fn rst5(&mut self) -> RST5_W<5> {
-        RST5_W::new(self)
+    pub fn rst5(&mut self) -> Rst5W<RrSpec> {
+        Rst5W::new(self, 5)
     }
     #[doc = "Bit 6 - RST6"]
     #[inline(always)]
     #[must_use]
-    pub fn rst6(&mut self) -> RST6_W<6> {
-        RST6_W::new(self)
+    pub fn rst6(&mut self) -> Rst6W<RrSpec> {
+        Rst6W::new(self, 6)
     }
     #[doc = "Bit 7 - RST7"]
     #[inline(always)]
     #[must_use]
-    pub fn rst7(&mut self) -> RST7_W<7> {
-        RST7_W::new(self)
+    pub fn rst7(&mut self) -> Rst7W<RrSpec> {
+        Rst7W::new(self, 7)
     }
     #[doc = "Bit 8 - RST8"]
     #[inline(always)]
     #[must_use]
-    pub fn rst8(&mut self) -> RST8_W<8> {
-        RST8_W::new(self)
+    pub fn rst8(&mut self) -> Rst8W<RrSpec> {
+        Rst8W::new(self, 8)
     }
     #[doc = "Bit 9 - RST9"]
     #[inline(always)]
     #[must_use]
-    pub fn rst9(&mut self) -> RST9_W<9> {
-        RST9_W::new(self)
+    pub fn rst9(&mut self) -> Rst9W<RrSpec> {
+        Rst9W::new(self, 9)
     }
     #[doc = "Bit 10 - RST10"]
     #[inline(always)]
     #[must_use]
-    pub fn rst10(&mut self) -> RST10_W<10> {
-        RST10_W::new(self)
+    pub fn rst10(&mut self) -> Rst10W<RrSpec> {
+        Rst10W::new(self, 10)
     }
     #[doc = "Bit 11 - RST11"]
     #[inline(always)]
     #[must_use]
-    pub fn rst11(&mut self) -> RST11_W<11> {
-        RST11_W::new(self)
+    pub fn rst11(&mut self) -> Rst11W<RrSpec> {
+        Rst11W::new(self, 11)
     }
     #[doc = "Bit 12 - RST12"]
     #[inline(always)]
     #[must_use]
-    pub fn rst12(&mut self) -> RST12_W<12> {
-        RST12_W::new(self)
+    pub fn rst12(&mut self) -> Rst12W<RrSpec> {
+        Rst12W::new(self, 12)
     }
     #[doc = "Bit 13 - RST13"]
     #[inline(always)]
     #[must_use]
-    pub fn rst13(&mut self) -> RST13_W<13> {
-        RST13_W::new(self)
+    pub fn rst13(&mut self) -> Rst13W<RrSpec> {
+        Rst13W::new(self, 13)
     }
     #[doc = "Bit 14 - RST14"]
     #[inline(always)]
     #[must_use]
-    pub fn rst14(&mut self) -> RST14_W<14> {
-        RST14_W::new(self)
+    pub fn rst14(&mut self) -> Rst14W<RrSpec> {
+        Rst14W::new(self, 14)
     }
     #[doc = "Bit 15 - RST15"]
     #[inline(always)]
     #[must_use]
-    pub fn rst15(&mut self) -> RST15_W<15> {
-        RST15_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn rst15(&mut self) -> Rst15W<RrSpec> {
+        Rst15W::new(self, 15)
     }
 }
-#[doc = "RR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rr](index.html) module"]
-pub struct RR_SPEC;
-impl crate::RegisterSpec for RR_SPEC {
+#[doc = "RR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct RrSpec;
+impl crate::RegisterSpec for RrSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rr::R](R) reader structure"]
-impl crate::Readable for RR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [rr::W](W) writer structure"]
-impl crate::Writable for RR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`rr::R`](R) reader structure"]
+impl crate::Readable for RrSpec {}
+#[doc = "`write(|w| ..)` method takes [`rr::W`](W) writer structure"]
+impl crate::Writable for RrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RR to value 0"]
-impl crate::Resettable for RR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for RrSpec {
+    const RESET_VALUE: u32 = 0;
 }

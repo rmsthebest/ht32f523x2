@@ -1,95 +1,55 @@
 #[doc = "Register `DR6` reader"]
-pub struct R(crate::R<DR6_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DR6_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DR6_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DR6_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<Dr6Spec>;
 #[doc = "Register `DR6` writer"]
-pub struct W(crate::W<DR6_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DR6_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DR6_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DR6_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<Dr6Spec>;
 #[doc = "Field `ADD6` reader - ADD6"]
-pub type ADD6_R = crate::FieldReader<u16, u16>;
+pub type Add6R = crate::FieldReader<u16>;
 #[doc = "Field `ADD6` writer - ADD6"]
-pub type ADD6_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DR6_SPEC, u16, u16, 16, O>;
+pub type Add6W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `ADVLD6` reader - ADVLD6"]
-pub type ADVLD6_R = crate::BitReader<bool>;
+pub type Advld6R = crate::BitReader;
 #[doc = "Field `ADVLD6` writer - ADVLD6"]
-pub type ADVLD6_W<'a, const O: u8> = crate::BitWriter<'a, u32, DR6_SPEC, bool, O>;
+pub type Advld6W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - ADD6"]
     #[inline(always)]
-    pub fn add6(&self) -> ADD6_R {
-        ADD6_R::new((self.bits & 0xffff) as u16)
+    pub fn add6(&self) -> Add6R {
+        Add6R::new((self.bits & 0xffff) as u16)
     }
     #[doc = "Bit 31 - ADVLD6"]
     #[inline(always)]
-    pub fn advld6(&self) -> ADVLD6_R {
-        ADVLD6_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn advld6(&self) -> Advld6R {
+        Advld6R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - ADD6"]
     #[inline(always)]
     #[must_use]
-    pub fn add6(&mut self) -> ADD6_W<0> {
-        ADD6_W::new(self)
+    pub fn add6(&mut self) -> Add6W<Dr6Spec> {
+        Add6W::new(self, 0)
     }
     #[doc = "Bit 31 - ADVLD6"]
     #[inline(always)]
     #[must_use]
-    pub fn advld6(&mut self) -> ADVLD6_W<31> {
-        ADVLD6_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn advld6(&mut self) -> Advld6W<Dr6Spec> {
+        Advld6W::new(self, 31)
     }
 }
-#[doc = "DR6\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dr6](index.html) module"]
-pub struct DR6_SPEC;
-impl crate::RegisterSpec for DR6_SPEC {
+#[doc = "DR6\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dr6::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dr6::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Dr6Spec;
+impl crate::RegisterSpec for Dr6Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dr6::R](R) reader structure"]
-impl crate::Readable for DR6_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dr6::W](W) writer structure"]
-impl crate::Writable for DR6_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`dr6::R`](R) reader structure"]
+impl crate::Readable for Dr6Spec {}
+#[doc = "`write(|w| ..)` method takes [`dr6::W`](W) writer structure"]
+impl crate::Writable for Dr6Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DR6 to value 0"]
-impl crate::Resettable for DR6_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for Dr6Spec {
+    const RESET_VALUE: u32 = 0;
 }

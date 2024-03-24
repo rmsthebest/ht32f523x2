@@ -1,245 +1,205 @@
 #[doc = "Register `CR` reader"]
-pub struct R(crate::R<CR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CrSpec>;
 #[doc = "Register `CR` writer"]
-pub struct W(crate::W<CR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CrSpec>;
 #[doc = "Field `RTCEN` reader - RTCEN"]
-pub type RTCEN_R = crate::BitReader<bool>;
+pub type RtcenR = crate::BitReader;
 #[doc = "Field `RTCEN` writer - RTCEN"]
-pub type RTCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type RtcenW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTCSRC` reader - RTCSRC"]
-pub type RTCSRC_R = crate::BitReader<bool>;
+pub type RtcsrcR = crate::BitReader;
 #[doc = "Field `RTCSRC` writer - RTCSRC"]
-pub type RTCSRC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type RtcsrcW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LSIEN` reader - LSIEN"]
-pub type LSIEN_R = crate::BitReader<bool>;
+pub type LsienR = crate::BitReader;
 #[doc = "Field `LSIEN` writer - LSIEN"]
-pub type LSIEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type LsienW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LSEEN` reader - LSEEN"]
-pub type LSEEN_R = crate::BitReader<bool>;
+pub type LseenR = crate::BitReader;
 #[doc = "Field `LSEEN` writer - LSEEN"]
-pub type LSEEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type LseenW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMPCLR` reader - CMPCLR"]
-pub type CMPCLR_R = crate::BitReader<bool>;
+pub type CmpclrR = crate::BitReader;
 #[doc = "Field `CMPCLR` writer - CMPCLR"]
-pub type CMPCLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type CmpclrW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LSESM` reader - LSESM"]
-pub type LSESM_R = crate::BitReader<bool>;
+pub type LsesmR = crate::BitReader;
 #[doc = "Field `LSESM` writer - LSESM"]
-pub type LSESM_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type LsesmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RPRE` reader - RPRE"]
-pub type RPRE_R = crate::FieldReader<u8, u8>;
+pub type RpreR = crate::FieldReader;
 #[doc = "Field `RPRE` writer - RPRE"]
-pub type RPRE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR_SPEC, u8, u8, 4, O>;
+pub type RpreW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `ROEN` reader - ROEN"]
-pub type ROEN_R = crate::BitReader<bool>;
+pub type RoenR = crate::BitReader;
 #[doc = "Field `ROEN` writer - ROEN"]
-pub type ROEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type RoenW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ROES` reader - ROES"]
-pub type ROES_R = crate::BitReader<bool>;
+pub type RoesR = crate::BitReader;
 #[doc = "Field `ROES` writer - ROES"]
-pub type ROES_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type RoesW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ROWM` reader - ROWM"]
-pub type ROWM_R = crate::BitReader<bool>;
+pub type RowmR = crate::BitReader;
 #[doc = "Field `ROWM` writer - ROWM"]
-pub type ROWM_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type RowmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ROAP` reader - ROAP"]
-pub type ROAP_R = crate::BitReader<bool>;
+pub type RoapR = crate::BitReader;
 #[doc = "Field `ROAP` writer - ROAP"]
-pub type ROAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type RoapW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ROLF` reader - ROLF"]
-pub type ROLF_R = crate::BitReader<bool>;
+pub type RolfR = crate::BitReader;
 #[doc = "Field `ROLF` writer - ROLF"]
-pub type ROLF_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type RolfW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - RTCEN"]
     #[inline(always)]
-    pub fn rtcen(&self) -> RTCEN_R {
-        RTCEN_R::new((self.bits & 1) != 0)
+    pub fn rtcen(&self) -> RtcenR {
+        RtcenR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RTCSRC"]
     #[inline(always)]
-    pub fn rtcsrc(&self) -> RTCSRC_R {
-        RTCSRC_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn rtcsrc(&self) -> RtcsrcR {
+        RtcsrcR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - LSIEN"]
     #[inline(always)]
-    pub fn lsien(&self) -> LSIEN_R {
-        LSIEN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn lsien(&self) -> LsienR {
+        LsienR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - LSEEN"]
     #[inline(always)]
-    pub fn lseen(&self) -> LSEEN_R {
-        LSEEN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn lseen(&self) -> LseenR {
+        LseenR::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - CMPCLR"]
     #[inline(always)]
-    pub fn cmpclr(&self) -> CMPCLR_R {
-        CMPCLR_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn cmpclr(&self) -> CmpclrR {
+        CmpclrR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - LSESM"]
     #[inline(always)]
-    pub fn lsesm(&self) -> LSESM_R {
-        LSESM_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn lsesm(&self) -> LsesmR {
+        LsesmR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bits 8:11 - RPRE"]
     #[inline(always)]
-    pub fn rpre(&self) -> RPRE_R {
-        RPRE_R::new(((self.bits >> 8) & 0x0f) as u8)
+    pub fn rpre(&self) -> RpreR {
+        RpreR::new(((self.bits >> 8) & 0x0f) as u8)
     }
     #[doc = "Bit 16 - ROEN"]
     #[inline(always)]
-    pub fn roen(&self) -> ROEN_R {
-        ROEN_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn roen(&self) -> RoenR {
+        RoenR::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - ROES"]
     #[inline(always)]
-    pub fn roes(&self) -> ROES_R {
-        ROES_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn roes(&self) -> RoesR {
+        RoesR::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - ROWM"]
     #[inline(always)]
-    pub fn rowm(&self) -> ROWM_R {
-        ROWM_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn rowm(&self) -> RowmR {
+        RowmR::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Bit 19 - ROAP"]
     #[inline(always)]
-    pub fn roap(&self) -> ROAP_R {
-        ROAP_R::new(((self.bits >> 19) & 1) != 0)
+    pub fn roap(&self) -> RoapR {
+        RoapR::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Bit 20 - ROLF"]
     #[inline(always)]
-    pub fn rolf(&self) -> ROLF_R {
-        ROLF_R::new(((self.bits >> 20) & 1) != 0)
+    pub fn rolf(&self) -> RolfR {
+        RolfR::new(((self.bits >> 20) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - RTCEN"]
     #[inline(always)]
     #[must_use]
-    pub fn rtcen(&mut self) -> RTCEN_W<0> {
-        RTCEN_W::new(self)
+    pub fn rtcen(&mut self) -> RtcenW<CrSpec> {
+        RtcenW::new(self, 0)
     }
     #[doc = "Bit 1 - RTCSRC"]
     #[inline(always)]
     #[must_use]
-    pub fn rtcsrc(&mut self) -> RTCSRC_W<1> {
-        RTCSRC_W::new(self)
+    pub fn rtcsrc(&mut self) -> RtcsrcW<CrSpec> {
+        RtcsrcW::new(self, 1)
     }
     #[doc = "Bit 2 - LSIEN"]
     #[inline(always)]
     #[must_use]
-    pub fn lsien(&mut self) -> LSIEN_W<2> {
-        LSIEN_W::new(self)
+    pub fn lsien(&mut self) -> LsienW<CrSpec> {
+        LsienW::new(self, 2)
     }
     #[doc = "Bit 3 - LSEEN"]
     #[inline(always)]
     #[must_use]
-    pub fn lseen(&mut self) -> LSEEN_W<3> {
-        LSEEN_W::new(self)
+    pub fn lseen(&mut self) -> LseenW<CrSpec> {
+        LseenW::new(self, 3)
     }
     #[doc = "Bit 4 - CMPCLR"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpclr(&mut self) -> CMPCLR_W<4> {
-        CMPCLR_W::new(self)
+    pub fn cmpclr(&mut self) -> CmpclrW<CrSpec> {
+        CmpclrW::new(self, 4)
     }
     #[doc = "Bit 5 - LSESM"]
     #[inline(always)]
     #[must_use]
-    pub fn lsesm(&mut self) -> LSESM_W<5> {
-        LSESM_W::new(self)
+    pub fn lsesm(&mut self) -> LsesmW<CrSpec> {
+        LsesmW::new(self, 5)
     }
     #[doc = "Bits 8:11 - RPRE"]
     #[inline(always)]
     #[must_use]
-    pub fn rpre(&mut self) -> RPRE_W<8> {
-        RPRE_W::new(self)
+    pub fn rpre(&mut self) -> RpreW<CrSpec> {
+        RpreW::new(self, 8)
     }
     #[doc = "Bit 16 - ROEN"]
     #[inline(always)]
     #[must_use]
-    pub fn roen(&mut self) -> ROEN_W<16> {
-        ROEN_W::new(self)
+    pub fn roen(&mut self) -> RoenW<CrSpec> {
+        RoenW::new(self, 16)
     }
     #[doc = "Bit 17 - ROES"]
     #[inline(always)]
     #[must_use]
-    pub fn roes(&mut self) -> ROES_W<17> {
-        ROES_W::new(self)
+    pub fn roes(&mut self) -> RoesW<CrSpec> {
+        RoesW::new(self, 17)
     }
     #[doc = "Bit 18 - ROWM"]
     #[inline(always)]
     #[must_use]
-    pub fn rowm(&mut self) -> ROWM_W<18> {
-        ROWM_W::new(self)
+    pub fn rowm(&mut self) -> RowmW<CrSpec> {
+        RowmW::new(self, 18)
     }
     #[doc = "Bit 19 - ROAP"]
     #[inline(always)]
     #[must_use]
-    pub fn roap(&mut self) -> ROAP_W<19> {
-        ROAP_W::new(self)
+    pub fn roap(&mut self) -> RoapW<CrSpec> {
+        RoapW::new(self, 19)
     }
     #[doc = "Bit 20 - ROLF"]
     #[inline(always)]
     #[must_use]
-    pub fn rolf(&mut self) -> ROLF_W<20> {
-        ROLF_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn rolf(&mut self) -> RolfW<CrSpec> {
+        RolfW::new(self, 20)
     }
 }
-#[doc = "CR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cr](index.html) module"]
-pub struct CR_SPEC;
-impl crate::RegisterSpec for CR_SPEC {
+#[doc = "CR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CrSpec;
+impl crate::RegisterSpec for CrSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cr::R](R) reader structure"]
-impl crate::Readable for CR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cr::W](W) writer structure"]
-impl crate::Writable for CR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`cr::R`](R) reader structure"]
+impl crate::Readable for CrSpec {}
+#[doc = "`write(|w| ..)` method takes [`cr::W`](W) writer structure"]
+impl crate::Writable for CrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR to value 0"]
-impl crate::Resettable for CR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for CrSpec {
+    const RESET_VALUE: u32 = 0;
 }

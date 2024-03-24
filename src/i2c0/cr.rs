@@ -1,230 +1,190 @@
 #[doc = "Register `CR` reader"]
-pub struct R(crate::R<CR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CrSpec>;
 #[doc = "Register `CR` writer"]
-pub struct W(crate::W<CR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CrSpec>;
 #[doc = "Field `AA` reader - AA"]
-pub type AA_R = crate::BitReader<bool>;
+pub type AaR = crate::BitReader;
 #[doc = "Field `AA` writer - AA"]
-pub type AA_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type AaW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STOP` reader - STOP"]
-pub type STOP_R = crate::BitReader<bool>;
+pub type StopR = crate::BitReader;
 #[doc = "Field `STOP` writer - STOP"]
-pub type STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type StopW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GCEN` reader - GCEN"]
-pub type GCEN_R = crate::BitReader<bool>;
+pub type GcenR = crate::BitReader;
 #[doc = "Field `GCEN` writer - GCEN"]
-pub type GCEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type GcenW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2CEN` reader - I2CEN"]
-pub type I2CEN_R = crate::BitReader<bool>;
+pub type I2cenR = crate::BitReader;
 #[doc = "Field `I2CEN` writer - I2CEN"]
-pub type I2CEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type I2cenW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADRM` reader - ADRM"]
-pub type ADRM_R = crate::BitReader<bool>;
+pub type AdrmR = crate::BitReader;
 #[doc = "Field `ADRM` writer - ADRM"]
-pub type ADRM_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type AdrmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXDMAE` reader - TXDMAE"]
-pub type TXDMAE_R = crate::BitReader<bool>;
+pub type TxdmaeR = crate::BitReader;
 #[doc = "Field `TXDMAE` writer - TXDMAE"]
-pub type TXDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type TxdmaeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXDMAE` reader - RXDMAE"]
-pub type RXDMAE_R = crate::BitReader<bool>;
+pub type RxdmaeR = crate::BitReader;
 #[doc = "Field `RXDMAE` writer - RXDMAE"]
-pub type RXDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type RxdmaeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMANACK` reader - DMANACK"]
-pub type DMANACK_R = crate::BitReader<bool>;
+pub type DmanackR = crate::BitReader;
 #[doc = "Field `DMANACK` writer - DMANACK"]
-pub type DMANACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type DmanackW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENTOUT` reader - ENTOUT"]
-pub type ENTOUT_R = crate::BitReader<bool>;
+pub type EntoutR = crate::BitReader;
 #[doc = "Field `ENTOUT` writer - ENTOUT"]
-pub type ENTOUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type EntoutW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `COMB_FILTER_EN` reader - COMB_FILTER_EN"]
-pub type COMB_FILTER_EN_R = crate::BitReader<bool>;
+pub type CombFilterEnR = crate::BitReader;
 #[doc = "Field `COMB_FILTER_EN` writer - COMB_FILTER_EN"]
-pub type COMB_FILTER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type CombFilterEnW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SEQ_FILTER` reader - SEQ_FILTER"]
-pub type SEQ_FILTER_R = crate::FieldReader<u8, u8>;
+pub type SeqFilterR = crate::FieldReader;
 #[doc = "Field `SEQ_FILTER` writer - SEQ_FILTER"]
-pub type SEQ_FILTER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR_SPEC, u8, u8, 2, O>;
+pub type SeqFilterW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - AA"]
     #[inline(always)]
-    pub fn aa(&self) -> AA_R {
-        AA_R::new((self.bits & 1) != 0)
+    pub fn aa(&self) -> AaR {
+        AaR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - STOP"]
     #[inline(always)]
-    pub fn stop(&self) -> STOP_R {
-        STOP_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn stop(&self) -> StopR {
+        StopR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - GCEN"]
     #[inline(always)]
-    pub fn gcen(&self) -> GCEN_R {
-        GCEN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn gcen(&self) -> GcenR {
+        GcenR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - I2CEN"]
     #[inline(always)]
-    pub fn i2cen(&self) -> I2CEN_R {
-        I2CEN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn i2cen(&self) -> I2cenR {
+        I2cenR::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 7 - ADRM"]
     #[inline(always)]
-    pub fn adrm(&self) -> ADRM_R {
-        ADRM_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn adrm(&self) -> AdrmR {
+        AdrmR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - TXDMAE"]
     #[inline(always)]
-    pub fn txdmae(&self) -> TXDMAE_R {
-        TXDMAE_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn txdmae(&self) -> TxdmaeR {
+        TxdmaeR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - RXDMAE"]
     #[inline(always)]
-    pub fn rxdmae(&self) -> RXDMAE_R {
-        RXDMAE_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn rxdmae(&self) -> RxdmaeR {
+        RxdmaeR::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - DMANACK"]
     #[inline(always)]
-    pub fn dmanack(&self) -> DMANACK_R {
-        DMANACK_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn dmanack(&self) -> DmanackR {
+        DmanackR::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 12 - ENTOUT"]
     #[inline(always)]
-    pub fn entout(&self) -> ENTOUT_R {
-        ENTOUT_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn entout(&self) -> EntoutR {
+        EntoutR::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - COMB_FILTER_EN"]
     #[inline(always)]
-    pub fn comb_filter_en(&self) -> COMB_FILTER_EN_R {
-        COMB_FILTER_EN_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn comb_filter_en(&self) -> CombFilterEnR {
+        CombFilterEnR::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bits 14:15 - SEQ_FILTER"]
     #[inline(always)]
-    pub fn seq_filter(&self) -> SEQ_FILTER_R {
-        SEQ_FILTER_R::new(((self.bits >> 14) & 3) as u8)
+    pub fn seq_filter(&self) -> SeqFilterR {
+        SeqFilterR::new(((self.bits >> 14) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0 - AA"]
     #[inline(always)]
     #[must_use]
-    pub fn aa(&mut self) -> AA_W<0> {
-        AA_W::new(self)
+    pub fn aa(&mut self) -> AaW<CrSpec> {
+        AaW::new(self, 0)
     }
     #[doc = "Bit 1 - STOP"]
     #[inline(always)]
     #[must_use]
-    pub fn stop(&mut self) -> STOP_W<1> {
-        STOP_W::new(self)
+    pub fn stop(&mut self) -> StopW<CrSpec> {
+        StopW::new(self, 1)
     }
     #[doc = "Bit 2 - GCEN"]
     #[inline(always)]
     #[must_use]
-    pub fn gcen(&mut self) -> GCEN_W<2> {
-        GCEN_W::new(self)
+    pub fn gcen(&mut self) -> GcenW<CrSpec> {
+        GcenW::new(self, 2)
     }
     #[doc = "Bit 3 - I2CEN"]
     #[inline(always)]
     #[must_use]
-    pub fn i2cen(&mut self) -> I2CEN_W<3> {
-        I2CEN_W::new(self)
+    pub fn i2cen(&mut self) -> I2cenW<CrSpec> {
+        I2cenW::new(self, 3)
     }
     #[doc = "Bit 7 - ADRM"]
     #[inline(always)]
     #[must_use]
-    pub fn adrm(&mut self) -> ADRM_W<7> {
-        ADRM_W::new(self)
+    pub fn adrm(&mut self) -> AdrmW<CrSpec> {
+        AdrmW::new(self, 7)
     }
     #[doc = "Bit 8 - TXDMAE"]
     #[inline(always)]
     #[must_use]
-    pub fn txdmae(&mut self) -> TXDMAE_W<8> {
-        TXDMAE_W::new(self)
+    pub fn txdmae(&mut self) -> TxdmaeW<CrSpec> {
+        TxdmaeW::new(self, 8)
     }
     #[doc = "Bit 9 - RXDMAE"]
     #[inline(always)]
     #[must_use]
-    pub fn rxdmae(&mut self) -> RXDMAE_W<9> {
-        RXDMAE_W::new(self)
+    pub fn rxdmae(&mut self) -> RxdmaeW<CrSpec> {
+        RxdmaeW::new(self, 9)
     }
     #[doc = "Bit 10 - DMANACK"]
     #[inline(always)]
     #[must_use]
-    pub fn dmanack(&mut self) -> DMANACK_W<10> {
-        DMANACK_W::new(self)
+    pub fn dmanack(&mut self) -> DmanackW<CrSpec> {
+        DmanackW::new(self, 10)
     }
     #[doc = "Bit 12 - ENTOUT"]
     #[inline(always)]
     #[must_use]
-    pub fn entout(&mut self) -> ENTOUT_W<12> {
-        ENTOUT_W::new(self)
+    pub fn entout(&mut self) -> EntoutW<CrSpec> {
+        EntoutW::new(self, 12)
     }
     #[doc = "Bit 13 - COMB_FILTER_EN"]
     #[inline(always)]
     #[must_use]
-    pub fn comb_filter_en(&mut self) -> COMB_FILTER_EN_W<13> {
-        COMB_FILTER_EN_W::new(self)
+    pub fn comb_filter_en(&mut self) -> CombFilterEnW<CrSpec> {
+        CombFilterEnW::new(self, 13)
     }
     #[doc = "Bits 14:15 - SEQ_FILTER"]
     #[inline(always)]
     #[must_use]
-    pub fn seq_filter(&mut self) -> SEQ_FILTER_W<14> {
-        SEQ_FILTER_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn seq_filter(&mut self) -> SeqFilterW<CrSpec> {
+        SeqFilterW::new(self, 14)
     }
 }
-#[doc = "CR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cr](index.html) module"]
-pub struct CR_SPEC;
-impl crate::RegisterSpec for CR_SPEC {
+#[doc = "CR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CrSpec;
+impl crate::RegisterSpec for CrSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cr::R](R) reader structure"]
-impl crate::Readable for CR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cr::W](W) writer structure"]
-impl crate::Writable for CR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`cr::R`](R) reader structure"]
+impl crate::Readable for CrSpec {}
+#[doc = "`write(|w| ..)` method takes [`cr::W`](W) writer structure"]
+impl crate::Writable for CrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR to value 0"]
-impl crate::Resettable for CR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for CrSpec {
+    const RESET_VALUE: u32 = 0;
 }

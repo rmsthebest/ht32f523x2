@@ -1,110 +1,70 @@
 #[doc = "Register `CFGR0` reader"]
-pub struct R(crate::R<CFGR0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CFGR0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CFGR0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CFGR0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<Cfgr0Spec>;
 #[doc = "Register `CFGR0` writer"]
-pub struct W(crate::W<CFGR0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CFGR0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CFGR0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CFGR0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<Cfgr0Spec>;
 #[doc = "Field `DBCNT` reader - DBCNT"]
-pub type DBCNT_R = crate::FieldReader<u16, u16>;
+pub type DbcntR = crate::FieldReader<u16>;
 #[doc = "Field `DBCNT` writer - DBCNT"]
-pub type DBCNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFGR0_SPEC, u16, u16, 16, O>;
+pub type DbcntW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `SRCTYPE` reader - SRCTYPE"]
-pub type SRCTYPE_R = crate::FieldReader<u8, u8>;
+pub type SrctypeR = crate::FieldReader;
 #[doc = "Field `SRCTYPE` writer - SRCTYPE"]
-pub type SRCTYPE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFGR0_SPEC, u8, u8, 3, O>;
+pub type SrctypeW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `DBEN` reader - DBEN"]
-pub type DBEN_R = crate::BitReader<bool>;
+pub type DbenR = crate::BitReader;
 #[doc = "Field `DBEN` writer - DBEN"]
-pub type DBEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFGR0_SPEC, bool, O>;
+pub type DbenW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - DBCNT"]
     #[inline(always)]
-    pub fn dbcnt(&self) -> DBCNT_R {
-        DBCNT_R::new((self.bits & 0xffff) as u16)
+    pub fn dbcnt(&self) -> DbcntR {
+        DbcntR::new((self.bits & 0xffff) as u16)
     }
     #[doc = "Bits 28:30 - SRCTYPE"]
     #[inline(always)]
-    pub fn srctype(&self) -> SRCTYPE_R {
-        SRCTYPE_R::new(((self.bits >> 28) & 7) as u8)
+    pub fn srctype(&self) -> SrctypeR {
+        SrctypeR::new(((self.bits >> 28) & 7) as u8)
     }
     #[doc = "Bit 31 - DBEN"]
     #[inline(always)]
-    pub fn dben(&self) -> DBEN_R {
-        DBEN_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn dben(&self) -> DbenR {
+        DbenR::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - DBCNT"]
     #[inline(always)]
     #[must_use]
-    pub fn dbcnt(&mut self) -> DBCNT_W<0> {
-        DBCNT_W::new(self)
+    pub fn dbcnt(&mut self) -> DbcntW<Cfgr0Spec> {
+        DbcntW::new(self, 0)
     }
     #[doc = "Bits 28:30 - SRCTYPE"]
     #[inline(always)]
     #[must_use]
-    pub fn srctype(&mut self) -> SRCTYPE_W<28> {
-        SRCTYPE_W::new(self)
+    pub fn srctype(&mut self) -> SrctypeW<Cfgr0Spec> {
+        SrctypeW::new(self, 28)
     }
     #[doc = "Bit 31 - DBEN"]
     #[inline(always)]
     #[must_use]
-    pub fn dben(&mut self) -> DBEN_W<31> {
-        DBEN_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn dben(&mut self) -> DbenW<Cfgr0Spec> {
+        DbenW::new(self, 31)
     }
 }
-#[doc = "CFGR0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cfgr0](index.html) module"]
-pub struct CFGR0_SPEC;
-impl crate::RegisterSpec for CFGR0_SPEC {
+#[doc = "CFGR0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Cfgr0Spec;
+impl crate::RegisterSpec for Cfgr0Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cfgr0::R](R) reader structure"]
-impl crate::Readable for CFGR0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cfgr0::W](W) writer structure"]
-impl crate::Writable for CFGR0_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`cfgr0::R`](R) reader structure"]
+impl crate::Readable for Cfgr0Spec {}
+#[doc = "`write(|w| ..)` method takes [`cfgr0::W`](W) writer structure"]
+impl crate::Writable for Cfgr0Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFGR0 to value 0"]
-impl crate::Resettable for CFGR0_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for Cfgr0Spec {
+    const RESET_VALUE: u32 = 0;
 }

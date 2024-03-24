@@ -1,275 +1,235 @@
 #[doc = "Register `IER` reader"]
-pub struct R(crate::R<IER_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IER_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IER_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IER_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IerSpec>;
 #[doc = "Register `IER` writer"]
-pub struct W(crate::W<IER_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IER_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IER_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IER_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IerSpec>;
 #[doc = "Field `UGIE` reader - UGIE"]
-pub type UGIE_R = crate::BitReader<bool>;
+pub type UgieR = crate::BitReader;
 #[doc = "Field `UGIE` writer - UGIE"]
-pub type UGIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+pub type UgieW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SOFIE` reader - SOFIE"]
-pub type SOFIE_R = crate::BitReader<bool>;
+pub type SofieR = crate::BitReader;
 #[doc = "Field `SOFIE` writer - SOFIE"]
-pub type SOFIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+pub type SofieW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `URSTIE` reader - URSTIE"]
-pub type URSTIE_R = crate::BitReader<bool>;
+pub type UrstieR = crate::BitReader;
 #[doc = "Field `URSTIE` writer - URSTIE"]
-pub type URSTIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+pub type UrstieW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RSMIE` reader - RSMIE"]
-pub type RSMIE_R = crate::BitReader<bool>;
+pub type RsmieR = crate::BitReader;
 #[doc = "Field `RSMIE` writer - RSMIE"]
-pub type RSMIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+pub type RsmieW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SUSPIE` reader - SUSPIE"]
-pub type SUSPIE_R = crate::BitReader<bool>;
+pub type SuspieR = crate::BitReader;
 #[doc = "Field `SUSPIE` writer - SUSPIE"]
-pub type SUSPIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+pub type SuspieW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ESOFIE` reader - ESOFIE"]
-pub type ESOFIE_R = crate::BitReader<bool>;
+pub type EsofieR = crate::BitReader;
 #[doc = "Field `ESOFIE` writer - ESOFIE"]
-pub type ESOFIE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+pub type EsofieW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP0IE` reader - EP0IE"]
-pub type EP0IE_R = crate::BitReader<bool>;
+pub type Ep0ieR = crate::BitReader;
 #[doc = "Field `EP0IE` writer - EP0IE"]
-pub type EP0IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+pub type Ep0ieW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP1IE` reader - EP1IE"]
-pub type EP1IE_R = crate::BitReader<bool>;
+pub type Ep1ieR = crate::BitReader;
 #[doc = "Field `EP1IE` writer - EP1IE"]
-pub type EP1IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+pub type Ep1ieW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP2IE` reader - EP2IE"]
-pub type EP2IE_R = crate::BitReader<bool>;
+pub type Ep2ieR = crate::BitReader;
 #[doc = "Field `EP2IE` writer - EP2IE"]
-pub type EP2IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+pub type Ep2ieW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP3IE` reader - EP3IE"]
-pub type EP3IE_R = crate::BitReader<bool>;
+pub type Ep3ieR = crate::BitReader;
 #[doc = "Field `EP3IE` writer - EP3IE"]
-pub type EP3IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+pub type Ep3ieW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP4IE` reader - EP4IE"]
-pub type EP4IE_R = crate::BitReader<bool>;
+pub type Ep4ieR = crate::BitReader;
 #[doc = "Field `EP4IE` writer - EP4IE"]
-pub type EP4IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+pub type Ep4ieW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP5IE` reader - EP5IE"]
-pub type EP5IE_R = crate::BitReader<bool>;
+pub type Ep5ieR = crate::BitReader;
 #[doc = "Field `EP5IE` writer - EP5IE"]
-pub type EP5IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+pub type Ep5ieW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP6IE` reader - EP6IE"]
-pub type EP6IE_R = crate::BitReader<bool>;
+pub type Ep6ieR = crate::BitReader;
 #[doc = "Field `EP6IE` writer - EP6IE"]
-pub type EP6IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+pub type Ep6ieW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP7IE` reader - EP7IE"]
-pub type EP7IE_R = crate::BitReader<bool>;
+pub type Ep7ieR = crate::BitReader;
 #[doc = "Field `EP7IE` writer - EP7IE"]
-pub type EP7IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IER_SPEC, bool, O>;
+pub type Ep7ieW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - UGIE"]
     #[inline(always)]
-    pub fn ugie(&self) -> UGIE_R {
-        UGIE_R::new((self.bits & 1) != 0)
+    pub fn ugie(&self) -> UgieR {
+        UgieR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - SOFIE"]
     #[inline(always)]
-    pub fn sofie(&self) -> SOFIE_R {
-        SOFIE_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn sofie(&self) -> SofieR {
+        SofieR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - URSTIE"]
     #[inline(always)]
-    pub fn urstie(&self) -> URSTIE_R {
-        URSTIE_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn urstie(&self) -> UrstieR {
+        UrstieR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - RSMIE"]
     #[inline(always)]
-    pub fn rsmie(&self) -> RSMIE_R {
-        RSMIE_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn rsmie(&self) -> RsmieR {
+        RsmieR::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - SUSPIE"]
     #[inline(always)]
-    pub fn suspie(&self) -> SUSPIE_R {
-        SUSPIE_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn suspie(&self) -> SuspieR {
+        SuspieR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - ESOFIE"]
     #[inline(always)]
-    pub fn esofie(&self) -> ESOFIE_R {
-        ESOFIE_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn esofie(&self) -> EsofieR {
+        EsofieR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 8 - EP0IE"]
     #[inline(always)]
-    pub fn ep0ie(&self) -> EP0IE_R {
-        EP0IE_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn ep0ie(&self) -> Ep0ieR {
+        Ep0ieR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - EP1IE"]
     #[inline(always)]
-    pub fn ep1ie(&self) -> EP1IE_R {
-        EP1IE_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn ep1ie(&self) -> Ep1ieR {
+        Ep1ieR::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - EP2IE"]
     #[inline(always)]
-    pub fn ep2ie(&self) -> EP2IE_R {
-        EP2IE_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn ep2ie(&self) -> Ep2ieR {
+        Ep2ieR::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - EP3IE"]
     #[inline(always)]
-    pub fn ep3ie(&self) -> EP3IE_R {
-        EP3IE_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn ep3ie(&self) -> Ep3ieR {
+        Ep3ieR::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - EP4IE"]
     #[inline(always)]
-    pub fn ep4ie(&self) -> EP4IE_R {
-        EP4IE_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn ep4ie(&self) -> Ep4ieR {
+        Ep4ieR::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - EP5IE"]
     #[inline(always)]
-    pub fn ep5ie(&self) -> EP5IE_R {
-        EP5IE_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn ep5ie(&self) -> Ep5ieR {
+        Ep5ieR::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - EP6IE"]
     #[inline(always)]
-    pub fn ep6ie(&self) -> EP6IE_R {
-        EP6IE_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn ep6ie(&self) -> Ep6ieR {
+        Ep6ieR::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - EP7IE"]
     #[inline(always)]
-    pub fn ep7ie(&self) -> EP7IE_R {
-        EP7IE_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn ep7ie(&self) -> Ep7ieR {
+        Ep7ieR::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - UGIE"]
     #[inline(always)]
     #[must_use]
-    pub fn ugie(&mut self) -> UGIE_W<0> {
-        UGIE_W::new(self)
+    pub fn ugie(&mut self) -> UgieW<IerSpec> {
+        UgieW::new(self, 0)
     }
     #[doc = "Bit 1 - SOFIE"]
     #[inline(always)]
     #[must_use]
-    pub fn sofie(&mut self) -> SOFIE_W<1> {
-        SOFIE_W::new(self)
+    pub fn sofie(&mut self) -> SofieW<IerSpec> {
+        SofieW::new(self, 1)
     }
     #[doc = "Bit 2 - URSTIE"]
     #[inline(always)]
     #[must_use]
-    pub fn urstie(&mut self) -> URSTIE_W<2> {
-        URSTIE_W::new(self)
+    pub fn urstie(&mut self) -> UrstieW<IerSpec> {
+        UrstieW::new(self, 2)
     }
     #[doc = "Bit 3 - RSMIE"]
     #[inline(always)]
     #[must_use]
-    pub fn rsmie(&mut self) -> RSMIE_W<3> {
-        RSMIE_W::new(self)
+    pub fn rsmie(&mut self) -> RsmieW<IerSpec> {
+        RsmieW::new(self, 3)
     }
     #[doc = "Bit 4 - SUSPIE"]
     #[inline(always)]
     #[must_use]
-    pub fn suspie(&mut self) -> SUSPIE_W<4> {
-        SUSPIE_W::new(self)
+    pub fn suspie(&mut self) -> SuspieW<IerSpec> {
+        SuspieW::new(self, 4)
     }
     #[doc = "Bit 5 - ESOFIE"]
     #[inline(always)]
     #[must_use]
-    pub fn esofie(&mut self) -> ESOFIE_W<5> {
-        ESOFIE_W::new(self)
+    pub fn esofie(&mut self) -> EsofieW<IerSpec> {
+        EsofieW::new(self, 5)
     }
     #[doc = "Bit 8 - EP0IE"]
     #[inline(always)]
     #[must_use]
-    pub fn ep0ie(&mut self) -> EP0IE_W<8> {
-        EP0IE_W::new(self)
+    pub fn ep0ie(&mut self) -> Ep0ieW<IerSpec> {
+        Ep0ieW::new(self, 8)
     }
     #[doc = "Bit 9 - EP1IE"]
     #[inline(always)]
     #[must_use]
-    pub fn ep1ie(&mut self) -> EP1IE_W<9> {
-        EP1IE_W::new(self)
+    pub fn ep1ie(&mut self) -> Ep1ieW<IerSpec> {
+        Ep1ieW::new(self, 9)
     }
     #[doc = "Bit 10 - EP2IE"]
     #[inline(always)]
     #[must_use]
-    pub fn ep2ie(&mut self) -> EP2IE_W<10> {
-        EP2IE_W::new(self)
+    pub fn ep2ie(&mut self) -> Ep2ieW<IerSpec> {
+        Ep2ieW::new(self, 10)
     }
     #[doc = "Bit 11 - EP3IE"]
     #[inline(always)]
     #[must_use]
-    pub fn ep3ie(&mut self) -> EP3IE_W<11> {
-        EP3IE_W::new(self)
+    pub fn ep3ie(&mut self) -> Ep3ieW<IerSpec> {
+        Ep3ieW::new(self, 11)
     }
     #[doc = "Bit 12 - EP4IE"]
     #[inline(always)]
     #[must_use]
-    pub fn ep4ie(&mut self) -> EP4IE_W<12> {
-        EP4IE_W::new(self)
+    pub fn ep4ie(&mut self) -> Ep4ieW<IerSpec> {
+        Ep4ieW::new(self, 12)
     }
     #[doc = "Bit 13 - EP5IE"]
     #[inline(always)]
     #[must_use]
-    pub fn ep5ie(&mut self) -> EP5IE_W<13> {
-        EP5IE_W::new(self)
+    pub fn ep5ie(&mut self) -> Ep5ieW<IerSpec> {
+        Ep5ieW::new(self, 13)
     }
     #[doc = "Bit 14 - EP6IE"]
     #[inline(always)]
     #[must_use]
-    pub fn ep6ie(&mut self) -> EP6IE_W<14> {
-        EP6IE_W::new(self)
+    pub fn ep6ie(&mut self) -> Ep6ieW<IerSpec> {
+        Ep6ieW::new(self, 14)
     }
     #[doc = "Bit 15 - EP7IE"]
     #[inline(always)]
     #[must_use]
-    pub fn ep7ie(&mut self) -> EP7IE_W<15> {
-        EP7IE_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn ep7ie(&mut self) -> Ep7ieW<IerSpec> {
+        Ep7ieW::new(self, 15)
     }
 }
-#[doc = "IER\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ier](index.html) module"]
-pub struct IER_SPEC;
-impl crate::RegisterSpec for IER_SPEC {
+#[doc = "IER\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ier::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ier::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct IerSpec;
+impl crate::RegisterSpec for IerSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ier::R](R) reader structure"]
-impl crate::Readable for IER_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ier::W](W) writer structure"]
-impl crate::Writable for IER_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`ier::R`](R) reader structure"]
+impl crate::Readable for IerSpec {}
+#[doc = "`write(|w| ..)` method takes [`ier::W`](W) writer structure"]
+impl crate::Writable for IerSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IER to value 0"]
-impl crate::Resettable for IER_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for IerSpec {
+    const RESET_VALUE: u32 = 0;
 }

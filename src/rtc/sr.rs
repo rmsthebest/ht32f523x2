@@ -1,110 +1,70 @@
 #[doc = "Register `SR` reader"]
-pub struct R(crate::R<SR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SrSpec>;
 #[doc = "Register `SR` writer"]
-pub struct W(crate::W<SR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SrSpec>;
 #[doc = "Field `CSECFLAG` reader - CSECFLAG"]
-pub type CSECFLAG_R = crate::BitReader<bool>;
+pub type CsecflagR = crate::BitReader;
 #[doc = "Field `CSECFLAG` writer - CSECFLAG"]
-pub type CSECFLAG_W<'a, const O: u8> = crate::BitWriter<'a, u32, SR_SPEC, bool, O>;
+pub type CsecflagW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMFLAG` reader - CMFLAG"]
-pub type CMFLAG_R = crate::BitReader<bool>;
+pub type CmflagR = crate::BitReader;
 #[doc = "Field `CMFLAG` writer - CMFLAG"]
-pub type CMFLAG_W<'a, const O: u8> = crate::BitWriter<'a, u32, SR_SPEC, bool, O>;
+pub type CmflagW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVFLAG` reader - OVFLAG"]
-pub type OVFLAG_R = crate::BitReader<bool>;
+pub type OvflagR = crate::BitReader;
 #[doc = "Field `OVFLAG` writer - OVFLAG"]
-pub type OVFLAG_W<'a, const O: u8> = crate::BitWriter<'a, u32, SR_SPEC, bool, O>;
+pub type OvflagW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - CSECFLAG"]
     #[inline(always)]
-    pub fn csecflag(&self) -> CSECFLAG_R {
-        CSECFLAG_R::new((self.bits & 1) != 0)
+    pub fn csecflag(&self) -> CsecflagR {
+        CsecflagR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - CMFLAG"]
     #[inline(always)]
-    pub fn cmflag(&self) -> CMFLAG_R {
-        CMFLAG_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn cmflag(&self) -> CmflagR {
+        CmflagR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - OVFLAG"]
     #[inline(always)]
-    pub fn ovflag(&self) -> OVFLAG_R {
-        OVFLAG_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn ovflag(&self) -> OvflagR {
+        OvflagR::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - CSECFLAG"]
     #[inline(always)]
     #[must_use]
-    pub fn csecflag(&mut self) -> CSECFLAG_W<0> {
-        CSECFLAG_W::new(self)
+    pub fn csecflag(&mut self) -> CsecflagW<SrSpec> {
+        CsecflagW::new(self, 0)
     }
     #[doc = "Bit 1 - CMFLAG"]
     #[inline(always)]
     #[must_use]
-    pub fn cmflag(&mut self) -> CMFLAG_W<1> {
-        CMFLAG_W::new(self)
+    pub fn cmflag(&mut self) -> CmflagW<SrSpec> {
+        CmflagW::new(self, 1)
     }
     #[doc = "Bit 2 - OVFLAG"]
     #[inline(always)]
     #[must_use]
-    pub fn ovflag(&mut self) -> OVFLAG_W<2> {
-        OVFLAG_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn ovflag(&mut self) -> OvflagW<SrSpec> {
+        OvflagW::new(self, 2)
     }
 }
-#[doc = "SR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sr](index.html) module"]
-pub struct SR_SPEC;
-impl crate::RegisterSpec for SR_SPEC {
+#[doc = "SR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct SrSpec;
+impl crate::RegisterSpec for SrSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sr::R](R) reader structure"]
-impl crate::Readable for SR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sr::W](W) writer structure"]
-impl crate::Writable for SR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`sr::R`](R) reader structure"]
+impl crate::Readable for SrSpec {}
+#[doc = "`write(|w| ..)` method takes [`sr::W`](W) writer structure"]
+impl crate::Writable for SrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SR to value 0"]
-impl crate::Resettable for SR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for SrSpec {
+    const RESET_VALUE: u32 = 0;
 }

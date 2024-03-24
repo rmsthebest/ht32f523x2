@@ -1,260 +1,220 @@
 #[doc = "Register `CR` reader"]
-pub struct R(crate::R<CR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CrSpec>;
 #[doc = "Register `CR` writer"]
-pub struct W(crate::W<CR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CrSpec>;
 #[doc = "Field `MODE0` reader - MODE0"]
-pub type MODE0_R = crate::FieldReader<u8, u8>;
+pub type Mode0R = crate::FieldReader;
 #[doc = "Field `MODE0` writer - MODE0"]
-pub type MODE0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR_SPEC, u8, u8, 2, O>;
+pub type Mode0W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MODE1` reader - MODE1"]
-pub type MODE1_R = crate::FieldReader<u8, u8>;
+pub type Mode1R = crate::FieldReader;
 #[doc = "Field `MODE1` writer - MODE1"]
-pub type MODE1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR_SPEC, u8, u8, 2, O>;
+pub type Mode1W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MODE2` reader - MODE2"]
-pub type MODE2_R = crate::FieldReader<u8, u8>;
+pub type Mode2R = crate::FieldReader;
 #[doc = "Field `MODE2` writer - MODE2"]
-pub type MODE2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR_SPEC, u8, u8, 2, O>;
+pub type Mode2W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `MODE3` reader - MODE3"]
-pub type MODE3_R = crate::FieldReader<u8, u8>;
+pub type Mode3R = crate::FieldReader;
 #[doc = "Field `MODE3` writer - MODE3"]
-pub type MODE3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR_SPEC, u8, u8, 2, O>;
+pub type Mode3W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BANKEN0` reader - BANKEN0"]
-pub type BANKEN0_R = crate::BitReader<bool>;
+pub type Banken0R = crate::BitReader;
 #[doc = "Field `BANKEN0` writer - BANKEN0"]
-pub type BANKEN0_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type Banken0W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BANKEN1` reader - BANKEN1"]
-pub type BANKEN1_R = crate::BitReader<bool>;
+pub type Banken1R = crate::BitReader;
 #[doc = "Field `BANKEN1` writer - BANKEN1"]
-pub type BANKEN1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type Banken1W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BANKEN2` reader - BANKEN2"]
-pub type BANKEN2_R = crate::BitReader<bool>;
+pub type Banken2R = crate::BitReader;
 #[doc = "Field `BANKEN2` writer - BANKEN2"]
-pub type BANKEN2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type Banken2W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BANKEN3` reader - BANKEN3"]
-pub type BANKEN3_R = crate::BitReader<bool>;
+pub type Banken3R = crate::BitReader;
 #[doc = "Field `BANKEN3` writer - BANKEN3"]
-pub type BANKEN3_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type Banken3W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NOIDLE0` reader - NOIDLE0"]
-pub type NOIDLE0_R = crate::BitReader<bool>;
+pub type Noidle0R = crate::BitReader;
 #[doc = "Field `NOIDLE0` writer - NOIDLE0"]
-pub type NOIDLE0_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type Noidle0W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NOIDLE1` reader - NOIDLE1"]
-pub type NOIDLE1_R = crate::BitReader<bool>;
+pub type Noidle1R = crate::BitReader;
 #[doc = "Field `NOIDLE1` writer - NOIDLE1"]
-pub type NOIDLE1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type Noidle1W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NOIDLE2` reader - NOIDLE2"]
-pub type NOIDLE2_R = crate::BitReader<bool>;
+pub type Noidle2R = crate::BitReader;
 #[doc = "Field `NOIDLE2` writer - NOIDLE2"]
-pub type NOIDLE2_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type Noidle2W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NOIDLE3` reader - NOIDLE3"]
-pub type NOIDLE3_R = crate::BitReader<bool>;
+pub type Noidle3R = crate::BitReader;
 #[doc = "Field `NOIDLE3` writer - NOIDLE3"]
-pub type NOIDLE3_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR_SPEC, bool, O>;
+pub type Noidle3W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IDLET` reader - IDLET"]
-pub type IDLET_R = crate::FieldReader<u8, u8>;
+pub type IdletR = crate::FieldReader;
 #[doc = "Field `IDLET` writer - IDLET"]
-pub type IDLET_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR_SPEC, u8, u8, 4, O>;
+pub type IdletW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:1 - MODE0"]
     #[inline(always)]
-    pub fn mode0(&self) -> MODE0_R {
-        MODE0_R::new((self.bits & 3) as u8)
+    pub fn mode0(&self) -> Mode0R {
+        Mode0R::new((self.bits & 3) as u8)
     }
     #[doc = "Bits 2:3 - MODE1"]
     #[inline(always)]
-    pub fn mode1(&self) -> MODE1_R {
-        MODE1_R::new(((self.bits >> 2) & 3) as u8)
+    pub fn mode1(&self) -> Mode1R {
+        Mode1R::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - MODE2"]
     #[inline(always)]
-    pub fn mode2(&self) -> MODE2_R {
-        MODE2_R::new(((self.bits >> 4) & 3) as u8)
+    pub fn mode2(&self) -> Mode2R {
+        Mode2R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bits 6:7 - MODE3"]
     #[inline(always)]
-    pub fn mode3(&self) -> MODE3_R {
-        MODE3_R::new(((self.bits >> 6) & 3) as u8)
+    pub fn mode3(&self) -> Mode3R {
+        Mode3R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bit 8 - BANKEN0"]
     #[inline(always)]
-    pub fn banken0(&self) -> BANKEN0_R {
-        BANKEN0_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn banken0(&self) -> Banken0R {
+        Banken0R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - BANKEN1"]
     #[inline(always)]
-    pub fn banken1(&self) -> BANKEN1_R {
-        BANKEN1_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn banken1(&self) -> Banken1R {
+        Banken1R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - BANKEN2"]
     #[inline(always)]
-    pub fn banken2(&self) -> BANKEN2_R {
-        BANKEN2_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn banken2(&self) -> Banken2R {
+        Banken2R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - BANKEN3"]
     #[inline(always)]
-    pub fn banken3(&self) -> BANKEN3_R {
-        BANKEN3_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn banken3(&self) -> Banken3R {
+        Banken3R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - NOIDLE0"]
     #[inline(always)]
-    pub fn noidle0(&self) -> NOIDLE0_R {
-        NOIDLE0_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn noidle0(&self) -> Noidle0R {
+        Noidle0R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - NOIDLE1"]
     #[inline(always)]
-    pub fn noidle1(&self) -> NOIDLE1_R {
-        NOIDLE1_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn noidle1(&self) -> Noidle1R {
+        Noidle1R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - NOIDLE2"]
     #[inline(always)]
-    pub fn noidle2(&self) -> NOIDLE2_R {
-        NOIDLE2_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn noidle2(&self) -> Noidle2R {
+        Noidle2R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - NOIDLE3"]
     #[inline(always)]
-    pub fn noidle3(&self) -> NOIDLE3_R {
-        NOIDLE3_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn noidle3(&self) -> Noidle3R {
+        Noidle3R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 28:31 - IDLET"]
     #[inline(always)]
-    pub fn idlet(&self) -> IDLET_R {
-        IDLET_R::new(((self.bits >> 28) & 0x0f) as u8)
+    pub fn idlet(&self) -> IdletR {
+        IdletR::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - MODE0"]
     #[inline(always)]
     #[must_use]
-    pub fn mode0(&mut self) -> MODE0_W<0> {
-        MODE0_W::new(self)
+    pub fn mode0(&mut self) -> Mode0W<CrSpec> {
+        Mode0W::new(self, 0)
     }
     #[doc = "Bits 2:3 - MODE1"]
     #[inline(always)]
     #[must_use]
-    pub fn mode1(&mut self) -> MODE1_W<2> {
-        MODE1_W::new(self)
+    pub fn mode1(&mut self) -> Mode1W<CrSpec> {
+        Mode1W::new(self, 2)
     }
     #[doc = "Bits 4:5 - MODE2"]
     #[inline(always)]
     #[must_use]
-    pub fn mode2(&mut self) -> MODE2_W<4> {
-        MODE2_W::new(self)
+    pub fn mode2(&mut self) -> Mode2W<CrSpec> {
+        Mode2W::new(self, 4)
     }
     #[doc = "Bits 6:7 - MODE3"]
     #[inline(always)]
     #[must_use]
-    pub fn mode3(&mut self) -> MODE3_W<6> {
-        MODE3_W::new(self)
+    pub fn mode3(&mut self) -> Mode3W<CrSpec> {
+        Mode3W::new(self, 6)
     }
     #[doc = "Bit 8 - BANKEN0"]
     #[inline(always)]
     #[must_use]
-    pub fn banken0(&mut self) -> BANKEN0_W<8> {
-        BANKEN0_W::new(self)
+    pub fn banken0(&mut self) -> Banken0W<CrSpec> {
+        Banken0W::new(self, 8)
     }
     #[doc = "Bit 9 - BANKEN1"]
     #[inline(always)]
     #[must_use]
-    pub fn banken1(&mut self) -> BANKEN1_W<9> {
-        BANKEN1_W::new(self)
+    pub fn banken1(&mut self) -> Banken1W<CrSpec> {
+        Banken1W::new(self, 9)
     }
     #[doc = "Bit 10 - BANKEN2"]
     #[inline(always)]
     #[must_use]
-    pub fn banken2(&mut self) -> BANKEN2_W<10> {
-        BANKEN2_W::new(self)
+    pub fn banken2(&mut self) -> Banken2W<CrSpec> {
+        Banken2W::new(self, 10)
     }
     #[doc = "Bit 11 - BANKEN3"]
     #[inline(always)]
     #[must_use]
-    pub fn banken3(&mut self) -> BANKEN3_W<11> {
-        BANKEN3_W::new(self)
+    pub fn banken3(&mut self) -> Banken3W<CrSpec> {
+        Banken3W::new(self, 11)
     }
     #[doc = "Bit 12 - NOIDLE0"]
     #[inline(always)]
     #[must_use]
-    pub fn noidle0(&mut self) -> NOIDLE0_W<12> {
-        NOIDLE0_W::new(self)
+    pub fn noidle0(&mut self) -> Noidle0W<CrSpec> {
+        Noidle0W::new(self, 12)
     }
     #[doc = "Bit 13 - NOIDLE1"]
     #[inline(always)]
     #[must_use]
-    pub fn noidle1(&mut self) -> NOIDLE1_W<13> {
-        NOIDLE1_W::new(self)
+    pub fn noidle1(&mut self) -> Noidle1W<CrSpec> {
+        Noidle1W::new(self, 13)
     }
     #[doc = "Bit 14 - NOIDLE2"]
     #[inline(always)]
     #[must_use]
-    pub fn noidle2(&mut self) -> NOIDLE2_W<14> {
-        NOIDLE2_W::new(self)
+    pub fn noidle2(&mut self) -> Noidle2W<CrSpec> {
+        Noidle2W::new(self, 14)
     }
     #[doc = "Bit 15 - NOIDLE3"]
     #[inline(always)]
     #[must_use]
-    pub fn noidle3(&mut self) -> NOIDLE3_W<15> {
-        NOIDLE3_W::new(self)
+    pub fn noidle3(&mut self) -> Noidle3W<CrSpec> {
+        Noidle3W::new(self, 15)
     }
     #[doc = "Bits 28:31 - IDLET"]
     #[inline(always)]
     #[must_use]
-    pub fn idlet(&mut self) -> IDLET_W<28> {
-        IDLET_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn idlet(&mut self) -> IdletW<CrSpec> {
+        IdletW::new(self, 28)
     }
 }
-#[doc = "CR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cr](index.html) module"]
-pub struct CR_SPEC;
-impl crate::RegisterSpec for CR_SPEC {
+#[doc = "CR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CrSpec;
+impl crate::RegisterSpec for CrSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cr::R](R) reader structure"]
-impl crate::Readable for CR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cr::W](W) writer structure"]
-impl crate::Writable for CR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`cr::R`](R) reader structure"]
+impl crate::Readable for CrSpec {}
+#[doc = "`write(|w| ..)` method takes [`cr::W`](W) writer structure"]
+impl crate::Writable for CrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR to value 0"]
-impl crate::Resettable for CR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for CrSpec {
+    const RESET_VALUE: u32 = 0;
 }

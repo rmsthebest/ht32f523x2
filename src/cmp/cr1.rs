@@ -1,260 +1,220 @@
 #[doc = "Register `CR1` reader"]
-pub struct R(crate::R<CR1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CR1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CR1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CR1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<Cr1Spec>;
 #[doc = "Register `CR1` writer"]
-pub struct W(crate::W<CR1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CR1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CR1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CR1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<Cr1Spec>;
 #[doc = "Field `CMPEN` reader - CMPEN"]
-pub type CMPEN_R = crate::BitReader<bool>;
+pub type CmpenR = crate::BitReader;
 #[doc = "Field `CMPEN` writer - CMPEN"]
-pub type CMPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
+pub type CmpenW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMPSM` reader - CMPSM"]
-pub type CMPSM_R = crate::BitReader<bool>;
+pub type CmpsmR = crate::BitReader;
 #[doc = "Field `CMPSM` writer - CMPSM"]
-pub type CMPSM_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
+pub type CmpsmW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMPHM` reader - CMPHM"]
-pub type CMPHM_R = crate::FieldReader<u8, u8>;
+pub type CmphmR = crate::FieldReader;
 #[doc = "Field `CMPHM` writer - CMPHM"]
-pub type CMPHM_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR1_SPEC, u8, u8, 2, O>;
+pub type CmphmW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CMPINSEL` reader - CMPINSEL"]
-pub type CMPINSEL_R = crate::FieldReader<u8, u8>;
+pub type CmpinselR = crate::FieldReader;
 #[doc = "Field `CMPINSEL` writer - CMPINSEL"]
-pub type CMPINSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR1_SPEC, u8, u8, 2, O>;
+pub type CmpinselW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CMPPOL` reader - CMPPOL"]
-pub type CMPPOL_R = crate::BitReader<bool>;
+pub type CmppolR = crate::BitReader;
 #[doc = "Field `CMPPOL` writer - CMPPOL"]
-pub type CMPPOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
+pub type CmppolW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SYNCSEL` reader - SYNCSEL"]
-pub type SYNCSEL_R = crate::BitReader<bool>;
+pub type SyncselR = crate::BitReader;
 #[doc = "Field `SYNCSEL` writer - SYNCSEL"]
-pub type SYNCSEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
+pub type SyncselW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CVREN` reader - CVREN"]
-pub type CVREN_R = crate::BitReader<bool>;
+pub type CvrenR = crate::BitReader;
 #[doc = "Field `CVREN` writer - CVREN"]
-pub type CVREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
+pub type CvrenW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CVROE` reader - CVROE"]
-pub type CVROE_R = crate::BitReader<bool>;
+pub type CvroeR = crate::BitReader;
 #[doc = "Field `CVROE` writer - CVROE"]
-pub type CVROE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
+pub type CvroeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CVRSS` reader - CVRSS"]
-pub type CVRSS_R = crate::BitReader<bool>;
+pub type CvrssR = crate::BitReader;
 #[doc = "Field `CVRSS` writer - CVRSS"]
-pub type CVRSS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
+pub type CvrssW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMPOSEL` reader - CMPOSEL"]
-pub type CMPOSEL_R = crate::FieldReader<u8, u8>;
+pub type CmposelR = crate::FieldReader;
 #[doc = "Field `CMPOSEL` writer - CMPOSEL"]
-pub type CMPOSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR1_SPEC, u8, u8, 3, O>;
+pub type CmposelW<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CMPWPEN` reader - CMPWPEN"]
-pub type CMPWPEN_R = crate::BitReader<bool>;
+pub type CmpwpenR = crate::BitReader;
 #[doc = "Field `CMPWPEN` writer - CMPWPEN"]
-pub type CMPWPEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
+pub type CmpwpenW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMPSTS` reader - CMPSTS"]
-pub type CMPSTS_R = crate::BitReader<bool>;
+pub type CmpstsR = crate::BitReader;
 #[doc = "Field `CMPSTS` writer - CMPSTS"]
-pub type CMPSTS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CR1_SPEC, bool, O>;
+pub type CmpstsW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PROTECT` reader - PROTECT"]
-pub type PROTECT_R = crate::FieldReader<u16, u16>;
+pub type ProtectR = crate::FieldReader<u16>;
 #[doc = "Field `PROTECT` writer - PROTECT"]
-pub type PROTECT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CR1_SPEC, u16, u16, 16, O>;
+pub type ProtectW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bit 0 - CMPEN"]
     #[inline(always)]
-    pub fn cmpen(&self) -> CMPEN_R {
-        CMPEN_R::new((self.bits & 1) != 0)
+    pub fn cmpen(&self) -> CmpenR {
+        CmpenR::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - CMPSM"]
     #[inline(always)]
-    pub fn cmpsm(&self) -> CMPSM_R {
-        CMPSM_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn cmpsm(&self) -> CmpsmR {
+        CmpsmR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 2:3 - CMPHM"]
     #[inline(always)]
-    pub fn cmphm(&self) -> CMPHM_R {
-        CMPHM_R::new(((self.bits >> 2) & 3) as u8)
+    pub fn cmphm(&self) -> CmphmR {
+        CmphmR::new(((self.bits >> 2) & 3) as u8)
     }
     #[doc = "Bits 4:5 - CMPINSEL"]
     #[inline(always)]
-    pub fn cmpinsel(&self) -> CMPINSEL_R {
-        CMPINSEL_R::new(((self.bits >> 4) & 3) as u8)
+    pub fn cmpinsel(&self) -> CmpinselR {
+        CmpinselR::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bit 6 - CMPPOL"]
     #[inline(always)]
-    pub fn cmppol(&self) -> CMPPOL_R {
-        CMPPOL_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn cmppol(&self) -> CmppolR {
+        CmppolR::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - SYNCSEL"]
     #[inline(always)]
-    pub fn syncsel(&self) -> SYNCSEL_R {
-        SYNCSEL_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn syncsel(&self) -> SyncselR {
+        SyncselR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - CVREN"]
     #[inline(always)]
-    pub fn cvren(&self) -> CVREN_R {
-        CVREN_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn cvren(&self) -> CvrenR {
+        CvrenR::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - CVROE"]
     #[inline(always)]
-    pub fn cvroe(&self) -> CVROE_R {
-        CVROE_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn cvroe(&self) -> CvroeR {
+        CvroeR::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - CVRSS"]
     #[inline(always)]
-    pub fn cvrss(&self) -> CVRSS_R {
-        CVRSS_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn cvrss(&self) -> CvrssR {
+        CvrssR::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bits 11:13 - CMPOSEL"]
     #[inline(always)]
-    pub fn cmposel(&self) -> CMPOSEL_R {
-        CMPOSEL_R::new(((self.bits >> 11) & 7) as u8)
+    pub fn cmposel(&self) -> CmposelR {
+        CmposelR::new(((self.bits >> 11) & 7) as u8)
     }
     #[doc = "Bit 14 - CMPWPEN"]
     #[inline(always)]
-    pub fn cmpwpen(&self) -> CMPWPEN_R {
-        CMPWPEN_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn cmpwpen(&self) -> CmpwpenR {
+        CmpwpenR::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - CMPSTS"]
     #[inline(always)]
-    pub fn cmpsts(&self) -> CMPSTS_R {
-        CMPSTS_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn cmpsts(&self) -> CmpstsR {
+        CmpstsR::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 16:31 - PROTECT"]
     #[inline(always)]
-    pub fn protect(&self) -> PROTECT_R {
-        PROTECT_R::new(((self.bits >> 16) & 0xffff) as u16)
+    pub fn protect(&self) -> ProtectR {
+        ProtectR::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
 impl W {
     #[doc = "Bit 0 - CMPEN"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpen(&mut self) -> CMPEN_W<0> {
-        CMPEN_W::new(self)
+    pub fn cmpen(&mut self) -> CmpenW<Cr1Spec> {
+        CmpenW::new(self, 0)
     }
     #[doc = "Bit 1 - CMPSM"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpsm(&mut self) -> CMPSM_W<1> {
-        CMPSM_W::new(self)
+    pub fn cmpsm(&mut self) -> CmpsmW<Cr1Spec> {
+        CmpsmW::new(self, 1)
     }
     #[doc = "Bits 2:3 - CMPHM"]
     #[inline(always)]
     #[must_use]
-    pub fn cmphm(&mut self) -> CMPHM_W<2> {
-        CMPHM_W::new(self)
+    pub fn cmphm(&mut self) -> CmphmW<Cr1Spec> {
+        CmphmW::new(self, 2)
     }
     #[doc = "Bits 4:5 - CMPINSEL"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpinsel(&mut self) -> CMPINSEL_W<4> {
-        CMPINSEL_W::new(self)
+    pub fn cmpinsel(&mut self) -> CmpinselW<Cr1Spec> {
+        CmpinselW::new(self, 4)
     }
     #[doc = "Bit 6 - CMPPOL"]
     #[inline(always)]
     #[must_use]
-    pub fn cmppol(&mut self) -> CMPPOL_W<6> {
-        CMPPOL_W::new(self)
+    pub fn cmppol(&mut self) -> CmppolW<Cr1Spec> {
+        CmppolW::new(self, 6)
     }
     #[doc = "Bit 7 - SYNCSEL"]
     #[inline(always)]
     #[must_use]
-    pub fn syncsel(&mut self) -> SYNCSEL_W<7> {
-        SYNCSEL_W::new(self)
+    pub fn syncsel(&mut self) -> SyncselW<Cr1Spec> {
+        SyncselW::new(self, 7)
     }
     #[doc = "Bit 8 - CVREN"]
     #[inline(always)]
     #[must_use]
-    pub fn cvren(&mut self) -> CVREN_W<8> {
-        CVREN_W::new(self)
+    pub fn cvren(&mut self) -> CvrenW<Cr1Spec> {
+        CvrenW::new(self, 8)
     }
     #[doc = "Bit 9 - CVROE"]
     #[inline(always)]
     #[must_use]
-    pub fn cvroe(&mut self) -> CVROE_W<9> {
-        CVROE_W::new(self)
+    pub fn cvroe(&mut self) -> CvroeW<Cr1Spec> {
+        CvroeW::new(self, 9)
     }
     #[doc = "Bit 10 - CVRSS"]
     #[inline(always)]
     #[must_use]
-    pub fn cvrss(&mut self) -> CVRSS_W<10> {
-        CVRSS_W::new(self)
+    pub fn cvrss(&mut self) -> CvrssW<Cr1Spec> {
+        CvrssW::new(self, 10)
     }
     #[doc = "Bits 11:13 - CMPOSEL"]
     #[inline(always)]
     #[must_use]
-    pub fn cmposel(&mut self) -> CMPOSEL_W<11> {
-        CMPOSEL_W::new(self)
+    pub fn cmposel(&mut self) -> CmposelW<Cr1Spec> {
+        CmposelW::new(self, 11)
     }
     #[doc = "Bit 14 - CMPWPEN"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpwpen(&mut self) -> CMPWPEN_W<14> {
-        CMPWPEN_W::new(self)
+    pub fn cmpwpen(&mut self) -> CmpwpenW<Cr1Spec> {
+        CmpwpenW::new(self, 14)
     }
     #[doc = "Bit 15 - CMPSTS"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpsts(&mut self) -> CMPSTS_W<15> {
-        CMPSTS_W::new(self)
+    pub fn cmpsts(&mut self) -> CmpstsW<Cr1Spec> {
+        CmpstsW::new(self, 15)
     }
     #[doc = "Bits 16:31 - PROTECT"]
     #[inline(always)]
     #[must_use]
-    pub fn protect(&mut self) -> PROTECT_W<16> {
-        PROTECT_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn protect(&mut self) -> ProtectW<Cr1Spec> {
+        ProtectW::new(self, 16)
     }
 }
-#[doc = "CR1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cr1](index.html) module"]
-pub struct CR1_SPEC;
-impl crate::RegisterSpec for CR1_SPEC {
+#[doc = "CR1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Cr1Spec;
+impl crate::RegisterSpec for Cr1Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [cr1::R](R) reader structure"]
-impl crate::Readable for CR1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [cr1::W](W) writer structure"]
-impl crate::Writable for CR1_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`cr1::R`](R) reader structure"]
+impl crate::Readable for Cr1Spec {}
+#[doc = "`write(|w| ..)` method takes [`cr1::W`](W) writer structure"]
+impl crate::Writable for Cr1Spec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR1 to value 0"]
-impl crate::Resettable for CR1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for Cr1Spec {
+    const RESET_VALUE: u32 = 0;
 }

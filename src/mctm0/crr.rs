@@ -1,80 +1,40 @@
 #[doc = "Register `CRR` reader"]
-pub struct R(crate::R<CRR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CRR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CRR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CRR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CrrSpec>;
 #[doc = "Register `CRR` writer"]
-pub struct W(crate::W<CRR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CRR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CRR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CRR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CrrSpec>;
 #[doc = "Field `CRV` reader - CRV"]
-pub type CRV_R = crate::FieldReader<u16, u16>;
+pub type CrvR = crate::FieldReader<u16>;
 #[doc = "Field `CRV` writer - CRV"]
-pub type CRV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CRR_SPEC, u16, u16, 16, O>;
+pub type CrvW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - CRV"]
     #[inline(always)]
-    pub fn crv(&self) -> CRV_R {
-        CRV_R::new((self.bits & 0xffff) as u16)
+    pub fn crv(&self) -> CrvR {
+        CrvR::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
     #[doc = "Bits 0:15 - CRV"]
     #[inline(always)]
     #[must_use]
-    pub fn crv(&mut self) -> CRV_W<0> {
-        CRV_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn crv(&mut self) -> CrvW<CrrSpec> {
+        CrvW::new(self, 0)
     }
 }
-#[doc = "CRR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [crr](index.html) module"]
-pub struct CRR_SPEC;
-impl crate::RegisterSpec for CRR_SPEC {
+#[doc = "CRR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`crr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`crr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CrrSpec;
+impl crate::RegisterSpec for CrrSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [crr::R](R) reader structure"]
-impl crate::Readable for CRR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [crr::W](W) writer structure"]
-impl crate::Writable for CRR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`crr::R`](R) reader structure"]
+impl crate::Readable for CrrSpec {}
+#[doc = "`write(|w| ..)` method takes [`crr::W`](W) writer structure"]
+impl crate::Writable for CrrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CRR to value 0"]
-impl crate::Resettable for CRR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for CrrSpec {
+    const RESET_VALUE: u32 = 0;
 }

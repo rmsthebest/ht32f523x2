@@ -1,80 +1,40 @@
 #[doc = "Register `CH0CTSR` reader"]
-pub struct R(crate::R<CH0CTSR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CH0CTSR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CH0CTSR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CH0CTSR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<Ch0ctsrSpec>;
 #[doc = "Register `CH0CTSR` writer"]
-pub struct W(crate::W<CH0CTSR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CH0CTSR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CH0CTSR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CH0CTSR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<Ch0ctsrSpec>;
 #[doc = "Field `CBLKCNT` reader - CBLKCNT"]
-pub type CBLKCNT_R = crate::FieldReader<u16, u16>;
+pub type CblkcntR = crate::FieldReader<u16>;
 #[doc = "Field `CBLKCNT` writer - CBLKCNT"]
-pub type CBLKCNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CH0CTSR_SPEC, u16, u16, 16, O>;
+pub type CblkcntW<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 16:31 - CBLKCNT"]
     #[inline(always)]
-    pub fn cblkcnt(&self) -> CBLKCNT_R {
-        CBLKCNT_R::new(((self.bits >> 16) & 0xffff) as u16)
+    pub fn cblkcnt(&self) -> CblkcntR {
+        CblkcntR::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
 impl W {
     #[doc = "Bits 16:31 - CBLKCNT"]
     #[inline(always)]
     #[must_use]
-    pub fn cblkcnt(&mut self) -> CBLKCNT_W<16> {
-        CBLKCNT_W::new(self)
-    }
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
-        self
+    pub fn cblkcnt(&mut self) -> CblkcntW<Ch0ctsrSpec> {
+        CblkcntW::new(self, 16)
     }
 }
-#[doc = "CH0CTSR\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ch0ctsr](index.html) module"]
-pub struct CH0CTSR_SPEC;
-impl crate::RegisterSpec for CH0CTSR_SPEC {
+#[doc = "CH0CTSR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch0ctsr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch0ctsr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Ch0ctsrSpec;
+impl crate::RegisterSpec for Ch0ctsrSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ch0ctsr::R](R) reader structure"]
-impl crate::Readable for CH0CTSR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ch0ctsr::W](W) writer structure"]
-impl crate::Writable for CH0CTSR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+#[doc = "`read()` method returns [`ch0ctsr::R`](R) reader structure"]
+impl crate::Readable for Ch0ctsrSpec {}
+#[doc = "`write(|w| ..)` method takes [`ch0ctsr::W`](W) writer structure"]
+impl crate::Writable for Ch0ctsrSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CH0CTSR to value 0"]
-impl crate::Resettable for CH0CTSR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+impl crate::Resettable for Ch0ctsrSpec {
+    const RESET_VALUE: u32 = 0;
 }

@@ -1,70 +1,138 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
-    #[doc = "0x00 - CR"]
-    pub cr: CR,
-    #[doc = "0x04 - SR"]
-    pub sr: SR,
-    #[doc = "0x08 - CCR"]
-    pub ccr: CCR,
-    #[doc = "0x0c - ETUR"]
-    pub etur: ETUR,
-    #[doc = "0x10 - GTR"]
-    pub gtr: GTR,
-    #[doc = "0x14 - WTR"]
-    pub wtr: WTR,
-    #[doc = "0x18 - IER"]
-    pub ier: IER,
-    #[doc = "0x1c - IPR"]
-    pub ipr: IPR,
-    #[doc = "0x20 - TXB"]
-    pub txb: TXB,
-    #[doc = "0x24 - RXB"]
-    pub rxb: RXB,
-    #[doc = "0x28 - PSCR"]
-    pub pscr: PSCR,
+    cr: Cr,
+    sr: Sr,
+    ccr: Ccr,
+    etur: Etur,
+    gtr: Gtr,
+    wtr: Wtr,
+    ier: Ier,
+    ipr: Ipr,
+    txb: Txb,
+    rxb: Rxb,
+    pscr: Pscr,
 }
-#[doc = "CR (rw) register accessor: an alias for `Reg<CR_SPEC>`"]
-pub type CR = crate::Reg<cr::CR_SPEC>;
+impl RegisterBlock {
+    #[doc = "0x00 - CR"]
+    #[inline(always)]
+    pub const fn cr(&self) -> &Cr {
+        &self.cr
+    }
+    #[doc = "0x04 - SR"]
+    #[inline(always)]
+    pub const fn sr(&self) -> &Sr {
+        &self.sr
+    }
+    #[doc = "0x08 - CCR"]
+    #[inline(always)]
+    pub const fn ccr(&self) -> &Ccr {
+        &self.ccr
+    }
+    #[doc = "0x0c - ETUR"]
+    #[inline(always)]
+    pub const fn etur(&self) -> &Etur {
+        &self.etur
+    }
+    #[doc = "0x10 - GTR"]
+    #[inline(always)]
+    pub const fn gtr(&self) -> &Gtr {
+        &self.gtr
+    }
+    #[doc = "0x14 - WTR"]
+    #[inline(always)]
+    pub const fn wtr(&self) -> &Wtr {
+        &self.wtr
+    }
+    #[doc = "0x18 - IER"]
+    #[inline(always)]
+    pub const fn ier(&self) -> &Ier {
+        &self.ier
+    }
+    #[doc = "0x1c - IPR"]
+    #[inline(always)]
+    pub const fn ipr(&self) -> &Ipr {
+        &self.ipr
+    }
+    #[doc = "0x20 - TXB"]
+    #[inline(always)]
+    pub const fn txb(&self) -> &Txb {
+        &self.txb
+    }
+    #[doc = "0x24 - RXB"]
+    #[inline(always)]
+    pub const fn rxb(&self) -> &Rxb {
+        &self.rxb
+    }
+    #[doc = "0x28 - PSCR"]
+    #[inline(always)]
+    pub const fn pscr(&self) -> &Pscr {
+        &self.pscr
+    }
+}
+#[doc = "CR (rw) register accessor: CR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cr`]
+module"]
+#[doc(alias = "CR")]
+pub type Cr = crate::Reg<cr::CrSpec>;
 #[doc = "CR"]
 pub mod cr;
-#[doc = "SR (rw) register accessor: an alias for `Reg<SR_SPEC>`"]
-pub type SR = crate::Reg<sr::SR_SPEC>;
+#[doc = "SR (rw) register accessor: SR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sr`]
+module"]
+#[doc(alias = "SR")]
+pub type Sr = crate::Reg<sr::SrSpec>;
 #[doc = "SR"]
 pub mod sr;
-#[doc = "CCR (rw) register accessor: an alias for `Reg<CCR_SPEC>`"]
-pub type CCR = crate::Reg<ccr::CCR_SPEC>;
+#[doc = "CCR (rw) register accessor: CCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ccr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ccr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ccr`]
+module"]
+#[doc(alias = "CCR")]
+pub type Ccr = crate::Reg<ccr::CcrSpec>;
 #[doc = "CCR"]
 pub mod ccr;
-#[doc = "ETUR (rw) register accessor: an alias for `Reg<ETUR_SPEC>`"]
-pub type ETUR = crate::Reg<etur::ETUR_SPEC>;
+#[doc = "ETUR (rw) register accessor: ETUR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`etur::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`etur::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etur`]
+module"]
+#[doc(alias = "ETUR")]
+pub type Etur = crate::Reg<etur::EturSpec>;
 #[doc = "ETUR"]
 pub mod etur;
-#[doc = "GTR (rw) register accessor: an alias for `Reg<GTR_SPEC>`"]
-pub type GTR = crate::Reg<gtr::GTR_SPEC>;
+#[doc = "GTR (rw) register accessor: GTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gtr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gtr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gtr`]
+module"]
+#[doc(alias = "GTR")]
+pub type Gtr = crate::Reg<gtr::GtrSpec>;
 #[doc = "GTR"]
 pub mod gtr;
-#[doc = "WTR (rw) register accessor: an alias for `Reg<WTR_SPEC>`"]
-pub type WTR = crate::Reg<wtr::WTR_SPEC>;
+#[doc = "WTR (rw) register accessor: WTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wtr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wtr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wtr`]
+module"]
+#[doc(alias = "WTR")]
+pub type Wtr = crate::Reg<wtr::WtrSpec>;
 #[doc = "WTR"]
 pub mod wtr;
-#[doc = "IER (rw) register accessor: an alias for `Reg<IER_SPEC>`"]
-pub type IER = crate::Reg<ier::IER_SPEC>;
+#[doc = "IER (rw) register accessor: IER\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ier::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ier::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ier`]
+module"]
+#[doc(alias = "IER")]
+pub type Ier = crate::Reg<ier::IerSpec>;
 #[doc = "IER"]
 pub mod ier;
-#[doc = "IPR (rw) register accessor: an alias for `Reg<IPR_SPEC>`"]
-pub type IPR = crate::Reg<ipr::IPR_SPEC>;
+#[doc = "IPR (rw) register accessor: IPR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ipr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ipr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ipr`]
+module"]
+#[doc(alias = "IPR")]
+pub type Ipr = crate::Reg<ipr::IprSpec>;
 #[doc = "IPR"]
 pub mod ipr;
-#[doc = "TXB (rw) register accessor: an alias for `Reg<TXB_SPEC>`"]
-pub type TXB = crate::Reg<txb::TXB_SPEC>;
+#[doc = "TXB (rw) register accessor: TXB\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`txb::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`txb::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@txb`]
+module"]
+#[doc(alias = "TXB")]
+pub type Txb = crate::Reg<txb::TxbSpec>;
 #[doc = "TXB"]
 pub mod txb;
-#[doc = "RXB (rw) register accessor: an alias for `Reg<RXB_SPEC>`"]
-pub type RXB = crate::Reg<rxb::RXB_SPEC>;
+#[doc = "RXB (rw) register accessor: RXB\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rxb::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rxb::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rxb`]
+module"]
+#[doc(alias = "RXB")]
+pub type Rxb = crate::Reg<rxb::RxbSpec>;
 #[doc = "RXB"]
 pub mod rxb;
-#[doc = "PSCR (rw) register accessor: an alias for `Reg<PSCR_SPEC>`"]
-pub type PSCR = crate::Reg<pscr::PSCR_SPEC>;
+#[doc = "PSCR (rw) register accessor: PSCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pscr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pscr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pscr`]
+module"]
+#[doc(alias = "PSCR")]
+pub type Pscr = crate::Reg<pscr::PscrSpec>;
 #[doc = "PSCR"]
 pub mod pscr;
