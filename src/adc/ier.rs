@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - ADIES"]
     #[inline(always)]
-    #[must_use]
-    pub fn adies(&mut self) -> AdiesW<IerSpec> {
+    pub fn adies(&mut self) -> AdiesW<'_, IerSpec> {
         AdiesW::new(self, 0)
     }
     #[doc = "Bit 1 - ADIEG"]
     #[inline(always)]
-    #[must_use]
-    pub fn adieg(&mut self) -> AdiegW<IerSpec> {
+    pub fn adieg(&mut self) -> AdiegW<'_, IerSpec> {
         AdiegW::new(self, 1)
     }
     #[doc = "Bit 2 - ADIEC"]
     #[inline(always)]
-    #[must_use]
-    pub fn adiec(&mut self) -> AdiecW<IerSpec> {
+    pub fn adiec(&mut self) -> AdiecW<'_, IerSpec> {
         AdiecW::new(self, 2)
     }
     #[doc = "Bit 16 - ADIEL"]
     #[inline(always)]
-    #[must_use]
-    pub fn adiel(&mut self) -> AdielW<IerSpec> {
+    pub fn adiel(&mut self) -> AdielW<'_, IerSpec> {
         AdielW::new(self, 16)
     }
     #[doc = "Bit 17 - ADIEU"]
     #[inline(always)]
-    #[must_use]
-    pub fn adieu(&mut self) -> AdieuW<IerSpec> {
+    pub fn adieu(&mut self) -> AdieuW<'_, IerSpec> {
         AdieuW::new(self, 17)
     }
     #[doc = "Bit 24 - ADIEO"]
     #[inline(always)]
-    #[must_use]
-    pub fn adieo(&mut self) -> AdieoW<IerSpec> {
+    pub fn adieo(&mut self) -> AdieoW<'_, IerSpec> {
         AdieoW::new(self, 24)
     }
 }
-#[doc = "IMR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ier::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ier::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IMR\n\nYou can [`read`](crate::Reg::read) this register and get [`ier::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ier::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IerSpec;
 impl crate::RegisterSpec for IerSpec {
     type Ux = u32;
@@ -106,10 +100,6 @@ impl crate::Readable for IerSpec {}
 #[doc = "`write(|w| ..)` method takes [`ier::W`](W) writer structure"]
 impl crate::Writable for IerSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IER to value 0"]
-impl crate::Resettable for IerSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IerSpec {}

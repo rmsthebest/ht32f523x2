@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - TCNT0"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcnt0(&mut self) -> Tcnt0W<Ep5tcrSpec> {
+    pub fn tcnt0(&mut self) -> Tcnt0W<'_, Ep5tcrSpec> {
         Tcnt0W::new(self, 0)
     }
     #[doc = "Bits 16:25 - TCNT1"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcnt1(&mut self) -> Tcnt1W<Ep5tcrSpec> {
+    pub fn tcnt1(&mut self) -> Tcnt1W<'_, Ep5tcrSpec> {
         Tcnt1W::new(self, 16)
     }
 }
-#[doc = "EP5TCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ep5tcr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ep5tcr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "EP5TCR\n\nYou can [`read`](crate::Reg::read) this register and get [`ep5tcr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ep5tcr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ep5tcrSpec;
 impl crate::RegisterSpec for Ep5tcrSpec {
     type Ux = u32;
@@ -46,10 +44,6 @@ impl crate::Readable for Ep5tcrSpec {}
 #[doc = "`write(|w| ..)` method takes [`ep5tcr::W`](W) writer structure"]
 impl crate::Writable for Ep5tcrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EP5TCR to value 0"]
-impl crate::Resettable for Ep5tcrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Ep5tcrSpec {}

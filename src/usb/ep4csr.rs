@@ -79,54 +79,46 @@ impl R {
 impl W {
     #[doc = "Bit 0 - DTGTX"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtgtx(&mut self) -> DtgtxW<Ep4csrSpec> {
+    pub fn dtgtx(&mut self) -> DtgtxW<'_, Ep4csrSpec> {
         DtgtxW::new(self, 0)
     }
     #[doc = "Bit 1 - NAKTX"]
     #[inline(always)]
-    #[must_use]
-    pub fn naktx(&mut self) -> NaktxW<Ep4csrSpec> {
+    pub fn naktx(&mut self) -> NaktxW<'_, Ep4csrSpec> {
         NaktxW::new(self, 1)
     }
     #[doc = "Bit 2 - STLTX"]
     #[inline(always)]
-    #[must_use]
-    pub fn stltx(&mut self) -> StltxW<Ep4csrSpec> {
+    pub fn stltx(&mut self) -> StltxW<'_, Ep4csrSpec> {
         StltxW::new(self, 2)
     }
     #[doc = "Bit 3 - DTGRX"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtgrx(&mut self) -> DtgrxW<Ep4csrSpec> {
+    pub fn dtgrx(&mut self) -> DtgrxW<'_, Ep4csrSpec> {
         DtgrxW::new(self, 3)
     }
     #[doc = "Bit 4 - NAKRX"]
     #[inline(always)]
-    #[must_use]
-    pub fn nakrx(&mut self) -> NakrxW<Ep4csrSpec> {
+    pub fn nakrx(&mut self) -> NakrxW<'_, Ep4csrSpec> {
         NakrxW::new(self, 4)
     }
     #[doc = "Bit 5 - STLRX"]
     #[inline(always)]
-    #[must_use]
-    pub fn stlrx(&mut self) -> StlrxW<Ep4csrSpec> {
+    pub fn stlrx(&mut self) -> StlrxW<'_, Ep4csrSpec> {
         StlrxW::new(self, 5)
     }
     #[doc = "Bit 6 - MDBTG"]
     #[inline(always)]
-    #[must_use]
-    pub fn mdbtg(&mut self) -> MdbtgW<Ep4csrSpec> {
+    pub fn mdbtg(&mut self) -> MdbtgW<'_, Ep4csrSpec> {
         MdbtgW::new(self, 6)
     }
     #[doc = "Bit 7 - UDBTG"]
     #[inline(always)]
-    #[must_use]
-    pub fn udbtg(&mut self) -> UdbtgW<Ep4csrSpec> {
+    pub fn udbtg(&mut self) -> UdbtgW<'_, Ep4csrSpec> {
         UdbtgW::new(self, 7)
     }
 }
-#[doc = "EP4CSR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ep4csr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ep4csr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "EP4CSR\n\nYou can [`read`](crate::Reg::read) this register and get [`ep4csr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ep4csr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ep4csrSpec;
 impl crate::RegisterSpec for Ep4csrSpec {
     type Ux = u32;
@@ -136,10 +128,6 @@ impl crate::Readable for Ep4csrSpec {}
 #[doc = "`write(|w| ..)` method takes [`ep4csr::W`](W) writer structure"]
 impl crate::Writable for Ep4csrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EP4CSR to value 0"]
-impl crate::Resettable for Ep4csrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Ep4csrSpec {}

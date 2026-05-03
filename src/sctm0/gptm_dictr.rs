@@ -115,78 +115,66 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CH0CCIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0ccie(&mut self) -> Ch0ccieW<GptmDictrSpec> {
+    pub fn ch0ccie(&mut self) -> Ch0ccieW<'_, GptmDictrSpec> {
         Ch0ccieW::new(self, 0)
     }
     #[doc = "Bit 1 - CH1CCIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1ccie(&mut self) -> Ch1ccieW<GptmDictrSpec> {
+    pub fn ch1ccie(&mut self) -> Ch1ccieW<'_, GptmDictrSpec> {
         Ch1ccieW::new(self, 1)
     }
     #[doc = "Bit 2 - CH2CCIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2ccie(&mut self) -> Ch2ccieW<GptmDictrSpec> {
+    pub fn ch2ccie(&mut self) -> Ch2ccieW<'_, GptmDictrSpec> {
         Ch2ccieW::new(self, 2)
     }
     #[doc = "Bit 3 - CH3CCIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3ccie(&mut self) -> Ch3ccieW<GptmDictrSpec> {
+    pub fn ch3ccie(&mut self) -> Ch3ccieW<'_, GptmDictrSpec> {
         Ch3ccieW::new(self, 3)
     }
     #[doc = "Bit 8 - UEVIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn uevie(&mut self) -> UevieW<GptmDictrSpec> {
+    pub fn uevie(&mut self) -> UevieW<'_, GptmDictrSpec> {
         UevieW::new(self, 8)
     }
     #[doc = "Bit 10 - TEVIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tevie(&mut self) -> TevieW<GptmDictrSpec> {
+    pub fn tevie(&mut self) -> TevieW<'_, GptmDictrSpec> {
         TevieW::new(self, 10)
     }
     #[doc = "Bit 16 - CH0CCDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0ccde(&mut self) -> Ch0ccdeW<GptmDictrSpec> {
+    pub fn ch0ccde(&mut self) -> Ch0ccdeW<'_, GptmDictrSpec> {
         Ch0ccdeW::new(self, 16)
     }
     #[doc = "Bit 17 - CH1CCDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1ccde(&mut self) -> Ch1ccdeW<GptmDictrSpec> {
+    pub fn ch1ccde(&mut self) -> Ch1ccdeW<'_, GptmDictrSpec> {
         Ch1ccdeW::new(self, 17)
     }
     #[doc = "Bit 18 - CH2CCDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2ccde(&mut self) -> Ch2ccdeW<GptmDictrSpec> {
+    pub fn ch2ccde(&mut self) -> Ch2ccdeW<'_, GptmDictrSpec> {
         Ch2ccdeW::new(self, 18)
     }
     #[doc = "Bit 19 - CH3CCDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3ccde(&mut self) -> Ch3ccdeW<GptmDictrSpec> {
+    pub fn ch3ccde(&mut self) -> Ch3ccdeW<'_, GptmDictrSpec> {
         Ch3ccdeW::new(self, 19)
     }
     #[doc = "Bit 24 - UEVDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn uevde(&mut self) -> UevdeW<GptmDictrSpec> {
+    pub fn uevde(&mut self) -> UevdeW<'_, GptmDictrSpec> {
         UevdeW::new(self, 24)
     }
     #[doc = "Bit 26 - TEVDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tevde(&mut self) -> TevdeW<GptmDictrSpec> {
+    pub fn tevde(&mut self) -> TevdeW<'_, GptmDictrSpec> {
         TevdeW::new(self, 26)
     }
 }
-#[doc = "GPTM_DICTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_dictr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_dictr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM_DICTR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_dictr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_dictr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GptmDictrSpec;
 impl crate::RegisterSpec for GptmDictrSpec {
     type Ux = u32;
@@ -196,10 +184,6 @@ impl crate::Readable for GptmDictrSpec {}
 #[doc = "`write(|w| ..)` method takes [`gptm_dictr::W`](W) writer structure"]
 impl crate::Writable for GptmDictrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GPTM_DICTR to value 0"]
-impl crate::Resettable for GptmDictrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GptmDictrSpec {}

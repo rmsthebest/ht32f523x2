@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CMPFF"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpff(&mut self) -> CmpffW<Tfr1Spec> {
+    pub fn cmpff(&mut self) -> CmpffW<'_, Tfr1Spec> {
         CmpffW::new(self, 0)
     }
     #[doc = "Bit 1 - CMPRF"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmprf(&mut self) -> CmprfW<Tfr1Spec> {
+    pub fn cmprf(&mut self) -> CmprfW<'_, Tfr1Spec> {
         CmprfW::new(self, 1)
     }
     #[doc = "Bit 8 - CMPFDEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpfden(&mut self) -> CmpfdenW<Tfr1Spec> {
+    pub fn cmpfden(&mut self) -> CmpfdenW<'_, Tfr1Spec> {
         CmpfdenW::new(self, 8)
     }
     #[doc = "Bit 9 - CMPRF"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmprden(&mut self) -> CmprdenW<Tfr1Spec> {
+    pub fn cmprden(&mut self) -> CmprdenW<'_, Tfr1Spec> {
         CmprdenW::new(self, 9)
     }
 }
-#[doc = "TFR1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tfr1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tfr1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TFR1\n\nYou can [`read`](crate::Reg::read) this register and get [`tfr1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tfr1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Tfr1Spec;
 impl crate::RegisterSpec for Tfr1Spec {
     type Ux = u32;
@@ -76,10 +72,6 @@ impl crate::Readable for Tfr1Spec {}
 #[doc = "`write(|w| ..)` method takes [`tfr1::W`](W) writer structure"]
 impl crate::Writable for Tfr1Spec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TFR1 to value 0"]
-impl crate::Resettable for Tfr1Spec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Tfr1Spec {}

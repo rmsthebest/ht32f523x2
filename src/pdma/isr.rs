@@ -277,186 +277,156 @@ impl R {
 impl W {
     #[doc = "Bit 0 - GEISTA0"]
     #[inline(always)]
-    #[must_use]
-    pub fn geista0(&mut self) -> Geista0W<IsrSpec> {
+    pub fn geista0(&mut self) -> Geista0W<'_, IsrSpec> {
         Geista0W::new(self, 0)
     }
     #[doc = "Bit 1 - BEISTA0"]
     #[inline(always)]
-    #[must_use]
-    pub fn beista0(&mut self) -> Beista0W<IsrSpec> {
+    pub fn beista0(&mut self) -> Beista0W<'_, IsrSpec> {
         Beista0W::new(self, 1)
     }
     #[doc = "Bit 2 - HTISTA0"]
     #[inline(always)]
-    #[must_use]
-    pub fn htista0(&mut self) -> Htista0W<IsrSpec> {
+    pub fn htista0(&mut self) -> Htista0W<'_, IsrSpec> {
         Htista0W::new(self, 2)
     }
     #[doc = "Bit 3 - TCISTA0"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcista0(&mut self) -> Tcista0W<IsrSpec> {
+    pub fn tcista0(&mut self) -> Tcista0W<'_, IsrSpec> {
         Tcista0W::new(self, 3)
     }
     #[doc = "Bit 4 - TEISTA0"]
     #[inline(always)]
-    #[must_use]
-    pub fn teista0(&mut self) -> Teista0W<IsrSpec> {
+    pub fn teista0(&mut self) -> Teista0W<'_, IsrSpec> {
         Teista0W::new(self, 4)
     }
     #[doc = "Bit 5 - GEISTA1"]
     #[inline(always)]
-    #[must_use]
-    pub fn geista1(&mut self) -> Geista1W<IsrSpec> {
+    pub fn geista1(&mut self) -> Geista1W<'_, IsrSpec> {
         Geista1W::new(self, 5)
     }
     #[doc = "Bit 6 - BEISTA1"]
     #[inline(always)]
-    #[must_use]
-    pub fn beista1(&mut self) -> Beista1W<IsrSpec> {
+    pub fn beista1(&mut self) -> Beista1W<'_, IsrSpec> {
         Beista1W::new(self, 6)
     }
     #[doc = "Bit 7 - HTISTA1"]
     #[inline(always)]
-    #[must_use]
-    pub fn htista1(&mut self) -> Htista1W<IsrSpec> {
+    pub fn htista1(&mut self) -> Htista1W<'_, IsrSpec> {
         Htista1W::new(self, 7)
     }
     #[doc = "Bit 8 - TCISTA1"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcista1(&mut self) -> Tcista1W<IsrSpec> {
+    pub fn tcista1(&mut self) -> Tcista1W<'_, IsrSpec> {
         Tcista1W::new(self, 8)
     }
     #[doc = "Bit 9 - TEISTA1"]
     #[inline(always)]
-    #[must_use]
-    pub fn teista1(&mut self) -> Teista1W<IsrSpec> {
+    pub fn teista1(&mut self) -> Teista1W<'_, IsrSpec> {
         Teista1W::new(self, 9)
     }
     #[doc = "Bit 10 - GEISTA2"]
     #[inline(always)]
-    #[must_use]
-    pub fn geista2(&mut self) -> Geista2W<IsrSpec> {
+    pub fn geista2(&mut self) -> Geista2W<'_, IsrSpec> {
         Geista2W::new(self, 10)
     }
     #[doc = "Bit 11 - BEISTA2"]
     #[inline(always)]
-    #[must_use]
-    pub fn beista2(&mut self) -> Beista2W<IsrSpec> {
+    pub fn beista2(&mut self) -> Beista2W<'_, IsrSpec> {
         Beista2W::new(self, 11)
     }
     #[doc = "Bit 12 - HTISTA2"]
     #[inline(always)]
-    #[must_use]
-    pub fn htista2(&mut self) -> Htista2W<IsrSpec> {
+    pub fn htista2(&mut self) -> Htista2W<'_, IsrSpec> {
         Htista2W::new(self, 12)
     }
     #[doc = "Bit 13 - TCISTA2"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcista2(&mut self) -> Tcista2W<IsrSpec> {
+    pub fn tcista2(&mut self) -> Tcista2W<'_, IsrSpec> {
         Tcista2W::new(self, 13)
     }
     #[doc = "Bit 14 - TEISTA2"]
     #[inline(always)]
-    #[must_use]
-    pub fn teista2(&mut self) -> Teista2W<IsrSpec> {
+    pub fn teista2(&mut self) -> Teista2W<'_, IsrSpec> {
         Teista2W::new(self, 14)
     }
     #[doc = "Bit 15 - GEISTA3"]
     #[inline(always)]
-    #[must_use]
-    pub fn geista3(&mut self) -> Geista3W<IsrSpec> {
+    pub fn geista3(&mut self) -> Geista3W<'_, IsrSpec> {
         Geista3W::new(self, 15)
     }
     #[doc = "Bit 16 - BEISTA3"]
     #[inline(always)]
-    #[must_use]
-    pub fn beista3(&mut self) -> Beista3W<IsrSpec> {
+    pub fn beista3(&mut self) -> Beista3W<'_, IsrSpec> {
         Beista3W::new(self, 16)
     }
     #[doc = "Bit 17 - HTISTA3"]
     #[inline(always)]
-    #[must_use]
-    pub fn htista3(&mut self) -> Htista3W<IsrSpec> {
+    pub fn htista3(&mut self) -> Htista3W<'_, IsrSpec> {
         Htista3W::new(self, 17)
     }
     #[doc = "Bit 18 - TCISTA3"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcista3(&mut self) -> Tcista3W<IsrSpec> {
+    pub fn tcista3(&mut self) -> Tcista3W<'_, IsrSpec> {
         Tcista3W::new(self, 18)
     }
     #[doc = "Bit 19 - TEISTA3"]
     #[inline(always)]
-    #[must_use]
-    pub fn teista3(&mut self) -> Teista3W<IsrSpec> {
+    pub fn teista3(&mut self) -> Teista3W<'_, IsrSpec> {
         Teista3W::new(self, 19)
     }
     #[doc = "Bit 20 - GEISTA4"]
     #[inline(always)]
-    #[must_use]
-    pub fn geista4(&mut self) -> Geista4W<IsrSpec> {
+    pub fn geista4(&mut self) -> Geista4W<'_, IsrSpec> {
         Geista4W::new(self, 20)
     }
     #[doc = "Bit 21 - BEISTA4"]
     #[inline(always)]
-    #[must_use]
-    pub fn beista4(&mut self) -> Beista4W<IsrSpec> {
+    pub fn beista4(&mut self) -> Beista4W<'_, IsrSpec> {
         Beista4W::new(self, 21)
     }
     #[doc = "Bit 22 - HTISTA4"]
     #[inline(always)]
-    #[must_use]
-    pub fn htista4(&mut self) -> Htista4W<IsrSpec> {
+    pub fn htista4(&mut self) -> Htista4W<'_, IsrSpec> {
         Htista4W::new(self, 22)
     }
     #[doc = "Bit 23 - TCISTA4"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcista4(&mut self) -> Tcista4W<IsrSpec> {
+    pub fn tcista4(&mut self) -> Tcista4W<'_, IsrSpec> {
         Tcista4W::new(self, 23)
     }
     #[doc = "Bit 24 - TEISTA4"]
     #[inline(always)]
-    #[must_use]
-    pub fn teista4(&mut self) -> Teista4W<IsrSpec> {
+    pub fn teista4(&mut self) -> Teista4W<'_, IsrSpec> {
         Teista4W::new(self, 24)
     }
     #[doc = "Bit 25 - GEISTA5"]
     #[inline(always)]
-    #[must_use]
-    pub fn geista5(&mut self) -> Geista5W<IsrSpec> {
+    pub fn geista5(&mut self) -> Geista5W<'_, IsrSpec> {
         Geista5W::new(self, 25)
     }
     #[doc = "Bit 26 - BEISTA5"]
     #[inline(always)]
-    #[must_use]
-    pub fn beista5(&mut self) -> Beista5W<IsrSpec> {
+    pub fn beista5(&mut self) -> Beista5W<'_, IsrSpec> {
         Beista5W::new(self, 26)
     }
     #[doc = "Bit 27 - HTISTA5"]
     #[inline(always)]
-    #[must_use]
-    pub fn htista5(&mut self) -> Htista5W<IsrSpec> {
+    pub fn htista5(&mut self) -> Htista5W<'_, IsrSpec> {
         Htista5W::new(self, 27)
     }
     #[doc = "Bit 28 - TCISTA5"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcista5(&mut self) -> Tcista5W<IsrSpec> {
+    pub fn tcista5(&mut self) -> Tcista5W<'_, IsrSpec> {
         Tcista5W::new(self, 28)
     }
     #[doc = "Bit 29 - TEISTA5"]
     #[inline(always)]
-    #[must_use]
-    pub fn teista5(&mut self) -> Teista5W<IsrSpec> {
+    pub fn teista5(&mut self) -> Teista5W<'_, IsrSpec> {
         Teista5W::new(self, 29)
     }
 }
-#[doc = "ISR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`isr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`isr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ISR\n\nYou can [`read`](crate::Reg::read) this register and get [`isr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`isr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IsrSpec;
 impl crate::RegisterSpec for IsrSpec {
     type Ux = u32;
@@ -466,10 +436,6 @@ impl crate::Readable for IsrSpec {}
 #[doc = "`write(|w| ..)` method takes [`isr::W`](W) writer structure"]
 impl crate::Writable for IsrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ISR to value 0"]
-impl crate::Resettable for IsrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IsrSpec {}

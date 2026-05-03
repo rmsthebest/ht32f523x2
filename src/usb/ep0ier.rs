@@ -115,78 +115,66 @@ impl R {
 impl W {
     #[doc = "Bit 0 - OTRXIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn otrxie(&mut self) -> OtrxieW<Ep0ierSpec> {
+    pub fn otrxie(&mut self) -> OtrxieW<'_, Ep0ierSpec> {
         OtrxieW::new(self, 0)
     }
     #[doc = "Bit 1 - ODRXIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrxie(&mut self) -> OdrxieW<Ep0ierSpec> {
+    pub fn odrxie(&mut self) -> OdrxieW<'_, Ep0ierSpec> {
         OdrxieW::new(self, 1)
     }
     #[doc = "Bit 2 - ODOVIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn odovie(&mut self) -> OdovieW<Ep0ierSpec> {
+    pub fn odovie(&mut self) -> OdovieW<'_, Ep0ierSpec> {
         OdovieW::new(self, 2)
     }
     #[doc = "Bit 3 - ITRXIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn itrxie(&mut self) -> ItrxieW<Ep0ierSpec> {
+    pub fn itrxie(&mut self) -> ItrxieW<'_, Ep0ierSpec> {
         ItrxieW::new(self, 3)
     }
     #[doc = "Bit 4 - IDTXIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn idtxie(&mut self) -> IdtxieW<Ep0ierSpec> {
+    pub fn idtxie(&mut self) -> IdtxieW<'_, Ep0ierSpec> {
         IdtxieW::new(self, 4)
     }
     #[doc = "Bit 5 - NAKIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn nakie(&mut self) -> NakieW<Ep0ierSpec> {
+    pub fn nakie(&mut self) -> NakieW<'_, Ep0ierSpec> {
         NakieW::new(self, 5)
     }
     #[doc = "Bit 6 - STLIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn stlie(&mut self) -> StlieW<Ep0ierSpec> {
+    pub fn stlie(&mut self) -> StlieW<'_, Ep0ierSpec> {
         StlieW::new(self, 6)
     }
     #[doc = "Bit 7 - UERIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn uerie(&mut self) -> UerieW<Ep0ierSpec> {
+    pub fn uerie(&mut self) -> UerieW<'_, Ep0ierSpec> {
         UerieW::new(self, 7)
     }
     #[doc = "Bit 8 - STRXIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn strxie(&mut self) -> StrxieW<Ep0ierSpec> {
+    pub fn strxie(&mut self) -> StrxieW<'_, Ep0ierSpec> {
         StrxieW::new(self, 8)
     }
     #[doc = "Bit 9 - SDRXIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn sdrxie(&mut self) -> SdrxieW<Ep0ierSpec> {
+    pub fn sdrxie(&mut self) -> SdrxieW<'_, Ep0ierSpec> {
         SdrxieW::new(self, 9)
     }
     #[doc = "Bit 10 - SDERIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn sderie(&mut self) -> SderieW<Ep0ierSpec> {
+    pub fn sderie(&mut self) -> SderieW<'_, Ep0ierSpec> {
         SderieW::new(self, 10)
     }
     #[doc = "Bit 11 - ZLRXIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn zlrxie(&mut self) -> ZlrxieW<Ep0ierSpec> {
+    pub fn zlrxie(&mut self) -> ZlrxieW<'_, Ep0ierSpec> {
         ZlrxieW::new(self, 11)
     }
 }
-#[doc = "EP0IER\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ep0ier::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ep0ier::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "EP0IER\n\nYou can [`read`](crate::Reg::read) this register and get [`ep0ier::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ep0ier::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ep0ierSpec;
 impl crate::RegisterSpec for Ep0ierSpec {
     type Ux = u32;
@@ -196,10 +184,6 @@ impl crate::Readable for Ep0ierSpec {}
 #[doc = "`write(|w| ..)` method takes [`ep0ier::W`](W) writer structure"]
 impl crate::Writable for Ep0ierSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EP0IER to value 0"]
-impl crate::Resettable for Ep0ierSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Ep0ierSpec {}

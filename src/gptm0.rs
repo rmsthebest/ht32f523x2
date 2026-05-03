@@ -177,170 +177,142 @@ impl RegisterBlock {
         &self.gptm_ch3acr
     }
 }
-#[doc = "GPTM_CNTCFR (rw) register accessor: GPTM_CNTCFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_cntcfr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_cntcfr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_cntcfr`]
-module"]
+#[doc = "GPTM_CNTCFR (rw) register accessor: GPTM_CNTCFR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_cntcfr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_cntcfr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_cntcfr`] module"]
 #[doc(alias = "GPTM_CNTCFR")]
 pub type GptmCntcfr = crate::Reg<gptm_cntcfr::GptmCntcfrSpec>;
 #[doc = "GPTM_CNTCFR"]
 pub mod gptm_cntcfr;
-#[doc = "GPTM_MDCFR (rw) register accessor: GPTM_MDCFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_mdcfr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_mdcfr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_mdcfr`]
-module"]
+#[doc = "GPTM_MDCFR (rw) register accessor: GPTM_MDCFR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_mdcfr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_mdcfr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_mdcfr`] module"]
 #[doc(alias = "GPTM_MDCFR")]
 pub type GptmMdcfr = crate::Reg<gptm_mdcfr::GptmMdcfrSpec>;
 #[doc = "GPTM_MDCFR"]
 pub mod gptm_mdcfr;
-#[doc = "GPTM_TRCFR (rw) register accessor: GPTM_TRCFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_trcfr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_trcfr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_trcfr`]
-module"]
+#[doc = "GPTM_TRCFR (rw) register accessor: GPTM_TRCFR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_trcfr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_trcfr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_trcfr`] module"]
 #[doc(alias = "GPTM_TRCFR")]
 pub type GptmTrcfr = crate::Reg<gptm_trcfr::GptmTrcfrSpec>;
 #[doc = "GPTM_TRCFR"]
 pub mod gptm_trcfr;
-#[doc = "GPTM_CTR (rw) register accessor: GPTM_CTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ctr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ctr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ctr`]
-module"]
+#[doc = "GPTM_CTR (rw) register accessor: GPTM_CTR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ctr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ctr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ctr`] module"]
 #[doc(alias = "GPTM_CTR")]
 pub type GptmCtr = crate::Reg<gptm_ctr::GptmCtrSpec>;
 #[doc = "GPTM_CTR"]
 pub mod gptm_ctr;
-#[doc = "GPTM_CH0ICFR (rw) register accessor: GPTM_CH0ICFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch0icfr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch0icfr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch0icfr`]
-module"]
+#[doc = "GPTM_CH0ICFR (rw) register accessor: GPTM_CH0ICFR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch0icfr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch0icfr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch0icfr`] module"]
 #[doc(alias = "GPTM_CH0ICFR")]
 pub type GptmCh0icfr = crate::Reg<gptm_ch0icfr::GptmCh0icfrSpec>;
 #[doc = "GPTM_CH0ICFR"]
 pub mod gptm_ch0icfr;
-#[doc = "GPTM_CH1ICFR (rw) register accessor: GPTM_CH1ICFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch1icfr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch1icfr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch1icfr`]
-module"]
+#[doc = "GPTM_CH1ICFR (rw) register accessor: GPTM_CH1ICFR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch1icfr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch1icfr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch1icfr`] module"]
 #[doc(alias = "GPTM_CH1ICFR")]
 pub type GptmCh1icfr = crate::Reg<gptm_ch1icfr::GptmCh1icfrSpec>;
 #[doc = "GPTM_CH1ICFR"]
 pub mod gptm_ch1icfr;
-#[doc = "GPTM_CH2ICFR (rw) register accessor: GPTM_CH2ICFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch2icfr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch2icfr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch2icfr`]
-module"]
+#[doc = "GPTM_CH2ICFR (rw) register accessor: GPTM_CH2ICFR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch2icfr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch2icfr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch2icfr`] module"]
 #[doc(alias = "GPTM_CH2ICFR")]
 pub type GptmCh2icfr = crate::Reg<gptm_ch2icfr::GptmCh2icfrSpec>;
 #[doc = "GPTM_CH2ICFR"]
 pub mod gptm_ch2icfr;
-#[doc = "GPTM_CH3ICFR (rw) register accessor: GPTM_CH3ICFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch3icfr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch3icfr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch3icfr`]
-module"]
+#[doc = "GPTM_CH3ICFR (rw) register accessor: GPTM_CH3ICFR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch3icfr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch3icfr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch3icfr`] module"]
 #[doc(alias = "GPTM_CH3ICFR")]
 pub type GptmCh3icfr = crate::Reg<gptm_ch3icfr::GptmCh3icfrSpec>;
 #[doc = "GPTM_CH3ICFR"]
 pub mod gptm_ch3icfr;
-#[doc = "GPTM_CH0OCFR (rw) register accessor: GPTM_CH0OCFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch0ocfr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch0ocfr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch0ocfr`]
-module"]
+#[doc = "GPTM_CH0OCFR (rw) register accessor: GPTM_CH0OCFR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch0ocfr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch0ocfr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch0ocfr`] module"]
 #[doc(alias = "GPTM_CH0OCFR")]
 pub type GptmCh0ocfr = crate::Reg<gptm_ch0ocfr::GptmCh0ocfrSpec>;
 #[doc = "GPTM_CH0OCFR"]
 pub mod gptm_ch0ocfr;
-#[doc = "GPTM_CH1OCFR (rw) register accessor: GPTM_CH1OCFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch1ocfr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch1ocfr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch1ocfr`]
-module"]
+#[doc = "GPTM_CH1OCFR (rw) register accessor: GPTM_CH1OCFR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch1ocfr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch1ocfr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch1ocfr`] module"]
 #[doc(alias = "GPTM_CH1OCFR")]
 pub type GptmCh1ocfr = crate::Reg<gptm_ch1ocfr::GptmCh1ocfrSpec>;
 #[doc = "GPTM_CH1OCFR"]
 pub mod gptm_ch1ocfr;
-#[doc = "GPTM_CH2OCFR (rw) register accessor: GPTM_CH2OCFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch2ocfr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch2ocfr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch2ocfr`]
-module"]
+#[doc = "GPTM_CH2OCFR (rw) register accessor: GPTM_CH2OCFR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch2ocfr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch2ocfr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch2ocfr`] module"]
 #[doc(alias = "GPTM_CH2OCFR")]
 pub type GptmCh2ocfr = crate::Reg<gptm_ch2ocfr::GptmCh2ocfrSpec>;
 #[doc = "GPTM_CH2OCFR"]
 pub mod gptm_ch2ocfr;
-#[doc = "GPTM_CH3OCFR (rw) register accessor: GPTM_CH3OCFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch3ocfr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch3ocfr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch3ocfr`]
-module"]
+#[doc = "GPTM_CH3OCFR (rw) register accessor: GPTM_CH3OCFR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch3ocfr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch3ocfr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch3ocfr`] module"]
 #[doc(alias = "GPTM_CH3OCFR")]
 pub type GptmCh3ocfr = crate::Reg<gptm_ch3ocfr::GptmCh3ocfrSpec>;
 #[doc = "GPTM_CH3OCFR"]
 pub mod gptm_ch3ocfr;
-#[doc = "GPTM_CHCTR (rw) register accessor: GPTM_CHCTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_chctr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_chctr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_chctr`]
-module"]
+#[doc = "GPTM_CHCTR (rw) register accessor: GPTM_CHCTR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_chctr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_chctr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_chctr`] module"]
 #[doc(alias = "GPTM_CHCTR")]
 pub type GptmChctr = crate::Reg<gptm_chctr::GptmChctrSpec>;
 #[doc = "GPTM_CHCTR"]
 pub mod gptm_chctr;
-#[doc = "GPTM_CHPOLR (rw) register accessor: GPTM_CHPOLR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_chpolr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_chpolr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_chpolr`]
-module"]
+#[doc = "GPTM_CHPOLR (rw) register accessor: GPTM_CHPOLR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_chpolr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_chpolr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_chpolr`] module"]
 #[doc(alias = "GPTM_CHPOLR")]
 pub type GptmChpolr = crate::Reg<gptm_chpolr::GptmChpolrSpec>;
 #[doc = "GPTM_CHPOLR"]
 pub mod gptm_chpolr;
-#[doc = "GPTM_DICTR (rw) register accessor: GPTM_DICTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_dictr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_dictr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_dictr`]
-module"]
+#[doc = "GPTM_DICTR (rw) register accessor: GPTM_DICTR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_dictr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_dictr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_dictr`] module"]
 #[doc(alias = "GPTM_DICTR")]
 pub type GptmDictr = crate::Reg<gptm_dictr::GptmDictrSpec>;
 #[doc = "GPTM_DICTR"]
 pub mod gptm_dictr;
-#[doc = "GPTM_EVGR (rw) register accessor: GPTM_EVGR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_evgr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_evgr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_evgr`]
-module"]
+#[doc = "GPTM_EVGR (rw) register accessor: GPTM_EVGR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_evgr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_evgr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_evgr`] module"]
 #[doc(alias = "GPTM_EVGR")]
 pub type GptmEvgr = crate::Reg<gptm_evgr::GptmEvgrSpec>;
 #[doc = "GPTM_EVGR"]
 pub mod gptm_evgr;
-#[doc = "GPTM_INTSR (rw) register accessor: GPTM_INTSR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_intsr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_intsr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_intsr`]
-module"]
+#[doc = "GPTM_INTSR (rw) register accessor: GPTM_INTSR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_intsr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_intsr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_intsr`] module"]
 #[doc(alias = "GPTM_INTSR")]
 pub type GptmIntsr = crate::Reg<gptm_intsr::GptmIntsrSpec>;
 #[doc = "GPTM_INTSR"]
 pub mod gptm_intsr;
-#[doc = "GPTM_CNTR (rw) register accessor: GPTM_CNTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_cntr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_cntr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_cntr`]
-module"]
+#[doc = "GPTM_CNTR (rw) register accessor: GPTM_CNTR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_cntr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_cntr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_cntr`] module"]
 #[doc(alias = "GPTM_CNTR")]
 pub type GptmCntr = crate::Reg<gptm_cntr::GptmCntrSpec>;
 #[doc = "GPTM_CNTR"]
 pub mod gptm_cntr;
-#[doc = "GPTM_PSCR (rw) register accessor: GPTM_PSCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_pscr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_pscr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_pscr`]
-module"]
+#[doc = "GPTM_PSCR (rw) register accessor: GPTM_PSCR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_pscr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_pscr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_pscr`] module"]
 #[doc(alias = "GPTM_PSCR")]
 pub type GptmPscr = crate::Reg<gptm_pscr::GptmPscrSpec>;
 #[doc = "GPTM_PSCR"]
 pub mod gptm_pscr;
-#[doc = "GPTM_CRR (rw) register accessor: GPTM_CRR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_crr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_crr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_crr`]
-module"]
+#[doc = "GPTM_CRR (rw) register accessor: GPTM_CRR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_crr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_crr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_crr`] module"]
 #[doc(alias = "GPTM_CRR")]
 pub type GptmCrr = crate::Reg<gptm_crr::GptmCrrSpec>;
 #[doc = "GPTM_CRR"]
 pub mod gptm_crr;
-#[doc = "GPTM_CH0CCR (rw) register accessor: GPTM_CH0CCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch0ccr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch0ccr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch0ccr`]
-module"]
+#[doc = "GPTM_CH0CCR (rw) register accessor: GPTM_CH0CCR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch0ccr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch0ccr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch0ccr`] module"]
 #[doc(alias = "GPTM_CH0CCR")]
 pub type GptmCh0ccr = crate::Reg<gptm_ch0ccr::GptmCh0ccrSpec>;
 #[doc = "GPTM_CH0CCR"]
 pub mod gptm_ch0ccr;
-#[doc = "GPTM_CH1CCR (rw) register accessor: GPTM_CH1CCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch1ccr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch1ccr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch1ccr`]
-module"]
+#[doc = "GPTM_CH1CCR (rw) register accessor: GPTM_CH1CCR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch1ccr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch1ccr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch1ccr`] module"]
 #[doc(alias = "GPTM_CH1CCR")]
 pub type GptmCh1ccr = crate::Reg<gptm_ch1ccr::GptmCh1ccrSpec>;
 #[doc = "GPTM_CH1CCR"]
 pub mod gptm_ch1ccr;
-#[doc = "GPTM_CH2CCR (rw) register accessor: GPTM_CH2CCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch2ccr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch2ccr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch2ccr`]
-module"]
+#[doc = "GPTM_CH2CCR (rw) register accessor: GPTM_CH2CCR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch2ccr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch2ccr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch2ccr`] module"]
 #[doc(alias = "GPTM_CH2CCR")]
 pub type GptmCh2ccr = crate::Reg<gptm_ch2ccr::GptmCh2ccrSpec>;
 #[doc = "GPTM_CH2CCR"]
 pub mod gptm_ch2ccr;
-#[doc = "GPTM_CH3CCR (rw) register accessor: GPTM_CH3CCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch3ccr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch3ccr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch3ccr`]
-module"]
+#[doc = "GPTM_CH3CCR (rw) register accessor: GPTM_CH3CCR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch3ccr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch3ccr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch3ccr`] module"]
 #[doc(alias = "GPTM_CH3CCR")]
 pub type GptmCh3ccr = crate::Reg<gptm_ch3ccr::GptmCh3ccrSpec>;
 #[doc = "GPTM_CH3CCR"]
 pub mod gptm_ch3ccr;
-#[doc = "GPTM_CH0ACR (rw) register accessor: GPTM_CH0ACR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch0acr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch0acr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch0acr`]
-module"]
+#[doc = "GPTM_CH0ACR (rw) register accessor: GPTM_CH0ACR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch0acr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch0acr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch0acr`] module"]
 #[doc(alias = "GPTM_CH0ACR")]
 pub type GptmCh0acr = crate::Reg<gptm_ch0acr::GptmCh0acrSpec>;
 #[doc = "GPTM_CH0ACR"]
 pub mod gptm_ch0acr;
-#[doc = "GPTM_CH1ACR (rw) register accessor: GPTM_CH1ACR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch1acr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch1acr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch1acr`]
-module"]
+#[doc = "GPTM_CH1ACR (rw) register accessor: GPTM_CH1ACR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch1acr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch1acr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch1acr`] module"]
 #[doc(alias = "GPTM_CH1ACR")]
 pub type GptmCh1acr = crate::Reg<gptm_ch1acr::GptmCh1acrSpec>;
 #[doc = "GPTM_CH1ACR"]
 pub mod gptm_ch1acr;
-#[doc = "GPTM_CH2ACR (rw) register accessor: GPTM_CH2ACR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch2acr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch2acr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch2acr`]
-module"]
+#[doc = "GPTM_CH2ACR (rw) register accessor: GPTM_CH2ACR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch2acr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch2acr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch2acr`] module"]
 #[doc(alias = "GPTM_CH2ACR")]
 pub type GptmCh2acr = crate::Reg<gptm_ch2acr::GptmCh2acrSpec>;
 #[doc = "GPTM_CH2ACR"]
 pub mod gptm_ch2acr;
-#[doc = "GPTM_CH3ACR (rw) register accessor: GPTM_CH3ACR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch3acr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch3acr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch3acr`]
-module"]
+#[doc = "GPTM_CH3ACR (rw) register accessor: GPTM_CH3ACR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch3acr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch3acr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gptm_ch3acr`] module"]
 #[doc(alias = "GPTM_CH3ACR")]
 pub type GptmCh3acr = crate::Reg<gptm_ch3acr::GptmCh3acrSpec>;
 #[doc = "GPTM_CH3ACR"]

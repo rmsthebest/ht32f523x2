@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - WAIT"]
     #[inline(always)]
-    #[must_use]
-    pub fn wait(&mut self) -> WaitW<CfcrSpec> {
+    pub fn wait(&mut self) -> WaitW<'_, CfcrSpec> {
         WaitW::new(self, 0)
     }
     #[doc = "Bit 4 - PFBE"]
     #[inline(always)]
-    #[must_use]
-    pub fn pfbe(&mut self) -> PfbeW<CfcrSpec> {
+    pub fn pfbe(&mut self) -> PfbeW<'_, CfcrSpec> {
         PfbeW::new(self, 4)
     }
     #[doc = "Bit 7 - DCDB"]
     #[inline(always)]
-    #[must_use]
-    pub fn dcdb(&mut self) -> DcdbW<CfcrSpec> {
+    pub fn dcdb(&mut self) -> DcdbW<'_, CfcrSpec> {
         DcdbW::new(self, 7)
     }
     #[doc = "Bit 12 - CE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ce(&mut self) -> CeW<CfcrSpec> {
+    pub fn ce(&mut self) -> CeW<'_, CfcrSpec> {
         CeW::new(self, 12)
     }
 }
-#[doc = "CFCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfcr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfcr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CFCR\n\nYou can [`read`](crate::Reg::read) this register and get [`cfcr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfcr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CfcrSpec;
 impl crate::RegisterSpec for CfcrSpec {
     type Ux = u32;
@@ -76,10 +72,6 @@ impl crate::Readable for CfcrSpec {}
 #[doc = "`write(|w| ..)` method takes [`cfcr::W`](W) writer structure"]
 impl crate::Writable for CfcrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFCR to value 0"]
-impl crate::Resettable for CfcrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CfcrSpec {}

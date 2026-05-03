@@ -97,66 +97,56 @@ impl R {
 impl W {
     #[doc = "Bit 1 - FRES"]
     #[inline(always)]
-    #[must_use]
-    pub fn fres(&mut self) -> FresW<CsrSpec> {
+    pub fn fres(&mut self) -> FresW<'_, CsrSpec> {
         FresW::new(self, 1)
     }
     #[doc = "Bit 2 - PDWN"]
     #[inline(always)]
-    #[must_use]
-    pub fn pdwn(&mut self) -> PdwnW<CsrSpec> {
+    pub fn pdwn(&mut self) -> PdwnW<'_, CsrSpec> {
         PdwnW::new(self, 2)
     }
     #[doc = "Bit 3 - LPMODE"]
     #[inline(always)]
-    #[must_use]
-    pub fn lpmode(&mut self) -> LpmodeW<CsrSpec> {
+    pub fn lpmode(&mut self) -> LpmodeW<'_, CsrSpec> {
         LpmodeW::new(self, 3)
     }
     #[doc = "Bit 5 - GENRSM"]
     #[inline(always)]
-    #[must_use]
-    pub fn genrsm(&mut self) -> GenrsmW<CsrSpec> {
+    pub fn genrsm(&mut self) -> GenrsmW<'_, CsrSpec> {
         GenrsmW::new(self, 5)
     }
     #[doc = "Bit 6 - RXDP"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxdp(&mut self) -> RxdpW<CsrSpec> {
+    pub fn rxdp(&mut self) -> RxdpW<'_, CsrSpec> {
         RxdpW::new(self, 6)
     }
     #[doc = "Bit 7 - RXDM"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxdm(&mut self) -> RxdmW<CsrSpec> {
+    pub fn rxdm(&mut self) -> RxdmW<'_, CsrSpec> {
         RxdmW::new(self, 7)
     }
     #[doc = "Bit 8 - ADRSET"]
     #[inline(always)]
-    #[must_use]
-    pub fn adrset(&mut self) -> AdrsetW<CsrSpec> {
+    pub fn adrset(&mut self) -> AdrsetW<'_, CsrSpec> {
         AdrsetW::new(self, 8)
     }
     #[doc = "Bit 9 - SRAMRSTC"]
     #[inline(always)]
-    #[must_use]
-    pub fn sramrstc(&mut self) -> SramrstcW<CsrSpec> {
+    pub fn sramrstc(&mut self) -> SramrstcW<'_, CsrSpec> {
         SramrstcW::new(self, 9)
     }
     #[doc = "Bit 10 - DPPUEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn dppuen(&mut self) -> DppuenW<CsrSpec> {
+    pub fn dppuen(&mut self) -> DppuenW<'_, CsrSpec> {
         DppuenW::new(self, 10)
     }
     #[doc = "Bit 11 - DPWKEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn dpwken(&mut self) -> DpwkenW<CsrSpec> {
+    pub fn dpwken(&mut self) -> DpwkenW<'_, CsrSpec> {
         DpwkenW::new(self, 11)
     }
 }
-#[doc = "CSR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`csr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`csr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CSR\n\nYou can [`read`](crate::Reg::read) this register and get [`csr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`csr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CsrSpec;
 impl crate::RegisterSpec for CsrSpec {
     type Ux = u32;
@@ -166,10 +156,6 @@ impl crate::Readable for CsrSpec {}
 #[doc = "`write(|w| ..)` method takes [`csr::W`](W) writer structure"]
 impl crate::Writable for CsrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CSR to value 0"]
-impl crate::Resettable for CsrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CsrSpec {}

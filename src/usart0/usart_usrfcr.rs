@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - TXR"]
     #[inline(always)]
-    #[must_use]
-    pub fn txr(&mut self) -> TxrW<UsartUsrfcrSpec> {
+    pub fn txr(&mut self) -> TxrW<'_, UsartUsrfcrSpec> {
         TxrW::new(self, 0)
     }
     #[doc = "Bit 1 - RXR"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxr(&mut self) -> RxrW<UsartUsrfcrSpec> {
+    pub fn rxr(&mut self) -> RxrW<'_, UsartUsrfcrSpec> {
         RxrW::new(self, 1)
     }
     #[doc = "Bits 4:5 - TXTL"]
     #[inline(always)]
-    #[must_use]
-    pub fn txtl(&mut self) -> TxtlW<UsartUsrfcrSpec> {
+    pub fn txtl(&mut self) -> TxtlW<'_, UsartUsrfcrSpec> {
         TxtlW::new(self, 4)
     }
     #[doc = "Bits 6:7 - RXTL"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxtl(&mut self) -> RxtlW<UsartUsrfcrSpec> {
+    pub fn rxtl(&mut self) -> RxtlW<'_, UsartUsrfcrSpec> {
         RxtlW::new(self, 6)
     }
     #[doc = "Bits 16:19 - TXFS"]
     #[inline(always)]
-    #[must_use]
-    pub fn txfs(&mut self) -> TxfsW<UsartUsrfcrSpec> {
+    pub fn txfs(&mut self) -> TxfsW<'_, UsartUsrfcrSpec> {
         TxfsW::new(self, 16)
     }
     #[doc = "Bits 24:27 - RXFS"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxfs(&mut self) -> RxfsW<UsartUsrfcrSpec> {
+    pub fn rxfs(&mut self) -> RxfsW<'_, UsartUsrfcrSpec> {
         RxfsW::new(self, 24)
     }
 }
-#[doc = "USART_USRFCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`usart_usrfcr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usart_usrfcr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "USART_USRFCR\n\nYou can [`read`](crate::Reg::read) this register and get [`usart_usrfcr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`usart_usrfcr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UsartUsrfcrSpec;
 impl crate::RegisterSpec for UsartUsrfcrSpec {
     type Ux = u32;
@@ -106,10 +100,6 @@ impl crate::Readable for UsartUsrfcrSpec {}
 #[doc = "`write(|w| ..)` method takes [`usart_usrfcr::W`](W) writer structure"]
 impl crate::Writable for UsartUsrfcrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets USART_USRFCR to value 0"]
-impl crate::Resettable for UsartUsrfcrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for UsartUsrfcrSpec {}

@@ -70,48 +70,41 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - SW"]
     #[inline(always)]
-    #[must_use]
-    pub fn sw(&mut self) -> SwW<GccrSpec> {
+    pub fn sw(&mut self) -> SwW<'_, GccrSpec> {
         SwW::new(self, 0)
     }
     #[doc = "Bit 8 - HSEGAIN"]
     #[inline(always)]
-    #[must_use]
-    pub fn hsegain(&mut self) -> HsegainW<GccrSpec> {
+    pub fn hsegain(&mut self) -> HsegainW<'_, GccrSpec> {
         HsegainW::new(self, 8)
     }
     #[doc = "Bit 9 - PLLEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn pllen(&mut self) -> PllenW<GccrSpec> {
+    pub fn pllen(&mut self) -> PllenW<'_, GccrSpec> {
         PllenW::new(self, 9)
     }
     #[doc = "Bit 10 - HSEEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn hseen(&mut self) -> HseenW<GccrSpec> {
+    pub fn hseen(&mut self) -> HseenW<'_, GccrSpec> {
         HseenW::new(self, 10)
     }
     #[doc = "Bit 11 - HSIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn hsien(&mut self) -> HsienW<GccrSpec> {
+    pub fn hsien(&mut self) -> HsienW<'_, GccrSpec> {
         HsienW::new(self, 11)
     }
     #[doc = "Bit 16 - CKMEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn ckmen(&mut self) -> CkmenW<GccrSpec> {
+    pub fn ckmen(&mut self) -> CkmenW<'_, GccrSpec> {
         CkmenW::new(self, 16)
     }
     #[doc = "Bit 17 - PSRCEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn psrcen(&mut self) -> PsrcenW<GccrSpec> {
+    pub fn psrcen(&mut self) -> PsrcenW<'_, GccrSpec> {
         PsrcenW::new(self, 17)
     }
 }
-#[doc = "GCCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gccr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gccr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GCCR\n\nYou can [`read`](crate::Reg::read) this register and get [`gccr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gccr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GccrSpec;
 impl crate::RegisterSpec for GccrSpec {
     type Ux = u32;
@@ -121,10 +114,6 @@ impl crate::Readable for GccrSpec {}
 #[doc = "`write(|w| ..)` method takes [`gccr::W`](W) writer structure"]
 impl crate::Writable for GccrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GCCR to value 0"]
-impl crate::Resettable for GccrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GccrSpec {}

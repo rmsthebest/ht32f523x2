@@ -106,72 +106,61 @@ impl R {
 impl W {
     #[doc = "Bit 0 - MCTM0EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn mctm0en(&mut self) -> Mctm0enW<Apbccr1Spec> {
+    pub fn mctm0en(&mut self) -> Mctm0enW<'_, Apbccr1Spec> {
         Mctm0enW::new(self, 0)
     }
     #[doc = "Bit 4 - WDTEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn wdten(&mut self) -> WdtenW<Apbccr1Spec> {
+    pub fn wdten(&mut self) -> WdtenW<'_, Apbccr1Spec> {
         WdtenW::new(self, 4)
     }
     #[doc = "Bit 6 - BKPREN"]
     #[inline(always)]
-    #[must_use]
-    pub fn bkpren(&mut self) -> BkprenW<Apbccr1Spec> {
+    pub fn bkpren(&mut self) -> BkprenW<'_, Apbccr1Spec> {
         BkprenW::new(self, 6)
     }
     #[doc = "Bit 8 - GPTM0EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn gptm0en(&mut self) -> Gptm0enW<Apbccr1Spec> {
+    pub fn gptm0en(&mut self) -> Gptm0enW<'_, Apbccr1Spec> {
         Gptm0enW::new(self, 8)
     }
     #[doc = "Bit 9 - GPTM1EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn gptm1en(&mut self) -> Gptm1enW<Apbccr1Spec> {
+    pub fn gptm1en(&mut self) -> Gptm1enW<'_, Apbccr1Spec> {
         Gptm1enW::new(self, 9)
     }
     #[doc = "Bit 16 - BFTM0EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn bftm0en(&mut self) -> Bftm0enW<Apbccr1Spec> {
+    pub fn bftm0en(&mut self) -> Bftm0enW<'_, Apbccr1Spec> {
         Bftm0enW::new(self, 16)
     }
     #[doc = "Bit 17 - BFTM1EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn bftm1en(&mut self) -> Bftm1enW<Apbccr1Spec> {
+    pub fn bftm1en(&mut self) -> Bftm1enW<'_, Apbccr1Spec> {
         Bftm1enW::new(self, 17)
     }
     #[doc = "Bit 22 - CMPEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpen(&mut self) -> CmpenW<Apbccr1Spec> {
+    pub fn cmpen(&mut self) -> CmpenW<'_, Apbccr1Spec> {
         CmpenW::new(self, 22)
     }
     #[doc = "Bit 24 - ADCEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn adcen(&mut self) -> AdcenW<Apbccr1Spec> {
+    pub fn adcen(&mut self) -> AdcenW<'_, Apbccr1Spec> {
         AdcenW::new(self, 24)
     }
     #[doc = "Bit 28 - SCTM0EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn sctm0en(&mut self) -> Sctm0enW<Apbccr1Spec> {
+    pub fn sctm0en(&mut self) -> Sctm0enW<'_, Apbccr1Spec> {
         Sctm0enW::new(self, 28)
     }
     #[doc = "Bit 29 - SCTM1EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn sctm1en(&mut self) -> Sctm1enW<Apbccr1Spec> {
+    pub fn sctm1en(&mut self) -> Sctm1enW<'_, Apbccr1Spec> {
         Sctm1enW::new(self, 29)
     }
 }
-#[doc = "APBCCR1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apbccr1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apbccr1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "APBCCR1\n\nYou can [`read`](crate::Reg::read) this register and get [`apbccr1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apbccr1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Apbccr1Spec;
 impl crate::RegisterSpec for Apbccr1Spec {
     type Ux = u32;
@@ -181,10 +170,6 @@ impl crate::Readable for Apbccr1Spec {}
 #[doc = "`write(|w| ..)` method takes [`apbccr1::W`](W) writer structure"]
 impl crate::Writable for Apbccr1Spec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APBCCR1 to value 0"]
-impl crate::Resettable for Apbccr1Spec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Apbccr1Spec {}

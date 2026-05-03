@@ -70,48 +70,41 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CH0OIS"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0ois(&mut self) -> Ch0oisW<ChbrkcfrSpec> {
+    pub fn ch0ois(&mut self) -> Ch0oisW<'_, ChbrkcfrSpec> {
         Ch0oisW::new(self, 0)
     }
     #[doc = "Bit 1 - CH0OISN"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0oisn(&mut self) -> Ch0oisnW<ChbrkcfrSpec> {
+    pub fn ch0oisn(&mut self) -> Ch0oisnW<'_, ChbrkcfrSpec> {
         Ch0oisnW::new(self, 1)
     }
     #[doc = "Bit 2 - CH1OIS"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1ois(&mut self) -> Ch1oisW<ChbrkcfrSpec> {
+    pub fn ch1ois(&mut self) -> Ch1oisW<'_, ChbrkcfrSpec> {
         Ch1oisW::new(self, 2)
     }
     #[doc = "Bit 3 - CH1OISN"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1oisn(&mut self) -> Ch1oisnW<ChbrkcfrSpec> {
+    pub fn ch1oisn(&mut self) -> Ch1oisnW<'_, ChbrkcfrSpec> {
         Ch1oisnW::new(self, 3)
     }
     #[doc = "Bit 4 - CH2OIS"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2ois(&mut self) -> Ch2oisW<ChbrkcfrSpec> {
+    pub fn ch2ois(&mut self) -> Ch2oisW<'_, ChbrkcfrSpec> {
         Ch2oisW::new(self, 4)
     }
     #[doc = "Bit 5 - CH2OISN"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2oisn(&mut self) -> Ch2oisnW<ChbrkcfrSpec> {
+    pub fn ch2oisn(&mut self) -> Ch2oisnW<'_, ChbrkcfrSpec> {
         Ch2oisnW::new(self, 5)
     }
     #[doc = "Bit 6 - CH3OIS"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3ois(&mut self) -> Ch3oisW<ChbrkcfrSpec> {
+    pub fn ch3ois(&mut self) -> Ch3oisW<'_, ChbrkcfrSpec> {
         Ch3oisW::new(self, 6)
     }
 }
-#[doc = "CHBRKCFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chbrkcfr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`chbrkcfr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CHBRKCFR\n\nYou can [`read`](crate::Reg::read) this register and get [`chbrkcfr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`chbrkcfr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ChbrkcfrSpec;
 impl crate::RegisterSpec for ChbrkcfrSpec {
     type Ux = u32;
@@ -121,10 +114,6 @@ impl crate::Readable for ChbrkcfrSpec {}
 #[doc = "`write(|w| ..)` method takes [`chbrkcfr::W`](W) writer structure"]
 impl crate::Writable for ChbrkcfrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CHBRKCFR to value 0"]
-impl crate::Resettable for ChbrkcfrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ChbrkcfrSpec {}

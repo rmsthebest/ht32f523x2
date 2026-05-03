@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - ADICLRS"]
     #[inline(always)]
-    #[must_use]
-    pub fn adiclrs(&mut self) -> AdiclrsW<IclrSpec> {
+    pub fn adiclrs(&mut self) -> AdiclrsW<'_, IclrSpec> {
         AdiclrsW::new(self, 0)
     }
     #[doc = "Bit 1 - ADICLRG"]
     #[inline(always)]
-    #[must_use]
-    pub fn adiclrg(&mut self) -> AdiclrgW<IclrSpec> {
+    pub fn adiclrg(&mut self) -> AdiclrgW<'_, IclrSpec> {
         AdiclrgW::new(self, 1)
     }
     #[doc = "Bit 2 - ADICLRC"]
     #[inline(always)]
-    #[must_use]
-    pub fn adiclrc(&mut self) -> AdiclrcW<IclrSpec> {
+    pub fn adiclrc(&mut self) -> AdiclrcW<'_, IclrSpec> {
         AdiclrcW::new(self, 2)
     }
     #[doc = "Bit 16 - ADICLRL"]
     #[inline(always)]
-    #[must_use]
-    pub fn adiclrl(&mut self) -> AdiclrlW<IclrSpec> {
+    pub fn adiclrl(&mut self) -> AdiclrlW<'_, IclrSpec> {
         AdiclrlW::new(self, 16)
     }
     #[doc = "Bit 17 - ADICLRU"]
     #[inline(always)]
-    #[must_use]
-    pub fn adiclru(&mut self) -> AdiclruW<IclrSpec> {
+    pub fn adiclru(&mut self) -> AdiclruW<'_, IclrSpec> {
         AdiclruW::new(self, 17)
     }
     #[doc = "Bit 24 - ADICLRO"]
     #[inline(always)]
-    #[must_use]
-    pub fn adiclro(&mut self) -> AdiclroW<IclrSpec> {
+    pub fn adiclro(&mut self) -> AdiclroW<'_, IclrSpec> {
         AdiclroW::new(self, 24)
     }
 }
-#[doc = "ICLR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iclr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iclr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ICLR\n\nYou can [`read`](crate::Reg::read) this register and get [`iclr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iclr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IclrSpec;
 impl crate::RegisterSpec for IclrSpec {
     type Ux = u32;
@@ -106,10 +100,6 @@ impl crate::Readable for IclrSpec {}
 #[doc = "`write(|w| ..)` method takes [`iclr::W`](W) writer structure"]
 impl crate::Writable for IclrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ICLR to value 0"]
-impl crate::Resettable for IclrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IclrSpec {}

@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - CBLKLEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn cblklen(&mut self) -> CblklenW<Ch2ctsrSpec> {
+    pub fn cblklen(&mut self) -> CblklenW<'_, Ch2ctsrSpec> {
         CblklenW::new(self, 0)
     }
     #[doc = "Bits 16:31 - CBLKCNT"]
     #[inline(always)]
-    #[must_use]
-    pub fn cblkcnt(&mut self) -> CblkcntW<Ch2ctsrSpec> {
+    pub fn cblkcnt(&mut self) -> CblkcntW<'_, Ch2ctsrSpec> {
         CblkcntW::new(self, 16)
     }
 }
-#[doc = "CH2CTSR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch2ctsr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch2ctsr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CH2CTSR\n\nYou can [`read`](crate::Reg::read) this register and get [`ch2ctsr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch2ctsr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ch2ctsrSpec;
 impl crate::RegisterSpec for Ch2ctsrSpec {
     type Ux = u32;
@@ -46,10 +44,6 @@ impl crate::Readable for Ch2ctsrSpec {}
 #[doc = "`write(|w| ..)` method takes [`ch2ctsr::W`](W) writer structure"]
 impl crate::Writable for Ch2ctsrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CH2CTSR to value 0"]
-impl crate::Resettable for Ch2ctsrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Ch2ctsrSpec {}

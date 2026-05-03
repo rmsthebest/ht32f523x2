@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - DB"]
     #[inline(always)]
-    #[must_use]
-    pub fn db(&mut self) -> DbW<UartUrdrSpec> {
+    pub fn db(&mut self) -> DbW<'_, UartUrdrSpec> {
         DbW::new(self, 0)
     }
 }
-#[doc = "UART_URDR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`uart_urdr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uart_urdr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "UART_URDR\n\nYou can [`read`](crate::Reg::read) this register and get [`uart_urdr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart_urdr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UartUrdrSpec;
 impl crate::RegisterSpec for UartUrdrSpec {
     type Ux = u32;
@@ -31,10 +30,6 @@ impl crate::Readable for UartUrdrSpec {}
 #[doc = "`write(|w| ..)` method takes [`uart_urdr::W`](W) writer structure"]
 impl crate::Writable for UartUrdrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets UART_URDR to value 0"]
-impl crate::Resettable for UartUrdrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for UartUrdrSpec {}

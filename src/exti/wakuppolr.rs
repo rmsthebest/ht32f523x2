@@ -151,102 +151,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - EXTI0WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti0wpol(&mut self) -> Exti0wpolW<WakuppolrSpec> {
+    pub fn exti0wpol(&mut self) -> Exti0wpolW<'_, WakuppolrSpec> {
         Exti0wpolW::new(self, 0)
     }
     #[doc = "Bit 1 - EXTI1WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti1wpol(&mut self) -> Exti1wpolW<WakuppolrSpec> {
+    pub fn exti1wpol(&mut self) -> Exti1wpolW<'_, WakuppolrSpec> {
         Exti1wpolW::new(self, 1)
     }
     #[doc = "Bit 2 - EXTI2WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti2wpol(&mut self) -> Exti2wpolW<WakuppolrSpec> {
+    pub fn exti2wpol(&mut self) -> Exti2wpolW<'_, WakuppolrSpec> {
         Exti2wpolW::new(self, 2)
     }
     #[doc = "Bit 3 - EXTI3WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti3wpol(&mut self) -> Exti3wpolW<WakuppolrSpec> {
+    pub fn exti3wpol(&mut self) -> Exti3wpolW<'_, WakuppolrSpec> {
         Exti3wpolW::new(self, 3)
     }
     #[doc = "Bit 4 - EXTI4WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti4wpol(&mut self) -> Exti4wpolW<WakuppolrSpec> {
+    pub fn exti4wpol(&mut self) -> Exti4wpolW<'_, WakuppolrSpec> {
         Exti4wpolW::new(self, 4)
     }
     #[doc = "Bit 5 - EXTI5WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti5wpol(&mut self) -> Exti5wpolW<WakuppolrSpec> {
+    pub fn exti5wpol(&mut self) -> Exti5wpolW<'_, WakuppolrSpec> {
         Exti5wpolW::new(self, 5)
     }
     #[doc = "Bit 6 - EXTI6WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti6wpol(&mut self) -> Exti6wpolW<WakuppolrSpec> {
+    pub fn exti6wpol(&mut self) -> Exti6wpolW<'_, WakuppolrSpec> {
         Exti6wpolW::new(self, 6)
     }
     #[doc = "Bit 7 - EXTI7WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti7wpol(&mut self) -> Exti7wpolW<WakuppolrSpec> {
+    pub fn exti7wpol(&mut self) -> Exti7wpolW<'_, WakuppolrSpec> {
         Exti7wpolW::new(self, 7)
     }
     #[doc = "Bit 8 - EXTI8WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti8wpol(&mut self) -> Exti8wpolW<WakuppolrSpec> {
+    pub fn exti8wpol(&mut self) -> Exti8wpolW<'_, WakuppolrSpec> {
         Exti8wpolW::new(self, 8)
     }
     #[doc = "Bit 9 - EXTI9WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti9wpol(&mut self) -> Exti9wpolW<WakuppolrSpec> {
+    pub fn exti9wpol(&mut self) -> Exti9wpolW<'_, WakuppolrSpec> {
         Exti9wpolW::new(self, 9)
     }
     #[doc = "Bit 10 - EXTI10WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti10wpol(&mut self) -> Exti10wpolW<WakuppolrSpec> {
+    pub fn exti10wpol(&mut self) -> Exti10wpolW<'_, WakuppolrSpec> {
         Exti10wpolW::new(self, 10)
     }
     #[doc = "Bit 11 - EXTI11WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti11wpol(&mut self) -> Exti11wpolW<WakuppolrSpec> {
+    pub fn exti11wpol(&mut self) -> Exti11wpolW<'_, WakuppolrSpec> {
         Exti11wpolW::new(self, 11)
     }
     #[doc = "Bit 12 - EXTI12WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti12wpol(&mut self) -> Exti12wpolW<WakuppolrSpec> {
+    pub fn exti12wpol(&mut self) -> Exti12wpolW<'_, WakuppolrSpec> {
         Exti12wpolW::new(self, 12)
     }
     #[doc = "Bit 13 - EXTI13WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti13wpol(&mut self) -> Exti13wpolW<WakuppolrSpec> {
+    pub fn exti13wpol(&mut self) -> Exti13wpolW<'_, WakuppolrSpec> {
         Exti13wpolW::new(self, 13)
     }
     #[doc = "Bit 14 - EXTI14WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti14wpol(&mut self) -> Exti14wpolW<WakuppolrSpec> {
+    pub fn exti14wpol(&mut self) -> Exti14wpolW<'_, WakuppolrSpec> {
         Exti14wpolW::new(self, 14)
     }
     #[doc = "Bit 15 - EXTI15WPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti15wpol(&mut self) -> Exti15wpolW<WakuppolrSpec> {
+    pub fn exti15wpol(&mut self) -> Exti15wpolW<'_, WakuppolrSpec> {
         Exti15wpolW::new(self, 15)
     }
 }
-#[doc = "WAKUPPOLR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wakuppolr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wakuppolr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "WAKUPPOLR\n\nYou can [`read`](crate::Reg::read) this register and get [`wakuppolr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wakuppolr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WakuppolrSpec;
 impl crate::RegisterSpec for WakuppolrSpec {
     type Ux = u32;
@@ -256,10 +240,6 @@ impl crate::Readable for WakuppolrSpec {}
 #[doc = "`write(|w| ..)` method takes [`wakuppolr::W`](W) writer structure"]
 impl crate::Writable for WakuppolrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets WAKUPPOLR to value 0"]
-impl crate::Resettable for WakuppolrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for WakuppolrSpec {}

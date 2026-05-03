@@ -25,18 +25,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CMPFIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpfien(&mut self) -> CmpfienW<Ier0Spec> {
+    pub fn cmpfien(&mut self) -> CmpfienW<'_, Ier0Spec> {
         CmpfienW::new(self, 0)
     }
     #[doc = "Bit 1 - CMPRIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmprien(&mut self) -> CmprienW<Ier0Spec> {
+    pub fn cmprien(&mut self) -> CmprienW<'_, Ier0Spec> {
         CmprienW::new(self, 1)
     }
 }
-#[doc = "IER0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ier0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ier0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IER0\n\nYou can [`read`](crate::Reg::read) this register and get [`ier0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ier0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ier0Spec;
 impl crate::RegisterSpec for Ier0Spec {
     type Ux = u32;
@@ -46,10 +44,6 @@ impl crate::Readable for Ier0Spec {}
 #[doc = "`write(|w| ..)` method takes [`ier0::W`](W) writer structure"]
 impl crate::Writable for Ier0Spec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IER0 to value 0"]
-impl crate::Resettable for Ier0Spec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Ier0Spec {}

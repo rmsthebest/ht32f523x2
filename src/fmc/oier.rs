@@ -52,36 +52,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - ORFIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn orfien(&mut self) -> OrfienW<OierSpec> {
+    pub fn orfien(&mut self) -> OrfienW<'_, OierSpec> {
         OrfienW::new(self, 0)
     }
     #[doc = "Bit 1 - ITADIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn itadien(&mut self) -> ItadienW<OierSpec> {
+    pub fn itadien(&mut self) -> ItadienW<'_, OierSpec> {
         ItadienW::new(self, 1)
     }
     #[doc = "Bit 2 - OBEIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn obeien(&mut self) -> ObeienW<OierSpec> {
+    pub fn obeien(&mut self) -> ObeienW<'_, OierSpec> {
         ObeienW::new(self, 2)
     }
     #[doc = "Bit 3 - IOCMIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocmien(&mut self) -> IocmienW<OierSpec> {
+    pub fn iocmien(&mut self) -> IocmienW<'_, OierSpec> {
         IocmienW::new(self, 3)
     }
     #[doc = "Bit 4 - OREIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn oreien(&mut self) -> OreienW<OierSpec> {
+    pub fn oreien(&mut self) -> OreienW<'_, OierSpec> {
         OreienW::new(self, 4)
     }
 }
-#[doc = "OIER\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`oier::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`oier::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OIER\n\nYou can [`read`](crate::Reg::read) this register and get [`oier::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`oier::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OierSpec;
 impl crate::RegisterSpec for OierSpec {
     type Ux = u32;
@@ -91,10 +86,6 @@ impl crate::Readable for OierSpec {}
 #[doc = "`write(|w| ..)` method takes [`oier::W`](W) writer structure"]
 impl crate::Writable for OierSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OIER to value 0"]
-impl crate::Resettable for OierSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OierSpec {}

@@ -277,186 +277,156 @@ impl R {
 impl W {
     #[doc = "Bit 0 - GEIE0"]
     #[inline(always)]
-    #[must_use]
-    pub fn geie0(&mut self) -> Geie0W<IerSpec> {
+    pub fn geie0(&mut self) -> Geie0W<'_, IerSpec> {
         Geie0W::new(self, 0)
     }
     #[doc = "Bit 1 - BEIE0"]
     #[inline(always)]
-    #[must_use]
-    pub fn beie0(&mut self) -> Beie0W<IerSpec> {
+    pub fn beie0(&mut self) -> Beie0W<'_, IerSpec> {
         Beie0W::new(self, 1)
     }
     #[doc = "Bit 2 - HTIE0"]
     #[inline(always)]
-    #[must_use]
-    pub fn htie0(&mut self) -> Htie0W<IerSpec> {
+    pub fn htie0(&mut self) -> Htie0W<'_, IerSpec> {
         Htie0W::new(self, 2)
     }
     #[doc = "Bit 3 - TCIE0"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcie0(&mut self) -> Tcie0W<IerSpec> {
+    pub fn tcie0(&mut self) -> Tcie0W<'_, IerSpec> {
         Tcie0W::new(self, 3)
     }
     #[doc = "Bit 4 - TEIE0"]
     #[inline(always)]
-    #[must_use]
-    pub fn teie0(&mut self) -> Teie0W<IerSpec> {
+    pub fn teie0(&mut self) -> Teie0W<'_, IerSpec> {
         Teie0W::new(self, 4)
     }
     #[doc = "Bit 5 - GEIE1"]
     #[inline(always)]
-    #[must_use]
-    pub fn geie1(&mut self) -> Geie1W<IerSpec> {
+    pub fn geie1(&mut self) -> Geie1W<'_, IerSpec> {
         Geie1W::new(self, 5)
     }
     #[doc = "Bit 6 - BEIE1"]
     #[inline(always)]
-    #[must_use]
-    pub fn beie1(&mut self) -> Beie1W<IerSpec> {
+    pub fn beie1(&mut self) -> Beie1W<'_, IerSpec> {
         Beie1W::new(self, 6)
     }
     #[doc = "Bit 7 - HTIE1"]
     #[inline(always)]
-    #[must_use]
-    pub fn htie1(&mut self) -> Htie1W<IerSpec> {
+    pub fn htie1(&mut self) -> Htie1W<'_, IerSpec> {
         Htie1W::new(self, 7)
     }
     #[doc = "Bit 8 - TCIE1"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcie1(&mut self) -> Tcie1W<IerSpec> {
+    pub fn tcie1(&mut self) -> Tcie1W<'_, IerSpec> {
         Tcie1W::new(self, 8)
     }
     #[doc = "Bit 9 - TEIE1"]
     #[inline(always)]
-    #[must_use]
-    pub fn teie1(&mut self) -> Teie1W<IerSpec> {
+    pub fn teie1(&mut self) -> Teie1W<'_, IerSpec> {
         Teie1W::new(self, 9)
     }
     #[doc = "Bit 10 - GEIE2"]
     #[inline(always)]
-    #[must_use]
-    pub fn geie2(&mut self) -> Geie2W<IerSpec> {
+    pub fn geie2(&mut self) -> Geie2W<'_, IerSpec> {
         Geie2W::new(self, 10)
     }
     #[doc = "Bit 11 - BEIE2"]
     #[inline(always)]
-    #[must_use]
-    pub fn beie2(&mut self) -> Beie2W<IerSpec> {
+    pub fn beie2(&mut self) -> Beie2W<'_, IerSpec> {
         Beie2W::new(self, 11)
     }
     #[doc = "Bit 12 - HTIE2"]
     #[inline(always)]
-    #[must_use]
-    pub fn htie2(&mut self) -> Htie2W<IerSpec> {
+    pub fn htie2(&mut self) -> Htie2W<'_, IerSpec> {
         Htie2W::new(self, 12)
     }
     #[doc = "Bit 13 - TCIE2"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcie2(&mut self) -> Tcie2W<IerSpec> {
+    pub fn tcie2(&mut self) -> Tcie2W<'_, IerSpec> {
         Tcie2W::new(self, 13)
     }
     #[doc = "Bit 14 - TEIE2"]
     #[inline(always)]
-    #[must_use]
-    pub fn teie2(&mut self) -> Teie2W<IerSpec> {
+    pub fn teie2(&mut self) -> Teie2W<'_, IerSpec> {
         Teie2W::new(self, 14)
     }
     #[doc = "Bit 15 - GEIE3"]
     #[inline(always)]
-    #[must_use]
-    pub fn geie3(&mut self) -> Geie3W<IerSpec> {
+    pub fn geie3(&mut self) -> Geie3W<'_, IerSpec> {
         Geie3W::new(self, 15)
     }
     #[doc = "Bit 16 - BEIE3"]
     #[inline(always)]
-    #[must_use]
-    pub fn beie3(&mut self) -> Beie3W<IerSpec> {
+    pub fn beie3(&mut self) -> Beie3W<'_, IerSpec> {
         Beie3W::new(self, 16)
     }
     #[doc = "Bit 17 - HTIE3"]
     #[inline(always)]
-    #[must_use]
-    pub fn htie3(&mut self) -> Htie3W<IerSpec> {
+    pub fn htie3(&mut self) -> Htie3W<'_, IerSpec> {
         Htie3W::new(self, 17)
     }
     #[doc = "Bit 18 - TCIE3"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcie3(&mut self) -> Tcie3W<IerSpec> {
+    pub fn tcie3(&mut self) -> Tcie3W<'_, IerSpec> {
         Tcie3W::new(self, 18)
     }
     #[doc = "Bit 19 - TEIE3"]
     #[inline(always)]
-    #[must_use]
-    pub fn teie3(&mut self) -> Teie3W<IerSpec> {
+    pub fn teie3(&mut self) -> Teie3W<'_, IerSpec> {
         Teie3W::new(self, 19)
     }
     #[doc = "Bit 20 - GEIE4"]
     #[inline(always)]
-    #[must_use]
-    pub fn geie4(&mut self) -> Geie4W<IerSpec> {
+    pub fn geie4(&mut self) -> Geie4W<'_, IerSpec> {
         Geie4W::new(self, 20)
     }
     #[doc = "Bit 21 - BEIE4"]
     #[inline(always)]
-    #[must_use]
-    pub fn beie4(&mut self) -> Beie4W<IerSpec> {
+    pub fn beie4(&mut self) -> Beie4W<'_, IerSpec> {
         Beie4W::new(self, 21)
     }
     #[doc = "Bit 22 - HTIE4"]
     #[inline(always)]
-    #[must_use]
-    pub fn htie4(&mut self) -> Htie4W<IerSpec> {
+    pub fn htie4(&mut self) -> Htie4W<'_, IerSpec> {
         Htie4W::new(self, 22)
     }
     #[doc = "Bit 23 - TCIE4"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcie4(&mut self) -> Tcie4W<IerSpec> {
+    pub fn tcie4(&mut self) -> Tcie4W<'_, IerSpec> {
         Tcie4W::new(self, 23)
     }
     #[doc = "Bit 24 - TEIE4"]
     #[inline(always)]
-    #[must_use]
-    pub fn teie4(&mut self) -> Teie4W<IerSpec> {
+    pub fn teie4(&mut self) -> Teie4W<'_, IerSpec> {
         Teie4W::new(self, 24)
     }
     #[doc = "Bit 25 - GEIE5"]
     #[inline(always)]
-    #[must_use]
-    pub fn geie5(&mut self) -> Geie5W<IerSpec> {
+    pub fn geie5(&mut self) -> Geie5W<'_, IerSpec> {
         Geie5W::new(self, 25)
     }
     #[doc = "Bit 26 - BEIE5"]
     #[inline(always)]
-    #[must_use]
-    pub fn beie5(&mut self) -> Beie5W<IerSpec> {
+    pub fn beie5(&mut self) -> Beie5W<'_, IerSpec> {
         Beie5W::new(self, 26)
     }
     #[doc = "Bit 27 - HTIE5"]
     #[inline(always)]
-    #[must_use]
-    pub fn htie5(&mut self) -> Htie5W<IerSpec> {
+    pub fn htie5(&mut self) -> Htie5W<'_, IerSpec> {
         Htie5W::new(self, 27)
     }
     #[doc = "Bit 28 - TCIE5"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcie5(&mut self) -> Tcie5W<IerSpec> {
+    pub fn tcie5(&mut self) -> Tcie5W<'_, IerSpec> {
         Tcie5W::new(self, 28)
     }
     #[doc = "Bit 29 - TEIE5"]
     #[inline(always)]
-    #[must_use]
-    pub fn teie5(&mut self) -> Teie5W<IerSpec> {
+    pub fn teie5(&mut self) -> Teie5W<'_, IerSpec> {
         Teie5W::new(self, 29)
     }
 }
-#[doc = "IER\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ier::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ier::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IER\n\nYou can [`read`](crate::Reg::read) this register and get [`ier::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ier::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IerSpec;
 impl crate::RegisterSpec for IerSpec {
     type Ux = u32;
@@ -466,10 +436,6 @@ impl crate::Readable for IerSpec {}
 #[doc = "`write(|w| ..)` method takes [`ier::W`](W) writer structure"]
 impl crate::Writable for IerSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IER to value 0"]
-impl crate::Resettable for IerSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IerSpec {}

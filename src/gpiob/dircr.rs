@@ -151,102 +151,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - DIR0"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir0(&mut self) -> Dir0W<DircrSpec> {
+    pub fn dir0(&mut self) -> Dir0W<'_, DircrSpec> {
         Dir0W::new(self, 0)
     }
     #[doc = "Bit 1 - DIR1"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir1(&mut self) -> Dir1W<DircrSpec> {
+    pub fn dir1(&mut self) -> Dir1W<'_, DircrSpec> {
         Dir1W::new(self, 1)
     }
     #[doc = "Bit 2 - DIR2"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir2(&mut self) -> Dir2W<DircrSpec> {
+    pub fn dir2(&mut self) -> Dir2W<'_, DircrSpec> {
         Dir2W::new(self, 2)
     }
     #[doc = "Bit 3 - DIR3"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir3(&mut self) -> Dir3W<DircrSpec> {
+    pub fn dir3(&mut self) -> Dir3W<'_, DircrSpec> {
         Dir3W::new(self, 3)
     }
     #[doc = "Bit 4 - DIR4"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir4(&mut self) -> Dir4W<DircrSpec> {
+    pub fn dir4(&mut self) -> Dir4W<'_, DircrSpec> {
         Dir4W::new(self, 4)
     }
     #[doc = "Bit 5 - DIR5"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir5(&mut self) -> Dir5W<DircrSpec> {
+    pub fn dir5(&mut self) -> Dir5W<'_, DircrSpec> {
         Dir5W::new(self, 5)
     }
     #[doc = "Bit 6 - DIR6"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir6(&mut self) -> Dir6W<DircrSpec> {
+    pub fn dir6(&mut self) -> Dir6W<'_, DircrSpec> {
         Dir6W::new(self, 6)
     }
     #[doc = "Bit 7 - DIR7"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir7(&mut self) -> Dir7W<DircrSpec> {
+    pub fn dir7(&mut self) -> Dir7W<'_, DircrSpec> {
         Dir7W::new(self, 7)
     }
     #[doc = "Bit 8 - DIR8"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir8(&mut self) -> Dir8W<DircrSpec> {
+    pub fn dir8(&mut self) -> Dir8W<'_, DircrSpec> {
         Dir8W::new(self, 8)
     }
     #[doc = "Bit 9 - DIR9"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir9(&mut self) -> Dir9W<DircrSpec> {
+    pub fn dir9(&mut self) -> Dir9W<'_, DircrSpec> {
         Dir9W::new(self, 9)
     }
     #[doc = "Bit 10 - DIR10"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir10(&mut self) -> Dir10W<DircrSpec> {
+    pub fn dir10(&mut self) -> Dir10W<'_, DircrSpec> {
         Dir10W::new(self, 10)
     }
     #[doc = "Bit 11 - DIR11"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir11(&mut self) -> Dir11W<DircrSpec> {
+    pub fn dir11(&mut self) -> Dir11W<'_, DircrSpec> {
         Dir11W::new(self, 11)
     }
     #[doc = "Bit 12 - DIR12"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir12(&mut self) -> Dir12W<DircrSpec> {
+    pub fn dir12(&mut self) -> Dir12W<'_, DircrSpec> {
         Dir12W::new(self, 12)
     }
     #[doc = "Bit 13 - DIR13"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir13(&mut self) -> Dir13W<DircrSpec> {
+    pub fn dir13(&mut self) -> Dir13W<'_, DircrSpec> {
         Dir13W::new(self, 13)
     }
     #[doc = "Bit 14 - DIR14"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir14(&mut self) -> Dir14W<DircrSpec> {
+    pub fn dir14(&mut self) -> Dir14W<'_, DircrSpec> {
         Dir14W::new(self, 14)
     }
     #[doc = "Bit 15 - DIR15"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir15(&mut self) -> Dir15W<DircrSpec> {
+    pub fn dir15(&mut self) -> Dir15W<'_, DircrSpec> {
         Dir15W::new(self, 15)
     }
 }
-#[doc = "DIRCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dircr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dircr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DIRCR\n\nYou can [`read`](crate::Reg::read) this register and get [`dircr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dircr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DircrSpec;
 impl crate::RegisterSpec for DircrSpec {
     type Ux = u32;
@@ -256,10 +240,6 @@ impl crate::Readable for DircrSpec {}
 #[doc = "`write(|w| ..)` method takes [`dircr::W`](W) writer structure"]
 impl crate::Writable for DircrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIRCR to value 0"]
-impl crate::Resettable for DircrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DircrSpec {}

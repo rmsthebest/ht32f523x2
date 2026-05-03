@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - PARP"]
     #[inline(always)]
-    #[must_use]
-    pub fn parp(&mut self) -> ParpW<IprSpec> {
+    pub fn parp(&mut self) -> ParpW<'_, IprSpec> {
         ParpW::new(self, 0)
     }
     #[doc = "Bit 1 - RXCP"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxcp(&mut self) -> RxcpW<IprSpec> {
+    pub fn rxcp(&mut self) -> RxcpW<'_, IprSpec> {
         RxcpW::new(self, 1)
     }
     #[doc = "Bit 2 - TXCP"]
     #[inline(always)]
-    #[must_use]
-    pub fn txcp(&mut self) -> TxcpW<IprSpec> {
+    pub fn txcp(&mut self) -> TxcpW<'_, IprSpec> {
         TxcpW::new(self, 2)
     }
     #[doc = "Bit 3 - WTP"]
     #[inline(always)]
-    #[must_use]
-    pub fn wtp(&mut self) -> WtpW<IprSpec> {
+    pub fn wtp(&mut self) -> WtpW<'_, IprSpec> {
         WtpW::new(self, 3)
     }
     #[doc = "Bit 6 - CARDIRP"]
     #[inline(always)]
-    #[must_use]
-    pub fn cardirp(&mut self) -> CardirpW<IprSpec> {
+    pub fn cardirp(&mut self) -> CardirpW<'_, IprSpec> {
         CardirpW::new(self, 6)
     }
     #[doc = "Bit 7 - TXBEP"]
     #[inline(always)]
-    #[must_use]
-    pub fn txbep(&mut self) -> TxbepW<IprSpec> {
+    pub fn txbep(&mut self) -> TxbepW<'_, IprSpec> {
         TxbepW::new(self, 7)
     }
 }
-#[doc = "IPR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ipr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ipr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IPR\n\nYou can [`read`](crate::Reg::read) this register and get [`ipr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ipr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IprSpec;
 impl crate::RegisterSpec for IprSpec {
     type Ux = u32;
@@ -106,10 +100,6 @@ impl crate::Readable for IprSpec {}
 #[doc = "`write(|w| ..)` method takes [`ipr::W`](W) writer structure"]
 impl crate::Writable for IprSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IPR to value 0"]
-impl crate::Resettable for IprSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IprSpec {}

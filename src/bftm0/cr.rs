@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - MIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn mien(&mut self) -> MienW<CrSpec> {
+    pub fn mien(&mut self) -> MienW<'_, CrSpec> {
         MienW::new(self, 0)
     }
     #[doc = "Bit 1 - OSM"]
     #[inline(always)]
-    #[must_use]
-    pub fn osm(&mut self) -> OsmW<CrSpec> {
+    pub fn osm(&mut self) -> OsmW<'_, CrSpec> {
         OsmW::new(self, 1)
     }
     #[doc = "Bit 2 - CEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn cen(&mut self) -> CenW<CrSpec> {
+    pub fn cen(&mut self) -> CenW<'_, CrSpec> {
         CenW::new(self, 2)
     }
 }
-#[doc = "CR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CR\n\nYou can [`read`](crate::Reg::read) this register and get [`cr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CrSpec;
 impl crate::RegisterSpec for CrSpec {
     type Ux = u32;
@@ -61,10 +58,6 @@ impl crate::Readable for CrSpec {}
 #[doc = "`write(|w| ..)` method takes [`cr::W`](W) writer structure"]
 impl crate::Writable for CrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR to value 0"]
-impl crate::Resettable for CrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CrSpec {}

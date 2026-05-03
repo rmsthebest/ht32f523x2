@@ -79,54 +79,46 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - EXTI0PIN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti0pin(&mut self) -> Exti0pinW<Essr0Spec> {
+    pub fn exti0pin(&mut self) -> Exti0pinW<'_, Essr0Spec> {
         Exti0pinW::new(self, 0)
     }
     #[doc = "Bits 4:7 - EXTI1PIN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti1pin(&mut self) -> Exti1pinW<Essr0Spec> {
+    pub fn exti1pin(&mut self) -> Exti1pinW<'_, Essr0Spec> {
         Exti1pinW::new(self, 4)
     }
     #[doc = "Bits 8:11 - EXTI2PIN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti2pin(&mut self) -> Exti2pinW<Essr0Spec> {
+    pub fn exti2pin(&mut self) -> Exti2pinW<'_, Essr0Spec> {
         Exti2pinW::new(self, 8)
     }
     #[doc = "Bits 12:15 - EXTI3PIN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti3pin(&mut self) -> Exti3pinW<Essr0Spec> {
+    pub fn exti3pin(&mut self) -> Exti3pinW<'_, Essr0Spec> {
         Exti3pinW::new(self, 12)
     }
     #[doc = "Bits 16:19 - EXTI4PIN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti4pin(&mut self) -> Exti4pinW<Essr0Spec> {
+    pub fn exti4pin(&mut self) -> Exti4pinW<'_, Essr0Spec> {
         Exti4pinW::new(self, 16)
     }
     #[doc = "Bits 20:23 - EXTI5PIN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti5pin(&mut self) -> Exti5pinW<Essr0Spec> {
+    pub fn exti5pin(&mut self) -> Exti5pinW<'_, Essr0Spec> {
         Exti5pinW::new(self, 20)
     }
     #[doc = "Bits 24:27 - EXTI6PIN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti6pin(&mut self) -> Exti6pinW<Essr0Spec> {
+    pub fn exti6pin(&mut self) -> Exti6pinW<'_, Essr0Spec> {
         Exti6pinW::new(self, 24)
     }
     #[doc = "Bits 28:31 - EXTI7PIN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti7pin(&mut self) -> Exti7pinW<Essr0Spec> {
+    pub fn exti7pin(&mut self) -> Exti7pinW<'_, Essr0Spec> {
         Exti7pinW::new(self, 28)
     }
 }
-#[doc = "ESSR0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`essr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`essr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ESSR0\n\nYou can [`read`](crate::Reg::read) this register and get [`essr0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`essr0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Essr0Spec;
 impl crate::RegisterSpec for Essr0Spec {
     type Ux = u32;
@@ -136,10 +128,6 @@ impl crate::Readable for Essr0Spec {}
 #[doc = "`write(|w| ..)` method takes [`essr0::W`](W) writer structure"]
 impl crate::Writable for Essr0Spec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ESSR0 to value 0"]
-impl crate::Resettable for Essr0Spec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Essr0Spec {}

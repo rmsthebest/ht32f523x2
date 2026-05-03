@@ -106,72 +106,61 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - AFIOPCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn afiopclk(&mut self) -> AfiopclkW<Apbpcsr1Spec> {
+    pub fn afiopclk(&mut self) -> AfiopclkW<'_, Apbpcsr1Spec> {
         AfiopclkW::new(self, 0)
     }
     #[doc = "Bits 2:3 - EXTIPCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn extipclk(&mut self) -> ExtipclkW<Apbpcsr1Spec> {
+    pub fn extipclk(&mut self) -> ExtipclkW<'_, Apbpcsr1Spec> {
         ExtipclkW::new(self, 2)
     }
     #[doc = "Bits 4:5 - ADCCPCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn adccpclk(&mut self) -> AdccpclkW<Apbpcsr1Spec> {
+    pub fn adccpclk(&mut self) -> AdccpclkW<'_, Apbpcsr1Spec> {
         AdccpclkW::new(self, 4)
     }
     #[doc = "Bits 8:9 - CMPPCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmppclk(&mut self) -> CmppclkW<Apbpcsr1Spec> {
+    pub fn cmppclk(&mut self) -> CmppclkW<'_, Apbpcsr1Spec> {
         CmppclkW::new(self, 8)
     }
     #[doc = "Bits 12:13 - WDTRPCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn wdtrpclk(&mut self) -> WdtrpclkW<Apbpcsr1Spec> {
+    pub fn wdtrpclk(&mut self) -> WdtrpclkW<'_, Apbpcsr1Spec> {
         WdtrpclkW::new(self, 12)
     }
     #[doc = "Bits 14:15 - BKPRPCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn bkprpclk(&mut self) -> BkprpclkW<Apbpcsr1Spec> {
+    pub fn bkprpclk(&mut self) -> BkprpclkW<'_, Apbpcsr1Spec> {
         BkprpclkW::new(self, 14)
     }
     #[doc = "Bits 16:17 - SCI0PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn sci0pclk(&mut self) -> Sci0pclkW<Apbpcsr1Spec> {
+    pub fn sci0pclk(&mut self) -> Sci0pclkW<'_, Apbpcsr1Spec> {
         Sci0pclkW::new(self, 16)
     }
     #[doc = "Bits 18:19 - SCI1PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn sci1pclk(&mut self) -> Sci1pclkW<Apbpcsr1Spec> {
+    pub fn sci1pclk(&mut self) -> Sci1pclkW<'_, Apbpcsr1Spec> {
         Sci1pclkW::new(self, 18)
     }
     #[doc = "Bits 20:21 - I2SPCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2spclk(&mut self) -> I2spclkW<Apbpcsr1Spec> {
+    pub fn i2spclk(&mut self) -> I2spclkW<'_, Apbpcsr1Spec> {
         I2spclkW::new(self, 20)
     }
     #[doc = "Bits 24:25 - SCTM0PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn sctm0pclk(&mut self) -> Sctm0pclkW<Apbpcsr1Spec> {
+    pub fn sctm0pclk(&mut self) -> Sctm0pclkW<'_, Apbpcsr1Spec> {
         Sctm0pclkW::new(self, 24)
     }
     #[doc = "Bits 26:27 - SCTM1PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn sctm1pclk(&mut self) -> Sctm1pclkW<Apbpcsr1Spec> {
+    pub fn sctm1pclk(&mut self) -> Sctm1pclkW<'_, Apbpcsr1Spec> {
         Sctm1pclkW::new(self, 26)
     }
 }
-#[doc = "APBPCSR1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apbpcsr1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apbpcsr1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "APBPCSR1\n\nYou can [`read`](crate::Reg::read) this register and get [`apbpcsr1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apbpcsr1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Apbpcsr1Spec;
 impl crate::RegisterSpec for Apbpcsr1Spec {
     type Ux = u32;
@@ -181,10 +170,6 @@ impl crate::Readable for Apbpcsr1Spec {}
 #[doc = "`write(|w| ..)` method takes [`apbpcsr1::W`](W) writer structure"]
 impl crate::Writable for Apbpcsr1Spec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APBPCSR1 to value 0"]
-impl crate::Resettable for Apbpcsr1Spec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Apbpcsr1Spec {}

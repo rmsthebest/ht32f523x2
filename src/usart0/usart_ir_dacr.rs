@@ -70,48 +70,41 @@ impl R {
 impl W {
     #[doc = "Bit 0 - IrDAEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn ir_daen(&mut self) -> IrDaenW<UsartIrDacrSpec> {
+    pub fn ir_daen(&mut self) -> IrDaenW<'_, UsartIrDacrSpec> {
         IrDaenW::new(self, 0)
     }
     #[doc = "Bit 1 - IrDALP"]
     #[inline(always)]
-    #[must_use]
-    pub fn ir_dalp(&mut self) -> IrDalpW<UsartIrDacrSpec> {
+    pub fn ir_dalp(&mut self) -> IrDalpW<'_, UsartIrDacrSpec> {
         IrDalpW::new(self, 1)
     }
     #[doc = "Bit 2 - TXSEL"]
     #[inline(always)]
-    #[must_use]
-    pub fn txsel(&mut self) -> TxselW<UsartIrDacrSpec> {
+    pub fn txsel(&mut self) -> TxselW<'_, UsartIrDacrSpec> {
         TxselW::new(self, 2)
     }
     #[doc = "Bit 3 - LB"]
     #[inline(always)]
-    #[must_use]
-    pub fn lb(&mut self) -> LbW<UsartIrDacrSpec> {
+    pub fn lb(&mut self) -> LbW<'_, UsartIrDacrSpec> {
         LbW::new(self, 3)
     }
     #[doc = "Bit 4 - TXINV"]
     #[inline(always)]
-    #[must_use]
-    pub fn txinv(&mut self) -> TxinvW<UsartIrDacrSpec> {
+    pub fn txinv(&mut self) -> TxinvW<'_, UsartIrDacrSpec> {
         TxinvW::new(self, 4)
     }
     #[doc = "Bit 5 - RXINV"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxinv(&mut self) -> RxinvW<UsartIrDacrSpec> {
+    pub fn rxinv(&mut self) -> RxinvW<'_, UsartIrDacrSpec> {
         RxinvW::new(self, 5)
     }
     #[doc = "Bits 8:15 - IrDAPSC"]
     #[inline(always)]
-    #[must_use]
-    pub fn ir_dapsc(&mut self) -> IrDapscW<UsartIrDacrSpec> {
+    pub fn ir_dapsc(&mut self) -> IrDapscW<'_, UsartIrDacrSpec> {
         IrDapscW::new(self, 8)
     }
 }
-#[doc = "USART_IrDACR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`usart_ir_dacr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usart_ir_dacr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "USART_IrDACR\n\nYou can [`read`](crate::Reg::read) this register and get [`usart_ir_dacr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`usart_ir_dacr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UsartIrDacrSpec;
 impl crate::RegisterSpec for UsartIrDacrSpec {
     type Ux = u32;
@@ -121,10 +114,6 @@ impl crate::Readable for UsartIrDacrSpec {}
 #[doc = "`write(|w| ..)` method takes [`usart_ir_dacr::W`](W) writer structure"]
 impl crate::Writable for UsartIrDacrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets USART_IrDACR to value 0"]
-impl crate::Resettable for UsartIrDacrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for UsartIrDacrSpec {}

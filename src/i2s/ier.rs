@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - TXFTLIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn txftlien(&mut self) -> TxftlienW<IerSpec> {
+    pub fn txftlien(&mut self) -> TxftlienW<'_, IerSpec> {
         TxftlienW::new(self, 0)
     }
     #[doc = "Bit 1 - TXUDIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn txudien(&mut self) -> TxudienW<IerSpec> {
+    pub fn txudien(&mut self) -> TxudienW<'_, IerSpec> {
         TxudienW::new(self, 1)
     }
     #[doc = "Bit 2 - TXOVIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn txovien(&mut self) -> TxovienW<IerSpec> {
+    pub fn txovien(&mut self) -> TxovienW<'_, IerSpec> {
         TxovienW::new(self, 2)
     }
     #[doc = "Bit 4 - RXFTLIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxftlien(&mut self) -> RxftlienW<IerSpec> {
+    pub fn rxftlien(&mut self) -> RxftlienW<'_, IerSpec> {
         RxftlienW::new(self, 4)
     }
     #[doc = "Bit 5 - RXUDIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxudien(&mut self) -> RxudienW<IerSpec> {
+    pub fn rxudien(&mut self) -> RxudienW<'_, IerSpec> {
         RxudienW::new(self, 5)
     }
     #[doc = "Bit 6 - RXOVIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxovien(&mut self) -> RxovienW<IerSpec> {
+    pub fn rxovien(&mut self) -> RxovienW<'_, IerSpec> {
         RxovienW::new(self, 6)
     }
 }
-#[doc = "IER\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ier::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ier::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IER\n\nYou can [`read`](crate::Reg::read) this register and get [`ier::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ier::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IerSpec;
 impl crate::RegisterSpec for IerSpec {
     type Ux = u32;
@@ -106,10 +100,6 @@ impl crate::Readable for IerSpec {}
 #[doc = "`write(|w| ..)` method takes [`ier::W`](W) writer structure"]
 impl crate::Writable for IerSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IER to value 0"]
-impl crate::Resettable for IerSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IerSpec {}

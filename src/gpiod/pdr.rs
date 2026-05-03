@@ -151,102 +151,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - PD0"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd0(&mut self) -> Pd0W<PdrSpec> {
+    pub fn pd0(&mut self) -> Pd0W<'_, PdrSpec> {
         Pd0W::new(self, 0)
     }
     #[doc = "Bit 1 - PD1"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd1(&mut self) -> Pd1W<PdrSpec> {
+    pub fn pd1(&mut self) -> Pd1W<'_, PdrSpec> {
         Pd1W::new(self, 1)
     }
     #[doc = "Bit 2 - PD2"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd2(&mut self) -> Pd2W<PdrSpec> {
+    pub fn pd2(&mut self) -> Pd2W<'_, PdrSpec> {
         Pd2W::new(self, 2)
     }
     #[doc = "Bit 3 - PD3"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd3(&mut self) -> Pd3W<PdrSpec> {
+    pub fn pd3(&mut self) -> Pd3W<'_, PdrSpec> {
         Pd3W::new(self, 3)
     }
     #[doc = "Bit 4 - PD4"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd4(&mut self) -> Pd4W<PdrSpec> {
+    pub fn pd4(&mut self) -> Pd4W<'_, PdrSpec> {
         Pd4W::new(self, 4)
     }
     #[doc = "Bit 5 - PD5"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd5(&mut self) -> Pd5W<PdrSpec> {
+    pub fn pd5(&mut self) -> Pd5W<'_, PdrSpec> {
         Pd5W::new(self, 5)
     }
     #[doc = "Bit 6 - PD6"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd6(&mut self) -> Pd6W<PdrSpec> {
+    pub fn pd6(&mut self) -> Pd6W<'_, PdrSpec> {
         Pd6W::new(self, 6)
     }
     #[doc = "Bit 7 - PD7"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd7(&mut self) -> Pd7W<PdrSpec> {
+    pub fn pd7(&mut self) -> Pd7W<'_, PdrSpec> {
         Pd7W::new(self, 7)
     }
     #[doc = "Bit 8 - PD8"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd8(&mut self) -> Pd8W<PdrSpec> {
+    pub fn pd8(&mut self) -> Pd8W<'_, PdrSpec> {
         Pd8W::new(self, 8)
     }
     #[doc = "Bit 9 - PD9"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd9(&mut self) -> Pd9W<PdrSpec> {
+    pub fn pd9(&mut self) -> Pd9W<'_, PdrSpec> {
         Pd9W::new(self, 9)
     }
     #[doc = "Bit 10 - PD10"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd10(&mut self) -> Pd10W<PdrSpec> {
+    pub fn pd10(&mut self) -> Pd10W<'_, PdrSpec> {
         Pd10W::new(self, 10)
     }
     #[doc = "Bit 11 - PD11"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd11(&mut self) -> Pd11W<PdrSpec> {
+    pub fn pd11(&mut self) -> Pd11W<'_, PdrSpec> {
         Pd11W::new(self, 11)
     }
     #[doc = "Bit 12 - PD12"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd12(&mut self) -> Pd12W<PdrSpec> {
+    pub fn pd12(&mut self) -> Pd12W<'_, PdrSpec> {
         Pd12W::new(self, 12)
     }
     #[doc = "Bit 13 - PD13"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd13(&mut self) -> Pd13W<PdrSpec> {
+    pub fn pd13(&mut self) -> Pd13W<'_, PdrSpec> {
         Pd13W::new(self, 13)
     }
     #[doc = "Bit 14 - PD14"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd14(&mut self) -> Pd14W<PdrSpec> {
+    pub fn pd14(&mut self) -> Pd14W<'_, PdrSpec> {
         Pd14W::new(self, 14)
     }
     #[doc = "Bit 15 - PD15"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd15(&mut self) -> Pd15W<PdrSpec> {
+    pub fn pd15(&mut self) -> Pd15W<'_, PdrSpec> {
         Pd15W::new(self, 15)
     }
 }
-#[doc = "PDR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pdr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pdr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PDR\n\nYou can [`read`](crate::Reg::read) this register and get [`pdr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pdr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PdrSpec;
 impl crate::RegisterSpec for PdrSpec {
     type Ux = u32;
@@ -256,10 +240,6 @@ impl crate::Readable for PdrSpec {}
 #[doc = "`write(|w| ..)` method takes [`pdr::W`](W) writer structure"]
 impl crate::Writable for PdrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PDR to value 0"]
-impl crate::Resettable for PdrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PdrSpec {}

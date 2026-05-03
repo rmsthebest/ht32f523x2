@@ -151,102 +151,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - EXTI0EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti0en(&mut self) -> Exti0enW<CrSpec> {
+    pub fn exti0en(&mut self) -> Exti0enW<'_, CrSpec> {
         Exti0enW::new(self, 0)
     }
     #[doc = "Bit 1 - EXTI1EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti1en(&mut self) -> Exti1enW<CrSpec> {
+    pub fn exti1en(&mut self) -> Exti1enW<'_, CrSpec> {
         Exti1enW::new(self, 1)
     }
     #[doc = "Bit 2 - EXTI2EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti2en(&mut self) -> Exti2enW<CrSpec> {
+    pub fn exti2en(&mut self) -> Exti2enW<'_, CrSpec> {
         Exti2enW::new(self, 2)
     }
     #[doc = "Bit 3 - EXTI3EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti3en(&mut self) -> Exti3enW<CrSpec> {
+    pub fn exti3en(&mut self) -> Exti3enW<'_, CrSpec> {
         Exti3enW::new(self, 3)
     }
     #[doc = "Bit 4 - EXTI4EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti4en(&mut self) -> Exti4enW<CrSpec> {
+    pub fn exti4en(&mut self) -> Exti4enW<'_, CrSpec> {
         Exti4enW::new(self, 4)
     }
     #[doc = "Bit 5 - EXTI5EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti5en(&mut self) -> Exti5enW<CrSpec> {
+    pub fn exti5en(&mut self) -> Exti5enW<'_, CrSpec> {
         Exti5enW::new(self, 5)
     }
     #[doc = "Bit 6 - EXTI6EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti6en(&mut self) -> Exti6enW<CrSpec> {
+    pub fn exti6en(&mut self) -> Exti6enW<'_, CrSpec> {
         Exti6enW::new(self, 6)
     }
     #[doc = "Bit 7 - EXTI7EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti7en(&mut self) -> Exti7enW<CrSpec> {
+    pub fn exti7en(&mut self) -> Exti7enW<'_, CrSpec> {
         Exti7enW::new(self, 7)
     }
     #[doc = "Bit 8 - EXTI8EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti8en(&mut self) -> Exti8enW<CrSpec> {
+    pub fn exti8en(&mut self) -> Exti8enW<'_, CrSpec> {
         Exti8enW::new(self, 8)
     }
     #[doc = "Bit 9 - EXTI9EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti9en(&mut self) -> Exti9enW<CrSpec> {
+    pub fn exti9en(&mut self) -> Exti9enW<'_, CrSpec> {
         Exti9enW::new(self, 9)
     }
     #[doc = "Bit 10 - EXTI10EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti10en(&mut self) -> Exti10enW<CrSpec> {
+    pub fn exti10en(&mut self) -> Exti10enW<'_, CrSpec> {
         Exti10enW::new(self, 10)
     }
     #[doc = "Bit 11 - EXTI11EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti11en(&mut self) -> Exti11enW<CrSpec> {
+    pub fn exti11en(&mut self) -> Exti11enW<'_, CrSpec> {
         Exti11enW::new(self, 11)
     }
     #[doc = "Bit 12 - EXTI12EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti12en(&mut self) -> Exti12enW<CrSpec> {
+    pub fn exti12en(&mut self) -> Exti12enW<'_, CrSpec> {
         Exti12enW::new(self, 12)
     }
     #[doc = "Bit 13 - EXTI13EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti13en(&mut self) -> Exti13enW<CrSpec> {
+    pub fn exti13en(&mut self) -> Exti13enW<'_, CrSpec> {
         Exti13enW::new(self, 13)
     }
     #[doc = "Bit 14 - EXTI14EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti14en(&mut self) -> Exti14enW<CrSpec> {
+    pub fn exti14en(&mut self) -> Exti14enW<'_, CrSpec> {
         Exti14enW::new(self, 14)
     }
     #[doc = "Bit 15 - EXTI15EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti15en(&mut self) -> Exti15enW<CrSpec> {
+    pub fn exti15en(&mut self) -> Exti15enW<'_, CrSpec> {
         Exti15enW::new(self, 15)
     }
 }
-#[doc = "CR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CR\n\nYou can [`read`](crate::Reg::read) this register and get [`cr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CrSpec;
 impl crate::RegisterSpec for CrSpec {
     type Ux = u32;
@@ -256,10 +240,6 @@ impl crate::Readable for CrSpec {}
 #[doc = "`write(|w| ..)` method takes [`cr::W`](W) writer structure"]
 impl crate::Writable for CrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR to value 0"]
-impl crate::Resettable for CrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CrSpec {}

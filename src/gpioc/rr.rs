@@ -151,102 +151,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RST0"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst0(&mut self) -> Rst0W<RrSpec> {
+    pub fn rst0(&mut self) -> Rst0W<'_, RrSpec> {
         Rst0W::new(self, 0)
     }
     #[doc = "Bit 1 - RST1"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst1(&mut self) -> Rst1W<RrSpec> {
+    pub fn rst1(&mut self) -> Rst1W<'_, RrSpec> {
         Rst1W::new(self, 1)
     }
     #[doc = "Bit 2 - RST2"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst2(&mut self) -> Rst2W<RrSpec> {
+    pub fn rst2(&mut self) -> Rst2W<'_, RrSpec> {
         Rst2W::new(self, 2)
     }
     #[doc = "Bit 3 - RST3"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst3(&mut self) -> Rst3W<RrSpec> {
+    pub fn rst3(&mut self) -> Rst3W<'_, RrSpec> {
         Rst3W::new(self, 3)
     }
     #[doc = "Bit 4 - RST4"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst4(&mut self) -> Rst4W<RrSpec> {
+    pub fn rst4(&mut self) -> Rst4W<'_, RrSpec> {
         Rst4W::new(self, 4)
     }
     #[doc = "Bit 5 - RST5"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst5(&mut self) -> Rst5W<RrSpec> {
+    pub fn rst5(&mut self) -> Rst5W<'_, RrSpec> {
         Rst5W::new(self, 5)
     }
     #[doc = "Bit 6 - RST6"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst6(&mut self) -> Rst6W<RrSpec> {
+    pub fn rst6(&mut self) -> Rst6W<'_, RrSpec> {
         Rst6W::new(self, 6)
     }
     #[doc = "Bit 7 - RST7"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst7(&mut self) -> Rst7W<RrSpec> {
+    pub fn rst7(&mut self) -> Rst7W<'_, RrSpec> {
         Rst7W::new(self, 7)
     }
     #[doc = "Bit 8 - RST8"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst8(&mut self) -> Rst8W<RrSpec> {
+    pub fn rst8(&mut self) -> Rst8W<'_, RrSpec> {
         Rst8W::new(self, 8)
     }
     #[doc = "Bit 9 - RST9"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst9(&mut self) -> Rst9W<RrSpec> {
+    pub fn rst9(&mut self) -> Rst9W<'_, RrSpec> {
         Rst9W::new(self, 9)
     }
     #[doc = "Bit 10 - RST10"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst10(&mut self) -> Rst10W<RrSpec> {
+    pub fn rst10(&mut self) -> Rst10W<'_, RrSpec> {
         Rst10W::new(self, 10)
     }
     #[doc = "Bit 11 - RST11"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst11(&mut self) -> Rst11W<RrSpec> {
+    pub fn rst11(&mut self) -> Rst11W<'_, RrSpec> {
         Rst11W::new(self, 11)
     }
     #[doc = "Bit 12 - RST12"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst12(&mut self) -> Rst12W<RrSpec> {
+    pub fn rst12(&mut self) -> Rst12W<'_, RrSpec> {
         Rst12W::new(self, 12)
     }
     #[doc = "Bit 13 - RST13"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst13(&mut self) -> Rst13W<RrSpec> {
+    pub fn rst13(&mut self) -> Rst13W<'_, RrSpec> {
         Rst13W::new(self, 13)
     }
     #[doc = "Bit 14 - RST14"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst14(&mut self) -> Rst14W<RrSpec> {
+    pub fn rst14(&mut self) -> Rst14W<'_, RrSpec> {
         Rst14W::new(self, 14)
     }
     #[doc = "Bit 15 - RST15"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst15(&mut self) -> Rst15W<RrSpec> {
+    pub fn rst15(&mut self) -> Rst15W<'_, RrSpec> {
         Rst15W::new(self, 15)
     }
 }
-#[doc = "RR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RR\n\nYou can [`read`](crate::Reg::read) this register and get [`rr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RrSpec;
 impl crate::RegisterSpec for RrSpec {
     type Ux = u32;
@@ -256,10 +240,6 @@ impl crate::Readable for RrSpec {}
 #[doc = "`write(|w| ..)` method takes [`rr::W`](W) writer structure"]
 impl crate::Writable for RrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RR to value 0"]
-impl crate::Resettable for RrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RrSpec {}

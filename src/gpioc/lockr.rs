@@ -160,108 +160,91 @@ impl R {
 impl W {
     #[doc = "Bit 0 - LOCK0"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock0(&mut self) -> Lock0W<LockrSpec> {
+    pub fn lock0(&mut self) -> Lock0W<'_, LockrSpec> {
         Lock0W::new(self, 0)
     }
     #[doc = "Bit 1 - LOCK1"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock1(&mut self) -> Lock1W<LockrSpec> {
+    pub fn lock1(&mut self) -> Lock1W<'_, LockrSpec> {
         Lock1W::new(self, 1)
     }
     #[doc = "Bit 2 - LOCK2"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock2(&mut self) -> Lock2W<LockrSpec> {
+    pub fn lock2(&mut self) -> Lock2W<'_, LockrSpec> {
         Lock2W::new(self, 2)
     }
     #[doc = "Bit 3 - LOCK3"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock3(&mut self) -> Lock3W<LockrSpec> {
+    pub fn lock3(&mut self) -> Lock3W<'_, LockrSpec> {
         Lock3W::new(self, 3)
     }
     #[doc = "Bit 4 - LOCK4"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock4(&mut self) -> Lock4W<LockrSpec> {
+    pub fn lock4(&mut self) -> Lock4W<'_, LockrSpec> {
         Lock4W::new(self, 4)
     }
     #[doc = "Bit 5 - LOCK5"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock5(&mut self) -> Lock5W<LockrSpec> {
+    pub fn lock5(&mut self) -> Lock5W<'_, LockrSpec> {
         Lock5W::new(self, 5)
     }
     #[doc = "Bit 6 - LOCK6"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock6(&mut self) -> Lock6W<LockrSpec> {
+    pub fn lock6(&mut self) -> Lock6W<'_, LockrSpec> {
         Lock6W::new(self, 6)
     }
     #[doc = "Bit 7 - LOCK7"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock7(&mut self) -> Lock7W<LockrSpec> {
+    pub fn lock7(&mut self) -> Lock7W<'_, LockrSpec> {
         Lock7W::new(self, 7)
     }
     #[doc = "Bit 8 - LOCK8"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock8(&mut self) -> Lock8W<LockrSpec> {
+    pub fn lock8(&mut self) -> Lock8W<'_, LockrSpec> {
         Lock8W::new(self, 8)
     }
     #[doc = "Bit 9 - LOCK9"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock9(&mut self) -> Lock9W<LockrSpec> {
+    pub fn lock9(&mut self) -> Lock9W<'_, LockrSpec> {
         Lock9W::new(self, 9)
     }
     #[doc = "Bit 10 - LOCK10"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock10(&mut self) -> Lock10W<LockrSpec> {
+    pub fn lock10(&mut self) -> Lock10W<'_, LockrSpec> {
         Lock10W::new(self, 10)
     }
     #[doc = "Bit 11 - LOCK11"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock11(&mut self) -> Lock11W<LockrSpec> {
+    pub fn lock11(&mut self) -> Lock11W<'_, LockrSpec> {
         Lock11W::new(self, 11)
     }
     #[doc = "Bit 12 - LOCK12"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock12(&mut self) -> Lock12W<LockrSpec> {
+    pub fn lock12(&mut self) -> Lock12W<'_, LockrSpec> {
         Lock12W::new(self, 12)
     }
     #[doc = "Bit 13 - LOCK13"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock13(&mut self) -> Lock13W<LockrSpec> {
+    pub fn lock13(&mut self) -> Lock13W<'_, LockrSpec> {
         Lock13W::new(self, 13)
     }
     #[doc = "Bit 14 - LOCK14"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock14(&mut self) -> Lock14W<LockrSpec> {
+    pub fn lock14(&mut self) -> Lock14W<'_, LockrSpec> {
         Lock14W::new(self, 14)
     }
     #[doc = "Bit 15 - LOCK15"]
     #[inline(always)]
-    #[must_use]
-    pub fn lock15(&mut self) -> Lock15W<LockrSpec> {
+    pub fn lock15(&mut self) -> Lock15W<'_, LockrSpec> {
         Lock15W::new(self, 15)
     }
     #[doc = "Bits 16:31 - LKEY"]
     #[inline(always)]
-    #[must_use]
-    pub fn lkey(&mut self) -> LkeyW<LockrSpec> {
+    pub fn lkey(&mut self) -> LkeyW<'_, LockrSpec> {
         LkeyW::new(self, 16)
     }
 }
-#[doc = "LOCKR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lockr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lockr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LOCKR\n\nYou can [`read`](crate::Reg::read) this register and get [`lockr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lockr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LockrSpec;
 impl crate::RegisterSpec for LockrSpec {
     type Ux = u32;
@@ -271,10 +254,6 @@ impl crate::Readable for LockrSpec {}
 #[doc = "`write(|w| ..)` method takes [`lockr::W`](W) writer structure"]
 impl crate::Writable for LockrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LOCKR to value 0"]
-impl crate::Resettable for LockrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LockrSpec {}

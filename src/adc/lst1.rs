@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - ADSEQ4"]
     #[inline(always)]
-    #[must_use]
-    pub fn adseq4(&mut self) -> Adseq4W<Lst1Spec> {
+    pub fn adseq4(&mut self) -> Adseq4W<'_, Lst1Spec> {
         Adseq4W::new(self, 0)
     }
     #[doc = "Bits 8:12 - ADSEQ5"]
     #[inline(always)]
-    #[must_use]
-    pub fn adseq5(&mut self) -> Adseq5W<Lst1Spec> {
+    pub fn adseq5(&mut self) -> Adseq5W<'_, Lst1Spec> {
         Adseq5W::new(self, 8)
     }
     #[doc = "Bits 16:20 - ADSEQ6"]
     #[inline(always)]
-    #[must_use]
-    pub fn adseq6(&mut self) -> Adseq6W<Lst1Spec> {
+    pub fn adseq6(&mut self) -> Adseq6W<'_, Lst1Spec> {
         Adseq6W::new(self, 16)
     }
     #[doc = "Bits 24:28 - ADSEQ7"]
     #[inline(always)]
-    #[must_use]
-    pub fn adseq7(&mut self) -> Adseq7W<Lst1Spec> {
+    pub fn adseq7(&mut self) -> Adseq7W<'_, Lst1Spec> {
         Adseq7W::new(self, 24)
     }
 }
-#[doc = "LST1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lst1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lst1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LST1\n\nYou can [`read`](crate::Reg::read) this register and get [`lst1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lst1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Lst1Spec;
 impl crate::RegisterSpec for Lst1Spec {
     type Ux = u32;
@@ -76,10 +72,6 @@ impl crate::Readable for Lst1Spec {}
 #[doc = "`write(|w| ..)` method takes [`lst1::W`](W) writer structure"]
 impl crate::Writable for Lst1Spec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LST1 to value 0"]
-impl crate::Resettable for Lst1Spec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Lst1Spec {}

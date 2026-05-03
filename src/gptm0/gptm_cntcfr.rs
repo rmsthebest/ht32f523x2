@@ -52,36 +52,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - UEVDIS"]
     #[inline(always)]
-    #[must_use]
-    pub fn uevdis(&mut self) -> UevdisW<GptmCntcfrSpec> {
+    pub fn uevdis(&mut self) -> UevdisW<'_, GptmCntcfrSpec> {
         UevdisW::new(self, 0)
     }
     #[doc = "Bit 1 - UGDIS"]
     #[inline(always)]
-    #[must_use]
-    pub fn ugdis(&mut self) -> UgdisW<GptmCntcfrSpec> {
+    pub fn ugdis(&mut self) -> UgdisW<'_, GptmCntcfrSpec> {
         UgdisW::new(self, 1)
     }
     #[doc = "Bits 8:9 - CKDIV"]
     #[inline(always)]
-    #[must_use]
-    pub fn ckdiv(&mut self) -> CkdivW<GptmCntcfrSpec> {
+    pub fn ckdiv(&mut self) -> CkdivW<'_, GptmCntcfrSpec> {
         CkdivW::new(self, 8)
     }
     #[doc = "Bits 16:17 - CMSEL"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmsel(&mut self) -> CmselW<GptmCntcfrSpec> {
+    pub fn cmsel(&mut self) -> CmselW<'_, GptmCntcfrSpec> {
         CmselW::new(self, 16)
     }
     #[doc = "Bit 24 - DIR"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir(&mut self) -> DirW<GptmCntcfrSpec> {
+    pub fn dir(&mut self) -> DirW<'_, GptmCntcfrSpec> {
         DirW::new(self, 24)
     }
 }
-#[doc = "GPTM_CNTCFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_cntcfr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_cntcfr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM_CNTCFR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_cntcfr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_cntcfr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GptmCntcfrSpec;
 impl crate::RegisterSpec for GptmCntcfrSpec {
     type Ux = u32;
@@ -91,10 +86,6 @@ impl crate::Readable for GptmCntcfrSpec {}
 #[doc = "`write(|w| ..)` method takes [`gptm_cntcfr::W`](W) writer structure"]
 impl crate::Writable for GptmCntcfrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GPTM_CNTCFR to value 0"]
-impl crate::Resettable for GptmCntcfrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GptmCntcfrSpec {}

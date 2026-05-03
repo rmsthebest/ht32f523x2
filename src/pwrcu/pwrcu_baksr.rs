@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - BAKPORF"]
     #[inline(always)]
-    #[must_use]
-    pub fn bakporf(&mut self) -> BakporfW<PwrcuBaksrSpec> {
+    pub fn bakporf(&mut self) -> BakporfW<'_, PwrcuBaksrSpec> {
         BakporfW::new(self, 0)
     }
     #[doc = "Bit 1 - PDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn pdf(&mut self) -> PdfW<PwrcuBaksrSpec> {
+    pub fn pdf(&mut self) -> PdfW<'_, PwrcuBaksrSpec> {
         PdfW::new(self, 1)
     }
     #[doc = "Bit 8 - WUPF"]
     #[inline(always)]
-    #[must_use]
-    pub fn wupf(&mut self) -> WupfW<PwrcuBaksrSpec> {
+    pub fn wupf(&mut self) -> WupfW<'_, PwrcuBaksrSpec> {
         WupfW::new(self, 8)
     }
 }
-#[doc = "PWRCU_BAKSR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pwrcu_baksr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pwrcu_baksr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PWRCU_BAKSR\n\nYou can [`read`](crate::Reg::read) this register and get [`pwrcu_baksr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pwrcu_baksr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PwrcuBaksrSpec;
 impl crate::RegisterSpec for PwrcuBaksrSpec {
     type Ux = u32;
@@ -61,10 +58,6 @@ impl crate::Readable for PwrcuBaksrSpec {}
 #[doc = "`write(|w| ..)` method takes [`pwrcu_baksr::W`](W) writer structure"]
 impl crate::Writable for PwrcuBaksrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PWRCU_BAKSR to value 0"]
-impl crate::Resettable for PwrcuBaksrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PwrcuBaksrSpec {}

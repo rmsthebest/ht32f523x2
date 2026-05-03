@@ -151,102 +151,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - EXTI0EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti0edf(&mut self) -> Exti0edfW<EdgeflgrSpec> {
+    pub fn exti0edf(&mut self) -> Exti0edfW<'_, EdgeflgrSpec> {
         Exti0edfW::new(self, 0)
     }
     #[doc = "Bit 1 - EXTI1EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti1edf(&mut self) -> Exti1edfW<EdgeflgrSpec> {
+    pub fn exti1edf(&mut self) -> Exti1edfW<'_, EdgeflgrSpec> {
         Exti1edfW::new(self, 1)
     }
     #[doc = "Bit 2 - EXTI2EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti2edf(&mut self) -> Exti2edfW<EdgeflgrSpec> {
+    pub fn exti2edf(&mut self) -> Exti2edfW<'_, EdgeflgrSpec> {
         Exti2edfW::new(self, 2)
     }
     #[doc = "Bit 3 - EXTI3EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti3edf(&mut self) -> Exti3edfW<EdgeflgrSpec> {
+    pub fn exti3edf(&mut self) -> Exti3edfW<'_, EdgeflgrSpec> {
         Exti3edfW::new(self, 3)
     }
     #[doc = "Bit 4 - EXTI4EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti4edf(&mut self) -> Exti4edfW<EdgeflgrSpec> {
+    pub fn exti4edf(&mut self) -> Exti4edfW<'_, EdgeflgrSpec> {
         Exti4edfW::new(self, 4)
     }
     #[doc = "Bit 5 - EXTI5EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti5edf(&mut self) -> Exti5edfW<EdgeflgrSpec> {
+    pub fn exti5edf(&mut self) -> Exti5edfW<'_, EdgeflgrSpec> {
         Exti5edfW::new(self, 5)
     }
     #[doc = "Bit 6 - EXTI6EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti6edf(&mut self) -> Exti6edfW<EdgeflgrSpec> {
+    pub fn exti6edf(&mut self) -> Exti6edfW<'_, EdgeflgrSpec> {
         Exti6edfW::new(self, 6)
     }
     #[doc = "Bit 7 - EXTI7EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti7edf(&mut self) -> Exti7edfW<EdgeflgrSpec> {
+    pub fn exti7edf(&mut self) -> Exti7edfW<'_, EdgeflgrSpec> {
         Exti7edfW::new(self, 7)
     }
     #[doc = "Bit 8 - EXTI8EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti8edf(&mut self) -> Exti8edfW<EdgeflgrSpec> {
+    pub fn exti8edf(&mut self) -> Exti8edfW<'_, EdgeflgrSpec> {
         Exti8edfW::new(self, 8)
     }
     #[doc = "Bit 9 - EXTI9EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti9edf(&mut self) -> Exti9edfW<EdgeflgrSpec> {
+    pub fn exti9edf(&mut self) -> Exti9edfW<'_, EdgeflgrSpec> {
         Exti9edfW::new(self, 9)
     }
     #[doc = "Bit 10 - EXTI10EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti10edf(&mut self) -> Exti10edfW<EdgeflgrSpec> {
+    pub fn exti10edf(&mut self) -> Exti10edfW<'_, EdgeflgrSpec> {
         Exti10edfW::new(self, 10)
     }
     #[doc = "Bit 11 - EXTI11EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti11edf(&mut self) -> Exti11edfW<EdgeflgrSpec> {
+    pub fn exti11edf(&mut self) -> Exti11edfW<'_, EdgeflgrSpec> {
         Exti11edfW::new(self, 11)
     }
     #[doc = "Bit 12 - EXTI12EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti12edf(&mut self) -> Exti12edfW<EdgeflgrSpec> {
+    pub fn exti12edf(&mut self) -> Exti12edfW<'_, EdgeflgrSpec> {
         Exti12edfW::new(self, 12)
     }
     #[doc = "Bit 13 - EXTI13EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti13edf(&mut self) -> Exti13edfW<EdgeflgrSpec> {
+    pub fn exti13edf(&mut self) -> Exti13edfW<'_, EdgeflgrSpec> {
         Exti13edfW::new(self, 13)
     }
     #[doc = "Bit 14 - EXTI14EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti14edf(&mut self) -> Exti14edfW<EdgeflgrSpec> {
+    pub fn exti14edf(&mut self) -> Exti14edfW<'_, EdgeflgrSpec> {
         Exti14edfW::new(self, 14)
     }
     #[doc = "Bit 15 - EXTI15EDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti15edf(&mut self) -> Exti15edfW<EdgeflgrSpec> {
+    pub fn exti15edf(&mut self) -> Exti15edfW<'_, EdgeflgrSpec> {
         Exti15edfW::new(self, 15)
     }
 }
-#[doc = "EDGEFLGR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`edgeflgr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`edgeflgr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "EDGEFLGR\n\nYou can [`read`](crate::Reg::read) this register and get [`edgeflgr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`edgeflgr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EdgeflgrSpec;
 impl crate::RegisterSpec for EdgeflgrSpec {
     type Ux = u32;
@@ -256,10 +240,6 @@ impl crate::Readable for EdgeflgrSpec {}
 #[doc = "`write(|w| ..)` method takes [`edgeflgr::W`](W) writer structure"]
 impl crate::Writable for EdgeflgrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EDGEFLGR to value 0"]
-impl crate::Resettable for EdgeflgrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EdgeflgrSpec {}

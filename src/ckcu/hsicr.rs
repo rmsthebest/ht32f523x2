@@ -70,48 +70,41 @@ impl R {
 impl W {
     #[doc = "Bit 0 - TRIMEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn trimen(&mut self) -> TrimenW<HsicrSpec> {
+    pub fn trimen(&mut self) -> TrimenW<'_, HsicrSpec> {
         TrimenW::new(self, 0)
     }
     #[doc = "Bit 1 - ATCEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn atcen(&mut self) -> AtcenW<HsicrSpec> {
+    pub fn atcen(&mut self) -> AtcenW<'_, HsicrSpec> {
         AtcenW::new(self, 1)
     }
     #[doc = "Bit 4 - TMSEL"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmsel(&mut self) -> TmselW<HsicrSpec> {
+    pub fn tmsel(&mut self) -> TmselW<'_, HsicrSpec> {
         TmselW::new(self, 4)
     }
     #[doc = "Bit 5 - REFCLKSEL"]
     #[inline(always)]
-    #[must_use]
-    pub fn refclksel(&mut self) -> RefclkselW<HsicrSpec> {
+    pub fn refclksel(&mut self) -> RefclkselW<'_, HsicrSpec> {
         RefclkselW::new(self, 5)
     }
     #[doc = "Bit 7 - FLOCK"]
     #[inline(always)]
-    #[must_use]
-    pub fn flock(&mut self) -> FlockW<HsicrSpec> {
+    pub fn flock(&mut self) -> FlockW<'_, HsicrSpec> {
         FlockW::new(self, 7)
     }
     #[doc = "Bits 16:23 - HSIFINE"]
     #[inline(always)]
-    #[must_use]
-    pub fn hsifine(&mut self) -> HsifineW<HsicrSpec> {
+    pub fn hsifine(&mut self) -> HsifineW<'_, HsicrSpec> {
         HsifineW::new(self, 16)
     }
     #[doc = "Bits 24:28 - HSICOARSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn hsicoarse(&mut self) -> HsicoarseW<HsicrSpec> {
+    pub fn hsicoarse(&mut self) -> HsicoarseW<'_, HsicrSpec> {
         HsicoarseW::new(self, 24)
     }
 }
-#[doc = "HSICR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hsicr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hsicr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "HSICR\n\nYou can [`read`](crate::Reg::read) this register and get [`hsicr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hsicr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HsicrSpec;
 impl crate::RegisterSpec for HsicrSpec {
     type Ux = u32;
@@ -121,10 +114,6 @@ impl crate::Readable for HsicrSpec {}
 #[doc = "`write(|w| ..)` method takes [`hsicr::W`](W) writer structure"]
 impl crate::Writable for HsicrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HSICR to value 0"]
-impl crate::Resettable for HsicrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HsicrSpec {}

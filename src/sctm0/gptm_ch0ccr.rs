@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - CH0CCV"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0ccv(&mut self) -> Ch0ccvW<GptmCh0ccrSpec> {
+    pub fn ch0ccv(&mut self) -> Ch0ccvW<'_, GptmCh0ccrSpec> {
         Ch0ccvW::new(self, 0)
     }
 }
-#[doc = "GPTM_CH0CCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch0ccr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch0ccr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM_CH0CCR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch0ccr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch0ccr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GptmCh0ccrSpec;
 impl crate::RegisterSpec for GptmCh0ccrSpec {
     type Ux = u32;
@@ -31,10 +30,6 @@ impl crate::Readable for GptmCh0ccrSpec {}
 #[doc = "`write(|w| ..)` method takes [`gptm_ch0ccr::W`](W) writer structure"]
 impl crate::Writable for GptmCh0ccrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GPTM_CH0CCR to value 0"]
-impl crate::Resettable for GptmCh0ccrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GptmCh0ccrSpec {}

@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - DBCNT"]
     #[inline(always)]
-    #[must_use]
-    pub fn dbcnt(&mut self) -> DbcntW<Cfgr14Spec> {
+    pub fn dbcnt(&mut self) -> DbcntW<'_, Cfgr14Spec> {
         DbcntW::new(self, 0)
     }
     #[doc = "Bits 28:30 - SRCTYPE"]
     #[inline(always)]
-    #[must_use]
-    pub fn srctype(&mut self) -> SrctypeW<Cfgr14Spec> {
+    pub fn srctype(&mut self) -> SrctypeW<'_, Cfgr14Spec> {
         SrctypeW::new(self, 28)
     }
     #[doc = "Bit 31 - DBEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn dben(&mut self) -> DbenW<Cfgr14Spec> {
+    pub fn dben(&mut self) -> DbenW<'_, Cfgr14Spec> {
         DbenW::new(self, 31)
     }
 }
-#[doc = "CFGR14\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr14::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr14::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CFGR14\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr14::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr14::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Cfgr14Spec;
 impl crate::RegisterSpec for Cfgr14Spec {
     type Ux = u32;
@@ -61,10 +58,6 @@ impl crate::Readable for Cfgr14Spec {}
 #[doc = "`write(|w| ..)` method takes [`cfgr14::W`](W) writer structure"]
 impl crate::Writable for Cfgr14Spec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFGR14 to value 0"]
-impl crate::Resettable for Cfgr14Spec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Cfgr14Spec {}

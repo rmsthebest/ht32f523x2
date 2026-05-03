@@ -151,102 +151,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - DOUT0"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout0(&mut self) -> Dout0W<DoutrSpec> {
+    pub fn dout0(&mut self) -> Dout0W<'_, DoutrSpec> {
         Dout0W::new(self, 0)
     }
     #[doc = "Bit 1 - DOUT1"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout1(&mut self) -> Dout1W<DoutrSpec> {
+    pub fn dout1(&mut self) -> Dout1W<'_, DoutrSpec> {
         Dout1W::new(self, 1)
     }
     #[doc = "Bit 2 - DOUT2"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout2(&mut self) -> Dout2W<DoutrSpec> {
+    pub fn dout2(&mut self) -> Dout2W<'_, DoutrSpec> {
         Dout2W::new(self, 2)
     }
     #[doc = "Bit 3 - DOUT3"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout3(&mut self) -> Dout3W<DoutrSpec> {
+    pub fn dout3(&mut self) -> Dout3W<'_, DoutrSpec> {
         Dout3W::new(self, 3)
     }
     #[doc = "Bit 4 - DOUT4"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout4(&mut self) -> Dout4W<DoutrSpec> {
+    pub fn dout4(&mut self) -> Dout4W<'_, DoutrSpec> {
         Dout4W::new(self, 4)
     }
     #[doc = "Bit 5 - DOUT5"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout5(&mut self) -> Dout5W<DoutrSpec> {
+    pub fn dout5(&mut self) -> Dout5W<'_, DoutrSpec> {
         Dout5W::new(self, 5)
     }
     #[doc = "Bit 6 - DOUT6"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout6(&mut self) -> Dout6W<DoutrSpec> {
+    pub fn dout6(&mut self) -> Dout6W<'_, DoutrSpec> {
         Dout6W::new(self, 6)
     }
     #[doc = "Bit 7 - DOUT7"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout7(&mut self) -> Dout7W<DoutrSpec> {
+    pub fn dout7(&mut self) -> Dout7W<'_, DoutrSpec> {
         Dout7W::new(self, 7)
     }
     #[doc = "Bit 8 - DOUT8"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout8(&mut self) -> Dout8W<DoutrSpec> {
+    pub fn dout8(&mut self) -> Dout8W<'_, DoutrSpec> {
         Dout8W::new(self, 8)
     }
     #[doc = "Bit 9 - DOUT9"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout9(&mut self) -> Dout9W<DoutrSpec> {
+    pub fn dout9(&mut self) -> Dout9W<'_, DoutrSpec> {
         Dout9W::new(self, 9)
     }
     #[doc = "Bit 10 - DOUT10"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout10(&mut self) -> Dout10W<DoutrSpec> {
+    pub fn dout10(&mut self) -> Dout10W<'_, DoutrSpec> {
         Dout10W::new(self, 10)
     }
     #[doc = "Bit 11 - DOUT11"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout11(&mut self) -> Dout11W<DoutrSpec> {
+    pub fn dout11(&mut self) -> Dout11W<'_, DoutrSpec> {
         Dout11W::new(self, 11)
     }
     #[doc = "Bit 12 - DOUT12"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout12(&mut self) -> Dout12W<DoutrSpec> {
+    pub fn dout12(&mut self) -> Dout12W<'_, DoutrSpec> {
         Dout12W::new(self, 12)
     }
     #[doc = "Bit 13 - DOUT13"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout13(&mut self) -> Dout13W<DoutrSpec> {
+    pub fn dout13(&mut self) -> Dout13W<'_, DoutrSpec> {
         Dout13W::new(self, 13)
     }
     #[doc = "Bit 14 - DOUT14"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout14(&mut self) -> Dout14W<DoutrSpec> {
+    pub fn dout14(&mut self) -> Dout14W<'_, DoutrSpec> {
         Dout14W::new(self, 14)
     }
     #[doc = "Bit 15 - DOUT15"]
     #[inline(always)]
-    #[must_use]
-    pub fn dout15(&mut self) -> Dout15W<DoutrSpec> {
+    pub fn dout15(&mut self) -> Dout15W<'_, DoutrSpec> {
         Dout15W::new(self, 15)
     }
 }
-#[doc = "DOUTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doutr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doutr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DOUTR\n\nYou can [`read`](crate::Reg::read) this register and get [`doutr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doutr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DoutrSpec;
 impl crate::RegisterSpec for DoutrSpec {
     type Ux = u32;
@@ -256,10 +240,6 @@ impl crate::Readable for DoutrSpec {}
 #[doc = "`write(|w| ..)` method takes [`doutr::W`](W) writer structure"]
 impl crate::Writable for DoutrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DOUTR to value 0"]
-impl crate::Resettable for DoutrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DoutrSpec {}

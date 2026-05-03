@@ -79,54 +79,46 @@ impl R {
 impl W {
     #[doc = "Bit 0 - DMARST"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmarst(&mut self) -> DmarstW<AhbprstrSpec> {
+    pub fn dmarst(&mut self) -> DmarstW<'_, AhbprstrSpec> {
         DmarstW::new(self, 0)
     }
     #[doc = "Bit 5 - USBRST"]
     #[inline(always)]
-    #[must_use]
-    pub fn usbrst(&mut self) -> UsbrstW<AhbprstrSpec> {
+    pub fn usbrst(&mut self) -> UsbrstW<'_, AhbprstrSpec> {
         UsbrstW::new(self, 5)
     }
     #[doc = "Bit 6 - EBIRST"]
     #[inline(always)]
-    #[must_use]
-    pub fn ebirst(&mut self) -> EbirstW<AhbprstrSpec> {
+    pub fn ebirst(&mut self) -> EbirstW<'_, AhbprstrSpec> {
         EbirstW::new(self, 6)
     }
     #[doc = "Bit 7 - CRCRST"]
     #[inline(always)]
-    #[must_use]
-    pub fn crcrst(&mut self) -> CrcrstW<AhbprstrSpec> {
+    pub fn crcrst(&mut self) -> CrcrstW<'_, AhbprstrSpec> {
         CrcrstW::new(self, 7)
     }
     #[doc = "Bit 8 - PARST"]
     #[inline(always)]
-    #[must_use]
-    pub fn parst(&mut self) -> ParstW<AhbprstrSpec> {
+    pub fn parst(&mut self) -> ParstW<'_, AhbprstrSpec> {
         ParstW::new(self, 8)
     }
     #[doc = "Bit 9 - PBRST"]
     #[inline(always)]
-    #[must_use]
-    pub fn pbrst(&mut self) -> PbrstW<AhbprstrSpec> {
+    pub fn pbrst(&mut self) -> PbrstW<'_, AhbprstrSpec> {
         PbrstW::new(self, 9)
     }
     #[doc = "Bit 10 - PCRST"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcrst(&mut self) -> PcrstW<AhbprstrSpec> {
+    pub fn pcrst(&mut self) -> PcrstW<'_, AhbprstrSpec> {
         PcrstW::new(self, 10)
     }
     #[doc = "Bit 11 - PDRST"]
     #[inline(always)]
-    #[must_use]
-    pub fn pdrst(&mut self) -> PdrstW<AhbprstrSpec> {
+    pub fn pdrst(&mut self) -> PdrstW<'_, AhbprstrSpec> {
         PdrstW::new(self, 11)
     }
 }
-#[doc = "AHBPRSTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ahbprstr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ahbprstr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "AHBPRSTR\n\nYou can [`read`](crate::Reg::read) this register and get [`ahbprstr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ahbprstr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AhbprstrSpec;
 impl crate::RegisterSpec for AhbprstrSpec {
     type Ux = u32;
@@ -136,10 +128,6 @@ impl crate::Readable for AhbprstrSpec {}
 #[doc = "`write(|w| ..)` method takes [`ahbprstr::W`](W) writer structure"]
 impl crate::Writable for AhbprstrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBPRSTR to value 0"]
-impl crate::Resettable for AhbprstrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for AhbprstrSpec {}

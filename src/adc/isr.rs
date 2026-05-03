@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - ADISRS"]
     #[inline(always)]
-    #[must_use]
-    pub fn adisrs(&mut self) -> AdisrsW<IsrSpec> {
+    pub fn adisrs(&mut self) -> AdisrsW<'_, IsrSpec> {
         AdisrsW::new(self, 0)
     }
     #[doc = "Bit 1 - ADISRG"]
     #[inline(always)]
-    #[must_use]
-    pub fn adisrg(&mut self) -> AdisrgW<IsrSpec> {
+    pub fn adisrg(&mut self) -> AdisrgW<'_, IsrSpec> {
         AdisrgW::new(self, 1)
     }
     #[doc = "Bit 2 - ADISRC"]
     #[inline(always)]
-    #[must_use]
-    pub fn adisrc(&mut self) -> AdisrcW<IsrSpec> {
+    pub fn adisrc(&mut self) -> AdisrcW<'_, IsrSpec> {
         AdisrcW::new(self, 2)
     }
     #[doc = "Bit 16 - ADISRL"]
     #[inline(always)]
-    #[must_use]
-    pub fn adisrl(&mut self) -> AdisrlW<IsrSpec> {
+    pub fn adisrl(&mut self) -> AdisrlW<'_, IsrSpec> {
         AdisrlW::new(self, 16)
     }
     #[doc = "Bit 17 - ADISRU"]
     #[inline(always)]
-    #[must_use]
-    pub fn adisru(&mut self) -> AdisruW<IsrSpec> {
+    pub fn adisru(&mut self) -> AdisruW<'_, IsrSpec> {
         AdisruW::new(self, 17)
     }
     #[doc = "Bit 24 - ADISRO"]
     #[inline(always)]
-    #[must_use]
-    pub fn adisro(&mut self) -> AdisroW<IsrSpec> {
+    pub fn adisro(&mut self) -> AdisroW<'_, IsrSpec> {
         AdisroW::new(self, 24)
     }
 }
-#[doc = "ISR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`isr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`isr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ISR\n\nYou can [`read`](crate::Reg::read) this register and get [`isr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`isr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IsrSpec;
 impl crate::RegisterSpec for IsrSpec {
     type Ux = u32;
@@ -106,10 +100,6 @@ impl crate::Readable for IsrSpec {}
 #[doc = "`write(|w| ..)` method takes [`isr::W`](W) writer structure"]
 impl crate::Writable for IsrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ISR to value 0"]
-impl crate::Resettable for IsrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IsrSpec {}

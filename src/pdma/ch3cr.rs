@@ -97,66 +97,56 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CHEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn chen(&mut self) -> ChenW<Ch3crSpec> {
+    pub fn chen(&mut self) -> ChenW<'_, Ch3crSpec> {
         ChenW::new(self, 0)
     }
     #[doc = "Bit 1 - SWTRIG"]
     #[inline(always)]
-    #[must_use]
-    pub fn swtrig(&mut self) -> SwtrigW<Ch3crSpec> {
+    pub fn swtrig(&mut self) -> SwtrigW<'_, Ch3crSpec> {
         SwtrigW::new(self, 1)
     }
     #[doc = "Bits 2:3 - DWIDTH"]
     #[inline(always)]
-    #[must_use]
-    pub fn dwidth(&mut self) -> DwidthW<Ch3crSpec> {
+    pub fn dwidth(&mut self) -> DwidthW<'_, Ch3crSpec> {
         DwidthW::new(self, 2)
     }
     #[doc = "Bit 4 - DSTAINC"]
     #[inline(always)]
-    #[must_use]
-    pub fn dstainc(&mut self) -> DstaincW<Ch3crSpec> {
+    pub fn dstainc(&mut self) -> DstaincW<'_, Ch3crSpec> {
         DstaincW::new(self, 4)
     }
     #[doc = "Bit 5 - DSTAMOD"]
     #[inline(always)]
-    #[must_use]
-    pub fn dstamod(&mut self) -> DstamodW<Ch3crSpec> {
+    pub fn dstamod(&mut self) -> DstamodW<'_, Ch3crSpec> {
         DstamodW::new(self, 5)
     }
     #[doc = "Bit 6 - SRCAINC"]
     #[inline(always)]
-    #[must_use]
-    pub fn srcainc(&mut self) -> SrcaincW<Ch3crSpec> {
+    pub fn srcainc(&mut self) -> SrcaincW<'_, Ch3crSpec> {
         SrcaincW::new(self, 6)
     }
     #[doc = "Bit 7 - SRCAMOD"]
     #[inline(always)]
-    #[must_use]
-    pub fn srcamod(&mut self) -> SrcamodW<Ch3crSpec> {
+    pub fn srcamod(&mut self) -> SrcamodW<'_, Ch3crSpec> {
         SrcamodW::new(self, 7)
     }
     #[doc = "Bits 8:9 - CHPRI"]
     #[inline(always)]
-    #[must_use]
-    pub fn chpri(&mut self) -> ChpriW<Ch3crSpec> {
+    pub fn chpri(&mut self) -> ChpriW<'_, Ch3crSpec> {
         ChpriW::new(self, 8)
     }
     #[doc = "Bit 10 - FIXAEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn fixaen(&mut self) -> FixaenW<Ch3crSpec> {
+    pub fn fixaen(&mut self) -> FixaenW<'_, Ch3crSpec> {
         FixaenW::new(self, 10)
     }
     #[doc = "Bit 11 - AUTORL"]
     #[inline(always)]
-    #[must_use]
-    pub fn autorl(&mut self) -> AutorlW<Ch3crSpec> {
+    pub fn autorl(&mut self) -> AutorlW<'_, Ch3crSpec> {
         AutorlW::new(self, 11)
     }
 }
-#[doc = "CH3CR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch3cr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch3cr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CH3CR\n\nYou can [`read`](crate::Reg::read) this register and get [`ch3cr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch3cr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ch3crSpec;
 impl crate::RegisterSpec for Ch3crSpec {
     type Ux = u32;
@@ -166,10 +156,6 @@ impl crate::Readable for Ch3crSpec {}
 #[doc = "`write(|w| ..)` method takes [`ch3cr::W`](W) writer structure"]
 impl crate::Writable for Ch3crSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CH3CR to value 0"]
-impl crate::Resettable for Ch3crSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Ch3crSpec {}

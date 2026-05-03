@@ -70,48 +70,41 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CH0P"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0p(&mut self) -> Ch0pW<ChpolrSpec> {
+    pub fn ch0p(&mut self) -> Ch0pW<'_, ChpolrSpec> {
         Ch0pW::new(self, 0)
     }
     #[doc = "Bit 1 - CH0NP"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0np(&mut self) -> Ch0npW<ChpolrSpec> {
+    pub fn ch0np(&mut self) -> Ch0npW<'_, ChpolrSpec> {
         Ch0npW::new(self, 1)
     }
     #[doc = "Bit 2 - CH1P"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1p(&mut self) -> Ch1pW<ChpolrSpec> {
+    pub fn ch1p(&mut self) -> Ch1pW<'_, ChpolrSpec> {
         Ch1pW::new(self, 2)
     }
     #[doc = "Bit 3 - CH1NP"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1np(&mut self) -> Ch1npW<ChpolrSpec> {
+    pub fn ch1np(&mut self) -> Ch1npW<'_, ChpolrSpec> {
         Ch1npW::new(self, 3)
     }
     #[doc = "Bit 4 - CH2P"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2p(&mut self) -> Ch2pW<ChpolrSpec> {
+    pub fn ch2p(&mut self) -> Ch2pW<'_, ChpolrSpec> {
         Ch2pW::new(self, 4)
     }
     #[doc = "Bit 5 - CH2NP"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2np(&mut self) -> Ch2npW<ChpolrSpec> {
+    pub fn ch2np(&mut self) -> Ch2npW<'_, ChpolrSpec> {
         Ch2npW::new(self, 5)
     }
     #[doc = "Bit 6 - CH3P"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3p(&mut self) -> Ch3pW<ChpolrSpec> {
+    pub fn ch3p(&mut self) -> Ch3pW<'_, ChpolrSpec> {
         Ch3pW::new(self, 6)
     }
 }
-#[doc = "CHPOLR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chpolr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`chpolr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CHPOLR\n\nYou can [`read`](crate::Reg::read) this register and get [`chpolr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`chpolr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ChpolrSpec;
 impl crate::RegisterSpec for ChpolrSpec {
     type Ux = u32;
@@ -121,10 +114,6 @@ impl crate::Readable for ChpolrSpec {}
 #[doc = "`write(|w| ..)` method takes [`chpolr::W`](W) writer structure"]
 impl crate::Writable for ChpolrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CHPOLR to value 0"]
-impl crate::Resettable for ChpolrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ChpolrSpec {}

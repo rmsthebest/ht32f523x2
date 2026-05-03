@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - ADIRAWS"]
     #[inline(always)]
-    #[must_use]
-    pub fn adiraws(&mut self) -> AdirawsW<IrawSpec> {
+    pub fn adiraws(&mut self) -> AdirawsW<'_, IrawSpec> {
         AdirawsW::new(self, 0)
     }
     #[doc = "Bit 1 - ADIRAWG"]
     #[inline(always)]
-    #[must_use]
-    pub fn adirawg(&mut self) -> AdirawgW<IrawSpec> {
+    pub fn adirawg(&mut self) -> AdirawgW<'_, IrawSpec> {
         AdirawgW::new(self, 1)
     }
     #[doc = "Bit 2 - ADIRAWC"]
     #[inline(always)]
-    #[must_use]
-    pub fn adirawc(&mut self) -> AdirawcW<IrawSpec> {
+    pub fn adirawc(&mut self) -> AdirawcW<'_, IrawSpec> {
         AdirawcW::new(self, 2)
     }
     #[doc = "Bit 16 - ADIRAWL"]
     #[inline(always)]
-    #[must_use]
-    pub fn adirawl(&mut self) -> AdirawlW<IrawSpec> {
+    pub fn adirawl(&mut self) -> AdirawlW<'_, IrawSpec> {
         AdirawlW::new(self, 16)
     }
     #[doc = "Bit 17 - ADIRAWU"]
     #[inline(always)]
-    #[must_use]
-    pub fn adirawu(&mut self) -> AdirawuW<IrawSpec> {
+    pub fn adirawu(&mut self) -> AdirawuW<'_, IrawSpec> {
         AdirawuW::new(self, 17)
     }
     #[doc = "Bit 24 - ADIRAWO"]
     #[inline(always)]
-    #[must_use]
-    pub fn adirawo(&mut self) -> AdirawoW<IrawSpec> {
+    pub fn adirawo(&mut self) -> AdirawoW<'_, IrawSpec> {
         AdirawoW::new(self, 24)
     }
 }
-#[doc = "IRAW\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iraw::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iraw::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IRAW\n\nYou can [`read`](crate::Reg::read) this register and get [`iraw::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iraw::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IrawSpec;
 impl crate::RegisterSpec for IrawSpec {
     type Ux = u32;
@@ -106,10 +100,6 @@ impl crate::Readable for IrawSpec {}
 #[doc = "`write(|w| ..)` method takes [`iraw::W`](W) writer structure"]
 impl crate::Writable for IrawSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IRAW to value 0"]
-impl crate::Resettable for IrawSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IrawSpec {}

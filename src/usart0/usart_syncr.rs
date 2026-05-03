@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CLKEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn clken(&mut self) -> ClkenW<UsartSyncrSpec> {
+    pub fn clken(&mut self) -> ClkenW<'_, UsartSyncrSpec> {
         ClkenW::new(self, 0)
     }
     #[doc = "Bit 2 - CPS"]
     #[inline(always)]
-    #[must_use]
-    pub fn cps(&mut self) -> CpsW<UsartSyncrSpec> {
+    pub fn cps(&mut self) -> CpsW<'_, UsartSyncrSpec> {
         CpsW::new(self, 2)
     }
     #[doc = "Bit 3 - CPO"]
     #[inline(always)]
-    #[must_use]
-    pub fn cpo(&mut self) -> CpoW<UsartSyncrSpec> {
+    pub fn cpo(&mut self) -> CpoW<'_, UsartSyncrSpec> {
         CpoW::new(self, 3)
     }
 }
-#[doc = "USART_SYNCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`usart_syncr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usart_syncr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "USART_SYNCR\n\nYou can [`read`](crate::Reg::read) this register and get [`usart_syncr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`usart_syncr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UsartSyncrSpec;
 impl crate::RegisterSpec for UsartSyncrSpec {
     type Ux = u32;
@@ -61,10 +58,6 @@ impl crate::Readable for UsartSyncrSpec {}
 #[doc = "`write(|w| ..)` method takes [`usart_syncr::W`](W) writer structure"]
 impl crate::Writable for UsartSyncrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets USART_SYNCR to value 0"]
-impl crate::Resettable for UsartSyncrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for UsartSyncrSpec {}

@@ -79,54 +79,46 @@ impl R {
 impl W {
     #[doc = "Bit 0 - TXBEIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn txbeien(&mut self) -> TxbeienW<IerSpec> {
+    pub fn txbeien(&mut self) -> TxbeienW<'_, IerSpec> {
         TxbeienW::new(self, 0)
     }
     #[doc = "Bit 1 - TXEIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn txeien(&mut self) -> TxeienW<IerSpec> {
+    pub fn txeien(&mut self) -> TxeienW<'_, IerSpec> {
         TxeienW::new(self, 1)
     }
     #[doc = "Bit 2 - RXBNEIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxbneien(&mut self) -> RxbneienW<IerSpec> {
+    pub fn rxbneien(&mut self) -> RxbneienW<'_, IerSpec> {
         RxbneienW::new(self, 2)
     }
     #[doc = "Bit 3 - WCIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn wcien(&mut self) -> WcienW<IerSpec> {
+    pub fn wcien(&mut self) -> WcienW<'_, IerSpec> {
         WcienW::new(self, 3)
     }
     #[doc = "Bit 4 - ROIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn roien(&mut self) -> RoienW<IerSpec> {
+    pub fn roien(&mut self) -> RoienW<'_, IerSpec> {
         RoienW::new(self, 4)
     }
     #[doc = "Bit 5 - MFIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn mfien(&mut self) -> MfienW<IerSpec> {
+    pub fn mfien(&mut self) -> MfienW<'_, IerSpec> {
         MfienW::new(self, 5)
     }
     #[doc = "Bit 6 - SAIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn saien(&mut self) -> SaienW<IerSpec> {
+    pub fn saien(&mut self) -> SaienW<'_, IerSpec> {
         SaienW::new(self, 6)
     }
     #[doc = "Bit 7 - TOIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn toien(&mut self) -> ToienW<IerSpec> {
+    pub fn toien(&mut self) -> ToienW<'_, IerSpec> {
         ToienW::new(self, 7)
     }
 }
-#[doc = "IER\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ier::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ier::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IER\n\nYou can [`read`](crate::Reg::read) this register and get [`ier::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ier::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IerSpec;
 impl crate::RegisterSpec for IerSpec {
     type Ux = u32;
@@ -136,10 +128,6 @@ impl crate::Readable for IerSpec {}
 #[doc = "`write(|w| ..)` method takes [`ier::W`](W) writer structure"]
 impl crate::Writable for IerSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IER to value 0"]
-impl crate::Resettable for IerSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IerSpec {}

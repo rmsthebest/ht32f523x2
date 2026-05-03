@@ -88,60 +88,51 @@ impl R {
 impl W {
     #[doc = "Bit 0 - BODEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn boden(&mut self) -> BodenW<PwrcuLvdcsrSpec> {
+    pub fn boden(&mut self) -> BodenW<'_, PwrcuLvdcsrSpec> {
         BodenW::new(self, 0)
     }
     #[doc = "Bit 1 - BODRIS"]
     #[inline(always)]
-    #[must_use]
-    pub fn bodris(&mut self) -> BodrisW<PwrcuLvdcsrSpec> {
+    pub fn bodris(&mut self) -> BodrisW<'_, PwrcuLvdcsrSpec> {
         BodrisW::new(self, 1)
     }
     #[doc = "Bit 3 - BODF"]
     #[inline(always)]
-    #[must_use]
-    pub fn bodf(&mut self) -> BodfW<PwrcuLvdcsrSpec> {
+    pub fn bodf(&mut self) -> BodfW<'_, PwrcuLvdcsrSpec> {
         BodfW::new(self, 3)
     }
     #[doc = "Bit 16 - LVDEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn lvden(&mut self) -> LvdenW<PwrcuLvdcsrSpec> {
+    pub fn lvden(&mut self) -> LvdenW<'_, PwrcuLvdcsrSpec> {
         LvdenW::new(self, 16)
     }
     #[doc = "Bits 17:18 - LVDS01"]
     #[inline(always)]
-    #[must_use]
-    pub fn lvds01(&mut self) -> Lvds01W<PwrcuLvdcsrSpec> {
+    pub fn lvds01(&mut self) -> Lvds01W<'_, PwrcuLvdcsrSpec> {
         Lvds01W::new(self, 17)
     }
     #[doc = "Bit 19 - LVDF"]
     #[inline(always)]
-    #[must_use]
-    pub fn lvdf(&mut self) -> LvdfW<PwrcuLvdcsrSpec> {
+    pub fn lvdf(&mut self) -> LvdfW<'_, PwrcuLvdcsrSpec> {
         LvdfW::new(self, 19)
     }
     #[doc = "Bit 20 - LVDIWEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn lvdiwen(&mut self) -> LvdiwenW<PwrcuLvdcsrSpec> {
+    pub fn lvdiwen(&mut self) -> LvdiwenW<'_, PwrcuLvdcsrSpec> {
         LvdiwenW::new(self, 20)
     }
     #[doc = "Bit 21 - LVDEWEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn lvdewen(&mut self) -> LvdewenW<PwrcuLvdcsrSpec> {
+    pub fn lvdewen(&mut self) -> LvdewenW<'_, PwrcuLvdcsrSpec> {
         LvdewenW::new(self, 21)
     }
     #[doc = "Bit 22 - LVDS2"]
     #[inline(always)]
-    #[must_use]
-    pub fn lvds2(&mut self) -> Lvds2W<PwrcuLvdcsrSpec> {
+    pub fn lvds2(&mut self) -> Lvds2W<'_, PwrcuLvdcsrSpec> {
         Lvds2W::new(self, 22)
     }
 }
-#[doc = "PWRCU_LVDCSR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pwrcu_lvdcsr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pwrcu_lvdcsr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PWRCU_LVDCSR\n\nYou can [`read`](crate::Reg::read) this register and get [`pwrcu_lvdcsr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pwrcu_lvdcsr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PwrcuLvdcsrSpec;
 impl crate::RegisterSpec for PwrcuLvdcsrSpec {
     type Ux = u32;
@@ -151,10 +142,6 @@ impl crate::Readable for PwrcuLvdcsrSpec {}
 #[doc = "`write(|w| ..)` method takes [`pwrcu_lvdcsr::W`](W) writer structure"]
 impl crate::Writable for PwrcuLvdcsrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PWRCU_LVDCSR to value 0"]
-impl crate::Resettable for PwrcuLvdcsrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PwrcuLvdcsrSpec {}

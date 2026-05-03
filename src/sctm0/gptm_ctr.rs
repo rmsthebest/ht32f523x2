@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - TME"]
     #[inline(always)]
-    #[must_use]
-    pub fn tme(&mut self) -> TmeW<GptmCtrSpec> {
+    pub fn tme(&mut self) -> TmeW<'_, GptmCtrSpec> {
         TmeW::new(self, 0)
     }
     #[doc = "Bit 1 - CRBE"]
     #[inline(always)]
-    #[must_use]
-    pub fn crbe(&mut self) -> CrbeW<GptmCtrSpec> {
+    pub fn crbe(&mut self) -> CrbeW<'_, GptmCtrSpec> {
         CrbeW::new(self, 1)
     }
     #[doc = "Bit 16 - CHCCDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn chccds(&mut self) -> ChccdsW<GptmCtrSpec> {
+    pub fn chccds(&mut self) -> ChccdsW<'_, GptmCtrSpec> {
         ChccdsW::new(self, 16)
     }
 }
-#[doc = "GPTM_CTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ctr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ctr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM_CTR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ctr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ctr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GptmCtrSpec;
 impl crate::RegisterSpec for GptmCtrSpec {
     type Ux = u32;
@@ -61,10 +58,6 @@ impl crate::Readable for GptmCtrSpec {}
 #[doc = "`write(|w| ..)` method takes [`gptm_ctr::W`](W) writer structure"]
 impl crate::Writable for GptmCtrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GPTM_CTR to value 0"]
-impl crate::Resettable for GptmCtrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GptmCtrSpec {}

@@ -133,90 +133,76 @@ impl R {
 impl W {
     #[doc = "Bit 0 - UGIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ugie(&mut self) -> UgieW<IerSpec> {
+    pub fn ugie(&mut self) -> UgieW<'_, IerSpec> {
         UgieW::new(self, 0)
     }
     #[doc = "Bit 1 - SOFIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn sofie(&mut self) -> SofieW<IerSpec> {
+    pub fn sofie(&mut self) -> SofieW<'_, IerSpec> {
         SofieW::new(self, 1)
     }
     #[doc = "Bit 2 - URSTIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn urstie(&mut self) -> UrstieW<IerSpec> {
+    pub fn urstie(&mut self) -> UrstieW<'_, IerSpec> {
         UrstieW::new(self, 2)
     }
     #[doc = "Bit 3 - RSMIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn rsmie(&mut self) -> RsmieW<IerSpec> {
+    pub fn rsmie(&mut self) -> RsmieW<'_, IerSpec> {
         RsmieW::new(self, 3)
     }
     #[doc = "Bit 4 - SUSPIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn suspie(&mut self) -> SuspieW<IerSpec> {
+    pub fn suspie(&mut self) -> SuspieW<'_, IerSpec> {
         SuspieW::new(self, 4)
     }
     #[doc = "Bit 5 - ESOFIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn esofie(&mut self) -> EsofieW<IerSpec> {
+    pub fn esofie(&mut self) -> EsofieW<'_, IerSpec> {
         EsofieW::new(self, 5)
     }
     #[doc = "Bit 8 - EP0IE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep0ie(&mut self) -> Ep0ieW<IerSpec> {
+    pub fn ep0ie(&mut self) -> Ep0ieW<'_, IerSpec> {
         Ep0ieW::new(self, 8)
     }
     #[doc = "Bit 9 - EP1IE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep1ie(&mut self) -> Ep1ieW<IerSpec> {
+    pub fn ep1ie(&mut self) -> Ep1ieW<'_, IerSpec> {
         Ep1ieW::new(self, 9)
     }
     #[doc = "Bit 10 - EP2IE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep2ie(&mut self) -> Ep2ieW<IerSpec> {
+    pub fn ep2ie(&mut self) -> Ep2ieW<'_, IerSpec> {
         Ep2ieW::new(self, 10)
     }
     #[doc = "Bit 11 - EP3IE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep3ie(&mut self) -> Ep3ieW<IerSpec> {
+    pub fn ep3ie(&mut self) -> Ep3ieW<'_, IerSpec> {
         Ep3ieW::new(self, 11)
     }
     #[doc = "Bit 12 - EP4IE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep4ie(&mut self) -> Ep4ieW<IerSpec> {
+    pub fn ep4ie(&mut self) -> Ep4ieW<'_, IerSpec> {
         Ep4ieW::new(self, 12)
     }
     #[doc = "Bit 13 - EP5IE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep5ie(&mut self) -> Ep5ieW<IerSpec> {
+    pub fn ep5ie(&mut self) -> Ep5ieW<'_, IerSpec> {
         Ep5ieW::new(self, 13)
     }
     #[doc = "Bit 14 - EP6IE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep6ie(&mut self) -> Ep6ieW<IerSpec> {
+    pub fn ep6ie(&mut self) -> Ep6ieW<'_, IerSpec> {
         Ep6ieW::new(self, 14)
     }
     #[doc = "Bit 15 - EP7IE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep7ie(&mut self) -> Ep7ieW<IerSpec> {
+    pub fn ep7ie(&mut self) -> Ep7ieW<'_, IerSpec> {
         Ep7ieW::new(self, 15)
     }
 }
-#[doc = "IER\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ier::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ier::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IER\n\nYou can [`read`](crate::Reg::read) this register and get [`ier::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ier::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IerSpec;
 impl crate::RegisterSpec for IerSpec {
     type Ux = u32;
@@ -226,10 +212,6 @@ impl crate::Readable for IerSpec {}
 #[doc = "`write(|w| ..)` method takes [`ier::W`](W) writer structure"]
 impl crate::Writable for IerSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IER to value 0"]
-impl crate::Resettable for IerSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IerSpec {}

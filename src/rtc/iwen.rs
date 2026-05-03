@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CSECIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn csecien(&mut self) -> CsecienW<IwenSpec> {
+    pub fn csecien(&mut self) -> CsecienW<'_, IwenSpec> {
         CsecienW::new(self, 0)
     }
     #[doc = "Bit 1 - CMIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmien(&mut self) -> CmienW<IwenSpec> {
+    pub fn cmien(&mut self) -> CmienW<'_, IwenSpec> {
         CmienW::new(self, 1)
     }
     #[doc = "Bit 2 - OVIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovien(&mut self) -> OvienW<IwenSpec> {
+    pub fn ovien(&mut self) -> OvienW<'_, IwenSpec> {
         OvienW::new(self, 2)
     }
     #[doc = "Bit 8 - CSECWEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn csecwen(&mut self) -> CsecwenW<IwenSpec> {
+    pub fn csecwen(&mut self) -> CsecwenW<'_, IwenSpec> {
         CsecwenW::new(self, 8)
     }
     #[doc = "Bit 9 - CMWEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmwen(&mut self) -> CmwenW<IwenSpec> {
+    pub fn cmwen(&mut self) -> CmwenW<'_, IwenSpec> {
         CmwenW::new(self, 9)
     }
     #[doc = "Bit 10 - OVWEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovwen(&mut self) -> OvwenW<IwenSpec> {
+    pub fn ovwen(&mut self) -> OvwenW<'_, IwenSpec> {
         OvwenW::new(self, 10)
     }
 }
-#[doc = "IWEN\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iwen::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iwen::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IWEN\n\nYou can [`read`](crate::Reg::read) this register and get [`iwen::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iwen::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IwenSpec;
 impl crate::RegisterSpec for IwenSpec {
     type Ux = u32;
@@ -106,10 +100,6 @@ impl crate::Readable for IwenSpec {}
 #[doc = "`write(|w| ..)` method takes [`iwen::W`](W) writer structure"]
 impl crate::Writable for IwenSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IWEN to value 0"]
-impl crate::Resettable for IwenSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IwenSpec {}

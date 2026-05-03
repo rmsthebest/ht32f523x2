@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - DFL"]
     #[inline(always)]
-    #[must_use]
-    pub fn dfl(&mut self) -> DflW<Cr1Spec> {
+    pub fn dfl(&mut self) -> DflW<'_, Cr1Spec> {
         DflW::new(self, 0)
     }
     #[doc = "Bits 8:10 - FORMAT"]
     #[inline(always)]
-    #[must_use]
-    pub fn format(&mut self) -> FormatW<Cr1Spec> {
+    pub fn format(&mut self) -> FormatW<'_, Cr1Spec> {
         FormatW::new(self, 8)
     }
     #[doc = "Bit 11 - SELAP"]
     #[inline(always)]
-    #[must_use]
-    pub fn selap(&mut self) -> SelapW<Cr1Spec> {
+    pub fn selap(&mut self) -> SelapW<'_, Cr1Spec> {
         SelapW::new(self, 11)
     }
     #[doc = "Bit 12 - FIRSTBIT"]
     #[inline(always)]
-    #[must_use]
-    pub fn firstbit(&mut self) -> FirstbitW<Cr1Spec> {
+    pub fn firstbit(&mut self) -> FirstbitW<'_, Cr1Spec> {
         FirstbitW::new(self, 12)
     }
     #[doc = "Bit 13 - SELM"]
     #[inline(always)]
-    #[must_use]
-    pub fn selm(&mut self) -> SelmW<Cr1Spec> {
+    pub fn selm(&mut self) -> SelmW<'_, Cr1Spec> {
         SelmW::new(self, 13)
     }
     #[doc = "Bit 14 - MODE"]
     #[inline(always)]
-    #[must_use]
-    pub fn mode(&mut self) -> ModeW<Cr1Spec> {
+    pub fn mode(&mut self) -> ModeW<'_, Cr1Spec> {
         ModeW::new(self, 14)
     }
 }
-#[doc = "CR1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CR1\n\nYou can [`read`](crate::Reg::read) this register and get [`cr1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Cr1Spec;
 impl crate::RegisterSpec for Cr1Spec {
     type Ux = u32;
@@ -106,10 +100,6 @@ impl crate::Readable for Cr1Spec {}
 #[doc = "`write(|w| ..)` method takes [`cr1::W`](W) writer structure"]
 impl crate::Writable for Cr1Spec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR1 to value 0"]
-impl crate::Resettable for Cr1Spec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Cr1Spec {}

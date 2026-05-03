@@ -124,84 +124,71 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - MODE0"]
     #[inline(always)]
-    #[must_use]
-    pub fn mode0(&mut self) -> Mode0W<CrSpec> {
+    pub fn mode0(&mut self) -> Mode0W<'_, CrSpec> {
         Mode0W::new(self, 0)
     }
     #[doc = "Bits 2:3 - MODE1"]
     #[inline(always)]
-    #[must_use]
-    pub fn mode1(&mut self) -> Mode1W<CrSpec> {
+    pub fn mode1(&mut self) -> Mode1W<'_, CrSpec> {
         Mode1W::new(self, 2)
     }
     #[doc = "Bits 4:5 - MODE2"]
     #[inline(always)]
-    #[must_use]
-    pub fn mode2(&mut self) -> Mode2W<CrSpec> {
+    pub fn mode2(&mut self) -> Mode2W<'_, CrSpec> {
         Mode2W::new(self, 4)
     }
     #[doc = "Bits 6:7 - MODE3"]
     #[inline(always)]
-    #[must_use]
-    pub fn mode3(&mut self) -> Mode3W<CrSpec> {
+    pub fn mode3(&mut self) -> Mode3W<'_, CrSpec> {
         Mode3W::new(self, 6)
     }
     #[doc = "Bit 8 - BANKEN0"]
     #[inline(always)]
-    #[must_use]
-    pub fn banken0(&mut self) -> Banken0W<CrSpec> {
+    pub fn banken0(&mut self) -> Banken0W<'_, CrSpec> {
         Banken0W::new(self, 8)
     }
     #[doc = "Bit 9 - BANKEN1"]
     #[inline(always)]
-    #[must_use]
-    pub fn banken1(&mut self) -> Banken1W<CrSpec> {
+    pub fn banken1(&mut self) -> Banken1W<'_, CrSpec> {
         Banken1W::new(self, 9)
     }
     #[doc = "Bit 10 - BANKEN2"]
     #[inline(always)]
-    #[must_use]
-    pub fn banken2(&mut self) -> Banken2W<CrSpec> {
+    pub fn banken2(&mut self) -> Banken2W<'_, CrSpec> {
         Banken2W::new(self, 10)
     }
     #[doc = "Bit 11 - BANKEN3"]
     #[inline(always)]
-    #[must_use]
-    pub fn banken3(&mut self) -> Banken3W<CrSpec> {
+    pub fn banken3(&mut self) -> Banken3W<'_, CrSpec> {
         Banken3W::new(self, 11)
     }
     #[doc = "Bit 12 - NOIDLE0"]
     #[inline(always)]
-    #[must_use]
-    pub fn noidle0(&mut self) -> Noidle0W<CrSpec> {
+    pub fn noidle0(&mut self) -> Noidle0W<'_, CrSpec> {
         Noidle0W::new(self, 12)
     }
     #[doc = "Bit 13 - NOIDLE1"]
     #[inline(always)]
-    #[must_use]
-    pub fn noidle1(&mut self) -> Noidle1W<CrSpec> {
+    pub fn noidle1(&mut self) -> Noidle1W<'_, CrSpec> {
         Noidle1W::new(self, 13)
     }
     #[doc = "Bit 14 - NOIDLE2"]
     #[inline(always)]
-    #[must_use]
-    pub fn noidle2(&mut self) -> Noidle2W<CrSpec> {
+    pub fn noidle2(&mut self) -> Noidle2W<'_, CrSpec> {
         Noidle2W::new(self, 14)
     }
     #[doc = "Bit 15 - NOIDLE3"]
     #[inline(always)]
-    #[must_use]
-    pub fn noidle3(&mut self) -> Noidle3W<CrSpec> {
+    pub fn noidle3(&mut self) -> Noidle3W<'_, CrSpec> {
         Noidle3W::new(self, 15)
     }
     #[doc = "Bits 28:31 - IDLET"]
     #[inline(always)]
-    #[must_use]
-    pub fn idlet(&mut self) -> IdletW<CrSpec> {
+    pub fn idlet(&mut self) -> IdletW<'_, CrSpec> {
         IdletW::new(self, 28)
     }
 }
-#[doc = "CR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CR\n\nYou can [`read`](crate::Reg::read) this register and get [`cr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CrSpec;
 impl crate::RegisterSpec for CrSpec {
     type Ux = u32;
@@ -211,10 +198,6 @@ impl crate::Readable for CrSpec {}
 #[doc = "`write(|w| ..)` method takes [`cr::W`](W) writer structure"]
 impl crate::Writable for CrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR to value 0"]
-impl crate::Resettable for CrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CrSpec {}

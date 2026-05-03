@@ -151,102 +151,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - EXTI0SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti0sc(&mut self) -> Exti0scW<SscrSpec> {
+    pub fn exti0sc(&mut self) -> Exti0scW<'_, SscrSpec> {
         Exti0scW::new(self, 0)
     }
     #[doc = "Bit 1 - EXTI1SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti1sc(&mut self) -> Exti1scW<SscrSpec> {
+    pub fn exti1sc(&mut self) -> Exti1scW<'_, SscrSpec> {
         Exti1scW::new(self, 1)
     }
     #[doc = "Bit 2 - EXTI2SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti2sc(&mut self) -> Exti2scW<SscrSpec> {
+    pub fn exti2sc(&mut self) -> Exti2scW<'_, SscrSpec> {
         Exti2scW::new(self, 2)
     }
     #[doc = "Bit 3 - EXTI3SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti3sc(&mut self) -> Exti3scW<SscrSpec> {
+    pub fn exti3sc(&mut self) -> Exti3scW<'_, SscrSpec> {
         Exti3scW::new(self, 3)
     }
     #[doc = "Bit 4 - EXTI4SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti4sc(&mut self) -> Exti4scW<SscrSpec> {
+    pub fn exti4sc(&mut self) -> Exti4scW<'_, SscrSpec> {
         Exti4scW::new(self, 4)
     }
     #[doc = "Bit 5 - EXTI5SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti5sc(&mut self) -> Exti5scW<SscrSpec> {
+    pub fn exti5sc(&mut self) -> Exti5scW<'_, SscrSpec> {
         Exti5scW::new(self, 5)
     }
     #[doc = "Bit 6 - EXTI6SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti6sc(&mut self) -> Exti6scW<SscrSpec> {
+    pub fn exti6sc(&mut self) -> Exti6scW<'_, SscrSpec> {
         Exti6scW::new(self, 6)
     }
     #[doc = "Bit 7 - EXTI7SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti7sc(&mut self) -> Exti7scW<SscrSpec> {
+    pub fn exti7sc(&mut self) -> Exti7scW<'_, SscrSpec> {
         Exti7scW::new(self, 7)
     }
     #[doc = "Bit 8 - EXTI8SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti8sc(&mut self) -> Exti8scW<SscrSpec> {
+    pub fn exti8sc(&mut self) -> Exti8scW<'_, SscrSpec> {
         Exti8scW::new(self, 8)
     }
     #[doc = "Bit 9 - EXTI9SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti9sc(&mut self) -> Exti9scW<SscrSpec> {
+    pub fn exti9sc(&mut self) -> Exti9scW<'_, SscrSpec> {
         Exti9scW::new(self, 9)
     }
     #[doc = "Bit 10 - EXTI10SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti10sc(&mut self) -> Exti10scW<SscrSpec> {
+    pub fn exti10sc(&mut self) -> Exti10scW<'_, SscrSpec> {
         Exti10scW::new(self, 10)
     }
     #[doc = "Bit 11 - EXTI11SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti11sc(&mut self) -> Exti11scW<SscrSpec> {
+    pub fn exti11sc(&mut self) -> Exti11scW<'_, SscrSpec> {
         Exti11scW::new(self, 11)
     }
     #[doc = "Bit 12 - EXTI12SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti12sc(&mut self) -> Exti12scW<SscrSpec> {
+    pub fn exti12sc(&mut self) -> Exti12scW<'_, SscrSpec> {
         Exti12scW::new(self, 12)
     }
     #[doc = "Bit 13 - EXTI13SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti13sc(&mut self) -> Exti13scW<SscrSpec> {
+    pub fn exti13sc(&mut self) -> Exti13scW<'_, SscrSpec> {
         Exti13scW::new(self, 13)
     }
     #[doc = "Bit 14 - EXTI14SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti14sc(&mut self) -> Exti14scW<SscrSpec> {
+    pub fn exti14sc(&mut self) -> Exti14scW<'_, SscrSpec> {
         Exti14scW::new(self, 14)
     }
     #[doc = "Bit 15 - EXTI15SC"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti15sc(&mut self) -> Exti15scW<SscrSpec> {
+    pub fn exti15sc(&mut self) -> Exti15scW<'_, SscrSpec> {
         Exti15scW::new(self, 15)
     }
 }
-#[doc = "SSCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sscr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sscr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SSCR\n\nYou can [`read`](crate::Reg::read) this register and get [`sscr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sscr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SscrSpec;
 impl crate::RegisterSpec for SscrSpec {
     type Ux = u32;
@@ -256,10 +240,6 @@ impl crate::Readable for SscrSpec {}
 #[doc = "`write(|w| ..)` method takes [`sscr::W`](W) writer structure"]
 impl crate::Writable for SscrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SSCR to value 0"]
-impl crate::Resettable for SscrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SscrSpec {}

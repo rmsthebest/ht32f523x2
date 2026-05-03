@@ -79,54 +79,46 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CH0CCG"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0ccg(&mut self) -> Ch0ccgW<EvgrSpec> {
+    pub fn ch0ccg(&mut self) -> Ch0ccgW<'_, EvgrSpec> {
         Ch0ccgW::new(self, 0)
     }
     #[doc = "Bit 1 - CH1CCG"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1ccg(&mut self) -> Ch1ccgW<EvgrSpec> {
+    pub fn ch1ccg(&mut self) -> Ch1ccgW<'_, EvgrSpec> {
         Ch1ccgW::new(self, 1)
     }
     #[doc = "Bit 2 - CH2CCG"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2ccg(&mut self) -> Ch2ccgW<EvgrSpec> {
+    pub fn ch2ccg(&mut self) -> Ch2ccgW<'_, EvgrSpec> {
         Ch2ccgW::new(self, 2)
     }
     #[doc = "Bit 3 - CH3CCG"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3ccg(&mut self) -> Ch3ccgW<EvgrSpec> {
+    pub fn ch3ccg(&mut self) -> Ch3ccgW<'_, EvgrSpec> {
         Ch3ccgW::new(self, 3)
     }
     #[doc = "Bit 8 - UEV1G"]
     #[inline(always)]
-    #[must_use]
-    pub fn uev1g(&mut self) -> Uev1gW<EvgrSpec> {
+    pub fn uev1g(&mut self) -> Uev1gW<'_, EvgrSpec> {
         Uev1gW::new(self, 8)
     }
     #[doc = "Bit 9 - UEV2G"]
     #[inline(always)]
-    #[must_use]
-    pub fn uev2g(&mut self) -> Uev2gW<EvgrSpec> {
+    pub fn uev2g(&mut self) -> Uev2gW<'_, EvgrSpec> {
         Uev2gW::new(self, 9)
     }
     #[doc = "Bit 10 - TEVG"]
     #[inline(always)]
-    #[must_use]
-    pub fn tevg(&mut self) -> TevgW<EvgrSpec> {
+    pub fn tevg(&mut self) -> TevgW<'_, EvgrSpec> {
         TevgW::new(self, 10)
     }
     #[doc = "Bit 11 - BRKG"]
     #[inline(always)]
-    #[must_use]
-    pub fn brkg(&mut self) -> BrkgW<EvgrSpec> {
+    pub fn brkg(&mut self) -> BrkgW<'_, EvgrSpec> {
         BrkgW::new(self, 11)
     }
 }
-#[doc = "EVGR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`evgr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`evgr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "EVGR\n\nYou can [`read`](crate::Reg::read) this register and get [`evgr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evgr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EvgrSpec;
 impl crate::RegisterSpec for EvgrSpec {
     type Ux = u32;
@@ -136,10 +128,6 @@ impl crate::Readable for EvgrSpec {}
 #[doc = "`write(|w| ..)` method takes [`evgr::W`](W) writer structure"]
 impl crate::Writable for EvgrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EVGR to value 0"]
-impl crate::Resettable for EvgrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EvgrSpec {}

@@ -70,48 +70,41 @@ impl R {
 impl W {
     #[doc = "Bit 1 - OEI"]
     #[inline(always)]
-    #[must_use]
-    pub fn oei(&mut self) -> OeiW<UartUrsifrSpec> {
+    pub fn oei(&mut self) -> OeiW<'_, UartUrsifrSpec> {
         OeiW::new(self, 1)
     }
     #[doc = "Bit 2 - PEI"]
     #[inline(always)]
-    #[must_use]
-    pub fn pei(&mut self) -> PeiW<UartUrsifrSpec> {
+    pub fn pei(&mut self) -> PeiW<'_, UartUrsifrSpec> {
         PeiW::new(self, 2)
     }
     #[doc = "Bit 3 - FEI"]
     #[inline(always)]
-    #[must_use]
-    pub fn fei(&mut self) -> FeiW<UartUrsifrSpec> {
+    pub fn fei(&mut self) -> FeiW<'_, UartUrsifrSpec> {
         FeiW::new(self, 3)
     }
     #[doc = "Bit 4 - BII"]
     #[inline(always)]
-    #[must_use]
-    pub fn bii(&mut self) -> BiiW<UartUrsifrSpec> {
+    pub fn bii(&mut self) -> BiiW<'_, UartUrsifrSpec> {
         BiiW::new(self, 4)
     }
     #[doc = "Bit 5 - RXDR"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxdr(&mut self) -> RxdrW<UartUrsifrSpec> {
+    pub fn rxdr(&mut self) -> RxdrW<'_, UartUrsifrSpec> {
         RxdrW::new(self, 5)
     }
     #[doc = "Bit 7 - TXDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn txde(&mut self) -> TxdeW<UartUrsifrSpec> {
+    pub fn txde(&mut self) -> TxdeW<'_, UartUrsifrSpec> {
         TxdeW::new(self, 7)
     }
     #[doc = "Bit 8 - TXC"]
     #[inline(always)]
-    #[must_use]
-    pub fn txc(&mut self) -> TxcW<UartUrsifrSpec> {
+    pub fn txc(&mut self) -> TxcW<'_, UartUrsifrSpec> {
         TxcW::new(self, 8)
     }
 }
-#[doc = "UART_URSIFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`uart_ursifr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uart_ursifr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "UART_URSIFR\n\nYou can [`read`](crate::Reg::read) this register and get [`uart_ursifr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart_ursifr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UartUrsifrSpec;
 impl crate::RegisterSpec for UartUrsifrSpec {
     type Ux = u32;
@@ -121,10 +114,6 @@ impl crate::Readable for UartUrsifrSpec {}
 #[doc = "`write(|w| ..)` method takes [`uart_ursifr::W`](W) writer structure"]
 impl crate::Writable for UartUrsifrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets UART_URSIFR to value 0"]
-impl crate::Resettable for UartUrsifrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for UartUrsifrSpec {}

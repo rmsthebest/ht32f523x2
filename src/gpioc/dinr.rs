@@ -151,102 +151,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - DIN0"]
     #[inline(always)]
-    #[must_use]
-    pub fn din0(&mut self) -> Din0W<DinrSpec> {
+    pub fn din0(&mut self) -> Din0W<'_, DinrSpec> {
         Din0W::new(self, 0)
     }
     #[doc = "Bit 1 - DIN1"]
     #[inline(always)]
-    #[must_use]
-    pub fn din1(&mut self) -> Din1W<DinrSpec> {
+    pub fn din1(&mut self) -> Din1W<'_, DinrSpec> {
         Din1W::new(self, 1)
     }
     #[doc = "Bit 2 - DIN2"]
     #[inline(always)]
-    #[must_use]
-    pub fn din2(&mut self) -> Din2W<DinrSpec> {
+    pub fn din2(&mut self) -> Din2W<'_, DinrSpec> {
         Din2W::new(self, 2)
     }
     #[doc = "Bit 3 - DIN3"]
     #[inline(always)]
-    #[must_use]
-    pub fn din3(&mut self) -> Din3W<DinrSpec> {
+    pub fn din3(&mut self) -> Din3W<'_, DinrSpec> {
         Din3W::new(self, 3)
     }
     #[doc = "Bit 4 - DIN4"]
     #[inline(always)]
-    #[must_use]
-    pub fn din4(&mut self) -> Din4W<DinrSpec> {
+    pub fn din4(&mut self) -> Din4W<'_, DinrSpec> {
         Din4W::new(self, 4)
     }
     #[doc = "Bit 5 - DIN5"]
     #[inline(always)]
-    #[must_use]
-    pub fn din5(&mut self) -> Din5W<DinrSpec> {
+    pub fn din5(&mut self) -> Din5W<'_, DinrSpec> {
         Din5W::new(self, 5)
     }
     #[doc = "Bit 6 - DIN6"]
     #[inline(always)]
-    #[must_use]
-    pub fn din6(&mut self) -> Din6W<DinrSpec> {
+    pub fn din6(&mut self) -> Din6W<'_, DinrSpec> {
         Din6W::new(self, 6)
     }
     #[doc = "Bit 7 - DIN7"]
     #[inline(always)]
-    #[must_use]
-    pub fn din7(&mut self) -> Din7W<DinrSpec> {
+    pub fn din7(&mut self) -> Din7W<'_, DinrSpec> {
         Din7W::new(self, 7)
     }
     #[doc = "Bit 8 - DIN8"]
     #[inline(always)]
-    #[must_use]
-    pub fn din8(&mut self) -> Din8W<DinrSpec> {
+    pub fn din8(&mut self) -> Din8W<'_, DinrSpec> {
         Din8W::new(self, 8)
     }
     #[doc = "Bit 9 - DIN9"]
     #[inline(always)]
-    #[must_use]
-    pub fn din9(&mut self) -> Din9W<DinrSpec> {
+    pub fn din9(&mut self) -> Din9W<'_, DinrSpec> {
         Din9W::new(self, 9)
     }
     #[doc = "Bit 10 - DIN10"]
     #[inline(always)]
-    #[must_use]
-    pub fn din10(&mut self) -> Din10W<DinrSpec> {
+    pub fn din10(&mut self) -> Din10W<'_, DinrSpec> {
         Din10W::new(self, 10)
     }
     #[doc = "Bit 11 - DIN11"]
     #[inline(always)]
-    #[must_use]
-    pub fn din11(&mut self) -> Din11W<DinrSpec> {
+    pub fn din11(&mut self) -> Din11W<'_, DinrSpec> {
         Din11W::new(self, 11)
     }
     #[doc = "Bit 12 - DIN12"]
     #[inline(always)]
-    #[must_use]
-    pub fn din12(&mut self) -> Din12W<DinrSpec> {
+    pub fn din12(&mut self) -> Din12W<'_, DinrSpec> {
         Din12W::new(self, 12)
     }
     #[doc = "Bit 13 - DIN13"]
     #[inline(always)]
-    #[must_use]
-    pub fn din13(&mut self) -> Din13W<DinrSpec> {
+    pub fn din13(&mut self) -> Din13W<'_, DinrSpec> {
         Din13W::new(self, 13)
     }
     #[doc = "Bit 14 - DIN14"]
     #[inline(always)]
-    #[must_use]
-    pub fn din14(&mut self) -> Din14W<DinrSpec> {
+    pub fn din14(&mut self) -> Din14W<'_, DinrSpec> {
         Din14W::new(self, 14)
     }
     #[doc = "Bit 15 - DIN15"]
     #[inline(always)]
-    #[must_use]
-    pub fn din15(&mut self) -> Din15W<DinrSpec> {
+    pub fn din15(&mut self) -> Din15W<'_, DinrSpec> {
         Din15W::new(self, 15)
     }
 }
-#[doc = "DINR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dinr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dinr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DINR\n\nYou can [`read`](crate::Reg::read) this register and get [`dinr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dinr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DinrSpec;
 impl crate::RegisterSpec for DinrSpec {
     type Ux = u32;
@@ -256,10 +240,6 @@ impl crate::Readable for DinrSpec {}
 #[doc = "`write(|w| ..)` method takes [`dinr::W`](W) writer structure"]
 impl crate::Writable for DinrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DINR to value 0"]
-impl crate::Resettable for DinrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DinrSpec {}

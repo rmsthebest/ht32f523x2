@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - CH3OM"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3om(&mut self) -> Ch3omW<Ch3ocfrSpec> {
+    pub fn ch3om(&mut self) -> Ch3omW<'_, Ch3ocfrSpec> {
         Ch3omW::new(self, 0)
     }
     #[doc = "Bit 4 - CH3PRE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3pre(&mut self) -> Ch3preW<Ch3ocfrSpec> {
+    pub fn ch3pre(&mut self) -> Ch3preW<'_, Ch3ocfrSpec> {
         Ch3preW::new(self, 4)
     }
     #[doc = "Bit 5 - CH3IMAE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3imae(&mut self) -> Ch3imaeW<Ch3ocfrSpec> {
+    pub fn ch3imae(&mut self) -> Ch3imaeW<'_, Ch3ocfrSpec> {
         Ch3imaeW::new(self, 5)
     }
     #[doc = "Bit 8 - CH3OM3"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3om3(&mut self) -> Ch3om3W<Ch3ocfrSpec> {
+    pub fn ch3om3(&mut self) -> Ch3om3W<'_, Ch3ocfrSpec> {
         Ch3om3W::new(self, 8)
     }
 }
-#[doc = "CH3OCFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch3ocfr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch3ocfr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CH3OCFR\n\nYou can [`read`](crate::Reg::read) this register and get [`ch3ocfr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch3ocfr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ch3ocfrSpec;
 impl crate::RegisterSpec for Ch3ocfrSpec {
     type Ux = u32;
@@ -76,10 +72,6 @@ impl crate::Readable for Ch3ocfrSpec {}
 #[doc = "`write(|w| ..)` method takes [`ch3ocfr::W`](W) writer structure"]
 impl crate::Writable for Ch3ocfrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CH3OCFR to value 0"]
-impl crate::Resettable for Ch3ocfrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Ch3ocfrSpec {}

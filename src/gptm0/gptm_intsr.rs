@@ -97,66 +97,56 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CH0CCIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0ccif(&mut self) -> Ch0ccifW<GptmIntsrSpec> {
+    pub fn ch0ccif(&mut self) -> Ch0ccifW<'_, GptmIntsrSpec> {
         Ch0ccifW::new(self, 0)
     }
     #[doc = "Bit 1 - CH1CCIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1ccif(&mut self) -> Ch1ccifW<GptmIntsrSpec> {
+    pub fn ch1ccif(&mut self) -> Ch1ccifW<'_, GptmIntsrSpec> {
         Ch1ccifW::new(self, 1)
     }
     #[doc = "Bit 2 - CH2CCIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2ccif(&mut self) -> Ch2ccifW<GptmIntsrSpec> {
+    pub fn ch2ccif(&mut self) -> Ch2ccifW<'_, GptmIntsrSpec> {
         Ch2ccifW::new(self, 2)
     }
     #[doc = "Bit 3 - CH3CCIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3ccif(&mut self) -> Ch3ccifW<GptmIntsrSpec> {
+    pub fn ch3ccif(&mut self) -> Ch3ccifW<'_, GptmIntsrSpec> {
         Ch3ccifW::new(self, 3)
     }
     #[doc = "Bit 4 - CH0OCF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0ocf(&mut self) -> Ch0ocfW<GptmIntsrSpec> {
+    pub fn ch0ocf(&mut self) -> Ch0ocfW<'_, GptmIntsrSpec> {
         Ch0ocfW::new(self, 4)
     }
     #[doc = "Bit 5 - CH1OCF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1ocf(&mut self) -> Ch1ocfW<GptmIntsrSpec> {
+    pub fn ch1ocf(&mut self) -> Ch1ocfW<'_, GptmIntsrSpec> {
         Ch1ocfW::new(self, 5)
     }
     #[doc = "Bit 6 - CH2OCF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2ocf(&mut self) -> Ch2ocfW<GptmIntsrSpec> {
+    pub fn ch2ocf(&mut self) -> Ch2ocfW<'_, GptmIntsrSpec> {
         Ch2ocfW::new(self, 6)
     }
     #[doc = "Bit 7 - CH3OCF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3ocf(&mut self) -> Ch3ocfW<GptmIntsrSpec> {
+    pub fn ch3ocf(&mut self) -> Ch3ocfW<'_, GptmIntsrSpec> {
         Ch3ocfW::new(self, 7)
     }
     #[doc = "Bit 8 - UEVIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn uevif(&mut self) -> UevifW<GptmIntsrSpec> {
+    pub fn uevif(&mut self) -> UevifW<'_, GptmIntsrSpec> {
         UevifW::new(self, 8)
     }
     #[doc = "Bit 10 - TEVIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn tevif(&mut self) -> TevifW<GptmIntsrSpec> {
+    pub fn tevif(&mut self) -> TevifW<'_, GptmIntsrSpec> {
         TevifW::new(self, 10)
     }
 }
-#[doc = "GPTM_INTSR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_intsr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_intsr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM_INTSR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_intsr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_intsr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GptmIntsrSpec;
 impl crate::RegisterSpec for GptmIntsrSpec {
     type Ux = u32;
@@ -166,10 +156,6 @@ impl crate::Readable for GptmIntsrSpec {}
 #[doc = "`write(|w| ..)` method takes [`gptm_intsr::W`](W) writer structure"]
 impl crate::Writable for GptmIntsrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GPTM_INTSR to value 0"]
-impl crate::Resettable for GptmIntsrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GptmIntsrSpec {}

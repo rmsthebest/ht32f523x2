@@ -70,48 +70,41 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - EPBUFA"]
     #[inline(always)]
-    #[must_use]
-    pub fn epbufa(&mut self) -> EpbufaW<Ep7cfgrSpec> {
+    pub fn epbufa(&mut self) -> EpbufaW<'_, Ep7cfgrSpec> {
         EpbufaW::new(self, 0)
     }
     #[doc = "Bits 10:19 - EPLEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn eplen(&mut self) -> EplenW<Ep7cfgrSpec> {
+    pub fn eplen(&mut self) -> EplenW<'_, Ep7cfgrSpec> {
         EplenW::new(self, 10)
     }
     #[doc = "Bit 23 - SDBS"]
     #[inline(always)]
-    #[must_use]
-    pub fn sdbs(&mut self) -> SdbsW<Ep7cfgrSpec> {
+    pub fn sdbs(&mut self) -> SdbsW<'_, Ep7cfgrSpec> {
         SdbsW::new(self, 23)
     }
     #[doc = "Bits 24:27 - EPADR"]
     #[inline(always)]
-    #[must_use]
-    pub fn epadr(&mut self) -> EpadrW<Ep7cfgrSpec> {
+    pub fn epadr(&mut self) -> EpadrW<'_, Ep7cfgrSpec> {
         EpadrW::new(self, 24)
     }
     #[doc = "Bit 28 - EPDIR"]
     #[inline(always)]
-    #[must_use]
-    pub fn epdir(&mut self) -> EpdirW<Ep7cfgrSpec> {
+    pub fn epdir(&mut self) -> EpdirW<'_, Ep7cfgrSpec> {
         EpdirW::new(self, 28)
     }
     #[doc = "Bit 29 - EPTYPE"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptype(&mut self) -> EptypeW<Ep7cfgrSpec> {
+    pub fn eptype(&mut self) -> EptypeW<'_, Ep7cfgrSpec> {
         EptypeW::new(self, 29)
     }
     #[doc = "Bit 31 - EPEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn epen(&mut self) -> EpenW<Ep7cfgrSpec> {
+    pub fn epen(&mut self) -> EpenW<'_, Ep7cfgrSpec> {
         EpenW::new(self, 31)
     }
 }
-#[doc = "EP7CFGR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ep7cfgr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ep7cfgr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "EP7CFGR\n\nYou can [`read`](crate::Reg::read) this register and get [`ep7cfgr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ep7cfgr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ep7cfgrSpec;
 impl crate::RegisterSpec for Ep7cfgrSpec {
     type Ux = u32;
@@ -121,10 +114,6 @@ impl crate::Readable for Ep7cfgrSpec {}
 #[doc = "`write(|w| ..)` method takes [`ep7cfgr::W`](W) writer structure"]
 impl crate::Writable for Ep7cfgrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EP7CFGR to value 0"]
-impl crate::Resettable for Ep7cfgrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Ep7cfgrSpec {}

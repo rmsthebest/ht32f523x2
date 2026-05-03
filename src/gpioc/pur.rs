@@ -151,102 +151,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - PU0"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu0(&mut self) -> Pu0W<PurSpec> {
+    pub fn pu0(&mut self) -> Pu0W<'_, PurSpec> {
         Pu0W::new(self, 0)
     }
     #[doc = "Bit 1 - PU1"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu1(&mut self) -> Pu1W<PurSpec> {
+    pub fn pu1(&mut self) -> Pu1W<'_, PurSpec> {
         Pu1W::new(self, 1)
     }
     #[doc = "Bit 2 - PU2"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu2(&mut self) -> Pu2W<PurSpec> {
+    pub fn pu2(&mut self) -> Pu2W<'_, PurSpec> {
         Pu2W::new(self, 2)
     }
     #[doc = "Bit 3 - PU3"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu3(&mut self) -> Pu3W<PurSpec> {
+    pub fn pu3(&mut self) -> Pu3W<'_, PurSpec> {
         Pu3W::new(self, 3)
     }
     #[doc = "Bit 4 - PU4"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu4(&mut self) -> Pu4W<PurSpec> {
+    pub fn pu4(&mut self) -> Pu4W<'_, PurSpec> {
         Pu4W::new(self, 4)
     }
     #[doc = "Bit 5 - PU5"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu5(&mut self) -> Pu5W<PurSpec> {
+    pub fn pu5(&mut self) -> Pu5W<'_, PurSpec> {
         Pu5W::new(self, 5)
     }
     #[doc = "Bit 6 - PU6"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu6(&mut self) -> Pu6W<PurSpec> {
+    pub fn pu6(&mut self) -> Pu6W<'_, PurSpec> {
         Pu6W::new(self, 6)
     }
     #[doc = "Bit 7 - PU7"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu7(&mut self) -> Pu7W<PurSpec> {
+    pub fn pu7(&mut self) -> Pu7W<'_, PurSpec> {
         Pu7W::new(self, 7)
     }
     #[doc = "Bit 8 - PU8"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu8(&mut self) -> Pu8W<PurSpec> {
+    pub fn pu8(&mut self) -> Pu8W<'_, PurSpec> {
         Pu8W::new(self, 8)
     }
     #[doc = "Bit 9 - PU9"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu9(&mut self) -> Pu9W<PurSpec> {
+    pub fn pu9(&mut self) -> Pu9W<'_, PurSpec> {
         Pu9W::new(self, 9)
     }
     #[doc = "Bit 10 - PU10"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu10(&mut self) -> Pu10W<PurSpec> {
+    pub fn pu10(&mut self) -> Pu10W<'_, PurSpec> {
         Pu10W::new(self, 10)
     }
     #[doc = "Bit 11 - PU11"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu11(&mut self) -> Pu11W<PurSpec> {
+    pub fn pu11(&mut self) -> Pu11W<'_, PurSpec> {
         Pu11W::new(self, 11)
     }
     #[doc = "Bit 12 - PU12"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu12(&mut self) -> Pu12W<PurSpec> {
+    pub fn pu12(&mut self) -> Pu12W<'_, PurSpec> {
         Pu12W::new(self, 12)
     }
     #[doc = "Bit 13 - PU13"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu13(&mut self) -> Pu13W<PurSpec> {
+    pub fn pu13(&mut self) -> Pu13W<'_, PurSpec> {
         Pu13W::new(self, 13)
     }
     #[doc = "Bit 14 - PU14"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu14(&mut self) -> Pu14W<PurSpec> {
+    pub fn pu14(&mut self) -> Pu14W<'_, PurSpec> {
         Pu14W::new(self, 14)
     }
     #[doc = "Bit 15 - PU15"]
     #[inline(always)]
-    #[must_use]
-    pub fn pu15(&mut self) -> Pu15W<PurSpec> {
+    pub fn pu15(&mut self) -> Pu15W<'_, PurSpec> {
         Pu15W::new(self, 15)
     }
 }
-#[doc = "PUR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pur::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pur::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PUR\n\nYou can [`read`](crate::Reg::read) this register and get [`pur::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pur::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PurSpec;
 impl crate::RegisterSpec for PurSpec {
     type Ux = u32;
@@ -256,10 +240,6 @@ impl crate::Readable for PurSpec {}
 #[doc = "`write(|w| ..)` method takes [`pur::W`](W) writer structure"]
 impl crate::Writable for PurSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PUR to value 0"]
-impl crate::Resettable for PurSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PurSpec {}

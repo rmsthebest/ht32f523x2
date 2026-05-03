@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - PARF"]
     #[inline(always)]
-    #[must_use]
-    pub fn parf(&mut self) -> ParfW<SrSpec> {
+    pub fn parf(&mut self) -> ParfW<'_, SrSpec> {
         ParfW::new(self, 0)
     }
     #[doc = "Bit 1 - RXCF"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxcf(&mut self) -> RxcfW<SrSpec> {
+    pub fn rxcf(&mut self) -> RxcfW<'_, SrSpec> {
         RxcfW::new(self, 1)
     }
     #[doc = "Bit 2 - TXCF"]
     #[inline(always)]
-    #[must_use]
-    pub fn txcf(&mut self) -> TxcfW<SrSpec> {
+    pub fn txcf(&mut self) -> TxcfW<'_, SrSpec> {
         TxcfW::new(self, 2)
     }
     #[doc = "Bit 3 - WTF"]
     #[inline(always)]
-    #[must_use]
-    pub fn wtf(&mut self) -> WtfW<SrSpec> {
+    pub fn wtf(&mut self) -> WtfW<'_, SrSpec> {
         WtfW::new(self, 3)
     }
     #[doc = "Bit 6 - CPREF"]
     #[inline(always)]
-    #[must_use]
-    pub fn cpref(&mut self) -> CprefW<SrSpec> {
+    pub fn cpref(&mut self) -> CprefW<'_, SrSpec> {
         CprefW::new(self, 6)
     }
     #[doc = "Bit 7 - TXBEF"]
     #[inline(always)]
-    #[must_use]
-    pub fn txbef(&mut self) -> TxbefW<SrSpec> {
+    pub fn txbef(&mut self) -> TxbefW<'_, SrSpec> {
         TxbefW::new(self, 7)
     }
 }
-#[doc = "SR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SR\n\nYou can [`read`](crate::Reg::read) this register and get [`sr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SrSpec;
 impl crate::RegisterSpec for SrSpec {
     type Ux = u32;
@@ -106,10 +100,6 @@ impl crate::Readable for SrSpec {}
 #[doc = "`write(|w| ..)` method takes [`sr::W`](W) writer structure"]
 impl crate::Writable for SrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SR to value 0"]
-impl crate::Resettable for SrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SrSpec {}

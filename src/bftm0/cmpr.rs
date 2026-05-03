@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - CMP"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp(&mut self) -> CmpW<CmprSpec> {
+    pub fn cmp(&mut self) -> CmpW<'_, CmprSpec> {
         CmpW::new(self, 0)
     }
 }
-#[doc = "CMPR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cmpr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cmpr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CMPR\n\nYou can [`read`](crate::Reg::read) this register and get [`cmpr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmpr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CmprSpec;
 impl crate::RegisterSpec for CmprSpec {
     type Ux = u32;
@@ -31,10 +30,6 @@ impl crate::Readable for CmprSpec {}
 #[doc = "`write(|w| ..)` method takes [`cmpr::W`](W) writer structure"]
 impl crate::Writable for CmprSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CMPR to value 0"]
-impl crate::Resettable for CmprSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CmprSpec {}

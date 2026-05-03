@@ -70,48 +70,41 @@ impl R {
 impl W {
     #[doc = "Bit 0 - ORFF"]
     #[inline(always)]
-    #[must_use]
-    pub fn orff(&mut self) -> OrffW<OisrSpec> {
+    pub fn orff(&mut self) -> OrffW<'_, OisrSpec> {
         OrffW::new(self, 0)
     }
     #[doc = "Bit 1 - ITADF"]
     #[inline(always)]
-    #[must_use]
-    pub fn itadf(&mut self) -> ItadfW<OisrSpec> {
+    pub fn itadf(&mut self) -> ItadfW<'_, OisrSpec> {
         ItadfW::new(self, 1)
     }
     #[doc = "Bit 2 - OBEF"]
     #[inline(always)]
-    #[must_use]
-    pub fn obef(&mut self) -> ObefW<OisrSpec> {
+    pub fn obef(&mut self) -> ObefW<'_, OisrSpec> {
         ObefW::new(self, 2)
     }
     #[doc = "Bit 3 - IOCMF"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocmf(&mut self) -> IocmfW<OisrSpec> {
+    pub fn iocmf(&mut self) -> IocmfW<'_, OisrSpec> {
         IocmfW::new(self, 3)
     }
     #[doc = "Bit 4 - OREF"]
     #[inline(always)]
-    #[must_use]
-    pub fn oref(&mut self) -> OrefW<OisrSpec> {
+    pub fn oref(&mut self) -> OrefW<'_, OisrSpec> {
         OrefW::new(self, 4)
     }
     #[doc = "Bit 16 - RORFF"]
     #[inline(always)]
-    #[must_use]
-    pub fn rorff(&mut self) -> RorffW<OisrSpec> {
+    pub fn rorff(&mut self) -> RorffW<'_, OisrSpec> {
         RorffW::new(self, 16)
     }
     #[doc = "Bit 17 - PPEF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ppef(&mut self) -> PpefW<OisrSpec> {
+    pub fn ppef(&mut self) -> PpefW<'_, OisrSpec> {
         PpefW::new(self, 17)
     }
 }
-#[doc = "OISR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`oisr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`oisr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OISR\n\nYou can [`read`](crate::Reg::read) this register and get [`oisr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`oisr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OisrSpec;
 impl crate::RegisterSpec for OisrSpec {
     type Ux = u32;
@@ -121,10 +114,6 @@ impl crate::Readable for OisrSpec {}
 #[doc = "`write(|w| ..)` method takes [`oisr::W`](W) writer structure"]
 impl crate::Writable for OisrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OISR to value 0"]
-impl crate::Resettable for OisrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OisrSpec {}

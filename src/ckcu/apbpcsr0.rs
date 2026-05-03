@@ -124,84 +124,71 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - I2C0PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c0pclk(&mut self) -> I2c0pclkW<Apbpcsr0Spec> {
+    pub fn i2c0pclk(&mut self) -> I2c0pclkW<'_, Apbpcsr0Spec> {
         I2c0pclkW::new(self, 0)
     }
     #[doc = "Bits 2:3 - I2C1PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c1pclk(&mut self) -> I2c1pclkW<Apbpcsr0Spec> {
+    pub fn i2c1pclk(&mut self) -> I2c1pclkW<'_, Apbpcsr0Spec> {
         I2c1pclkW::new(self, 2)
     }
     #[doc = "Bits 4:5 - SPI0PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi0pclk(&mut self) -> Spi0pclkW<Apbpcsr0Spec> {
+    pub fn spi0pclk(&mut self) -> Spi0pclkW<'_, Apbpcsr0Spec> {
         Spi0pclkW::new(self, 4)
     }
     #[doc = "Bits 6:7 - SPI1PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi1pclk(&mut self) -> Spi1pclkW<Apbpcsr0Spec> {
+    pub fn spi1pclk(&mut self) -> Spi1pclkW<'_, Apbpcsr0Spec> {
         Spi1pclkW::new(self, 6)
     }
     #[doc = "Bits 12:13 - BFTM0PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn bftm0pclk(&mut self) -> Bftm0pclkW<Apbpcsr0Spec> {
+    pub fn bftm0pclk(&mut self) -> Bftm0pclkW<'_, Apbpcsr0Spec> {
         Bftm0pclkW::new(self, 12)
     }
     #[doc = "Bits 14:15 - BFTM1PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn bftm1pclk(&mut self) -> Bftm1pclkW<Apbpcsr0Spec> {
+    pub fn bftm1pclk(&mut self) -> Bftm1pclkW<'_, Apbpcsr0Spec> {
         Bftm1pclkW::new(self, 14)
     }
     #[doc = "Bits 16:17 - MCTM0PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn mctm0pclk(&mut self) -> Mctm0pclkW<Apbpcsr0Spec> {
+    pub fn mctm0pclk(&mut self) -> Mctm0pclkW<'_, Apbpcsr0Spec> {
         Mctm0pclkW::new(self, 16)
     }
     #[doc = "Bits 20:21 - GPTM0PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn gptm0pclk(&mut self) -> Gptm0pclkW<Apbpcsr0Spec> {
+    pub fn gptm0pclk(&mut self) -> Gptm0pclkW<'_, Apbpcsr0Spec> {
         Gptm0pclkW::new(self, 20)
     }
     #[doc = "Bits 22:23 - GPTM1PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn gptm1pclk(&mut self) -> Gptm1pclkW<Apbpcsr0Spec> {
+    pub fn gptm1pclk(&mut self) -> Gptm1pclkW<'_, Apbpcsr0Spec> {
         Gptm1pclkW::new(self, 22)
     }
     #[doc = "Bits 24:25 - USR0PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn usr0pclk(&mut self) -> Usr0pclkW<Apbpcsr0Spec> {
+    pub fn usr0pclk(&mut self) -> Usr0pclkW<'_, Apbpcsr0Spec> {
         Usr0pclkW::new(self, 24)
     }
     #[doc = "Bits 26:27 - USR1PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn usr1pclk(&mut self) -> Usr1pclkW<Apbpcsr0Spec> {
+    pub fn usr1pclk(&mut self) -> Usr1pclkW<'_, Apbpcsr0Spec> {
         Usr1pclkW::new(self, 26)
     }
     #[doc = "Bits 28:29 - UR0PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn ur0pclk(&mut self) -> Ur0pclkW<Apbpcsr0Spec> {
+    pub fn ur0pclk(&mut self) -> Ur0pclkW<'_, Apbpcsr0Spec> {
         Ur0pclkW::new(self, 28)
     }
     #[doc = "Bits 30:31 - UR1PCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn ur1pclk(&mut self) -> Ur1pclkW<Apbpcsr0Spec> {
+    pub fn ur1pclk(&mut self) -> Ur1pclkW<'_, Apbpcsr0Spec> {
         Ur1pclkW::new(self, 30)
     }
 }
-#[doc = "APBPCSR0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apbpcsr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apbpcsr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "APBPCSR0\n\nYou can [`read`](crate::Reg::read) this register and get [`apbpcsr0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apbpcsr0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Apbpcsr0Spec;
 impl crate::RegisterSpec for Apbpcsr0Spec {
     type Ux = u32;
@@ -211,10 +198,6 @@ impl crate::Readable for Apbpcsr0Spec {}
 #[doc = "`write(|w| ..)` method takes [`apbpcsr0::W`](W) writer structure"]
 impl crate::Writable for Apbpcsr0Spec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APBPCSR0 to value 0"]
-impl crate::Resettable for Apbpcsr0Spec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Apbpcsr0Spec {}

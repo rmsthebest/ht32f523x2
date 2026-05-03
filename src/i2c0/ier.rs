@@ -106,72 +106,61 @@ impl R {
 impl W {
     #[doc = "Bit 0 - STAIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn staie(&mut self) -> StaieW<IerSpec> {
+    pub fn staie(&mut self) -> StaieW<'_, IerSpec> {
         StaieW::new(self, 0)
     }
     #[doc = "Bit 1 - STOIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn stoie(&mut self) -> StoieW<IerSpec> {
+    pub fn stoie(&mut self) -> StoieW<'_, IerSpec> {
         StoieW::new(self, 1)
     }
     #[doc = "Bit 2 - ADRSIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn adrsie(&mut self) -> AdrsieW<IerSpec> {
+    pub fn adrsie(&mut self) -> AdrsieW<'_, IerSpec> {
         AdrsieW::new(self, 2)
     }
     #[doc = "Bit 3 - GCSIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn gcsie(&mut self) -> GcsieW<IerSpec> {
+    pub fn gcsie(&mut self) -> GcsieW<'_, IerSpec> {
         GcsieW::new(self, 3)
     }
     #[doc = "Bit 8 - ARBLOSIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn arblosie(&mut self) -> ArblosieW<IerSpec> {
+    pub fn arblosie(&mut self) -> ArblosieW<'_, IerSpec> {
         ArblosieW::new(self, 8)
     }
     #[doc = "Bit 9 - RXNACKIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxnackie(&mut self) -> RxnackieW<IerSpec> {
+    pub fn rxnackie(&mut self) -> RxnackieW<'_, IerSpec> {
         RxnackieW::new(self, 9)
     }
     #[doc = "Bit 10 - BUSERRIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn buserrie(&mut self) -> BuserrieW<IerSpec> {
+    pub fn buserrie(&mut self) -> BuserrieW<'_, IerSpec> {
         BuserrieW::new(self, 10)
     }
     #[doc = "Bit 11 - TOUTIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn toutie(&mut self) -> ToutieW<IerSpec> {
+    pub fn toutie(&mut self) -> ToutieW<'_, IerSpec> {
         ToutieW::new(self, 11)
     }
     #[doc = "Bit 16 - RXDNEIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxdneie(&mut self) -> RxdneieW<IerSpec> {
+    pub fn rxdneie(&mut self) -> RxdneieW<'_, IerSpec> {
         RxdneieW::new(self, 16)
     }
     #[doc = "Bit 17 - TXDEIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn txdeie(&mut self) -> TxdeieW<IerSpec> {
+    pub fn txdeie(&mut self) -> TxdeieW<'_, IerSpec> {
         TxdeieW::new(self, 17)
     }
     #[doc = "Bit 18 - RXBFIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxbfie(&mut self) -> RxbfieW<IerSpec> {
+    pub fn rxbfie(&mut self) -> RxbfieW<'_, IerSpec> {
         RxbfieW::new(self, 18)
     }
 }
-#[doc = "IER\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ier::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ier::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IER\n\nYou can [`read`](crate::Reg::read) this register and get [`ier::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ier::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IerSpec;
 impl crate::RegisterSpec for IerSpec {
     type Ux = u32;
@@ -181,10 +170,6 @@ impl crate::Readable for IerSpec {}
 #[doc = "`write(|w| ..)` method takes [`ier::W`](W) writer structure"]
 impl crate::Writable for IerSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IER to value 0"]
-impl crate::Resettable for IerSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IerSpec {}

@@ -79,54 +79,46 @@ impl R {
 impl W {
     #[doc = "Bit 0 - OTRXIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn otrxie(&mut self) -> OtrxieW<Ep7ierSpec> {
+    pub fn otrxie(&mut self) -> OtrxieW<'_, Ep7ierSpec> {
         OtrxieW::new(self, 0)
     }
     #[doc = "Bit 1 - ODRXIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrxie(&mut self) -> OdrxieW<Ep7ierSpec> {
+    pub fn odrxie(&mut self) -> OdrxieW<'_, Ep7ierSpec> {
         OdrxieW::new(self, 1)
     }
     #[doc = "Bit 2 - ODOVIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn odovie(&mut self) -> OdovieW<Ep7ierSpec> {
+    pub fn odovie(&mut self) -> OdovieW<'_, Ep7ierSpec> {
         OdovieW::new(self, 2)
     }
     #[doc = "Bit 3 - ITRXIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn itrxie(&mut self) -> ItrxieW<Ep7ierSpec> {
+    pub fn itrxie(&mut self) -> ItrxieW<'_, Ep7ierSpec> {
         ItrxieW::new(self, 3)
     }
     #[doc = "Bit 4 - IDTXIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn idtxie(&mut self) -> IdtxieW<Ep7ierSpec> {
+    pub fn idtxie(&mut self) -> IdtxieW<'_, Ep7ierSpec> {
         IdtxieW::new(self, 4)
     }
     #[doc = "Bit 5 - NAKIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn nakie(&mut self) -> NakieW<Ep7ierSpec> {
+    pub fn nakie(&mut self) -> NakieW<'_, Ep7ierSpec> {
         NakieW::new(self, 5)
     }
     #[doc = "Bit 6 - STLIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn stlie(&mut self) -> StlieW<Ep7ierSpec> {
+    pub fn stlie(&mut self) -> StlieW<'_, Ep7ierSpec> {
         StlieW::new(self, 6)
     }
     #[doc = "Bit 7 - UERIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn uerie(&mut self) -> UerieW<Ep7ierSpec> {
+    pub fn uerie(&mut self) -> UerieW<'_, Ep7ierSpec> {
         UerieW::new(self, 7)
     }
 }
-#[doc = "EP7IER\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ep7ier::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ep7ier::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "EP7IER\n\nYou can [`read`](crate::Reg::read) this register and get [`ep7ier::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ep7ier::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ep7ierSpec;
 impl crate::RegisterSpec for Ep7ierSpec {
     type Ux = u32;
@@ -136,10 +128,6 @@ impl crate::Readable for Ep7ierSpec {}
 #[doc = "`write(|w| ..)` method takes [`ep7ier::W`](W) writer structure"]
 impl crate::Writable for Ep7ierSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EP7IER to value 0"]
-impl crate::Resettable for Ep7ierSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Ep7ierSpec {}

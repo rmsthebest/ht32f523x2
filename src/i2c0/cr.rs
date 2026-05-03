@@ -106,72 +106,61 @@ impl R {
 impl W {
     #[doc = "Bit 0 - AA"]
     #[inline(always)]
-    #[must_use]
-    pub fn aa(&mut self) -> AaW<CrSpec> {
+    pub fn aa(&mut self) -> AaW<'_, CrSpec> {
         AaW::new(self, 0)
     }
     #[doc = "Bit 1 - STOP"]
     #[inline(always)]
-    #[must_use]
-    pub fn stop(&mut self) -> StopW<CrSpec> {
+    pub fn stop(&mut self) -> StopW<'_, CrSpec> {
         StopW::new(self, 1)
     }
     #[doc = "Bit 2 - GCEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn gcen(&mut self) -> GcenW<CrSpec> {
+    pub fn gcen(&mut self) -> GcenW<'_, CrSpec> {
         GcenW::new(self, 2)
     }
     #[doc = "Bit 3 - I2CEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2cen(&mut self) -> I2cenW<CrSpec> {
+    pub fn i2cen(&mut self) -> I2cenW<'_, CrSpec> {
         I2cenW::new(self, 3)
     }
     #[doc = "Bit 7 - ADRM"]
     #[inline(always)]
-    #[must_use]
-    pub fn adrm(&mut self) -> AdrmW<CrSpec> {
+    pub fn adrm(&mut self) -> AdrmW<'_, CrSpec> {
         AdrmW::new(self, 7)
     }
     #[doc = "Bit 8 - TXDMAE"]
     #[inline(always)]
-    #[must_use]
-    pub fn txdmae(&mut self) -> TxdmaeW<CrSpec> {
+    pub fn txdmae(&mut self) -> TxdmaeW<'_, CrSpec> {
         TxdmaeW::new(self, 8)
     }
     #[doc = "Bit 9 - RXDMAE"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxdmae(&mut self) -> RxdmaeW<CrSpec> {
+    pub fn rxdmae(&mut self) -> RxdmaeW<'_, CrSpec> {
         RxdmaeW::new(self, 9)
     }
     #[doc = "Bit 10 - DMANACK"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmanack(&mut self) -> DmanackW<CrSpec> {
+    pub fn dmanack(&mut self) -> DmanackW<'_, CrSpec> {
         DmanackW::new(self, 10)
     }
     #[doc = "Bit 12 - ENTOUT"]
     #[inline(always)]
-    #[must_use]
-    pub fn entout(&mut self) -> EntoutW<CrSpec> {
+    pub fn entout(&mut self) -> EntoutW<'_, CrSpec> {
         EntoutW::new(self, 12)
     }
     #[doc = "Bit 13 - COMB_FILTER_EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn comb_filter_en(&mut self) -> CombFilterEnW<CrSpec> {
+    pub fn comb_filter_en(&mut self) -> CombFilterEnW<'_, CrSpec> {
         CombFilterEnW::new(self, 13)
     }
     #[doc = "Bits 14:15 - SEQ_FILTER"]
     #[inline(always)]
-    #[must_use]
-    pub fn seq_filter(&mut self) -> SeqFilterW<CrSpec> {
+    pub fn seq_filter(&mut self) -> SeqFilterW<'_, CrSpec> {
         SeqFilterW::new(self, 14)
     }
 }
-#[doc = "CR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CR\n\nYou can [`read`](crate::Reg::read) this register and get [`cr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CrSpec;
 impl crate::RegisterSpec for CrSpec {
     type Ux = u32;
@@ -181,10 +170,6 @@ impl crate::Readable for CrSpec {}
 #[doc = "`write(|w| ..)` method takes [`cr::W`](W) writer structure"]
 impl crate::Writable for CrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR to value 0"]
-impl crate::Resettable for CrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CrSpec {}

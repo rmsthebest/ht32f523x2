@@ -52,36 +52,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - CKOUTSRC"]
     #[inline(always)]
-    #[must_use]
-    pub fn ckoutsrc(&mut self) -> CkoutsrcW<GcfgrSpec> {
+    pub fn ckoutsrc(&mut self) -> CkoutsrcW<'_, GcfgrSpec> {
         CkoutsrcW::new(self, 0)
     }
     #[doc = "Bit 8 - PLLSRC"]
     #[inline(always)]
-    #[must_use]
-    pub fn pllsrc(&mut self) -> PllsrcW<GcfgrSpec> {
+    pub fn pllsrc(&mut self) -> PllsrcW<'_, GcfgrSpec> {
         PllsrcW::new(self, 8)
     }
     #[doc = "Bits 11:15 - CKREFPRE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ckrefpre(&mut self) -> CkrefpreW<GcfgrSpec> {
+    pub fn ckrefpre(&mut self) -> CkrefpreW<'_, GcfgrSpec> {
         CkrefpreW::new(self, 11)
     }
     #[doc = "Bits 22:23 - USBPRE"]
     #[inline(always)]
-    #[must_use]
-    pub fn usbpre(&mut self) -> UsbpreW<GcfgrSpec> {
+    pub fn usbpre(&mut self) -> UsbpreW<'_, GcfgrSpec> {
         UsbpreW::new(self, 22)
     }
     #[doc = "Bits 29:31 - LPMOD"]
     #[inline(always)]
-    #[must_use]
-    pub fn lpmod(&mut self) -> LpmodW<GcfgrSpec> {
+    pub fn lpmod(&mut self) -> LpmodW<'_, GcfgrSpec> {
         LpmodW::new(self, 29)
     }
 }
-#[doc = "GCFGR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gcfgr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gcfgr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GCFGR\n\nYou can [`read`](crate::Reg::read) this register and get [`gcfgr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gcfgr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GcfgrSpec;
 impl crate::RegisterSpec for GcfgrSpec {
     type Ux = u32;
@@ -91,10 +86,6 @@ impl crate::Readable for GcfgrSpec {}
 #[doc = "`write(|w| ..)` method takes [`gcfgr::W`](W) writer structure"]
 impl crate::Writable for GcfgrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GCFGR to value 0"]
-impl crate::Resettable for GcfgrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GcfgrSpec {}

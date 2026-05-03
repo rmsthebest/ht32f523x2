@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - TI1F"]
     #[inline(always)]
-    #[must_use]
-    pub fn ti1f(&mut self) -> Ti1fW<GptmCh1icfrSpec> {
+    pub fn ti1f(&mut self) -> Ti1fW<'_, GptmCh1icfrSpec> {
         Ti1fW::new(self, 0)
     }
     #[doc = "Bits 16:17 - CH1CCS"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1ccs(&mut self) -> Ch1ccsW<GptmCh1icfrSpec> {
+    pub fn ch1ccs(&mut self) -> Ch1ccsW<'_, GptmCh1icfrSpec> {
         Ch1ccsW::new(self, 16)
     }
     #[doc = "Bits 18:19 - CH1PSC"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1psc(&mut self) -> Ch1pscW<GptmCh1icfrSpec> {
+    pub fn ch1psc(&mut self) -> Ch1pscW<'_, GptmCh1icfrSpec> {
         Ch1pscW::new(self, 18)
     }
 }
-#[doc = "GPTM_CH1ICFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_ch1icfr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_ch1icfr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM_CH1ICFR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_ch1icfr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_ch1icfr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GptmCh1icfrSpec;
 impl crate::RegisterSpec for GptmCh1icfrSpec {
     type Ux = u32;
@@ -61,10 +58,6 @@ impl crate::Readable for GptmCh1icfrSpec {}
 #[doc = "`write(|w| ..)` method takes [`gptm_ch1icfr::W`](W) writer structure"]
 impl crate::Writable for GptmCh1icfrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GPTM_CH1ICFR to value 0"]
-impl crate::Resettable for GptmCh1icfrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GptmCh1icfrSpec {}

@@ -52,36 +52,31 @@ impl R {
 impl W {
     #[doc = "Bit 1 - PLLRDY"]
     #[inline(always)]
-    #[must_use]
-    pub fn pllrdy(&mut self) -> PllrdyW<GcsrSpec> {
+    pub fn pllrdy(&mut self) -> PllrdyW<'_, GcsrSpec> {
         PllrdyW::new(self, 1)
     }
     #[doc = "Bit 2 - HSERDY"]
     #[inline(always)]
-    #[must_use]
-    pub fn hserdy(&mut self) -> HserdyW<GcsrSpec> {
+    pub fn hserdy(&mut self) -> HserdyW<'_, GcsrSpec> {
         HserdyW::new(self, 2)
     }
     #[doc = "Bit 3 - HSIRDY"]
     #[inline(always)]
-    #[must_use]
-    pub fn hsirdy(&mut self) -> HsirdyW<GcsrSpec> {
+    pub fn hsirdy(&mut self) -> HsirdyW<'_, GcsrSpec> {
         HsirdyW::new(self, 3)
     }
     #[doc = "Bit 4 - LSERDY"]
     #[inline(always)]
-    #[must_use]
-    pub fn lserdy(&mut self) -> LserdyW<GcsrSpec> {
+    pub fn lserdy(&mut self) -> LserdyW<'_, GcsrSpec> {
         LserdyW::new(self, 4)
     }
     #[doc = "Bit 5 - LSIRDY"]
     #[inline(always)]
-    #[must_use]
-    pub fn lsirdy(&mut self) -> LsirdyW<GcsrSpec> {
+    pub fn lsirdy(&mut self) -> LsirdyW<'_, GcsrSpec> {
         LsirdyW::new(self, 5)
     }
 }
-#[doc = "GCSR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gcsr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gcsr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GCSR\n\nYou can [`read`](crate::Reg::read) this register and get [`gcsr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gcsr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GcsrSpec;
 impl crate::RegisterSpec for GcsrSpec {
     type Ux = u32;
@@ -91,10 +86,6 @@ impl crate::Readable for GcsrSpec {}
 #[doc = "`write(|w| ..)` method takes [`gcsr::W`](W) writer structure"]
 impl crate::Writable for GcsrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GCSR to value 0"]
-impl crate::Resettable for GcsrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GcsrSpec {}

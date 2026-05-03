@@ -79,54 +79,46 @@ impl R {
 impl W {
     #[doc = "Bit 0 - OTRXIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn otrxif(&mut self) -> OtrxifW<Ep1isrSpec> {
+    pub fn otrxif(&mut self) -> OtrxifW<'_, Ep1isrSpec> {
         OtrxifW::new(self, 0)
     }
     #[doc = "Bit 1 - ODRXIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrxif(&mut self) -> OdrxifW<Ep1isrSpec> {
+    pub fn odrxif(&mut self) -> OdrxifW<'_, Ep1isrSpec> {
         OdrxifW::new(self, 1)
     }
     #[doc = "Bit 2 - ODOVIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn odovif(&mut self) -> OdovifW<Ep1isrSpec> {
+    pub fn odovif(&mut self) -> OdovifW<'_, Ep1isrSpec> {
         OdovifW::new(self, 2)
     }
     #[doc = "Bit 3 - ITRXIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn itrxif(&mut self) -> ItrxifW<Ep1isrSpec> {
+    pub fn itrxif(&mut self) -> ItrxifW<'_, Ep1isrSpec> {
         ItrxifW::new(self, 3)
     }
     #[doc = "Bit 4 - IDTXIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn idtxif(&mut self) -> IdtxifW<Ep1isrSpec> {
+    pub fn idtxif(&mut self) -> IdtxifW<'_, Ep1isrSpec> {
         IdtxifW::new(self, 4)
     }
     #[doc = "Bit 5 - NAKIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn nakif(&mut self) -> NakifW<Ep1isrSpec> {
+    pub fn nakif(&mut self) -> NakifW<'_, Ep1isrSpec> {
         NakifW::new(self, 5)
     }
     #[doc = "Bit 6 - STLIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn stlif(&mut self) -> StlifW<Ep1isrSpec> {
+    pub fn stlif(&mut self) -> StlifW<'_, Ep1isrSpec> {
         StlifW::new(self, 6)
     }
     #[doc = "Bit 7 - UERIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn uerif(&mut self) -> UerifW<Ep1isrSpec> {
+    pub fn uerif(&mut self) -> UerifW<'_, Ep1isrSpec> {
         UerifW::new(self, 7)
     }
 }
-#[doc = "EP1ISR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ep1isr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ep1isr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "EP1ISR\n\nYou can [`read`](crate::Reg::read) this register and get [`ep1isr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ep1isr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ep1isrSpec;
 impl crate::RegisterSpec for Ep1isrSpec {
     type Ux = u32;
@@ -136,10 +128,6 @@ impl crate::Readable for Ep1isrSpec {}
 #[doc = "`write(|w| ..)` method takes [`ep1isr::W`](W) writer structure"]
 impl crate::Writable for Ep1isrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EP1ISR to value 0"]
-impl crate::Resettable for Ep1isrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Ep1isrSpec {}

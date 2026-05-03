@@ -88,60 +88,51 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CONV"]
     #[inline(always)]
-    #[must_use]
-    pub fn conv(&mut self) -> ConvW<CrSpec> {
+    pub fn conv(&mut self) -> ConvW<'_, CrSpec> {
         ConvW::new(self, 0)
     }
     #[doc = "Bit 1 - CREP"]
     #[inline(always)]
-    #[must_use]
-    pub fn crep(&mut self) -> CrepW<CrSpec> {
+    pub fn crep(&mut self) -> CrepW<'_, CrSpec> {
         CrepW::new(self, 1)
     }
     #[doc = "Bit 2 - WTEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn wten(&mut self) -> WtenW<CrSpec> {
+    pub fn wten(&mut self) -> WtenW<'_, CrSpec> {
         WtenW::new(self, 2)
     }
     #[doc = "Bit 3 - SCIM"]
     #[inline(always)]
-    #[must_use]
-    pub fn scim(&mut self) -> ScimW<CrSpec> {
+    pub fn scim(&mut self) -> ScimW<'_, CrSpec> {
         ScimW::new(self, 3)
     }
     #[doc = "Bit 4 - RETRY"]
     #[inline(always)]
-    #[must_use]
-    pub fn retry(&mut self) -> RetryW<CrSpec> {
+    pub fn retry(&mut self) -> RetryW<'_, CrSpec> {
         RetryW::new(self, 4)
     }
     #[doc = "Bit 5 - ENSCI"]
     #[inline(always)]
-    #[must_use]
-    pub fn ensci(&mut self) -> EnsciW<CrSpec> {
+    pub fn ensci(&mut self) -> EnsciW<'_, CrSpec> {
         EnsciW::new(self, 5)
     }
     #[doc = "Bit 6 - DETCNF"]
     #[inline(always)]
-    #[must_use]
-    pub fn detcnf(&mut self) -> DetcnfW<CrSpec> {
+    pub fn detcnf(&mut self) -> DetcnfW<'_, CrSpec> {
         DetcnfW::new(self, 6)
     }
     #[doc = "Bit 8 - TXDMA"]
     #[inline(always)]
-    #[must_use]
-    pub fn txdma(&mut self) -> TxdmaW<CrSpec> {
+    pub fn txdma(&mut self) -> TxdmaW<'_, CrSpec> {
         TxdmaW::new(self, 8)
     }
     #[doc = "Bit 9 - RXDMA"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxdma(&mut self) -> RxdmaW<CrSpec> {
+    pub fn rxdma(&mut self) -> RxdmaW<'_, CrSpec> {
         RxdmaW::new(self, 9)
     }
 }
-#[doc = "CR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CR\n\nYou can [`read`](crate::Reg::read) this register and get [`cr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CrSpec;
 impl crate::RegisterSpec for CrSpec {
     type Ux = u32;
@@ -151,10 +142,6 @@ impl crate::Readable for CrSpec {}
 #[doc = "`write(|w| ..)` method takes [`cr::W`](W) writer structure"]
 impl crate::Writable for CrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR to value 0"]
-impl crate::Resettable for CrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CrSpec {}

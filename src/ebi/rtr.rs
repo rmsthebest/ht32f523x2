@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - RDSETUP"]
     #[inline(always)]
-    #[must_use]
-    pub fn rdsetup(&mut self) -> RdsetupW<RtrSpec> {
+    pub fn rdsetup(&mut self) -> RdsetupW<'_, RtrSpec> {
         RdsetupW::new(self, 0)
     }
     #[doc = "Bits 8:12 - RDSTRB"]
     #[inline(always)]
-    #[must_use]
-    pub fn rdstrb(&mut self) -> RdstrbW<RtrSpec> {
+    pub fn rdstrb(&mut self) -> RdstrbW<'_, RtrSpec> {
         RdstrbW::new(self, 8)
     }
     #[doc = "Bits 16:18 - RDHOLD"]
     #[inline(always)]
-    #[must_use]
-    pub fn rdhold(&mut self) -> RdholdW<RtrSpec> {
+    pub fn rdhold(&mut self) -> RdholdW<'_, RtrSpec> {
         RdholdW::new(self, 16)
     }
 }
-#[doc = "RTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RTR\n\nYou can [`read`](crate::Reg::read) this register and get [`rtr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rtr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RtrSpec;
 impl crate::RegisterSpec for RtrSpec {
     type Ux = u32;
@@ -61,10 +58,6 @@ impl crate::Readable for RtrSpec {}
 #[doc = "`write(|w| ..)` method takes [`rtr::W`](W) writer structure"]
 impl crate::Writable for RtrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RTR to value 0"]
-impl crate::Resettable for RtrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RtrSpec {}

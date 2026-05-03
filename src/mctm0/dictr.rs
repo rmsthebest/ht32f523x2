@@ -142,96 +142,81 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CH0CCIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0ccie(&mut self) -> Ch0ccieW<DictrSpec> {
+    pub fn ch0ccie(&mut self) -> Ch0ccieW<'_, DictrSpec> {
         Ch0ccieW::new(self, 0)
     }
     #[doc = "Bit 1 - CH1CCIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1ccie(&mut self) -> Ch1ccieW<DictrSpec> {
+    pub fn ch1ccie(&mut self) -> Ch1ccieW<'_, DictrSpec> {
         Ch1ccieW::new(self, 1)
     }
     #[doc = "Bit 2 - CH2CCIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2ccie(&mut self) -> Ch2ccieW<DictrSpec> {
+    pub fn ch2ccie(&mut self) -> Ch2ccieW<'_, DictrSpec> {
         Ch2ccieW::new(self, 2)
     }
     #[doc = "Bit 3 - CH3CCIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3ccie(&mut self) -> Ch3ccieW<DictrSpec> {
+    pub fn ch3ccie(&mut self) -> Ch3ccieW<'_, DictrSpec> {
         Ch3ccieW::new(self, 3)
     }
     #[doc = "Bit 8 - UEV1IE"]
     #[inline(always)]
-    #[must_use]
-    pub fn uev1ie(&mut self) -> Uev1ieW<DictrSpec> {
+    pub fn uev1ie(&mut self) -> Uev1ieW<'_, DictrSpec> {
         Uev1ieW::new(self, 8)
     }
     #[doc = "Bit 9 - UEV2IE"]
     #[inline(always)]
-    #[must_use]
-    pub fn uev2ie(&mut self) -> Uev2ieW<DictrSpec> {
+    pub fn uev2ie(&mut self) -> Uev2ieW<'_, DictrSpec> {
         Uev2ieW::new(self, 9)
     }
     #[doc = "Bit 10 - TEVIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tevie(&mut self) -> TevieW<DictrSpec> {
+    pub fn tevie(&mut self) -> TevieW<'_, DictrSpec> {
         TevieW::new(self, 10)
     }
     #[doc = "Bit 11 - BRKIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn brkie(&mut self) -> BrkieW<DictrSpec> {
+    pub fn brkie(&mut self) -> BrkieW<'_, DictrSpec> {
         BrkieW::new(self, 11)
     }
     #[doc = "Bit 16 - CH0CCDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0ccde(&mut self) -> Ch0ccdeW<DictrSpec> {
+    pub fn ch0ccde(&mut self) -> Ch0ccdeW<'_, DictrSpec> {
         Ch0ccdeW::new(self, 16)
     }
     #[doc = "Bit 17 - CH1CCDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1ccde(&mut self) -> Ch1ccdeW<DictrSpec> {
+    pub fn ch1ccde(&mut self) -> Ch1ccdeW<'_, DictrSpec> {
         Ch1ccdeW::new(self, 17)
     }
     #[doc = "Bit 18 - CH2CCDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2ccde(&mut self) -> Ch2ccdeW<DictrSpec> {
+    pub fn ch2ccde(&mut self) -> Ch2ccdeW<'_, DictrSpec> {
         Ch2ccdeW::new(self, 18)
     }
     #[doc = "Bit 19 - CH3CCDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3ccde(&mut self) -> Ch3ccdeW<DictrSpec> {
+    pub fn ch3ccde(&mut self) -> Ch3ccdeW<'_, DictrSpec> {
         Ch3ccdeW::new(self, 19)
     }
     #[doc = "Bit 24 - UEV1DE"]
     #[inline(always)]
-    #[must_use]
-    pub fn uev1de(&mut self) -> Uev1deW<DictrSpec> {
+    pub fn uev1de(&mut self) -> Uev1deW<'_, DictrSpec> {
         Uev1deW::new(self, 24)
     }
     #[doc = "Bit 25 - UEV2DE"]
     #[inline(always)]
-    #[must_use]
-    pub fn uev2de(&mut self) -> Uev2deW<DictrSpec> {
+    pub fn uev2de(&mut self) -> Uev2deW<'_, DictrSpec> {
         Uev2deW::new(self, 25)
     }
     #[doc = "Bit 26 - TEVDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tevde(&mut self) -> TevdeW<DictrSpec> {
+    pub fn tevde(&mut self) -> TevdeW<'_, DictrSpec> {
         TevdeW::new(self, 26)
     }
 }
-#[doc = "DICTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dictr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dictr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DICTR\n\nYou can [`read`](crate::Reg::read) this register and get [`dictr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dictr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DictrSpec;
 impl crate::RegisterSpec for DictrSpec {
     type Ux = u32;
@@ -241,10 +226,6 @@ impl crate::Readable for DictrSpec {}
 #[doc = "`write(|w| ..)` method takes [`dictr::W`](W) writer structure"]
 impl crate::Writable for DictrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DICTR to value 0"]
-impl crate::Resettable for DictrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DictrSpec {}

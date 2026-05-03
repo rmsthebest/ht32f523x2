@@ -142,140 +142,117 @@ impl RegisterBlock {
         &self.wakupflg
     }
 }
-#[doc = "CFGR0 (rw) register accessor: CFGR0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr0`]
-module"]
+#[doc = "CFGR0 (rw) register accessor: CFGR0\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr0`] module"]
 #[doc(alias = "CFGR0")]
 pub type Cfgr0 = crate::Reg<cfgr0::Cfgr0Spec>;
 #[doc = "CFGR0"]
 pub mod cfgr0;
-#[doc = "CFGR1 (rw) register accessor: CFGR1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr1`]
-module"]
+#[doc = "CFGR1 (rw) register accessor: CFGR1\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr1`] module"]
 #[doc(alias = "CFGR1")]
 pub type Cfgr1 = crate::Reg<cfgr1::Cfgr1Spec>;
 #[doc = "CFGR1"]
 pub mod cfgr1;
-#[doc = "CFGR2 (rw) register accessor: CFGR2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr2`]
-module"]
+#[doc = "CFGR2 (rw) register accessor: CFGR2\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr2`] module"]
 #[doc(alias = "CFGR2")]
 pub type Cfgr2 = crate::Reg<cfgr2::Cfgr2Spec>;
 #[doc = "CFGR2"]
 pub mod cfgr2;
-#[doc = "CFGR3 (rw) register accessor: CFGR3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr3`]
-module"]
+#[doc = "CFGR3 (rw) register accessor: CFGR3\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr3`] module"]
 #[doc(alias = "CFGR3")]
 pub type Cfgr3 = crate::Reg<cfgr3::Cfgr3Spec>;
 #[doc = "CFGR3"]
 pub mod cfgr3;
-#[doc = "CFGR4 (rw) register accessor: CFGR4\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr4`]
-module"]
+#[doc = "CFGR4 (rw) register accessor: CFGR4\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr4`] module"]
 #[doc(alias = "CFGR4")]
 pub type Cfgr4 = crate::Reg<cfgr4::Cfgr4Spec>;
 #[doc = "CFGR4"]
 pub mod cfgr4;
-#[doc = "CFGR5 (rw) register accessor: CFGR5\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr5`]
-module"]
+#[doc = "CFGR5 (rw) register accessor: CFGR5\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr5`] module"]
 #[doc(alias = "CFGR5")]
 pub type Cfgr5 = crate::Reg<cfgr5::Cfgr5Spec>;
 #[doc = "CFGR5"]
 pub mod cfgr5;
-#[doc = "CFGR6 (rw) register accessor: CFGR6\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr6`]
-module"]
+#[doc = "CFGR6 (rw) register accessor: CFGR6\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr6`] module"]
 #[doc(alias = "CFGR6")]
 pub type Cfgr6 = crate::Reg<cfgr6::Cfgr6Spec>;
 #[doc = "CFGR6"]
 pub mod cfgr6;
-#[doc = "CFGR7 (rw) register accessor: CFGR7\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr7::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr7::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr7`]
-module"]
+#[doc = "CFGR7 (rw) register accessor: CFGR7\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr7`] module"]
 #[doc(alias = "CFGR7")]
 pub type Cfgr7 = crate::Reg<cfgr7::Cfgr7Spec>;
 #[doc = "CFGR7"]
 pub mod cfgr7;
-#[doc = "CFGR8 (rw) register accessor: CFGR8\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr8::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr8::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr8`]
-module"]
+#[doc = "CFGR8 (rw) register accessor: CFGR8\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr8`] module"]
 #[doc(alias = "CFGR8")]
 pub type Cfgr8 = crate::Reg<cfgr8::Cfgr8Spec>;
 #[doc = "CFGR8"]
 pub mod cfgr8;
-#[doc = "CFGR9 (rw) register accessor: CFGR9\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr9::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr9::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr9`]
-module"]
+#[doc = "CFGR9 (rw) register accessor: CFGR9\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr9::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr9::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr9`] module"]
 #[doc(alias = "CFGR9")]
 pub type Cfgr9 = crate::Reg<cfgr9::Cfgr9Spec>;
 #[doc = "CFGR9"]
 pub mod cfgr9;
-#[doc = "CFGR10 (rw) register accessor: CFGR10\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr10::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr10::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr10`]
-module"]
+#[doc = "CFGR10 (rw) register accessor: CFGR10\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr10::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr10::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr10`] module"]
 #[doc(alias = "CFGR10")]
 pub type Cfgr10 = crate::Reg<cfgr10::Cfgr10Spec>;
 #[doc = "CFGR10"]
 pub mod cfgr10;
-#[doc = "CFGR11 (rw) register accessor: CFGR11\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr11::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr11::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr11`]
-module"]
+#[doc = "CFGR11 (rw) register accessor: CFGR11\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr11::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr11::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr11`] module"]
 #[doc(alias = "CFGR11")]
 pub type Cfgr11 = crate::Reg<cfgr11::Cfgr11Spec>;
 #[doc = "CFGR11"]
 pub mod cfgr11;
-#[doc = "CFGR12 (rw) register accessor: CFGR12\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr12::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr12::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr12`]
-module"]
+#[doc = "CFGR12 (rw) register accessor: CFGR12\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr12::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr12::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr12`] module"]
 #[doc(alias = "CFGR12")]
 pub type Cfgr12 = crate::Reg<cfgr12::Cfgr12Spec>;
 #[doc = "CFGR12"]
 pub mod cfgr12;
-#[doc = "CFGR13 (rw) register accessor: CFGR13\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr13::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr13::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr13`]
-module"]
+#[doc = "CFGR13 (rw) register accessor: CFGR13\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr13::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr13::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr13`] module"]
 #[doc(alias = "CFGR13")]
 pub type Cfgr13 = crate::Reg<cfgr13::Cfgr13Spec>;
 #[doc = "CFGR13"]
 pub mod cfgr13;
-#[doc = "CFGR14 (rw) register accessor: CFGR14\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr14::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr14::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr14`]
-module"]
+#[doc = "CFGR14 (rw) register accessor: CFGR14\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr14::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr14::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr14`] module"]
 #[doc(alias = "CFGR14")]
 pub type Cfgr14 = crate::Reg<cfgr14::Cfgr14Spec>;
 #[doc = "CFGR14"]
 pub mod cfgr14;
-#[doc = "CFGR15 (rw) register accessor: CFGR15\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr15::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr15::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr15`]
-module"]
+#[doc = "CFGR15 (rw) register accessor: CFGR15\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr15::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr15::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr15`] module"]
 #[doc(alias = "CFGR15")]
 pub type Cfgr15 = crate::Reg<cfgr15::Cfgr15Spec>;
 #[doc = "CFGR15"]
 pub mod cfgr15;
-#[doc = "CR (rw) register accessor: CR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cr`]
-module"]
+#[doc = "CR (rw) register accessor: CR\n\nYou can [`read`](crate::Reg::read) this register and get [`cr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cr`] module"]
 #[doc(alias = "CR")]
 pub type Cr = crate::Reg<cr::CrSpec>;
 #[doc = "CR"]
 pub mod cr;
-#[doc = "EDGEFLGR (rw) register accessor: EDGEFLGR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`edgeflgr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`edgeflgr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@edgeflgr`]
-module"]
+#[doc = "EDGEFLGR (rw) register accessor: EDGEFLGR\n\nYou can [`read`](crate::Reg::read) this register and get [`edgeflgr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`edgeflgr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@edgeflgr`] module"]
 #[doc(alias = "EDGEFLGR")]
 pub type Edgeflgr = crate::Reg<edgeflgr::EdgeflgrSpec>;
 #[doc = "EDGEFLGR"]
 pub mod edgeflgr;
-#[doc = "EDGESR (rw) register accessor: EDGESR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`edgesr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`edgesr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@edgesr`]
-module"]
+#[doc = "EDGESR (rw) register accessor: EDGESR\n\nYou can [`read`](crate::Reg::read) this register and get [`edgesr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`edgesr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@edgesr`] module"]
 #[doc(alias = "EDGESR")]
 pub type Edgesr = crate::Reg<edgesr::EdgesrSpec>;
 #[doc = "EDGESR"]
 pub mod edgesr;
-#[doc = "SSCR (rw) register accessor: SSCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sscr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sscr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sscr`]
-module"]
+#[doc = "SSCR (rw) register accessor: SSCR\n\nYou can [`read`](crate::Reg::read) this register and get [`sscr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sscr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sscr`] module"]
 #[doc(alias = "SSCR")]
 pub type Sscr = crate::Reg<sscr::SscrSpec>;
 #[doc = "SSCR"]
 pub mod sscr;
-#[doc = "WAKUPCR (rw) register accessor: WAKUPCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wakupcr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wakupcr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wakupcr`]
-module"]
+#[doc = "WAKUPCR (rw) register accessor: WAKUPCR\n\nYou can [`read`](crate::Reg::read) this register and get [`wakupcr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wakupcr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wakupcr`] module"]
 #[doc(alias = "WAKUPCR")]
 pub type Wakupcr = crate::Reg<wakupcr::WakupcrSpec>;
 #[doc = "WAKUPCR"]
 pub mod wakupcr;
-#[doc = "WAKUPPOLR (rw) register accessor: WAKUPPOLR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wakuppolr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wakuppolr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wakuppolr`]
-module"]
+#[doc = "WAKUPPOLR (rw) register accessor: WAKUPPOLR\n\nYou can [`read`](crate::Reg::read) this register and get [`wakuppolr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wakuppolr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wakuppolr`] module"]
 #[doc(alias = "WAKUPPOLR")]
 pub type Wakuppolr = crate::Reg<wakuppolr::WakuppolrSpec>;
 #[doc = "WAKUPPOLR"]
 pub mod wakuppolr;
-#[doc = "WAKUPFLG (rw) register accessor: WAKUPFLG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wakupflg::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wakupflg::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wakupflg`]
-module"]
+#[doc = "WAKUPFLG (rw) register accessor: WAKUPFLG\n\nYou can [`read`](crate::Reg::read) this register and get [`wakupflg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wakupflg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wakupflg`] module"]
 #[doc(alias = "WAKUPFLG")]
 pub type Wakupflg = crate::Reg<wakupflg::WakupflgSpec>;
 #[doc = "WAKUPFLG"]

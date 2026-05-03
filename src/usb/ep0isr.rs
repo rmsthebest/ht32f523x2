@@ -115,78 +115,66 @@ impl R {
 impl W {
     #[doc = "Bit 0 - OTRXIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn otrxif(&mut self) -> OtrxifW<Ep0isrSpec> {
+    pub fn otrxif(&mut self) -> OtrxifW<'_, Ep0isrSpec> {
         OtrxifW::new(self, 0)
     }
     #[doc = "Bit 1 - ODRXIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrxif(&mut self) -> OdrxifW<Ep0isrSpec> {
+    pub fn odrxif(&mut self) -> OdrxifW<'_, Ep0isrSpec> {
         OdrxifW::new(self, 1)
     }
     #[doc = "Bit 2 - ODOVIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn odovif(&mut self) -> OdovifW<Ep0isrSpec> {
+    pub fn odovif(&mut self) -> OdovifW<'_, Ep0isrSpec> {
         OdovifW::new(self, 2)
     }
     #[doc = "Bit 3 - ITRXIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn itrxif(&mut self) -> ItrxifW<Ep0isrSpec> {
+    pub fn itrxif(&mut self) -> ItrxifW<'_, Ep0isrSpec> {
         ItrxifW::new(self, 3)
     }
     #[doc = "Bit 4 - IDTXIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn idtxif(&mut self) -> IdtxifW<Ep0isrSpec> {
+    pub fn idtxif(&mut self) -> IdtxifW<'_, Ep0isrSpec> {
         IdtxifW::new(self, 4)
     }
     #[doc = "Bit 5 - NAKIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn nakif(&mut self) -> NakifW<Ep0isrSpec> {
+    pub fn nakif(&mut self) -> NakifW<'_, Ep0isrSpec> {
         NakifW::new(self, 5)
     }
     #[doc = "Bit 6 - STLIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn stlif(&mut self) -> StlifW<Ep0isrSpec> {
+    pub fn stlif(&mut self) -> StlifW<'_, Ep0isrSpec> {
         StlifW::new(self, 6)
     }
     #[doc = "Bit 7 - UERIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn uerif(&mut self) -> UerifW<Ep0isrSpec> {
+    pub fn uerif(&mut self) -> UerifW<'_, Ep0isrSpec> {
         UerifW::new(self, 7)
     }
     #[doc = "Bit 8 - STRXIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn strxif(&mut self) -> StrxifW<Ep0isrSpec> {
+    pub fn strxif(&mut self) -> StrxifW<'_, Ep0isrSpec> {
         StrxifW::new(self, 8)
     }
     #[doc = "Bit 9 - SDRXIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn sdrxif(&mut self) -> SdrxifW<Ep0isrSpec> {
+    pub fn sdrxif(&mut self) -> SdrxifW<'_, Ep0isrSpec> {
         SdrxifW::new(self, 9)
     }
     #[doc = "Bit 10 - SDERIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn sderif(&mut self) -> SderifW<Ep0isrSpec> {
+    pub fn sderif(&mut self) -> SderifW<'_, Ep0isrSpec> {
         SderifW::new(self, 10)
     }
     #[doc = "Bit 11 - ZLRXIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn zlrxif(&mut self) -> ZlrxifW<Ep0isrSpec> {
+    pub fn zlrxif(&mut self) -> ZlrxifW<'_, Ep0isrSpec> {
         ZlrxifW::new(self, 11)
     }
 }
-#[doc = "EP0ISR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ep0isr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ep0isr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "EP0ISR\n\nYou can [`read`](crate::Reg::read) this register and get [`ep0isr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ep0isr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ep0isrSpec;
 impl crate::RegisterSpec for Ep0isrSpec {
     type Ux = u32;
@@ -196,10 +184,6 @@ impl crate::Readable for Ep0isrSpec {}
 #[doc = "`write(|w| ..)` method takes [`ep0isr::W`](W) writer structure"]
 impl crate::Writable for Ep0isrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EP0ISR to value 0"]
-impl crate::Resettable for Ep0isrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Ep0isrSpec {}

@@ -277,186 +277,156 @@ impl R {
 impl W {
     #[doc = "Bit 0 - GEICLR0"]
     #[inline(always)]
-    #[must_use]
-    pub fn geiclr0(&mut self) -> Geiclr0W<IscrSpec> {
+    pub fn geiclr0(&mut self) -> Geiclr0W<'_, IscrSpec> {
         Geiclr0W::new(self, 0)
     }
     #[doc = "Bit 1 - BEICLR0"]
     #[inline(always)]
-    #[must_use]
-    pub fn beiclr0(&mut self) -> Beiclr0W<IscrSpec> {
+    pub fn beiclr0(&mut self) -> Beiclr0W<'_, IscrSpec> {
         Beiclr0W::new(self, 1)
     }
     #[doc = "Bit 2 - HTICLR0"]
     #[inline(always)]
-    #[must_use]
-    pub fn hticlr0(&mut self) -> Hticlr0W<IscrSpec> {
+    pub fn hticlr0(&mut self) -> Hticlr0W<'_, IscrSpec> {
         Hticlr0W::new(self, 2)
     }
     #[doc = "Bit 3 - TCICLR0"]
     #[inline(always)]
-    #[must_use]
-    pub fn tciclr0(&mut self) -> Tciclr0W<IscrSpec> {
+    pub fn tciclr0(&mut self) -> Tciclr0W<'_, IscrSpec> {
         Tciclr0W::new(self, 3)
     }
     #[doc = "Bit 4 - TEICLR0"]
     #[inline(always)]
-    #[must_use]
-    pub fn teiclr0(&mut self) -> Teiclr0W<IscrSpec> {
+    pub fn teiclr0(&mut self) -> Teiclr0W<'_, IscrSpec> {
         Teiclr0W::new(self, 4)
     }
     #[doc = "Bit 5 - GEICLR1"]
     #[inline(always)]
-    #[must_use]
-    pub fn geiclr1(&mut self) -> Geiclr1W<IscrSpec> {
+    pub fn geiclr1(&mut self) -> Geiclr1W<'_, IscrSpec> {
         Geiclr1W::new(self, 5)
     }
     #[doc = "Bit 6 - BEICLR1"]
     #[inline(always)]
-    #[must_use]
-    pub fn beiclr1(&mut self) -> Beiclr1W<IscrSpec> {
+    pub fn beiclr1(&mut self) -> Beiclr1W<'_, IscrSpec> {
         Beiclr1W::new(self, 6)
     }
     #[doc = "Bit 7 - HTICLR1"]
     #[inline(always)]
-    #[must_use]
-    pub fn hticlr1(&mut self) -> Hticlr1W<IscrSpec> {
+    pub fn hticlr1(&mut self) -> Hticlr1W<'_, IscrSpec> {
         Hticlr1W::new(self, 7)
     }
     #[doc = "Bit 8 - TCICLR1"]
     #[inline(always)]
-    #[must_use]
-    pub fn tciclr1(&mut self) -> Tciclr1W<IscrSpec> {
+    pub fn tciclr1(&mut self) -> Tciclr1W<'_, IscrSpec> {
         Tciclr1W::new(self, 8)
     }
     #[doc = "Bit 9 - TEICLR1"]
     #[inline(always)]
-    #[must_use]
-    pub fn teiclr1(&mut self) -> Teiclr1W<IscrSpec> {
+    pub fn teiclr1(&mut self) -> Teiclr1W<'_, IscrSpec> {
         Teiclr1W::new(self, 9)
     }
     #[doc = "Bit 10 - GEICLR2"]
     #[inline(always)]
-    #[must_use]
-    pub fn geiclr2(&mut self) -> Geiclr2W<IscrSpec> {
+    pub fn geiclr2(&mut self) -> Geiclr2W<'_, IscrSpec> {
         Geiclr2W::new(self, 10)
     }
     #[doc = "Bit 11 - BEICLR2"]
     #[inline(always)]
-    #[must_use]
-    pub fn beiclr2(&mut self) -> Beiclr2W<IscrSpec> {
+    pub fn beiclr2(&mut self) -> Beiclr2W<'_, IscrSpec> {
         Beiclr2W::new(self, 11)
     }
     #[doc = "Bit 12 - HTICLR2"]
     #[inline(always)]
-    #[must_use]
-    pub fn hticlr2(&mut self) -> Hticlr2W<IscrSpec> {
+    pub fn hticlr2(&mut self) -> Hticlr2W<'_, IscrSpec> {
         Hticlr2W::new(self, 12)
     }
     #[doc = "Bit 13 - TCICLR2"]
     #[inline(always)]
-    #[must_use]
-    pub fn tciclr2(&mut self) -> Tciclr2W<IscrSpec> {
+    pub fn tciclr2(&mut self) -> Tciclr2W<'_, IscrSpec> {
         Tciclr2W::new(self, 13)
     }
     #[doc = "Bit 14 - TEICLR2"]
     #[inline(always)]
-    #[must_use]
-    pub fn teiclr2(&mut self) -> Teiclr2W<IscrSpec> {
+    pub fn teiclr2(&mut self) -> Teiclr2W<'_, IscrSpec> {
         Teiclr2W::new(self, 14)
     }
     #[doc = "Bit 15 - GEICLR3"]
     #[inline(always)]
-    #[must_use]
-    pub fn geiclr3(&mut self) -> Geiclr3W<IscrSpec> {
+    pub fn geiclr3(&mut self) -> Geiclr3W<'_, IscrSpec> {
         Geiclr3W::new(self, 15)
     }
     #[doc = "Bit 16 - BEICLR3"]
     #[inline(always)]
-    #[must_use]
-    pub fn beiclr3(&mut self) -> Beiclr3W<IscrSpec> {
+    pub fn beiclr3(&mut self) -> Beiclr3W<'_, IscrSpec> {
         Beiclr3W::new(self, 16)
     }
     #[doc = "Bit 17 - HTICLR3"]
     #[inline(always)]
-    #[must_use]
-    pub fn hticlr3(&mut self) -> Hticlr3W<IscrSpec> {
+    pub fn hticlr3(&mut self) -> Hticlr3W<'_, IscrSpec> {
         Hticlr3W::new(self, 17)
     }
     #[doc = "Bit 18 - TCICLR3"]
     #[inline(always)]
-    #[must_use]
-    pub fn tciclr3(&mut self) -> Tciclr3W<IscrSpec> {
+    pub fn tciclr3(&mut self) -> Tciclr3W<'_, IscrSpec> {
         Tciclr3W::new(self, 18)
     }
     #[doc = "Bit 19 - TEICLR3"]
     #[inline(always)]
-    #[must_use]
-    pub fn teiclr3(&mut self) -> Teiclr3W<IscrSpec> {
+    pub fn teiclr3(&mut self) -> Teiclr3W<'_, IscrSpec> {
         Teiclr3W::new(self, 19)
     }
     #[doc = "Bit 20 - GEICLR4"]
     #[inline(always)]
-    #[must_use]
-    pub fn geiclr4(&mut self) -> Geiclr4W<IscrSpec> {
+    pub fn geiclr4(&mut self) -> Geiclr4W<'_, IscrSpec> {
         Geiclr4W::new(self, 20)
     }
     #[doc = "Bit 21 - BEICLR4"]
     #[inline(always)]
-    #[must_use]
-    pub fn beiclr4(&mut self) -> Beiclr4W<IscrSpec> {
+    pub fn beiclr4(&mut self) -> Beiclr4W<'_, IscrSpec> {
         Beiclr4W::new(self, 21)
     }
     #[doc = "Bit 22 - HTICLR4"]
     #[inline(always)]
-    #[must_use]
-    pub fn hticlr4(&mut self) -> Hticlr4W<IscrSpec> {
+    pub fn hticlr4(&mut self) -> Hticlr4W<'_, IscrSpec> {
         Hticlr4W::new(self, 22)
     }
     #[doc = "Bit 23 - TCICLR4"]
     #[inline(always)]
-    #[must_use]
-    pub fn tciclr4(&mut self) -> Tciclr4W<IscrSpec> {
+    pub fn tciclr4(&mut self) -> Tciclr4W<'_, IscrSpec> {
         Tciclr4W::new(self, 23)
     }
     #[doc = "Bit 24 - TEICLR4"]
     #[inline(always)]
-    #[must_use]
-    pub fn teiclr4(&mut self) -> Teiclr4W<IscrSpec> {
+    pub fn teiclr4(&mut self) -> Teiclr4W<'_, IscrSpec> {
         Teiclr4W::new(self, 24)
     }
     #[doc = "Bit 25 - GEICLR5"]
     #[inline(always)]
-    #[must_use]
-    pub fn geiclr5(&mut self) -> Geiclr5W<IscrSpec> {
+    pub fn geiclr5(&mut self) -> Geiclr5W<'_, IscrSpec> {
         Geiclr5W::new(self, 25)
     }
     #[doc = "Bit 26 - BEICLR5"]
     #[inline(always)]
-    #[must_use]
-    pub fn beiclr5(&mut self) -> Beiclr5W<IscrSpec> {
+    pub fn beiclr5(&mut self) -> Beiclr5W<'_, IscrSpec> {
         Beiclr5W::new(self, 26)
     }
     #[doc = "Bit 27 - HTICLR5"]
     #[inline(always)]
-    #[must_use]
-    pub fn hticlr5(&mut self) -> Hticlr5W<IscrSpec> {
+    pub fn hticlr5(&mut self) -> Hticlr5W<'_, IscrSpec> {
         Hticlr5W::new(self, 27)
     }
     #[doc = "Bit 28 - TCICLR5"]
     #[inline(always)]
-    #[must_use]
-    pub fn tciclr5(&mut self) -> Tciclr5W<IscrSpec> {
+    pub fn tciclr5(&mut self) -> Tciclr5W<'_, IscrSpec> {
         Tciclr5W::new(self, 28)
     }
     #[doc = "Bit 29 - TEICLR5"]
     #[inline(always)]
-    #[must_use]
-    pub fn teiclr5(&mut self) -> Teiclr5W<IscrSpec> {
+    pub fn teiclr5(&mut self) -> Teiclr5W<'_, IscrSpec> {
         Teiclr5W::new(self, 29)
     }
 }
-#[doc = "ISCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iscr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iscr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ISCR\n\nYou can [`read`](crate::Reg::read) this register and get [`iscr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iscr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IscrSpec;
 impl crate::RegisterSpec for IscrSpec {
     type Ux = u32;
@@ -466,10 +436,6 @@ impl crate::Readable for IscrSpec {}
 #[doc = "`write(|w| ..)` method takes [`iscr::W`](W) writer structure"]
 impl crate::Writable for IscrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ISCR to value 0"]
-impl crate::Resettable for IscrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IscrSpec {}

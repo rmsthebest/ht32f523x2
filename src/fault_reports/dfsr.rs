@@ -52,36 +52,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - HALTED"]
     #[inline(always)]
-    #[must_use]
-    pub fn halted(&mut self) -> HaltedW<DfsrSpec> {
+    pub fn halted(&mut self) -> HaltedW<'_, DfsrSpec> {
         HaltedW::new(self, 0)
     }
     #[doc = "Bit 1 - BKPT"]
     #[inline(always)]
-    #[must_use]
-    pub fn bkpt(&mut self) -> BkptW<DfsrSpec> {
+    pub fn bkpt(&mut self) -> BkptW<'_, DfsrSpec> {
         BkptW::new(self, 1)
     }
     #[doc = "Bit 2 - DWTTRAP"]
     #[inline(always)]
-    #[must_use]
-    pub fn dwttrap(&mut self) -> DwttrapW<DfsrSpec> {
+    pub fn dwttrap(&mut self) -> DwttrapW<'_, DfsrSpec> {
         DwttrapW::new(self, 2)
     }
     #[doc = "Bit 3 - VCATCH"]
     #[inline(always)]
-    #[must_use]
-    pub fn vcatch(&mut self) -> VcatchW<DfsrSpec> {
+    pub fn vcatch(&mut self) -> VcatchW<'_, DfsrSpec> {
         VcatchW::new(self, 3)
     }
     #[doc = "Bit 4 - EXTERNAL"]
     #[inline(always)]
-    #[must_use]
-    pub fn external(&mut self) -> ExternalW<DfsrSpec> {
+    pub fn external(&mut self) -> ExternalW<'_, DfsrSpec> {
         ExternalW::new(self, 4)
     }
 }
-#[doc = "DFSR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dfsr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dfsr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DFSR\n\nYou can [`read`](crate::Reg::read) this register and get [`dfsr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dfsr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DfsrSpec;
 impl crate::RegisterSpec for DfsrSpec {
     type Ux = u32;
@@ -91,10 +86,6 @@ impl crate::Readable for DfsrSpec {}
 #[doc = "`write(|w| ..)` method takes [`dfsr::W`](W) writer structure"]
 impl crate::Writable for DfsrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DFSR to value 0"]
-impl crate::Resettable for DfsrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DfsrSpec {}

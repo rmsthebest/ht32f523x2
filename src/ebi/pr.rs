@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CSPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn cspol(&mut self) -> CspolW<PrSpec> {
+    pub fn cspol(&mut self) -> CspolW<'_, PrSpec> {
         CspolW::new(self, 0)
     }
     #[doc = "Bit 1 - OEPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn oepol(&mut self) -> OepolW<PrSpec> {
+    pub fn oepol(&mut self) -> OepolW<'_, PrSpec> {
         OepolW::new(self, 1)
     }
     #[doc = "Bit 2 - WEPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn wepol(&mut self) -> WepolW<PrSpec> {
+    pub fn wepol(&mut self) -> WepolW<'_, PrSpec> {
         WepolW::new(self, 2)
     }
     #[doc = "Bit 3 - ALEPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn alepol(&mut self) -> AlepolW<PrSpec> {
+    pub fn alepol(&mut self) -> AlepolW<'_, PrSpec> {
         AlepolW::new(self, 3)
     }
 }
-#[doc = "PR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PR\n\nYou can [`read`](crate::Reg::read) this register and get [`pr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PrSpec;
 impl crate::RegisterSpec for PrSpec {
     type Ux = u32;
@@ -76,10 +72,6 @@ impl crate::Readable for PrSpec {}
 #[doc = "`write(|w| ..)` method takes [`pr::W`](W) writer structure"]
 impl crate::Writable for PrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PR to value 0"]
-impl crate::Resettable for PrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PrSpec {}

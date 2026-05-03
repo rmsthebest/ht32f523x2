@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CH0E"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0e(&mut self) -> Ch0eW<GptmChctrSpec> {
+    pub fn ch0e(&mut self) -> Ch0eW<'_, GptmChctrSpec> {
         Ch0eW::new(self, 0)
     }
     #[doc = "Bit 2 - CH1E"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1e(&mut self) -> Ch1eW<GptmChctrSpec> {
+    pub fn ch1e(&mut self) -> Ch1eW<'_, GptmChctrSpec> {
         Ch1eW::new(self, 2)
     }
     #[doc = "Bit 4 - CH2E"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2e(&mut self) -> Ch2eW<GptmChctrSpec> {
+    pub fn ch2e(&mut self) -> Ch2eW<'_, GptmChctrSpec> {
         Ch2eW::new(self, 4)
     }
     #[doc = "Bit 6 - CH3E"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3e(&mut self) -> Ch3eW<GptmChctrSpec> {
+    pub fn ch3e(&mut self) -> Ch3eW<'_, GptmChctrSpec> {
         Ch3eW::new(self, 6)
     }
 }
-#[doc = "GPTM_CHCTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gptm_chctr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gptm_chctr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPTM_CHCTR\n\nYou can [`read`](crate::Reg::read) this register and get [`gptm_chctr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gptm_chctr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GptmChctrSpec;
 impl crate::RegisterSpec for GptmChctrSpec {
     type Ux = u32;
@@ -76,10 +72,6 @@ impl crate::Readable for GptmChctrSpec {}
 #[doc = "`write(|w| ..)` method takes [`gptm_chctr::W`](W) writer structure"]
 impl crate::Writable for GptmChctrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GPTM_CHCTR to value 0"]
-impl crate::Resettable for GptmChctrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GptmChctrSpec {}

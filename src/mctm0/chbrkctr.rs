@@ -97,66 +97,56 @@ impl R {
 impl W {
     #[doc = "Bit 0 - BKE0"]
     #[inline(always)]
-    #[must_use]
-    pub fn bke0(&mut self) -> Bke0W<ChbrkctrSpec> {
+    pub fn bke0(&mut self) -> Bke0W<'_, ChbrkctrSpec> {
         Bke0W::new(self, 0)
     }
     #[doc = "Bit 1 - BKP0"]
     #[inline(always)]
-    #[must_use]
-    pub fn bkp0(&mut self) -> Bkp0W<ChbrkctrSpec> {
+    pub fn bkp0(&mut self) -> Bkp0W<'_, ChbrkctrSpec> {
         Bkp0W::new(self, 1)
     }
     #[doc = "Bit 4 - CHMOE"]
     #[inline(always)]
-    #[must_use]
-    pub fn chmoe(&mut self) -> ChmoeW<ChbrkctrSpec> {
+    pub fn chmoe(&mut self) -> ChmoeW<'_, ChbrkctrSpec> {
         ChmoeW::new(self, 4)
     }
     #[doc = "Bit 5 - CHAOE"]
     #[inline(always)]
-    #[must_use]
-    pub fn chaoe(&mut self) -> ChaoeW<ChbrkctrSpec> {
+    pub fn chaoe(&mut self) -> ChaoeW<'_, ChbrkctrSpec> {
         ChaoeW::new(self, 5)
     }
     #[doc = "Bits 8:11 - BKF0"]
     #[inline(always)]
-    #[must_use]
-    pub fn bkf0(&mut self) -> Bkf0W<ChbrkctrSpec> {
+    pub fn bkf0(&mut self) -> Bkf0W<'_, ChbrkctrSpec> {
         Bkf0W::new(self, 8)
     }
     #[doc = "Bits 16:17 - LOCKLV"]
     #[inline(always)]
-    #[must_use]
-    pub fn locklv(&mut self) -> LocklvW<ChbrkctrSpec> {
+    pub fn locklv(&mut self) -> LocklvW<'_, ChbrkctrSpec> {
         LocklvW::new(self, 16)
     }
     #[doc = "Bit 18 - GFSEL0"]
     #[inline(always)]
-    #[must_use]
-    pub fn gfsel0(&mut self) -> Gfsel0W<ChbrkctrSpec> {
+    pub fn gfsel0(&mut self) -> Gfsel0W<'_, ChbrkctrSpec> {
         Gfsel0W::new(self, 18)
     }
     #[doc = "Bit 20 - CHOSSI"]
     #[inline(always)]
-    #[must_use]
-    pub fn chossi(&mut self) -> ChossiW<ChbrkctrSpec> {
+    pub fn chossi(&mut self) -> ChossiW<'_, ChbrkctrSpec> {
         ChossiW::new(self, 20)
     }
     #[doc = "Bit 21 - CHOSSR"]
     #[inline(always)]
-    #[must_use]
-    pub fn chossr(&mut self) -> ChossrW<ChbrkctrSpec> {
+    pub fn chossr(&mut self) -> ChossrW<'_, ChbrkctrSpec> {
         ChossrW::new(self, 21)
     }
     #[doc = "Bits 24:31 - CHDTG"]
     #[inline(always)]
-    #[must_use]
-    pub fn chdtg(&mut self) -> ChdtgW<ChbrkctrSpec> {
+    pub fn chdtg(&mut self) -> ChdtgW<'_, ChbrkctrSpec> {
         ChdtgW::new(self, 24)
     }
 }
-#[doc = "CHBRKCTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chbrkctr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`chbrkctr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CHBRKCTR\n\nYou can [`read`](crate::Reg::read) this register and get [`chbrkctr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`chbrkctr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ChbrkctrSpec;
 impl crate::RegisterSpec for ChbrkctrSpec {
     type Ux = u32;
@@ -166,10 +156,6 @@ impl crate::Readable for ChbrkctrSpec {}
 #[doc = "`write(|w| ..)` method takes [`chbrkctr::W`](W) writer structure"]
 impl crate::Writable for ChbrkctrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CHBRKCTR to value 0"]
-impl crate::Resettable for ChbrkctrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ChbrkctrSpec {}

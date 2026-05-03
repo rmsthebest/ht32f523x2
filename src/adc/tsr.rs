@@ -61,42 +61,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - ADSC"]
     #[inline(always)]
-    #[must_use]
-    pub fn adsc(&mut self) -> AdscW<TsrSpec> {
+    pub fn adsc(&mut self) -> AdscW<'_, TsrSpec> {
         AdscW::new(self, 0)
     }
     #[doc = "Bits 8:11 - ADEXTIS"]
     #[inline(always)]
-    #[must_use]
-    pub fn adextis(&mut self) -> AdextisW<TsrSpec> {
+    pub fn adextis(&mut self) -> AdextisW<'_, TsrSpec> {
         AdextisW::new(self, 8)
     }
     #[doc = "Bits 16:18 - TMS"]
     #[inline(always)]
-    #[must_use]
-    pub fn tms(&mut self) -> TmsW<TsrSpec> {
+    pub fn tms(&mut self) -> TmsW<'_, TsrSpec> {
         TmsW::new(self, 16)
     }
     #[doc = "Bit 19 - BFTMS"]
     #[inline(always)]
-    #[must_use]
-    pub fn bftms(&mut self) -> BftmsW<TsrSpec> {
+    pub fn bftms(&mut self) -> BftmsW<'_, TsrSpec> {
         BftmsW::new(self, 19)
     }
     #[doc = "Bit 20 - CMPS"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmps(&mut self) -> CmpsW<TsrSpec> {
+    pub fn cmps(&mut self) -> CmpsW<'_, TsrSpec> {
         CmpsW::new(self, 20)
     }
     #[doc = "Bits 24:26 - TME"]
     #[inline(always)]
-    #[must_use]
-    pub fn tme(&mut self) -> TmeW<TsrSpec> {
+    pub fn tme(&mut self) -> TmeW<'_, TsrSpec> {
         TmeW::new(self, 24)
     }
 }
-#[doc = "TSR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tsr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tsr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TSR\n\nYou can [`read`](crate::Reg::read) this register and get [`tsr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tsr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TsrSpec;
 impl crate::RegisterSpec for TsrSpec {
     type Ux = u32;
@@ -106,10 +100,6 @@ impl crate::Readable for TsrSpec {}
 #[doc = "`write(|w| ..)` method takes [`tsr::W`](W) writer structure"]
 impl crate::Writable for TsrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TSR to value 0"]
-impl crate::Resettable for TsrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TsrSpec {}

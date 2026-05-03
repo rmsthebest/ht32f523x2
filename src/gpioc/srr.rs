@@ -295,198 +295,166 @@ impl R {
 impl W {
     #[doc = "Bit 0 - SET0"]
     #[inline(always)]
-    #[must_use]
-    pub fn set0(&mut self) -> Set0W<SrrSpec> {
+    pub fn set0(&mut self) -> Set0W<'_, SrrSpec> {
         Set0W::new(self, 0)
     }
     #[doc = "Bit 1 - SET1"]
     #[inline(always)]
-    #[must_use]
-    pub fn set1(&mut self) -> Set1W<SrrSpec> {
+    pub fn set1(&mut self) -> Set1W<'_, SrrSpec> {
         Set1W::new(self, 1)
     }
     #[doc = "Bit 2 - SET2"]
     #[inline(always)]
-    #[must_use]
-    pub fn set2(&mut self) -> Set2W<SrrSpec> {
+    pub fn set2(&mut self) -> Set2W<'_, SrrSpec> {
         Set2W::new(self, 2)
     }
     #[doc = "Bit 3 - SET3"]
     #[inline(always)]
-    #[must_use]
-    pub fn set3(&mut self) -> Set3W<SrrSpec> {
+    pub fn set3(&mut self) -> Set3W<'_, SrrSpec> {
         Set3W::new(self, 3)
     }
     #[doc = "Bit 4 - SET4"]
     #[inline(always)]
-    #[must_use]
-    pub fn set4(&mut self) -> Set4W<SrrSpec> {
+    pub fn set4(&mut self) -> Set4W<'_, SrrSpec> {
         Set4W::new(self, 4)
     }
     #[doc = "Bit 5 - SET5"]
     #[inline(always)]
-    #[must_use]
-    pub fn set5(&mut self) -> Set5W<SrrSpec> {
+    pub fn set5(&mut self) -> Set5W<'_, SrrSpec> {
         Set5W::new(self, 5)
     }
     #[doc = "Bit 6 - SET6"]
     #[inline(always)]
-    #[must_use]
-    pub fn set6(&mut self) -> Set6W<SrrSpec> {
+    pub fn set6(&mut self) -> Set6W<'_, SrrSpec> {
         Set6W::new(self, 6)
     }
     #[doc = "Bit 7 - SET7"]
     #[inline(always)]
-    #[must_use]
-    pub fn set7(&mut self) -> Set7W<SrrSpec> {
+    pub fn set7(&mut self) -> Set7W<'_, SrrSpec> {
         Set7W::new(self, 7)
     }
     #[doc = "Bit 8 - SET8"]
     #[inline(always)]
-    #[must_use]
-    pub fn set8(&mut self) -> Set8W<SrrSpec> {
+    pub fn set8(&mut self) -> Set8W<'_, SrrSpec> {
         Set8W::new(self, 8)
     }
     #[doc = "Bit 9 - SET9"]
     #[inline(always)]
-    #[must_use]
-    pub fn set9(&mut self) -> Set9W<SrrSpec> {
+    pub fn set9(&mut self) -> Set9W<'_, SrrSpec> {
         Set9W::new(self, 9)
     }
     #[doc = "Bit 10 - SET10"]
     #[inline(always)]
-    #[must_use]
-    pub fn set10(&mut self) -> Set10W<SrrSpec> {
+    pub fn set10(&mut self) -> Set10W<'_, SrrSpec> {
         Set10W::new(self, 10)
     }
     #[doc = "Bit 11 - SET11"]
     #[inline(always)]
-    #[must_use]
-    pub fn set11(&mut self) -> Set11W<SrrSpec> {
+    pub fn set11(&mut self) -> Set11W<'_, SrrSpec> {
         Set11W::new(self, 11)
     }
     #[doc = "Bit 12 - SET12"]
     #[inline(always)]
-    #[must_use]
-    pub fn set12(&mut self) -> Set12W<SrrSpec> {
+    pub fn set12(&mut self) -> Set12W<'_, SrrSpec> {
         Set12W::new(self, 12)
     }
     #[doc = "Bit 13 - SET13"]
     #[inline(always)]
-    #[must_use]
-    pub fn set13(&mut self) -> Set13W<SrrSpec> {
+    pub fn set13(&mut self) -> Set13W<'_, SrrSpec> {
         Set13W::new(self, 13)
     }
     #[doc = "Bit 14 - SET14"]
     #[inline(always)]
-    #[must_use]
-    pub fn set14(&mut self) -> Set14W<SrrSpec> {
+    pub fn set14(&mut self) -> Set14W<'_, SrrSpec> {
         Set14W::new(self, 14)
     }
     #[doc = "Bit 15 - SET15"]
     #[inline(always)]
-    #[must_use]
-    pub fn set15(&mut self) -> Set15W<SrrSpec> {
+    pub fn set15(&mut self) -> Set15W<'_, SrrSpec> {
         Set15W::new(self, 15)
     }
     #[doc = "Bit 16 - RST0"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst0(&mut self) -> Rst0W<SrrSpec> {
+    pub fn rst0(&mut self) -> Rst0W<'_, SrrSpec> {
         Rst0W::new(self, 16)
     }
     #[doc = "Bit 17 - RST1"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst1(&mut self) -> Rst1W<SrrSpec> {
+    pub fn rst1(&mut self) -> Rst1W<'_, SrrSpec> {
         Rst1W::new(self, 17)
     }
     #[doc = "Bit 18 - RST2"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst2(&mut self) -> Rst2W<SrrSpec> {
+    pub fn rst2(&mut self) -> Rst2W<'_, SrrSpec> {
         Rst2W::new(self, 18)
     }
     #[doc = "Bit 19 - RST3"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst3(&mut self) -> Rst3W<SrrSpec> {
+    pub fn rst3(&mut self) -> Rst3W<'_, SrrSpec> {
         Rst3W::new(self, 19)
     }
     #[doc = "Bit 20 - RST4"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst4(&mut self) -> Rst4W<SrrSpec> {
+    pub fn rst4(&mut self) -> Rst4W<'_, SrrSpec> {
         Rst4W::new(self, 20)
     }
     #[doc = "Bit 21 - RST5"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst5(&mut self) -> Rst5W<SrrSpec> {
+    pub fn rst5(&mut self) -> Rst5W<'_, SrrSpec> {
         Rst5W::new(self, 21)
     }
     #[doc = "Bit 22 - RST6"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst6(&mut self) -> Rst6W<SrrSpec> {
+    pub fn rst6(&mut self) -> Rst6W<'_, SrrSpec> {
         Rst6W::new(self, 22)
     }
     #[doc = "Bit 23 - RST7"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst7(&mut self) -> Rst7W<SrrSpec> {
+    pub fn rst7(&mut self) -> Rst7W<'_, SrrSpec> {
         Rst7W::new(self, 23)
     }
     #[doc = "Bit 24 - RST8"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst8(&mut self) -> Rst8W<SrrSpec> {
+    pub fn rst8(&mut self) -> Rst8W<'_, SrrSpec> {
         Rst8W::new(self, 24)
     }
     #[doc = "Bit 25 - RST9"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst9(&mut self) -> Rst9W<SrrSpec> {
+    pub fn rst9(&mut self) -> Rst9W<'_, SrrSpec> {
         Rst9W::new(self, 25)
     }
     #[doc = "Bit 26 - RST10"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst10(&mut self) -> Rst10W<SrrSpec> {
+    pub fn rst10(&mut self) -> Rst10W<'_, SrrSpec> {
         Rst10W::new(self, 26)
     }
     #[doc = "Bit 27 - RST11"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst11(&mut self) -> Rst11W<SrrSpec> {
+    pub fn rst11(&mut self) -> Rst11W<'_, SrrSpec> {
         Rst11W::new(self, 27)
     }
     #[doc = "Bit 28 - RST12"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst12(&mut self) -> Rst12W<SrrSpec> {
+    pub fn rst12(&mut self) -> Rst12W<'_, SrrSpec> {
         Rst12W::new(self, 28)
     }
     #[doc = "Bit 29 - RST13"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst13(&mut self) -> Rst13W<SrrSpec> {
+    pub fn rst13(&mut self) -> Rst13W<'_, SrrSpec> {
         Rst13W::new(self, 29)
     }
     #[doc = "Bit 30 - RST14"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst14(&mut self) -> Rst14W<SrrSpec> {
+    pub fn rst14(&mut self) -> Rst14W<'_, SrrSpec> {
         Rst14W::new(self, 30)
     }
     #[doc = "Bit 31 - RST15"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst15(&mut self) -> Rst15W<SrrSpec> {
+    pub fn rst15(&mut self) -> Rst15W<'_, SrrSpec> {
         Rst15W::new(self, 31)
     }
 }
-#[doc = "SRR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`srr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`srr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SRR\n\nYou can [`read`](crate::Reg::read) this register and get [`srr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`srr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SrrSpec;
 impl crate::RegisterSpec for SrrSpec {
     type Ux = u32;
@@ -496,10 +464,6 @@ impl crate::Readable for SrrSpec {}
 #[doc = "`write(|w| ..)` method takes [`srr::W`](W) writer structure"]
 impl crate::Writable for SrrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRR to value 0"]
-impl crate::Resettable for SrrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SrrSpec {}

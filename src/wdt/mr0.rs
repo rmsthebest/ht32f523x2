@@ -52,36 +52,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - WDTV"]
     #[inline(always)]
-    #[must_use]
-    pub fn wdtv(&mut self) -> WdtvW<Mr0Spec> {
+    pub fn wdtv(&mut self) -> WdtvW<'_, Mr0Spec> {
         WdtvW::new(self, 0)
     }
     #[doc = "Bit 12 - WDTFIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn wdtfien(&mut self) -> WdtfienW<Mr0Spec> {
+    pub fn wdtfien(&mut self) -> WdtfienW<'_, Mr0Spec> {
         WdtfienW::new(self, 12)
     }
     #[doc = "Bit 13 - WDTRSTEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn wdtrsten(&mut self) -> WdtrstenW<Mr0Spec> {
+    pub fn wdtrsten(&mut self) -> WdtrstenW<'_, Mr0Spec> {
         WdtrstenW::new(self, 13)
     }
     #[doc = "Bits 14:15 - WDTSHLT"]
     #[inline(always)]
-    #[must_use]
-    pub fn wdtshlt(&mut self) -> WdtshltW<Mr0Spec> {
+    pub fn wdtshlt(&mut self) -> WdtshltW<'_, Mr0Spec> {
         WdtshltW::new(self, 14)
     }
     #[doc = "Bit 16 - WDTEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn wdten(&mut self) -> WdtenW<Mr0Spec> {
+    pub fn wdten(&mut self) -> WdtenW<'_, Mr0Spec> {
         WdtenW::new(self, 16)
     }
 }
-#[doc = "MR0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MR0\n\nYou can [`read`](crate::Reg::read) this register and get [`mr0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mr0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Mr0Spec;
 impl crate::RegisterSpec for Mr0Spec {
     type Ux = u32;
@@ -91,10 +86,6 @@ impl crate::Readable for Mr0Spec {}
 #[doc = "`write(|w| ..)` method takes [`mr0::W`](W) writer structure"]
 impl crate::Writable for Mr0Spec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MR0 to value 0"]
-impl crate::Resettable for Mr0Spec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Mr0Spec {}

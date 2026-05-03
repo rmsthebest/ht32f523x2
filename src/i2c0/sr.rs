@@ -133,90 +133,76 @@ impl R {
 impl W {
     #[doc = "Bit 0 - STA"]
     #[inline(always)]
-    #[must_use]
-    pub fn sta(&mut self) -> StaW<SrSpec> {
+    pub fn sta(&mut self) -> StaW<'_, SrSpec> {
         StaW::new(self, 0)
     }
     #[doc = "Bit 1 - STO"]
     #[inline(always)]
-    #[must_use]
-    pub fn sto(&mut self) -> StoW<SrSpec> {
+    pub fn sto(&mut self) -> StoW<'_, SrSpec> {
         StoW::new(self, 1)
     }
     #[doc = "Bit 2 - ADRS"]
     #[inline(always)]
-    #[must_use]
-    pub fn adrs(&mut self) -> AdrsW<SrSpec> {
+    pub fn adrs(&mut self) -> AdrsW<'_, SrSpec> {
         AdrsW::new(self, 2)
     }
     #[doc = "Bit 3 - GCS"]
     #[inline(always)]
-    #[must_use]
-    pub fn gcs(&mut self) -> GcsW<SrSpec> {
+    pub fn gcs(&mut self) -> GcsW<'_, SrSpec> {
         GcsW::new(self, 3)
     }
     #[doc = "Bit 8 - ARBLOS"]
     #[inline(always)]
-    #[must_use]
-    pub fn arblos(&mut self) -> ArblosW<SrSpec> {
+    pub fn arblos(&mut self) -> ArblosW<'_, SrSpec> {
         ArblosW::new(self, 8)
     }
     #[doc = "Bit 9 - RXNACK"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxnack(&mut self) -> RxnackW<SrSpec> {
+    pub fn rxnack(&mut self) -> RxnackW<'_, SrSpec> {
         RxnackW::new(self, 9)
     }
     #[doc = "Bit 10 - BUSERR"]
     #[inline(always)]
-    #[must_use]
-    pub fn buserr(&mut self) -> BuserrW<SrSpec> {
+    pub fn buserr(&mut self) -> BuserrW<'_, SrSpec> {
         BuserrW::new(self, 10)
     }
     #[doc = "Bit 11 - TOUTF"]
     #[inline(always)]
-    #[must_use]
-    pub fn toutf(&mut self) -> ToutfW<SrSpec> {
+    pub fn toutf(&mut self) -> ToutfW<'_, SrSpec> {
         ToutfW::new(self, 11)
     }
     #[doc = "Bit 16 - RXDNE"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxdne(&mut self) -> RxdneW<SrSpec> {
+    pub fn rxdne(&mut self) -> RxdneW<'_, SrSpec> {
         RxdneW::new(self, 16)
     }
     #[doc = "Bit 17 - TXDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn txde(&mut self) -> TxdeW<SrSpec> {
+    pub fn txde(&mut self) -> TxdeW<'_, SrSpec> {
         TxdeW::new(self, 17)
     }
     #[doc = "Bit 18 - RXBF"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxbf(&mut self) -> RxbfW<SrSpec> {
+    pub fn rxbf(&mut self) -> RxbfW<'_, SrSpec> {
         RxbfW::new(self, 18)
     }
     #[doc = "Bit 19 - BUSBUSY"]
     #[inline(always)]
-    #[must_use]
-    pub fn busbusy(&mut self) -> BusbusyW<SrSpec> {
+    pub fn busbusy(&mut self) -> BusbusyW<'_, SrSpec> {
         BusbusyW::new(self, 19)
     }
     #[doc = "Bit 20 - MASTER"]
     #[inline(always)]
-    #[must_use]
-    pub fn master(&mut self) -> MasterW<SrSpec> {
+    pub fn master(&mut self) -> MasterW<'_, SrSpec> {
         MasterW::new(self, 20)
     }
     #[doc = "Bit 21 - TXNRX"]
     #[inline(always)]
-    #[must_use]
-    pub fn txnrx(&mut self) -> TxnrxW<SrSpec> {
+    pub fn txnrx(&mut self) -> TxnrxW<'_, SrSpec> {
         TxnrxW::new(self, 21)
     }
 }
-#[doc = "SR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SR\n\nYou can [`read`](crate::Reg::read) this register and get [`sr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SrSpec;
 impl crate::RegisterSpec for SrSpec {
     type Ux = u32;
@@ -226,10 +212,6 @@ impl crate::Readable for SrSpec {}
 #[doc = "`write(|w| ..)` method takes [`sr::W`](W) writer structure"]
 impl crate::Writable for SrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SR to value 0"]
-impl crate::Resettable for SrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SrSpec {}

@@ -151,102 +151,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - EXTI0EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti0eds(&mut self) -> Exti0edsW<EdgesrSpec> {
+    pub fn exti0eds(&mut self) -> Exti0edsW<'_, EdgesrSpec> {
         Exti0edsW::new(self, 0)
     }
     #[doc = "Bit 1 - EXTI1EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti1eds(&mut self) -> Exti1edsW<EdgesrSpec> {
+    pub fn exti1eds(&mut self) -> Exti1edsW<'_, EdgesrSpec> {
         Exti1edsW::new(self, 1)
     }
     #[doc = "Bit 2 - EXTI2EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti2eds(&mut self) -> Exti2edsW<EdgesrSpec> {
+    pub fn exti2eds(&mut self) -> Exti2edsW<'_, EdgesrSpec> {
         Exti2edsW::new(self, 2)
     }
     #[doc = "Bit 3 - EXTI3EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti3eds(&mut self) -> Exti3edsW<EdgesrSpec> {
+    pub fn exti3eds(&mut self) -> Exti3edsW<'_, EdgesrSpec> {
         Exti3edsW::new(self, 3)
     }
     #[doc = "Bit 4 - EXTI4EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti4eds(&mut self) -> Exti4edsW<EdgesrSpec> {
+    pub fn exti4eds(&mut self) -> Exti4edsW<'_, EdgesrSpec> {
         Exti4edsW::new(self, 4)
     }
     #[doc = "Bit 5 - EXTI5EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti5eds(&mut self) -> Exti5edsW<EdgesrSpec> {
+    pub fn exti5eds(&mut self) -> Exti5edsW<'_, EdgesrSpec> {
         Exti5edsW::new(self, 5)
     }
     #[doc = "Bit 6 - EXTI6EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti6eds(&mut self) -> Exti6edsW<EdgesrSpec> {
+    pub fn exti6eds(&mut self) -> Exti6edsW<'_, EdgesrSpec> {
         Exti6edsW::new(self, 6)
     }
     #[doc = "Bit 7 - EXTI7EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti7eds(&mut self) -> Exti7edsW<EdgesrSpec> {
+    pub fn exti7eds(&mut self) -> Exti7edsW<'_, EdgesrSpec> {
         Exti7edsW::new(self, 7)
     }
     #[doc = "Bit 8 - EXTI8EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti8eds(&mut self) -> Exti8edsW<EdgesrSpec> {
+    pub fn exti8eds(&mut self) -> Exti8edsW<'_, EdgesrSpec> {
         Exti8edsW::new(self, 8)
     }
     #[doc = "Bit 9 - EXTI9EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti9eds(&mut self) -> Exti9edsW<EdgesrSpec> {
+    pub fn exti9eds(&mut self) -> Exti9edsW<'_, EdgesrSpec> {
         Exti9edsW::new(self, 9)
     }
     #[doc = "Bit 10 - EXTI10EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti10eds(&mut self) -> Exti10edsW<EdgesrSpec> {
+    pub fn exti10eds(&mut self) -> Exti10edsW<'_, EdgesrSpec> {
         Exti10edsW::new(self, 10)
     }
     #[doc = "Bit 11 - EXTI11EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti11eds(&mut self) -> Exti11edsW<EdgesrSpec> {
+    pub fn exti11eds(&mut self) -> Exti11edsW<'_, EdgesrSpec> {
         Exti11edsW::new(self, 11)
     }
     #[doc = "Bit 12 - EXTI12EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti12eds(&mut self) -> Exti12edsW<EdgesrSpec> {
+    pub fn exti12eds(&mut self) -> Exti12edsW<'_, EdgesrSpec> {
         Exti12edsW::new(self, 12)
     }
     #[doc = "Bit 13 - EXTI13EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti13eds(&mut self) -> Exti13edsW<EdgesrSpec> {
+    pub fn exti13eds(&mut self) -> Exti13edsW<'_, EdgesrSpec> {
         Exti13edsW::new(self, 13)
     }
     #[doc = "Bit 14 - EXTI14EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti14eds(&mut self) -> Exti14edsW<EdgesrSpec> {
+    pub fn exti14eds(&mut self) -> Exti14edsW<'_, EdgesrSpec> {
         Exti14edsW::new(self, 14)
     }
     #[doc = "Bit 15 - EXTI15EDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn exti15eds(&mut self) -> Exti15edsW<EdgesrSpec> {
+    pub fn exti15eds(&mut self) -> Exti15edsW<'_, EdgesrSpec> {
         Exti15edsW::new(self, 15)
     }
 }
-#[doc = "EDGESR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`edgesr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`edgesr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "EDGESR\n\nYou can [`read`](crate::Reg::read) this register and get [`edgesr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`edgesr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EdgesrSpec;
 impl crate::RegisterSpec for EdgesrSpec {
     type Ux = u32;
@@ -256,10 +240,6 @@ impl crate::Readable for EdgesrSpec {}
 #[doc = "`write(|w| ..)` method takes [`edgesr::W`](W) writer structure"]
 impl crate::Writable for EdgesrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EDGESR to value 0"]
-impl crate::Resettable for EdgesrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EdgesrSpec {}

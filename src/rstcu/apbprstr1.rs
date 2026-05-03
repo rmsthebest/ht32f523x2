@@ -97,66 +97,56 @@ impl R {
 impl W {
     #[doc = "Bit 0 - MCTM0RST"]
     #[inline(always)]
-    #[must_use]
-    pub fn mctm0rst(&mut self) -> Mctm0rstW<Apbprstr1Spec> {
+    pub fn mctm0rst(&mut self) -> Mctm0rstW<'_, Apbprstr1Spec> {
         Mctm0rstW::new(self, 0)
     }
     #[doc = "Bit 4 - WDTRST"]
     #[inline(always)]
-    #[must_use]
-    pub fn wdtrst(&mut self) -> WdtrstW<Apbprstr1Spec> {
+    pub fn wdtrst(&mut self) -> WdtrstW<'_, Apbprstr1Spec> {
         WdtrstW::new(self, 4)
     }
     #[doc = "Bit 8 - GPTM0RST"]
     #[inline(always)]
-    #[must_use]
-    pub fn gptm0rst(&mut self) -> Gptm0rstW<Apbprstr1Spec> {
+    pub fn gptm0rst(&mut self) -> Gptm0rstW<'_, Apbprstr1Spec> {
         Gptm0rstW::new(self, 8)
     }
     #[doc = "Bit 9 - GPTM1RST"]
     #[inline(always)]
-    #[must_use]
-    pub fn gptm1rst(&mut self) -> Gptm1rstW<Apbprstr1Spec> {
+    pub fn gptm1rst(&mut self) -> Gptm1rstW<'_, Apbprstr1Spec> {
         Gptm1rstW::new(self, 9)
     }
     #[doc = "Bit 16 - BFTM0RST"]
     #[inline(always)]
-    #[must_use]
-    pub fn bftm0rst(&mut self) -> Bftm0rstW<Apbprstr1Spec> {
+    pub fn bftm0rst(&mut self) -> Bftm0rstW<'_, Apbprstr1Spec> {
         Bftm0rstW::new(self, 16)
     }
     #[doc = "Bit 17 - BFTM1RST"]
     #[inline(always)]
-    #[must_use]
-    pub fn bftm1rst(&mut self) -> Bftm1rstW<Apbprstr1Spec> {
+    pub fn bftm1rst(&mut self) -> Bftm1rstW<'_, Apbprstr1Spec> {
         Bftm1rstW::new(self, 17)
     }
     #[doc = "Bit 22 - CMPRST"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmprst(&mut self) -> CmprstW<Apbprstr1Spec> {
+    pub fn cmprst(&mut self) -> CmprstW<'_, Apbprstr1Spec> {
         CmprstW::new(self, 22)
     }
     #[doc = "Bit 24 - ADCRST"]
     #[inline(always)]
-    #[must_use]
-    pub fn adcrst(&mut self) -> AdcrstW<Apbprstr1Spec> {
+    pub fn adcrst(&mut self) -> AdcrstW<'_, Apbprstr1Spec> {
         AdcrstW::new(self, 24)
     }
     #[doc = "Bit 28 - SCTM0RST"]
     #[inline(always)]
-    #[must_use]
-    pub fn sctm0rst(&mut self) -> Sctm0rstW<Apbprstr1Spec> {
+    pub fn sctm0rst(&mut self) -> Sctm0rstW<'_, Apbprstr1Spec> {
         Sctm0rstW::new(self, 28)
     }
     #[doc = "Bit 29 - SCTM1RST"]
     #[inline(always)]
-    #[must_use]
-    pub fn sctm1rst(&mut self) -> Sctm1rstW<Apbprstr1Spec> {
+    pub fn sctm1rst(&mut self) -> Sctm1rstW<'_, Apbprstr1Spec> {
         Sctm1rstW::new(self, 29)
     }
 }
-#[doc = "APBPRSTR1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apbprstr1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apbprstr1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "APBPRSTR1\n\nYou can [`read`](crate::Reg::read) this register and get [`apbprstr1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apbprstr1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Apbprstr1Spec;
 impl crate::RegisterSpec for Apbprstr1Spec {
     type Ux = u32;
@@ -166,10 +156,6 @@ impl crate::Readable for Apbprstr1Spec {}
 #[doc = "`write(|w| ..)` method takes [`apbprstr1::W`](W) writer structure"]
 impl crate::Writable for Apbprstr1Spec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APBPRSTR1 to value 0"]
-impl crate::Resettable for Apbprstr1Spec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Apbprstr1Spec {}

@@ -124,84 +124,71 @@ impl R {
 impl W {
     #[doc = "Bit 0 - FMCEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn fmcen(&mut self) -> FmcenW<AhbccrSpec> {
+    pub fn fmcen(&mut self) -> FmcenW<'_, AhbccrSpec> {
         FmcenW::new(self, 0)
     }
     #[doc = "Bit 2 - SRAMEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn sramen(&mut self) -> SramenW<AhbccrSpec> {
+    pub fn sramen(&mut self) -> SramenW<'_, AhbccrSpec> {
         SramenW::new(self, 2)
     }
     #[doc = "Bit 4 - PDMAEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn pdmaen(&mut self) -> PdmaenW<AhbccrSpec> {
+    pub fn pdmaen(&mut self) -> PdmaenW<'_, AhbccrSpec> {
         PdmaenW::new(self, 4)
     }
     #[doc = "Bit 5 - BMEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn bmen(&mut self) -> BmenW<AhbccrSpec> {
+    pub fn bmen(&mut self) -> BmenW<'_, AhbccrSpec> {
         BmenW::new(self, 5)
     }
     #[doc = "Bit 6 - APBEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn apben(&mut self) -> ApbenW<AhbccrSpec> {
+    pub fn apben(&mut self) -> ApbenW<'_, AhbccrSpec> {
         ApbenW::new(self, 6)
     }
     #[doc = "Bit 10 - USBEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn usben(&mut self) -> UsbenW<AhbccrSpec> {
+    pub fn usben(&mut self) -> UsbenW<'_, AhbccrSpec> {
         UsbenW::new(self, 10)
     }
     #[doc = "Bit 11 - CKREFEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn ckrefen(&mut self) -> CkrefenW<AhbccrSpec> {
+    pub fn ckrefen(&mut self) -> CkrefenW<'_, AhbccrSpec> {
         CkrefenW::new(self, 11)
     }
     #[doc = "Bit 12 - EBIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn ebien(&mut self) -> EbienW<AhbccrSpec> {
+    pub fn ebien(&mut self) -> EbienW<'_, AhbccrSpec> {
         EbienW::new(self, 12)
     }
     #[doc = "Bit 13 - CRCEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn crcen(&mut self) -> CrcenW<AhbccrSpec> {
+    pub fn crcen(&mut self) -> CrcenW<'_, AhbccrSpec> {
         CrcenW::new(self, 13)
     }
     #[doc = "Bit 16 - PAEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn paen(&mut self) -> PaenW<AhbccrSpec> {
+    pub fn paen(&mut self) -> PaenW<'_, AhbccrSpec> {
         PaenW::new(self, 16)
     }
     #[doc = "Bit 17 - PBEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn pben(&mut self) -> PbenW<AhbccrSpec> {
+    pub fn pben(&mut self) -> PbenW<'_, AhbccrSpec> {
         PbenW::new(self, 17)
     }
     #[doc = "Bit 18 - PCEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcen(&mut self) -> PcenW<AhbccrSpec> {
+    pub fn pcen(&mut self) -> PcenW<'_, AhbccrSpec> {
         PcenW::new(self, 18)
     }
     #[doc = "Bit 19 - PDEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn pden(&mut self) -> PdenW<AhbccrSpec> {
+    pub fn pden(&mut self) -> PdenW<'_, AhbccrSpec> {
         PdenW::new(self, 19)
     }
 }
-#[doc = "AHBCCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ahbccr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ahbccr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "AHBCCR\n\nYou can [`read`](crate::Reg::read) this register and get [`ahbccr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ahbccr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AhbccrSpec;
 impl crate::RegisterSpec for AhbccrSpec {
     type Ux = u32;
@@ -211,10 +198,6 @@ impl crate::Readable for AhbccrSpec {}
 #[doc = "`write(|w| ..)` method takes [`ahbccr::W`](W) writer structure"]
 impl crate::Writable for AhbccrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBCCR to value 0"]
-impl crate::Resettable for AhbccrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for AhbccrSpec {}

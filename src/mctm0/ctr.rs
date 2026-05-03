@@ -52,36 +52,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - TME"]
     #[inline(always)]
-    #[must_use]
-    pub fn tme(&mut self) -> TmeW<CtrSpec> {
+    pub fn tme(&mut self) -> TmeW<'_, CtrSpec> {
         TmeW::new(self, 0)
     }
     #[doc = "Bit 1 - CRBE"]
     #[inline(always)]
-    #[must_use]
-    pub fn crbe(&mut self) -> CrbeW<CtrSpec> {
+    pub fn crbe(&mut self) -> CrbeW<'_, CtrSpec> {
         CrbeW::new(self, 1)
     }
     #[doc = "Bit 8 - COMPRE"]
     #[inline(always)]
-    #[must_use]
-    pub fn compre(&mut self) -> CompreW<CtrSpec> {
+    pub fn compre(&mut self) -> CompreW<'_, CtrSpec> {
         CompreW::new(self, 8)
     }
     #[doc = "Bit 9 - COMUS"]
     #[inline(always)]
-    #[must_use]
-    pub fn comus(&mut self) -> ComusW<CtrSpec> {
+    pub fn comus(&mut self) -> ComusW<'_, CtrSpec> {
         ComusW::new(self, 9)
     }
     #[doc = "Bit 16 - CHCCDS"]
     #[inline(always)]
-    #[must_use]
-    pub fn chccds(&mut self) -> ChccdsW<CtrSpec> {
+    pub fn chccds(&mut self) -> ChccdsW<'_, CtrSpec> {
         ChccdsW::new(self, 16)
     }
 }
-#[doc = "CTR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CTR\n\nYou can [`read`](crate::Reg::read) this register and get [`ctr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CtrSpec;
 impl crate::RegisterSpec for CtrSpec {
     type Ux = u32;
@@ -91,10 +86,6 @@ impl crate::Readable for CtrSpec {}
 #[doc = "`write(|w| ..)` method takes [`ctr::W`](W) writer structure"]
 impl crate::Writable for CtrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTR to value 0"]
-impl crate::Resettable for CtrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CtrSpec {}

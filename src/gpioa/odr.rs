@@ -151,102 +151,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - OD0"]
     #[inline(always)]
-    #[must_use]
-    pub fn od0(&mut self) -> Od0W<OdrSpec> {
+    pub fn od0(&mut self) -> Od0W<'_, OdrSpec> {
         Od0W::new(self, 0)
     }
     #[doc = "Bit 1 - OD1"]
     #[inline(always)]
-    #[must_use]
-    pub fn od1(&mut self) -> Od1W<OdrSpec> {
+    pub fn od1(&mut self) -> Od1W<'_, OdrSpec> {
         Od1W::new(self, 1)
     }
     #[doc = "Bit 2 - OD2"]
     #[inline(always)]
-    #[must_use]
-    pub fn od2(&mut self) -> Od2W<OdrSpec> {
+    pub fn od2(&mut self) -> Od2W<'_, OdrSpec> {
         Od2W::new(self, 2)
     }
     #[doc = "Bit 3 - OD3"]
     #[inline(always)]
-    #[must_use]
-    pub fn od3(&mut self) -> Od3W<OdrSpec> {
+    pub fn od3(&mut self) -> Od3W<'_, OdrSpec> {
         Od3W::new(self, 3)
     }
     #[doc = "Bit 4 - OD4"]
     #[inline(always)]
-    #[must_use]
-    pub fn od4(&mut self) -> Od4W<OdrSpec> {
+    pub fn od4(&mut self) -> Od4W<'_, OdrSpec> {
         Od4W::new(self, 4)
     }
     #[doc = "Bit 5 - OD5"]
     #[inline(always)]
-    #[must_use]
-    pub fn od5(&mut self) -> Od5W<OdrSpec> {
+    pub fn od5(&mut self) -> Od5W<'_, OdrSpec> {
         Od5W::new(self, 5)
     }
     #[doc = "Bit 6 - OD6"]
     #[inline(always)]
-    #[must_use]
-    pub fn od6(&mut self) -> Od6W<OdrSpec> {
+    pub fn od6(&mut self) -> Od6W<'_, OdrSpec> {
         Od6W::new(self, 6)
     }
     #[doc = "Bit 7 - OD7"]
     #[inline(always)]
-    #[must_use]
-    pub fn od7(&mut self) -> Od7W<OdrSpec> {
+    pub fn od7(&mut self) -> Od7W<'_, OdrSpec> {
         Od7W::new(self, 7)
     }
     #[doc = "Bit 8 - OD8"]
     #[inline(always)]
-    #[must_use]
-    pub fn od8(&mut self) -> Od8W<OdrSpec> {
+    pub fn od8(&mut self) -> Od8W<'_, OdrSpec> {
         Od8W::new(self, 8)
     }
     #[doc = "Bit 9 - OD9"]
     #[inline(always)]
-    #[must_use]
-    pub fn od9(&mut self) -> Od9W<OdrSpec> {
+    pub fn od9(&mut self) -> Od9W<'_, OdrSpec> {
         Od9W::new(self, 9)
     }
     #[doc = "Bit 10 - OD10"]
     #[inline(always)]
-    #[must_use]
-    pub fn od10(&mut self) -> Od10W<OdrSpec> {
+    pub fn od10(&mut self) -> Od10W<'_, OdrSpec> {
         Od10W::new(self, 10)
     }
     #[doc = "Bit 11 - OD11"]
     #[inline(always)]
-    #[must_use]
-    pub fn od11(&mut self) -> Od11W<OdrSpec> {
+    pub fn od11(&mut self) -> Od11W<'_, OdrSpec> {
         Od11W::new(self, 11)
     }
     #[doc = "Bit 12 - OD12"]
     #[inline(always)]
-    #[must_use]
-    pub fn od12(&mut self) -> Od12W<OdrSpec> {
+    pub fn od12(&mut self) -> Od12W<'_, OdrSpec> {
         Od12W::new(self, 12)
     }
     #[doc = "Bit 13 - OD13"]
     #[inline(always)]
-    #[must_use]
-    pub fn od13(&mut self) -> Od13W<OdrSpec> {
+    pub fn od13(&mut self) -> Od13W<'_, OdrSpec> {
         Od13W::new(self, 13)
     }
     #[doc = "Bit 14 - OD14"]
     #[inline(always)]
-    #[must_use]
-    pub fn od14(&mut self) -> Od14W<OdrSpec> {
+    pub fn od14(&mut self) -> Od14W<'_, OdrSpec> {
         Od14W::new(self, 14)
     }
     #[doc = "Bit 15 - OD15"]
     #[inline(always)]
-    #[must_use]
-    pub fn od15(&mut self) -> Od15W<OdrSpec> {
+    pub fn od15(&mut self) -> Od15W<'_, OdrSpec> {
         Od15W::new(self, 15)
     }
 }
-#[doc = "ODR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`odr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`odr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ODR\n\nYou can [`read`](crate::Reg::read) this register and get [`odr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`odr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OdrSpec;
 impl crate::RegisterSpec for OdrSpec {
     type Ux = u32;
@@ -256,10 +240,6 @@ impl crate::Readable for OdrSpec {}
 #[doc = "`write(|w| ..)` method takes [`odr::W`](W) writer structure"]
 impl crate::Writable for OdrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ODR to value 0"]
-impl crate::Resettable for OdrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OdrSpec {}

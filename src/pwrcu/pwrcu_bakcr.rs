@@ -79,54 +79,46 @@ impl R {
 impl W {
     #[doc = "Bit 0 - BAKRST"]
     #[inline(always)]
-    #[must_use]
-    pub fn bakrst(&mut self) -> BakrstW<PwrcuBakcrSpec> {
+    pub fn bakrst(&mut self) -> BakrstW<'_, PwrcuBakcrSpec> {
         BakrstW::new(self, 0)
     }
     #[doc = "Bit 1 - LDOLCM"]
     #[inline(always)]
-    #[must_use]
-    pub fn ldolcm(&mut self) -> LdolcmW<PwrcuBakcrSpec> {
+    pub fn ldolcm(&mut self) -> LdolcmW<'_, PwrcuBakcrSpec> {
         LdolcmW::new(self, 1)
     }
     #[doc = "Bit 3 - LDOOFF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ldooff(&mut self) -> LdooffW<PwrcuBakcrSpec> {
+    pub fn ldooff(&mut self) -> LdooffW<'_, PwrcuBakcrSpec> {
         LdooffW::new(self, 3)
     }
     #[doc = "Bit 7 - DMOSON"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmoson(&mut self) -> DmosonW<PwrcuBakcrSpec> {
+    pub fn dmoson(&mut self) -> DmosonW<'_, PwrcuBakcrSpec> {
         DmosonW::new(self, 7)
     }
     #[doc = "Bit 8 - WUPEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn wupen(&mut self) -> WupenW<PwrcuBakcrSpec> {
+    pub fn wupen(&mut self) -> WupenW<'_, PwrcuBakcrSpec> {
         WupenW::new(self, 8)
     }
     #[doc = "Bit 9 - WUPIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn wupien(&mut self) -> WupienW<PwrcuBakcrSpec> {
+    pub fn wupien(&mut self) -> WupienW<'_, PwrcuBakcrSpec> {
         WupienW::new(self, 9)
     }
     #[doc = "Bit 12 - V15RDYSC"]
     #[inline(always)]
-    #[must_use]
-    pub fn v15rdysc(&mut self) -> V15rdyscW<PwrcuBakcrSpec> {
+    pub fn v15rdysc(&mut self) -> V15rdyscW<'_, PwrcuBakcrSpec> {
         V15rdyscW::new(self, 12)
     }
     #[doc = "Bit 15 - DMOSSTS"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmossts(&mut self) -> DmosstsW<PwrcuBakcrSpec> {
+    pub fn dmossts(&mut self) -> DmosstsW<'_, PwrcuBakcrSpec> {
         DmosstsW::new(self, 15)
     }
 }
-#[doc = "PWRCU_BAKCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pwrcu_bakcr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pwrcu_bakcr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PWRCU_BAKCR\n\nYou can [`read`](crate::Reg::read) this register and get [`pwrcu_bakcr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pwrcu_bakcr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PwrcuBakcrSpec;
 impl crate::RegisterSpec for PwrcuBakcrSpec {
     type Ux = u32;
@@ -136,10 +128,6 @@ impl crate::Readable for PwrcuBakcrSpec {}
 #[doc = "`write(|w| ..)` method takes [`pwrcu_bakcr::W`](W) writer structure"]
 impl crate::Writable for PwrcuBakcrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PWRCU_BAKCR to value 0"]
-impl crate::Resettable for PwrcuBakcrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PwrcuBakcrSpec {}

@@ -88,60 +88,51 @@ impl R {
 impl W {
     #[doc = "Bit 0 - SPIEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn spien(&mut self) -> SpienW<Cr0Spec> {
+    pub fn spien(&mut self) -> SpienW<'_, Cr0Spec> {
         SpienW::new(self, 0)
     }
     #[doc = "Bit 1 - TXDMAE"]
     #[inline(always)]
-    #[must_use]
-    pub fn txdmae(&mut self) -> TxdmaeW<Cr0Spec> {
+    pub fn txdmae(&mut self) -> TxdmaeW<'_, Cr0Spec> {
         TxdmaeW::new(self, 1)
     }
     #[doc = "Bit 2 - RXDMAE"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxdmae(&mut self) -> RxdmaeW<Cr0Spec> {
+    pub fn rxdmae(&mut self) -> RxdmaeW<'_, Cr0Spec> {
         RxdmaeW::new(self, 2)
     }
     #[doc = "Bit 3 - SELOEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn seloen(&mut self) -> SeloenW<Cr0Spec> {
+    pub fn seloen(&mut self) -> SeloenW<'_, Cr0Spec> {
         SeloenW::new(self, 3)
     }
     #[doc = "Bit 4 - SSELC"]
     #[inline(always)]
-    #[must_use]
-    pub fn sselc(&mut self) -> SselcW<Cr0Spec> {
+    pub fn sselc(&mut self) -> SselcW<'_, Cr0Spec> {
         SselcW::new(self, 4)
     }
     #[doc = "Bit 6 - DUALEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn dualen(&mut self) -> DualenW<Cr0Spec> {
+    pub fn dualen(&mut self) -> DualenW<'_, Cr0Spec> {
         DualenW::new(self, 6)
     }
     #[doc = "Bit 7 - GUADTEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn guadten(&mut self) -> GuadtenW<Cr0Spec> {
+    pub fn guadten(&mut self) -> GuadtenW<'_, Cr0Spec> {
         GuadtenW::new(self, 7)
     }
     #[doc = "Bits 8:11 - GUADT"]
     #[inline(always)]
-    #[must_use]
-    pub fn guadt(&mut self) -> GuadtW<Cr0Spec> {
+    pub fn guadt(&mut self) -> GuadtW<'_, Cr0Spec> {
         GuadtW::new(self, 8)
     }
     #[doc = "Bits 12:15 - SELHT"]
     #[inline(always)]
-    #[must_use]
-    pub fn selht(&mut self) -> SelhtW<Cr0Spec> {
+    pub fn selht(&mut self) -> SelhtW<'_, Cr0Spec> {
         SelhtW::new(self, 12)
     }
 }
-#[doc = "CR0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CR0\n\nYou can [`read`](crate::Reg::read) this register and get [`cr0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Cr0Spec;
 impl crate::RegisterSpec for Cr0Spec {
     type Ux = u32;
@@ -151,10 +142,6 @@ impl crate::Readable for Cr0Spec {}
 #[doc = "`write(|w| ..)` method takes [`cr0::W`](W) writer structure"]
 impl crate::Writable for Cr0Spec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR0 to value 0"]
-impl crate::Resettable for Cr0Spec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Cr0Spec {}

@@ -43,30 +43,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - TXFTLS"]
     #[inline(always)]
-    #[must_use]
-    pub fn txftls(&mut self) -> TxftlsW<FcrSpec> {
+    pub fn txftls(&mut self) -> TxftlsW<'_, FcrSpec> {
         TxftlsW::new(self, 0)
     }
     #[doc = "Bits 4:7 - RXFTLS"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxftls(&mut self) -> RxftlsW<FcrSpec> {
+    pub fn rxftls(&mut self) -> RxftlsW<'_, FcrSpec> {
         RxftlsW::new(self, 4)
     }
     #[doc = "Bit 8 - TXFRST"]
     #[inline(always)]
-    #[must_use]
-    pub fn txfrst(&mut self) -> TxfrstW<FcrSpec> {
+    pub fn txfrst(&mut self) -> TxfrstW<'_, FcrSpec> {
         TxfrstW::new(self, 8)
     }
     #[doc = "Bit 9 - RXFRST"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxfrst(&mut self) -> RxfrstW<FcrSpec> {
+    pub fn rxfrst(&mut self) -> RxfrstW<'_, FcrSpec> {
         RxfrstW::new(self, 9)
     }
 }
-#[doc = "FCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fcr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fcr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "FCR\n\nYou can [`read`](crate::Reg::read) this register and get [`fcr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fcr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FcrSpec;
 impl crate::RegisterSpec for FcrSpec {
     type Ux = u32;
@@ -76,10 +72,6 @@ impl crate::Readable for FcrSpec {}
 #[doc = "`write(|w| ..)` method takes [`fcr::W`](W) writer structure"]
 impl crate::Writable for FcrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FCR to value 0"]
-impl crate::Resettable for FcrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FcrSpec {}

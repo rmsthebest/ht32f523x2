@@ -34,24 +34,21 @@ impl R {
 impl W {
     #[doc = "Bit 2 - CCLK"]
     #[inline(always)]
-    #[must_use]
-    pub fn cclk(&mut self) -> CclkW<CcrSpec> {
+    pub fn cclk(&mut self) -> CclkW<'_, CcrSpec> {
         CclkW::new(self, 2)
     }
     #[doc = "Bit 3 - CDIO"]
     #[inline(always)]
-    #[must_use]
-    pub fn cdio(&mut self) -> CdioW<CcrSpec> {
+    pub fn cdio(&mut self) -> CdioW<'_, CcrSpec> {
         CdioW::new(self, 3)
     }
     #[doc = "Bit 7 - CLKSEL"]
     #[inline(always)]
-    #[must_use]
-    pub fn clksel(&mut self) -> ClkselW<CcrSpec> {
+    pub fn clksel(&mut self) -> ClkselW<'_, CcrSpec> {
         ClkselW::new(self, 7)
     }
 }
-#[doc = "CCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ccr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ccr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CCR\n\nYou can [`read`](crate::Reg::read) this register and get [`ccr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ccr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CcrSpec;
 impl crate::RegisterSpec for CcrSpec {
     type Ux = u32;
@@ -61,10 +58,6 @@ impl crate::Readable for CcrSpec {}
 #[doc = "`write(|w| ..)` method takes [`ccr::W`](W) writer structure"]
 impl crate::Writable for CcrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CCR to value 0"]
-impl crate::Resettable for CcrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CcrSpec {}

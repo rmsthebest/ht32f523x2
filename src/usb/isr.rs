@@ -124,84 +124,71 @@ impl R {
 impl W {
     #[doc = "Bit 1 - SOFIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn sofif(&mut self) -> SofifW<IsrSpec> {
+    pub fn sofif(&mut self) -> SofifW<'_, IsrSpec> {
         SofifW::new(self, 1)
     }
     #[doc = "Bit 2 - URSTIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn urstif(&mut self) -> UrstifW<IsrSpec> {
+    pub fn urstif(&mut self) -> UrstifW<'_, IsrSpec> {
         UrstifW::new(self, 2)
     }
     #[doc = "Bit 3 - RSMIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn rsmif(&mut self) -> RsmifW<IsrSpec> {
+    pub fn rsmif(&mut self) -> RsmifW<'_, IsrSpec> {
         RsmifW::new(self, 3)
     }
     #[doc = "Bit 4 - SUSPIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn suspif(&mut self) -> SuspifW<IsrSpec> {
+    pub fn suspif(&mut self) -> SuspifW<'_, IsrSpec> {
         SuspifW::new(self, 4)
     }
     #[doc = "Bit 5 - ESOFIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn esofif(&mut self) -> EsofifW<IsrSpec> {
+    pub fn esofif(&mut self) -> EsofifW<'_, IsrSpec> {
         EsofifW::new(self, 5)
     }
     #[doc = "Bit 8 - EP0IF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep0if(&mut self) -> Ep0ifW<IsrSpec> {
+    pub fn ep0if(&mut self) -> Ep0ifW<'_, IsrSpec> {
         Ep0ifW::new(self, 8)
     }
     #[doc = "Bit 9 - EP1IF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep1if(&mut self) -> Ep1ifW<IsrSpec> {
+    pub fn ep1if(&mut self) -> Ep1ifW<'_, IsrSpec> {
         Ep1ifW::new(self, 9)
     }
     #[doc = "Bit 10 - EP2IF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep2if(&mut self) -> Ep2ifW<IsrSpec> {
+    pub fn ep2if(&mut self) -> Ep2ifW<'_, IsrSpec> {
         Ep2ifW::new(self, 10)
     }
     #[doc = "Bit 11 - EP3IF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep3if(&mut self) -> Ep3ifW<IsrSpec> {
+    pub fn ep3if(&mut self) -> Ep3ifW<'_, IsrSpec> {
         Ep3ifW::new(self, 11)
     }
     #[doc = "Bit 12 - EP4IF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep4if(&mut self) -> Ep4ifW<IsrSpec> {
+    pub fn ep4if(&mut self) -> Ep4ifW<'_, IsrSpec> {
         Ep4ifW::new(self, 12)
     }
     #[doc = "Bit 13 - EP5IF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep5if(&mut self) -> Ep5ifW<IsrSpec> {
+    pub fn ep5if(&mut self) -> Ep5ifW<'_, IsrSpec> {
         Ep5ifW::new(self, 13)
     }
     #[doc = "Bit 14 - EP6IF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep6if(&mut self) -> Ep6ifW<IsrSpec> {
+    pub fn ep6if(&mut self) -> Ep6ifW<'_, IsrSpec> {
         Ep6ifW::new(self, 14)
     }
     #[doc = "Bit 15 - EP7IF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep7if(&mut self) -> Ep7ifW<IsrSpec> {
+    pub fn ep7if(&mut self) -> Ep7ifW<'_, IsrSpec> {
         Ep7ifW::new(self, 15)
     }
 }
-#[doc = "ISR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`isr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`isr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ISR\n\nYou can [`read`](crate::Reg::read) this register and get [`isr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`isr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IsrSpec;
 impl crate::RegisterSpec for IsrSpec {
     type Ux = u32;
@@ -211,10 +198,6 @@ impl crate::Readable for IsrSpec {}
 #[doc = "`write(|w| ..)` method takes [`isr::W`](W) writer structure"]
 impl crate::Writable for IsrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ISR to value 0"]
-impl crate::Resettable for IsrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IsrSpec {}

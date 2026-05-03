@@ -115,78 +115,66 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CKSF"]
     #[inline(always)]
-    #[must_use]
-    pub fn cksf(&mut self) -> CksfW<GcirSpec> {
+    pub fn cksf(&mut self) -> CksfW<'_, GcirSpec> {
         CksfW::new(self, 0)
     }
     #[doc = "Bit 2 - PLLRDYF"]
     #[inline(always)]
-    #[must_use]
-    pub fn pllrdyf(&mut self) -> PllrdyfW<GcirSpec> {
+    pub fn pllrdyf(&mut self) -> PllrdyfW<'_, GcirSpec> {
         PllrdyfW::new(self, 2)
     }
     #[doc = "Bit 3 - HSERDYF"]
     #[inline(always)]
-    #[must_use]
-    pub fn hserdyf(&mut self) -> HserdyfW<GcirSpec> {
+    pub fn hserdyf(&mut self) -> HserdyfW<'_, GcirSpec> {
         HserdyfW::new(self, 3)
     }
     #[doc = "Bit 4 - HSIRDYF"]
     #[inline(always)]
-    #[must_use]
-    pub fn hsirdyf(&mut self) -> HsirdyfW<GcirSpec> {
+    pub fn hsirdyf(&mut self) -> HsirdyfW<'_, GcirSpec> {
         HsirdyfW::new(self, 4)
     }
     #[doc = "Bit 5 - LSERDYF"]
     #[inline(always)]
-    #[must_use]
-    pub fn lserdyf(&mut self) -> LserdyfW<GcirSpec> {
+    pub fn lserdyf(&mut self) -> LserdyfW<'_, GcirSpec> {
         LserdyfW::new(self, 5)
     }
     #[doc = "Bit 6 - LSIRDYF"]
     #[inline(always)]
-    #[must_use]
-    pub fn lsirdyf(&mut self) -> LsirdyfW<GcirSpec> {
+    pub fn lsirdyf(&mut self) -> LsirdyfW<'_, GcirSpec> {
         LsirdyfW::new(self, 6)
     }
     #[doc = "Bit 16 - CKSIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn cksie(&mut self) -> CksieW<GcirSpec> {
+    pub fn cksie(&mut self) -> CksieW<'_, GcirSpec> {
         CksieW::new(self, 16)
     }
     #[doc = "Bit 18 - PLLRDYIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn pllrdyie(&mut self) -> PllrdyieW<GcirSpec> {
+    pub fn pllrdyie(&mut self) -> PllrdyieW<'_, GcirSpec> {
         PllrdyieW::new(self, 18)
     }
     #[doc = "Bit 19 - HSERDYIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn hserdyie(&mut self) -> HserdyieW<GcirSpec> {
+    pub fn hserdyie(&mut self) -> HserdyieW<'_, GcirSpec> {
         HserdyieW::new(self, 19)
     }
     #[doc = "Bit 20 - HSIRDYIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn hsirdyie(&mut self) -> HsirdyieW<GcirSpec> {
+    pub fn hsirdyie(&mut self) -> HsirdyieW<'_, GcirSpec> {
         HsirdyieW::new(self, 20)
     }
     #[doc = "Bit 21 - LSERDYIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn lserdyie(&mut self) -> LserdyieW<GcirSpec> {
+    pub fn lserdyie(&mut self) -> LserdyieW<'_, GcirSpec> {
         LserdyieW::new(self, 21)
     }
     #[doc = "Bit 22 - LSIRDYIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn lsirdyie(&mut self) -> LsirdyieW<GcirSpec> {
+    pub fn lsirdyie(&mut self) -> LsirdyieW<'_, GcirSpec> {
         LsirdyieW::new(self, 22)
     }
 }
-#[doc = "GCIR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gcir::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gcir::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GCIR\n\nYou can [`read`](crate::Reg::read) this register and get [`gcir::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gcir::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GcirSpec;
 impl crate::RegisterSpec for GcirSpec {
     type Ux = u32;
@@ -196,10 +184,6 @@ impl crate::Readable for GcirSpec {}
 #[doc = "`write(|w| ..)` method takes [`gcir::W`](W) writer structure"]
 impl crate::Writable for GcirSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GCIR to value 0"]
-impl crate::Resettable for GcirSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GcirSpec {}

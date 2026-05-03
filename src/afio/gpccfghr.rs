@@ -79,54 +79,46 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - CFG8"]
     #[inline(always)]
-    #[must_use]
-    pub fn cfg8(&mut self) -> Cfg8W<GpccfghrSpec> {
+    pub fn cfg8(&mut self) -> Cfg8W<'_, GpccfghrSpec> {
         Cfg8W::new(self, 0)
     }
     #[doc = "Bits 4:7 - CFG9"]
     #[inline(always)]
-    #[must_use]
-    pub fn cfg9(&mut self) -> Cfg9W<GpccfghrSpec> {
+    pub fn cfg9(&mut self) -> Cfg9W<'_, GpccfghrSpec> {
         Cfg9W::new(self, 4)
     }
     #[doc = "Bits 8:11 - CFG10"]
     #[inline(always)]
-    #[must_use]
-    pub fn cfg10(&mut self) -> Cfg10W<GpccfghrSpec> {
+    pub fn cfg10(&mut self) -> Cfg10W<'_, GpccfghrSpec> {
         Cfg10W::new(self, 8)
     }
     #[doc = "Bits 12:15 - CFG11"]
     #[inline(always)]
-    #[must_use]
-    pub fn cfg11(&mut self) -> Cfg11W<GpccfghrSpec> {
+    pub fn cfg11(&mut self) -> Cfg11W<'_, GpccfghrSpec> {
         Cfg11W::new(self, 12)
     }
     #[doc = "Bits 16:19 - CFG12"]
     #[inline(always)]
-    #[must_use]
-    pub fn cfg12(&mut self) -> Cfg12W<GpccfghrSpec> {
+    pub fn cfg12(&mut self) -> Cfg12W<'_, GpccfghrSpec> {
         Cfg12W::new(self, 16)
     }
     #[doc = "Bits 20:23 - CFG13"]
     #[inline(always)]
-    #[must_use]
-    pub fn cfg13(&mut self) -> Cfg13W<GpccfghrSpec> {
+    pub fn cfg13(&mut self) -> Cfg13W<'_, GpccfghrSpec> {
         Cfg13W::new(self, 20)
     }
     #[doc = "Bits 24:27 - CFG14"]
     #[inline(always)]
-    #[must_use]
-    pub fn cfg14(&mut self) -> Cfg14W<GpccfghrSpec> {
+    pub fn cfg14(&mut self) -> Cfg14W<'_, GpccfghrSpec> {
         Cfg14W::new(self, 24)
     }
     #[doc = "Bits 28:31 - CFG15"]
     #[inline(always)]
-    #[must_use]
-    pub fn cfg15(&mut self) -> Cfg15W<GpccfghrSpec> {
+    pub fn cfg15(&mut self) -> Cfg15W<'_, GpccfghrSpec> {
         Cfg15W::new(self, 28)
     }
 }
-#[doc = "GPCCFGHR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpccfghr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpccfghr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPCCFGHR\n\nYou can [`read`](crate::Reg::read) this register and get [`gpccfghr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpccfghr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GpccfghrSpec;
 impl crate::RegisterSpec for GpccfghrSpec {
     type Ux = u32;
@@ -136,10 +128,6 @@ impl crate::Readable for GpccfghrSpec {}
 #[doc = "`write(|w| ..)` method takes [`gpccfghr::W`](W) writer structure"]
 impl crate::Writable for GpccfghrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GPCCFGHR to value 0"]
-impl crate::Resettable for GpccfghrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GpccfghrSpec {}

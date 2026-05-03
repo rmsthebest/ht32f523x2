@@ -115,78 +115,66 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CH0CCIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0ccif(&mut self) -> Ch0ccifW<IntsrSpec> {
+    pub fn ch0ccif(&mut self) -> Ch0ccifW<'_, IntsrSpec> {
         Ch0ccifW::new(self, 0)
     }
     #[doc = "Bit 1 - CH1CCIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1ccif(&mut self) -> Ch1ccifW<IntsrSpec> {
+    pub fn ch1ccif(&mut self) -> Ch1ccifW<'_, IntsrSpec> {
         Ch1ccifW::new(self, 1)
     }
     #[doc = "Bit 2 - CH2CCIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2ccif(&mut self) -> Ch2ccifW<IntsrSpec> {
+    pub fn ch2ccif(&mut self) -> Ch2ccifW<'_, IntsrSpec> {
         Ch2ccifW::new(self, 2)
     }
     #[doc = "Bit 3 - CH3CCIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3ccif(&mut self) -> Ch3ccifW<IntsrSpec> {
+    pub fn ch3ccif(&mut self) -> Ch3ccifW<'_, IntsrSpec> {
         Ch3ccifW::new(self, 3)
     }
     #[doc = "Bit 4 - CH0OCF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch0ocf(&mut self) -> Ch0ocfW<IntsrSpec> {
+    pub fn ch0ocf(&mut self) -> Ch0ocfW<'_, IntsrSpec> {
         Ch0ocfW::new(self, 4)
     }
     #[doc = "Bit 5 - CH1OCF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1ocf(&mut self) -> Ch1ocfW<IntsrSpec> {
+    pub fn ch1ocf(&mut self) -> Ch1ocfW<'_, IntsrSpec> {
         Ch1ocfW::new(self, 5)
     }
     #[doc = "Bit 6 - CH2OCF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2ocf(&mut self) -> Ch2ocfW<IntsrSpec> {
+    pub fn ch2ocf(&mut self) -> Ch2ocfW<'_, IntsrSpec> {
         Ch2ocfW::new(self, 6)
     }
     #[doc = "Bit 7 - CH3OCF"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3ocf(&mut self) -> Ch3ocfW<IntsrSpec> {
+    pub fn ch3ocf(&mut self) -> Ch3ocfW<'_, IntsrSpec> {
         Ch3ocfW::new(self, 7)
     }
     #[doc = "Bit 8 - UEV1IF"]
     #[inline(always)]
-    #[must_use]
-    pub fn uev1if(&mut self) -> Uev1ifW<IntsrSpec> {
+    pub fn uev1if(&mut self) -> Uev1ifW<'_, IntsrSpec> {
         Uev1ifW::new(self, 8)
     }
     #[doc = "Bit 9 - UEV2IF"]
     #[inline(always)]
-    #[must_use]
-    pub fn uev2if(&mut self) -> Uev2ifW<IntsrSpec> {
+    pub fn uev2if(&mut self) -> Uev2ifW<'_, IntsrSpec> {
         Uev2ifW::new(self, 9)
     }
     #[doc = "Bit 10 - TEVIF"]
     #[inline(always)]
-    #[must_use]
-    pub fn tevif(&mut self) -> TevifW<IntsrSpec> {
+    pub fn tevif(&mut self) -> TevifW<'_, IntsrSpec> {
         TevifW::new(self, 10)
     }
     #[doc = "Bit 11 - BRK0IF"]
     #[inline(always)]
-    #[must_use]
-    pub fn brk0if(&mut self) -> Brk0ifW<IntsrSpec> {
+    pub fn brk0if(&mut self) -> Brk0ifW<'_, IntsrSpec> {
         Brk0ifW::new(self, 11)
     }
 }
-#[doc = "INTSR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intsr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intsr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "INTSR\n\nYou can [`read`](crate::Reg::read) this register and get [`intsr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intsr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IntsrSpec;
 impl crate::RegisterSpec for IntsrSpec {
     type Ux = u32;
@@ -196,10 +184,6 @@ impl crate::Readable for IntsrSpec {}
 #[doc = "`write(|w| ..)` method takes [`intsr::W`](W) writer structure"]
 impl crate::Writable for IntsrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTSR to value 0"]
-impl crate::Resettable for IntsrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IntsrSpec {}

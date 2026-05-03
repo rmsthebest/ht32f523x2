@@ -16,12 +16,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - SADR"]
     #[inline(always)]
-    #[must_use]
-    pub fn sadr(&mut self) -> SadrW<Ch2sadrSpec> {
+    pub fn sadr(&mut self) -> SadrW<'_, Ch2sadrSpec> {
         SadrW::new(self, 0)
     }
 }
-#[doc = "CH2SADR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch2sadr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch2sadr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CH2SADR\n\nYou can [`read`](crate::Reg::read) this register and get [`ch2sadr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch2sadr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Ch2sadrSpec;
 impl crate::RegisterSpec for Ch2sadrSpec {
     type Ux = u32;
@@ -31,10 +30,6 @@ impl crate::Readable for Ch2sadrSpec {}
 #[doc = "`write(|w| ..)` method takes [`ch2sadr::W`](W) writer structure"]
 impl crate::Writable for Ch2sadrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CH2SADR to value 0"]
-impl crate::Resettable for Ch2sadrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Ch2sadrSpec {}

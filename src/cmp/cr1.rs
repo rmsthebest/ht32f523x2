@@ -124,84 +124,71 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CMPEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpen(&mut self) -> CmpenW<Cr1Spec> {
+    pub fn cmpen(&mut self) -> CmpenW<'_, Cr1Spec> {
         CmpenW::new(self, 0)
     }
     #[doc = "Bit 1 - CMPSM"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpsm(&mut self) -> CmpsmW<Cr1Spec> {
+    pub fn cmpsm(&mut self) -> CmpsmW<'_, Cr1Spec> {
         CmpsmW::new(self, 1)
     }
     #[doc = "Bits 2:3 - CMPHM"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmphm(&mut self) -> CmphmW<Cr1Spec> {
+    pub fn cmphm(&mut self) -> CmphmW<'_, Cr1Spec> {
         CmphmW::new(self, 2)
     }
     #[doc = "Bits 4:5 - CMPINSEL"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpinsel(&mut self) -> CmpinselW<Cr1Spec> {
+    pub fn cmpinsel(&mut self) -> CmpinselW<'_, Cr1Spec> {
         CmpinselW::new(self, 4)
     }
     #[doc = "Bit 6 - CMPPOL"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmppol(&mut self) -> CmppolW<Cr1Spec> {
+    pub fn cmppol(&mut self) -> CmppolW<'_, Cr1Spec> {
         CmppolW::new(self, 6)
     }
     #[doc = "Bit 7 - SYNCSEL"]
     #[inline(always)]
-    #[must_use]
-    pub fn syncsel(&mut self) -> SyncselW<Cr1Spec> {
+    pub fn syncsel(&mut self) -> SyncselW<'_, Cr1Spec> {
         SyncselW::new(self, 7)
     }
     #[doc = "Bit 8 - CVREN"]
     #[inline(always)]
-    #[must_use]
-    pub fn cvren(&mut self) -> CvrenW<Cr1Spec> {
+    pub fn cvren(&mut self) -> CvrenW<'_, Cr1Spec> {
         CvrenW::new(self, 8)
     }
     #[doc = "Bit 9 - CVROE"]
     #[inline(always)]
-    #[must_use]
-    pub fn cvroe(&mut self) -> CvroeW<Cr1Spec> {
+    pub fn cvroe(&mut self) -> CvroeW<'_, Cr1Spec> {
         CvroeW::new(self, 9)
     }
     #[doc = "Bit 10 - CVRSS"]
     #[inline(always)]
-    #[must_use]
-    pub fn cvrss(&mut self) -> CvrssW<Cr1Spec> {
+    pub fn cvrss(&mut self) -> CvrssW<'_, Cr1Spec> {
         CvrssW::new(self, 10)
     }
     #[doc = "Bits 11:13 - CMPOSEL"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmposel(&mut self) -> CmposelW<Cr1Spec> {
+    pub fn cmposel(&mut self) -> CmposelW<'_, Cr1Spec> {
         CmposelW::new(self, 11)
     }
     #[doc = "Bit 14 - CMPWPEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpwpen(&mut self) -> CmpwpenW<Cr1Spec> {
+    pub fn cmpwpen(&mut self) -> CmpwpenW<'_, Cr1Spec> {
         CmpwpenW::new(self, 14)
     }
     #[doc = "Bit 15 - CMPSTS"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpsts(&mut self) -> CmpstsW<Cr1Spec> {
+    pub fn cmpsts(&mut self) -> CmpstsW<'_, Cr1Spec> {
         CmpstsW::new(self, 15)
     }
     #[doc = "Bits 16:31 - PROTECT"]
     #[inline(always)]
-    #[must_use]
-    pub fn protect(&mut self) -> ProtectW<Cr1Spec> {
+    pub fn protect(&mut self) -> ProtectW<'_, Cr1Spec> {
         ProtectW::new(self, 16)
     }
 }
-#[doc = "CR1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CR1\n\nYou can [`read`](crate::Reg::read) this register and get [`cr1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct Cr1Spec;
 impl crate::RegisterSpec for Cr1Spec {
     type Ux = u32;
@@ -211,10 +198,6 @@ impl crate::Readable for Cr1Spec {}
 #[doc = "`write(|w| ..)` method takes [`cr1::W`](W) writer structure"]
 impl crate::Writable for Cr1Spec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR1 to value 0"]
-impl crate::Resettable for Cr1Spec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for Cr1Spec {}

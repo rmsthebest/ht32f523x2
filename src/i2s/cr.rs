@@ -160,108 +160,91 @@ impl R {
 impl W {
     #[doc = "Bit 0 - I2SEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2sen(&mut self) -> I2senW<CrSpec> {
+    pub fn i2sen(&mut self) -> I2senW<'_, CrSpec> {
         I2senW::new(self, 0)
     }
     #[doc = "Bit 1 - TXEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn txen(&mut self) -> TxenW<CrSpec> {
+    pub fn txen(&mut self) -> TxenW<'_, CrSpec> {
         TxenW::new(self, 1)
     }
     #[doc = "Bit 2 - RXEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxen(&mut self) -> RxenW<CrSpec> {
+    pub fn rxen(&mut self) -> RxenW<'_, CrSpec> {
         RxenW::new(self, 2)
     }
     #[doc = "Bits 4:5 - SMPSIZE"]
     #[inline(always)]
-    #[must_use]
-    pub fn smpsize(&mut self) -> SmpsizeW<CrSpec> {
+    pub fn smpsize(&mut self) -> SmpsizeW<'_, CrSpec> {
         SmpsizeW::new(self, 4)
     }
     #[doc = "Bits 6:7 - FORMAT"]
     #[inline(always)]
-    #[must_use]
-    pub fn format(&mut self) -> FormatW<CrSpec> {
+    pub fn format(&mut self) -> FormatW<'_, CrSpec> {
         FormatW::new(self, 6)
     }
     #[doc = "Bit 8 - BITEXT"]
     #[inline(always)]
-    #[must_use]
-    pub fn bitext(&mut self) -> BitextW<CrSpec> {
+    pub fn bitext(&mut self) -> BitextW<'_, CrSpec> {
         BitextW::new(self, 8)
     }
     #[doc = "Bit 9 - MCLKEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn mclken(&mut self) -> MclkenW<CrSpec> {
+    pub fn mclken(&mut self) -> MclkenW<'_, CrSpec> {
         MclkenW::new(self, 9)
     }
     #[doc = "Bit 10 - REPEAT"]
     #[inline(always)]
-    #[must_use]
-    pub fn repeat(&mut self) -> RepeatW<CrSpec> {
+    pub fn repeat(&mut self) -> RepeatW<'_, CrSpec> {
         RepeatW::new(self, 10)
     }
     #[doc = "Bit 11 - CHANNEL"]
     #[inline(always)]
-    #[must_use]
-    pub fn channel(&mut self) -> ChannelW<CrSpec> {
+    pub fn channel(&mut self) -> ChannelW<'_, CrSpec> {
         ChannelW::new(self, 11)
     }
     #[doc = "Bit 12 - TXMUTE"]
     #[inline(always)]
-    #[must_use]
-    pub fn txmute(&mut self) -> TxmuteW<CrSpec> {
+    pub fn txmute(&mut self) -> TxmuteW<'_, CrSpec> {
         TxmuteW::new(self, 12)
     }
     #[doc = "Bit 13 - TXDMAEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn txdmaen(&mut self) -> TxdmaenW<CrSpec> {
+    pub fn txdmaen(&mut self) -> TxdmaenW<'_, CrSpec> {
         TxdmaenW::new(self, 13)
     }
     #[doc = "Bit 14 - RXDMAEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxdmaen(&mut self) -> RxdmaenW<CrSpec> {
+    pub fn rxdmaen(&mut self) -> RxdmaenW<'_, CrSpec> {
         RxdmaenW::new(self, 14)
     }
     #[doc = "Bit 15 - CLKDEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkden(&mut self) -> ClkdenW<CrSpec> {
+    pub fn clkden(&mut self) -> ClkdenW<'_, CrSpec> {
         ClkdenW::new(self, 15)
     }
     #[doc = "Bit 16 - RCEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn rcen(&mut self) -> RcenW<CrSpec> {
+    pub fn rcen(&mut self) -> RcenW<'_, CrSpec> {
         RcenW::new(self, 16)
     }
     #[doc = "Bit 17 - RCSEL"]
     #[inline(always)]
-    #[must_use]
-    pub fn rcsel(&mut self) -> RcselW<CrSpec> {
+    pub fn rcsel(&mut self) -> RcselW<'_, CrSpec> {
         RcselW::new(self, 17)
     }
     #[doc = "Bit 18 - BCKINV"]
     #[inline(always)]
-    #[must_use]
-    pub fn bckinv(&mut self) -> BckinvW<CrSpec> {
+    pub fn bckinv(&mut self) -> BckinvW<'_, CrSpec> {
         BckinvW::new(self, 18)
     }
     #[doc = "Bit 19 - MCKINV"]
     #[inline(always)]
-    #[must_use]
-    pub fn mckinv(&mut self) -> MckinvW<CrSpec> {
+    pub fn mckinv(&mut self) -> MckinvW<'_, CrSpec> {
         MckinvW::new(self, 19)
     }
 }
-#[doc = "CR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CR\n\nYou can [`read`](crate::Reg::read) this register and get [`cr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CrSpec;
 impl crate::RegisterSpec for CrSpec {
     type Ux = u32;
@@ -271,10 +254,6 @@ impl crate::Readable for CrSpec {}
 #[doc = "`write(|w| ..)` method takes [`cr::W`](W) writer structure"]
 impl crate::Writable for CrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CR to value 0"]
-impl crate::Resettable for CrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CrSpec {}

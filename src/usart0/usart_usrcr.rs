@@ -133,90 +133,76 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - MODE"]
     #[inline(always)]
-    #[must_use]
-    pub fn mode(&mut self) -> ModeW<UsartUsrcrSpec> {
+    pub fn mode(&mut self) -> ModeW<'_, UsartUsrcrSpec> {
         ModeW::new(self, 0)
     }
     #[doc = "Bit 2 - TRSM"]
     #[inline(always)]
-    #[must_use]
-    pub fn trsm(&mut self) -> TrsmW<UsartUsrcrSpec> {
+    pub fn trsm(&mut self) -> TrsmW<'_, UsartUsrcrSpec> {
         TrsmW::new(self, 2)
     }
     #[doc = "Bit 3 - HFCEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn hfcen(&mut self) -> HfcenW<UsartUsrcrSpec> {
+    pub fn hfcen(&mut self) -> HfcenW<'_, UsartUsrcrSpec> {
         HfcenW::new(self, 3)
     }
     #[doc = "Bit 4 - URTXEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn urtxen(&mut self) -> UrtxenW<UsartUsrcrSpec> {
+    pub fn urtxen(&mut self) -> UrtxenW<'_, UsartUsrcrSpec> {
         UrtxenW::new(self, 4)
     }
     #[doc = "Bit 5 - URRXEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn urrxen(&mut self) -> UrrxenW<UsartUsrcrSpec> {
+    pub fn urrxen(&mut self) -> UrrxenW<'_, UsartUsrcrSpec> {
         UrrxenW::new(self, 5)
     }
     #[doc = "Bit 6 - TXDMAEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn txdmaen(&mut self) -> TxdmaenW<UsartUsrcrSpec> {
+    pub fn txdmaen(&mut self) -> TxdmaenW<'_, UsartUsrcrSpec> {
         TxdmaenW::new(self, 6)
     }
     #[doc = "Bit 7 - RXDMAEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxdmaen(&mut self) -> RxdmaenW<UsartUsrcrSpec> {
+    pub fn rxdmaen(&mut self) -> RxdmaenW<'_, UsartUsrcrSpec> {
         RxdmaenW::new(self, 7)
     }
     #[doc = "Bits 8:9 - WLS"]
     #[inline(always)]
-    #[must_use]
-    pub fn wls(&mut self) -> WlsW<UsartUsrcrSpec> {
+    pub fn wls(&mut self) -> WlsW<'_, UsartUsrcrSpec> {
         WlsW::new(self, 8)
     }
     #[doc = "Bit 10 - NSB"]
     #[inline(always)]
-    #[must_use]
-    pub fn nsb(&mut self) -> NsbW<UsartUsrcrSpec> {
+    pub fn nsb(&mut self) -> NsbW<'_, UsartUsrcrSpec> {
         NsbW::new(self, 10)
     }
     #[doc = "Bit 11 - PBE"]
     #[inline(always)]
-    #[must_use]
-    pub fn pbe(&mut self) -> PbeW<UsartUsrcrSpec> {
+    pub fn pbe(&mut self) -> PbeW<'_, UsartUsrcrSpec> {
         PbeW::new(self, 11)
     }
     #[doc = "Bit 12 - EPE"]
     #[inline(always)]
-    #[must_use]
-    pub fn epe(&mut self) -> EpeW<UsartUsrcrSpec> {
+    pub fn epe(&mut self) -> EpeW<'_, UsartUsrcrSpec> {
         EpeW::new(self, 12)
     }
     #[doc = "Bit 13 - SPE"]
     #[inline(always)]
-    #[must_use]
-    pub fn spe(&mut self) -> SpeW<UsartUsrcrSpec> {
+    pub fn spe(&mut self) -> SpeW<'_, UsartUsrcrSpec> {
         SpeW::new(self, 13)
     }
     #[doc = "Bit 14 - BCB"]
     #[inline(always)]
-    #[must_use]
-    pub fn bcb(&mut self) -> BcbW<UsartUsrcrSpec> {
+    pub fn bcb(&mut self) -> BcbW<'_, UsartUsrcrSpec> {
         BcbW::new(self, 14)
     }
     #[doc = "Bit 15 - RTS"]
     #[inline(always)]
-    #[must_use]
-    pub fn rts(&mut self) -> RtsW<UsartUsrcrSpec> {
+    pub fn rts(&mut self) -> RtsW<'_, UsartUsrcrSpec> {
         RtsW::new(self, 15)
     }
 }
-#[doc = "USART_USRCR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`usart_usrcr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usart_usrcr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "USART_USRCR\n\nYou can [`read`](crate::Reg::read) this register and get [`usart_usrcr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`usart_usrcr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UsartUsrcrSpec;
 impl crate::RegisterSpec for UsartUsrcrSpec {
     type Ux = u32;
@@ -226,10 +212,6 @@ impl crate::Readable for UsartUsrcrSpec {}
 #[doc = "`write(|w| ..)` method takes [`usart_usrcr::W`](W) writer structure"]
 impl crate::Writable for UsartUsrcrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets USART_USRCR to value 0"]
-impl crate::Resettable for UsartUsrcrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for UsartUsrcrSpec {}

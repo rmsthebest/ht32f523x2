@@ -151,102 +151,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - INEN0"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen0(&mut self) -> Inen0W<InerSpec> {
+    pub fn inen0(&mut self) -> Inen0W<'_, InerSpec> {
         Inen0W::new(self, 0)
     }
     #[doc = "Bit 1 - INEN1"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen1(&mut self) -> Inen1W<InerSpec> {
+    pub fn inen1(&mut self) -> Inen1W<'_, InerSpec> {
         Inen1W::new(self, 1)
     }
     #[doc = "Bit 2 - INEN2"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen2(&mut self) -> Inen2W<InerSpec> {
+    pub fn inen2(&mut self) -> Inen2W<'_, InerSpec> {
         Inen2W::new(self, 2)
     }
     #[doc = "Bit 3 - INEN3"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen3(&mut self) -> Inen3W<InerSpec> {
+    pub fn inen3(&mut self) -> Inen3W<'_, InerSpec> {
         Inen3W::new(self, 3)
     }
     #[doc = "Bit 4 - INEN4"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen4(&mut self) -> Inen4W<InerSpec> {
+    pub fn inen4(&mut self) -> Inen4W<'_, InerSpec> {
         Inen4W::new(self, 4)
     }
     #[doc = "Bit 5 - INEN5"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen5(&mut self) -> Inen5W<InerSpec> {
+    pub fn inen5(&mut self) -> Inen5W<'_, InerSpec> {
         Inen5W::new(self, 5)
     }
     #[doc = "Bit 6 - INEN6"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen6(&mut self) -> Inen6W<InerSpec> {
+    pub fn inen6(&mut self) -> Inen6W<'_, InerSpec> {
         Inen6W::new(self, 6)
     }
     #[doc = "Bit 7 - INEN7"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen7(&mut self) -> Inen7W<InerSpec> {
+    pub fn inen7(&mut self) -> Inen7W<'_, InerSpec> {
         Inen7W::new(self, 7)
     }
     #[doc = "Bit 8 - INEN8"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen8(&mut self) -> Inen8W<InerSpec> {
+    pub fn inen8(&mut self) -> Inen8W<'_, InerSpec> {
         Inen8W::new(self, 8)
     }
     #[doc = "Bit 9 - INEN9"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen9(&mut self) -> Inen9W<InerSpec> {
+    pub fn inen9(&mut self) -> Inen9W<'_, InerSpec> {
         Inen9W::new(self, 9)
     }
     #[doc = "Bit 10 - INEN10"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen10(&mut self) -> Inen10W<InerSpec> {
+    pub fn inen10(&mut self) -> Inen10W<'_, InerSpec> {
         Inen10W::new(self, 10)
     }
     #[doc = "Bit 11 - INEN11"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen11(&mut self) -> Inen11W<InerSpec> {
+    pub fn inen11(&mut self) -> Inen11W<'_, InerSpec> {
         Inen11W::new(self, 11)
     }
     #[doc = "Bit 12 - INEN12"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen12(&mut self) -> Inen12W<InerSpec> {
+    pub fn inen12(&mut self) -> Inen12W<'_, InerSpec> {
         Inen12W::new(self, 12)
     }
     #[doc = "Bit 13 - INEN13"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen13(&mut self) -> Inen13W<InerSpec> {
+    pub fn inen13(&mut self) -> Inen13W<'_, InerSpec> {
         Inen13W::new(self, 13)
     }
     #[doc = "Bit 14 - INEN14"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen14(&mut self) -> Inen14W<InerSpec> {
+    pub fn inen14(&mut self) -> Inen14W<'_, InerSpec> {
         Inen14W::new(self, 14)
     }
     #[doc = "Bit 15 - INEN15"]
     #[inline(always)]
-    #[must_use]
-    pub fn inen15(&mut self) -> Inen15W<InerSpec> {
+    pub fn inen15(&mut self) -> Inen15W<'_, InerSpec> {
         Inen15W::new(self, 15)
     }
 }
-#[doc = "INER\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iner::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iner::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "INER\n\nYou can [`read`](crate::Reg::read) this register and get [`iner::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iner::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct InerSpec;
 impl crate::RegisterSpec for InerSpec {
     type Ux = u32;
@@ -256,10 +240,6 @@ impl crate::Readable for InerSpec {}
 #[doc = "`write(|w| ..)` method takes [`iner::W`](W) writer structure"]
 impl crate::Writable for InerSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INER to value 0"]
-impl crate::Resettable for InerSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for InerSpec {}

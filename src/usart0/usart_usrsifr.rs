@@ -115,78 +115,66 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RXDNE"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxdne(&mut self) -> RxdneW<UsartUsrsifrSpec> {
+    pub fn rxdne(&mut self) -> RxdneW<'_, UsartUsrsifrSpec> {
         RxdneW::new(self, 0)
     }
     #[doc = "Bit 1 - OEI"]
     #[inline(always)]
-    #[must_use]
-    pub fn oei(&mut self) -> OeiW<UsartUsrsifrSpec> {
+    pub fn oei(&mut self) -> OeiW<'_, UsartUsrsifrSpec> {
         OeiW::new(self, 1)
     }
     #[doc = "Bit 2 - PEI"]
     #[inline(always)]
-    #[must_use]
-    pub fn pei(&mut self) -> PeiW<UsartUsrsifrSpec> {
+    pub fn pei(&mut self) -> PeiW<'_, UsartUsrsifrSpec> {
         PeiW::new(self, 2)
     }
     #[doc = "Bit 3 - FEI"]
     #[inline(always)]
-    #[must_use]
-    pub fn fei(&mut self) -> FeiW<UsartUsrsifrSpec> {
+    pub fn fei(&mut self) -> FeiW<'_, UsartUsrsifrSpec> {
         FeiW::new(self, 3)
     }
     #[doc = "Bit 4 - BII"]
     #[inline(always)]
-    #[must_use]
-    pub fn bii(&mut self) -> BiiW<UsartUsrsifrSpec> {
+    pub fn bii(&mut self) -> BiiW<'_, UsartUsrsifrSpec> {
         BiiW::new(self, 4)
     }
     #[doc = "Bit 5 - RXDR"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxdr(&mut self) -> RxdrW<UsartUsrsifrSpec> {
+    pub fn rxdr(&mut self) -> RxdrW<'_, UsartUsrsifrSpec> {
         RxdrW::new(self, 5)
     }
     #[doc = "Bit 6 - RXTOF"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxtof(&mut self) -> RxtofW<UsartUsrsifrSpec> {
+    pub fn rxtof(&mut self) -> RxtofW<'_, UsartUsrsifrSpec> {
         RxtofW::new(self, 6)
     }
     #[doc = "Bit 7 - TXDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn txde(&mut self) -> TxdeW<UsartUsrsifrSpec> {
+    pub fn txde(&mut self) -> TxdeW<'_, UsartUsrsifrSpec> {
         TxdeW::new(self, 7)
     }
     #[doc = "Bit 8 - TXC"]
     #[inline(always)]
-    #[must_use]
-    pub fn txc(&mut self) -> TxcW<UsartUsrsifrSpec> {
+    pub fn txc(&mut self) -> TxcW<'_, UsartUsrsifrSpec> {
         TxcW::new(self, 8)
     }
     #[doc = "Bit 9 - RSADDE"]
     #[inline(always)]
-    #[must_use]
-    pub fn rsadde(&mut self) -> RsaddeW<UsartUsrsifrSpec> {
+    pub fn rsadde(&mut self) -> RsaddeW<'_, UsartUsrsifrSpec> {
         RsaddeW::new(self, 9)
     }
     #[doc = "Bit 10 - CTSC"]
     #[inline(always)]
-    #[must_use]
-    pub fn ctsc(&mut self) -> CtscW<UsartUsrsifrSpec> {
+    pub fn ctsc(&mut self) -> CtscW<'_, UsartUsrsifrSpec> {
         CtscW::new(self, 10)
     }
     #[doc = "Bit 11 - CTSS"]
     #[inline(always)]
-    #[must_use]
-    pub fn ctss(&mut self) -> CtssW<UsartUsrsifrSpec> {
+    pub fn ctss(&mut self) -> CtssW<'_, UsartUsrsifrSpec> {
         CtssW::new(self, 11)
     }
 }
-#[doc = "USART_USRSIFR\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`usart_usrsifr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usart_usrsifr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "USART_USRSIFR\n\nYou can [`read`](crate::Reg::read) this register and get [`usart_usrsifr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`usart_usrsifr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UsartUsrsifrSpec;
 impl crate::RegisterSpec for UsartUsrsifrSpec {
     type Ux = u32;
@@ -196,10 +184,6 @@ impl crate::Readable for UsartUsrsifrSpec {}
 #[doc = "`write(|w| ..)` method takes [`usart_usrsifr::W`](W) writer structure"]
 impl crate::Writable for UsartUsrsifrSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets USART_USRSIFR to value 0"]
-impl crate::Resettable for UsartUsrsifrSpec {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for UsartUsrsifrSpec {}
